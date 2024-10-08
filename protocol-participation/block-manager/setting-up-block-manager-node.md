@@ -2,10 +2,7 @@
 
 ## **System Requirements**
 
-| Configuration | CPU (cores) | RAM (GiB) | Storage   | Network                                          |
-| ------------- | ----------- | --------- | --------- | ------------------------------------------------ |
-| Minimum       | 4c/8t       | 32        | 1 TB NVMe | 1 Gbit synchronous unmetered Internet connection |
-| Recommended   | 8c/16t      | 64        | 2 TB NVMe | 1 Gbit synchronous unmetered Internet connection |
+<table><thead><tr><th width="205">Configuration</th><th width="90">CPU</th><th width="87">RAM</th><th width="131">Storage</th><th>Network</th></tr></thead><tbody><tr><td>Minimum</td><td>4c/8t</td><td>32 GB</td><td>1 TB NVMe</td><td>1 Gbit synchronous unmetered Internet connection</td></tr><tr><td>Recommended</td><td>8c/16t</td><td>64 GB</td><td>2 TB NVMe</td><td>1 Gbit synchronous unmetered Internet connection</td></tr></tbody></table>
 
 ## How to run
 
