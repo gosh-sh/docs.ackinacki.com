@@ -50,6 +50,12 @@ A Block Keeper responsible for block validation, who notifies all network partic
 
 The section of the block that contains information shared among all network participants.
 
+## D
+
+#### **Dapp ID**
+
+The ID of a contract system is equal to the address of the root smart contract, which is deployed using an external message. All contracts deployed with internal messages from the same root contract, or from contracts deployed by the root contract, automatically receive the same Dapp ID.
+
 ## E
 
 #### **Epoch**
@@ -74,7 +80,7 @@ A message from the Verifier broadcast to all network participants by Block Verif
 
 #### **NACKL**&#x20;
 
-The native token of the network, used for staking and as a reward for participating in the Acki Nacki protocol.
+The native network token, used for security guarantees: staking, slashing and block rewards.
 
 #### **Node Owner**&#x20;
 
@@ -96,12 +102,18 @@ An additional public key that provides limited access to the Block Keeper wallet
 
 The amount of NACKL tokens required to participate in the Acki Nacki protocol.
 
-#### **SHELL token**&#x20;
+#### **SHELL**&#x20;
 
-The utility token within the Acki Nacki network, designed to compensate Block Keepers (BKs) for the computing resources they provide.
+The utility token within the Acki Nacki network is designed to compensate NACKL holders for the computing resources the network provides. It can be converted to VMSHELL to cover network fees at a 1:1 ratio. However, it is not possible to convert VMSHELL back to SHELL. SHELL can be transferred between different Dapp IDs.
 
 ## T
 
 #### **Thread**&#x20;
 
 A subset of nodes that serve a particular subset of Accounts.
+
+## V
+
+#### VMSHELL
+
+The unit of account used to cover network fees. It is converted from SHELL and cannot be converted back to SHELL. VMSHELL can be transferred between contracts that belong to the same Dapp ID.
