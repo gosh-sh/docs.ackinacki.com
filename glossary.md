@@ -54,7 +54,7 @@ The section of the block that contains information shared among all network part
 
 #### **Dapp ID**
 
-The ID of a contract system is equal to the address of the root smart contract, which is deployed using an external message. All contracts deployed with internal messages from the same root contract, or from contracts deployed by the root contract, automatically receive the same Dapp ID.
+The identifier of a Decentralized Contract System on the Acki Nacki blockchain. This ID is equal to the address of the root smart contract, which is deployed using an external message. All contracts deployed with internal messages from the same root contract, or from contracts deployed by the root contract, automatically receive the same DAPP ID.
 
 ## E
 
