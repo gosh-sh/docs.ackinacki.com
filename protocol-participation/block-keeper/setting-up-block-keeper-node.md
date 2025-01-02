@@ -6,7 +6,7 @@
 
 ## How to run
 
-Follow the instructions in [Ackinacki repo.](https://github.com/ackinacki/ackinacki)
+Follow the instructions in [ackinacki repo.](https://github.com/ackinacki/ackinacki)
 
 ## API access
 

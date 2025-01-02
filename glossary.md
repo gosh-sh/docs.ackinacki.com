@@ -44,17 +44,25 @@ The leader  of a particular Thread responsible for block production.
 
 A Block Keeper responsible for block validation, who notifies all network participants of whether the block is valid or not.
 
+**BLS keys**
+
+The keys used by BK to sign blocks. The lifespan of the keys is one epoch. For a new epoch, new BLS keys will need to be generated. Each BK stores a list of BLS public keys of other BKs (for the current epoch), which they use to verify attestations on blocks.
+
 ## C
 
 #### **Common section**
 
 The section of the block that contains information shared among all network participants.
 
+**Currency Collection**&#x20;
+
+A set of currencies within the Acki Nacki network designed to address various tasks beyond [VMSHELL](glossary.md#vmshell) tokens, which are used for paying fees. These currencies enhance the flexibility and efficiency of the Acki Nacki ecosystem. They provide diverse functionalities tailored to specific use cases, such as value storage and staking ([NACKL](glossary.md#nackl)) or transferring funds between different Dapp IDs for subsequent conversion ([SHELL](glossary.md#shell)).
+
 ## D
 
 #### **Dapp ID**
 
-The identifier of a Decentralized Contract System on the Acki Nacki blockchain. This ID is equal to the address of the root smart contract, which is deployed using an external message. All contracts deployed with internal messages from the same root contract, or from contracts deployed by the root contract, automatically receive the same DAPP ID.
+The identifier of a Decentralized Contract System on the Acki Nacki blockchain. This ID is equal to the address of the root smart contract, which is deployed using an external message. All contracts deployed with internal messages from the same root contract, or from contracts deployed by the root contract, automatically receive the same Dapp ID.
 
 ## E
 
@@ -63,6 +71,10 @@ The identifier of a Decentralized Contract System on the Acki Nacki blockchain. 
 The participation period in the Acki Nacki protocol during which a participant acts as a Block Keeper.
 
 ## M
+
+#### **Master keys**&#x20;
+
+The keys of the Node Owner.  These are the primary keys for accessing the BK wallet. They can be used to transfer tokens and run the node.
 
 #### **Minimal Stake**
 
@@ -80,7 +92,8 @@ A message from the Verifier broadcast to all network participants by Block Verif
 
 #### **NACKL**&#x20;
 
-The native network token, used for security guarantees: staking, slashing and block rewards.
+The native network token, used for security guarantees: staking, slashing and block rewards.\
+(currency collection index: 1)
 
 #### **Node Owner**&#x20;
 
@@ -96,7 +109,7 @@ A metric that increases the rewards for Block Keepers based on their continuous 
 
 #### **Service Key**
 
-An additional public key that provides limited access to the Block Keeper wallet, allowing only Block Keeper node operations. This key is added by the owner.
+An additional key pair that provide limited access to the BK wallet, allowing only BK node operations. These keys are added by the owner.
 
 #### **Stake**
 
@@ -104,7 +117,7 @@ The amount of NACKL tokens required to participate in the Acki Nacki protocol.
 
 #### **SHELL**&#x20;
 
-The utility token within the Acki Nacki network is designed to compensate NACKL holders for the computing resources the network provides. It can be converted to VMSHELL to cover network fees at a 1:1 ratio. However, it is not possible to convert VMSHELL back to SHELL. SHELL can be transferred between different Dapp IDs.
+The utility token within the Acki Nacki network is designed to compensate NACKL holders for the computing resources the network provides. It can be converted to VMSHELL to cover network fees at a 1:1 ratio. However, it is not possible to convert VMSHELL back to SHELL. SHELL can be transferred between different Dapp IDs. (currency collection index: 2)
 
 ## T
 

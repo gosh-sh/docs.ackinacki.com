@@ -2,15 +2,19 @@
 
 ## **Glossary**
 
-* **Block Keeper Node (BK)** - A node with a deployed Epoch contract that participates in the Acki Nacki protocol.
+* **Block Keeper Node (BK)** - a node with a deployed Epoch contract that participates in the Acki Nacki protocol.
 * **Epoch** - a participation period in the Acki Nacki protocol during which a participant acts as a Block Keeper.
-* **Node Owner** - The owner of the staked funds who holds full rights to manage the BK wallet, including withdrawing funds and other operations.
-* **Service Key** - An additional public key that provides limited access to the BK wallet, allowing only BK node operations. This key is added by the owner.
-* **NACKL** - The native token of the network, used for staking and as a reward for participating in the Acki Nacki protocol.
-* **Stake** - The amount of NACKL tokens required to participate in the Acki Nacki protocol.
+* **Node Owner** - the owner of the staked funds who holds full rights to manage the BK wallet, including withdrawing funds and other operations.
+* **Master keys** - the keys of the Node Owner.  These are the primary keys for accessing the BK wallet. They can be used to transfer tokens and run the node.
+* **Service keys** - an additional key pair that provide limited access to the BK wallet, allowing only BK node operations. These keys are added by the owner.
+* **BLS keys**  - the keys used by BK to sign blocks. The lifespan of the keys is one epoch. For a new epoch, new BLS keys will need to be generated. Each BK stores a list of BLS public keys of other BKs (for the current epoch), which they use to verify attestations on blocks.
+* **NACKL** - the native network token, used for security guarantees: staking, slashing and block rewards. (currency collection index: 1)
+* **SHELL**  - the utility token within the Acki Nacki network is designed to compensate NACKL holders for the computing resources the network provides. It can be converted to VMSHELL to cover network fees at a 1:1 ratio. However, it is not possible to convert VMSHELL back to SHELL. (currency collection index: 2)
+* **VMSHELL** - the unit of account used to cover network fees. It is converted from SHELL and cannot be converted back to SHELL.
+* **Stake** - the amount of NACKL tokens required to participate in the Acki Nacki protocol.
 * **Minimal Stake** - the minimum amount of tokens a BK must stake to participate in the network. This value dynamically adjusts based on the difference between the current number of BKs and the required number of BKs in the network.
 * **Reputation Coefficient** is a metric that increases the rewards for BKs based on their continuous participation in the protocol.&#x20;
-* **BK Reward System**: BKs earn rewards based on their participation in the network during each _epoch_, regardless of their specific role (Block Producer, Acki-Nacki, or Block Keeper). The reward depends on the BK’s stake and _Reputation Coefficient_.
+* **BK Reward System**: BKs earn rewards based on their participation in the network during each _Epoch_, regardless of their specific role (Block Producer, Acki-Nacki, or Block Keeper). The reward depends on the BK’s stake and _Reputation Coefficient_.
 
 [Here](https://tokenomics.ackinacki.com/) you can review multiple plots detailing various aspects of [Tokenomics](../../tokenomics.md).
 
@@ -24,7 +28,7 @@ By this point, you should already have a [node running](setting-up-block-keeper-
 
 * **BlockKeeperContractRoot (Root)** - The main system contract that manages a BK's participation in the network.
 * **AckiNackiBlockKeeperNodeWallet (Wallet)** - The BK wallet contract, responsible for stake management.
-* **BlockKeeperPreEpochContract (Pre Epoch)** - The contract responsible for BK's preparation during the epoch.
+* **BlockKeeperPreEpochContract (Pre Epoch)** - The contract responsible for BK's preparation during the Epoch.
 * **BlockKeeperEpochContract (Epoch)** - The contract that indicates its owner is an active Block Keeper.
 * **BlockKeeperCoolerContract (Cooler)** - The contract where the stake (plus rewards) is locked for the duration of the BK's operation verification.
 
