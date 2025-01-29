@@ -1,22 +1,8 @@
 # How to join the protocol as Block Keeper?
 
-## **Glossary**
-
-* **Block Keeper Node (BK)** - a node with a deployed Epoch contract that participates in the Acki Nacki protocol.
-* **Epoch** - a participation period in the Acki Nacki protocol during which a participant acts as a Block Keeper.
-* **Node Owner** - the owner of the staked funds who holds full rights to manage the BK wallet, including withdrawing funds and other operations.
-* **Master keys** - the keys of the Node Owner.  These are the primary keys for accessing the BK wallet. They can be used to transfer tokens and run the node.
-* **Service keys** - an additional key pair that provide limited access to the BK wallet, allowing only BK node operations. These keys are added by the owner.
-* **BLS keys**  - the keys used by BK to sign blocks. The lifespan of the keys is one epoch. For a new epoch, new BLS keys will need to be generated. Each BK stores a list of BLS public keys of other BKs (for the current epoch), which they use to verify attestations on blocks.
-* **NACKL** - the native network token, used for security guarantees: staking, slashing and block rewards. (currency collection index: 1)
-* **SHELL**  - the utility token within the Acki Nacki network is designed to compensate NACKL holders for the computing resources the network provides. It can be converted to VMSHELL to cover network fees at a 1:1 ratio. However, it is not possible to convert VMSHELL back to SHELL. (currency collection index: 2)
-* **VMSHELL** - the unit of account used to cover network fees. It is converted from SHELL and cannot be converted back to SHELL.
-* **Stake** - the amount of NACKL tokens required to participate in the Acki Nacki protocol.
-* **Minimal Stake** - the minimum amount of tokens a BK must stake to participate in the network. This value dynamically adjusts based on the difference between the current number of BKs and the required number of BKs in the network.
-* **Reputation Coefficient** is a metric that increases the rewards for BKs based on their continuous participation in the protocol.&#x20;
-* **BK Reward System**: BKs earn rewards based on their participation in the network during each _Epoch_, regardless of their specific role (Block Producer, Acki-Nacki, or Block Keeper). The reward depends on the BK’s stake and _Reputation Coefficient_.
-
 [Here](https://tokenomics.ackinacki.com/) you can review multiple plots detailing various aspects of [Tokenomics](../../tokenomics.md).
+
+[Glossary](../../glossary.md)
 
 ## Setting up Block Keeper Node
 
@@ -26,11 +12,11 @@ By this point, you should already have a [node running](setting-up-block-keeper-
 
 ### **Contracts**
 
-* **BlockKeeperContractRoot (Root)** - The main system contract that manages a BK's participation in the network.
-* **AckiNackiBlockKeeperNodeWallet (Wallet)** - The BK wallet contract, responsible for stake management.
-* **BlockKeeperPreEpochContract (Pre Epoch)** - The contract responsible for BK's preparation during the Epoch.
-* **BlockKeeperEpochContract (Epoch)** - The contract that indicates its owner is an active Block Keeper.
-* **BlockKeeperCoolerContract (Cooler)** - The contract where the stake (plus rewards) is locked for the duration of the BK's operation verification.
+* **BlockKeeperContractRoot (Root)** - The main system contract that manages a [Block Keeper's (BK)](../../glossary.md#block-keeper-bk) participation in the network.
+* **AckiNackiBlockKeeperNodeWallet (Wallet)** - The BK wallet contract, responsible for [stake](../../glossary.md#stake) management.
+* **BlockKeeperPreEpochContract (Pre Epoch)** - The contract responsible for BK's preparation during the [Epoch](../../glossary.md#epoch).
+* **BlockKeeperEpochContract (Epoch)** - The contract that indicates its owner is an active BK.
+* **BlockKeeperCoolerContract (Cooler)** - The contract where the stake (plus [rewards](../../glossary.md#bk-reward-system)) is locked for the duration of the BK's operation verification.
 
 ### **Stage 1: Initializing the Block Keeper Wallet before joining the Acki Nacki protocol**
 
@@ -58,13 +44,13 @@ constructor (
 )
 ```
 
-3. To restrict access to the wallet but allow node operations, the Node Owner should set a service key by calling a function in the Wallet contract:
+3. To restrict access to the wallet but allow node operations, the [Node Owner ](../../glossary.md#bk-node-owner)should set a service key by calling a function in the Wallet contract:
 
 ```
 setServiceKey(optional(uint256))
 ```
 
-4. **Top Up with NACKL (from any source):**
+4. **Top Up with** [**NACKL**](../../glossary.md#nackl) **(from any source):**
 
 <pre><code><strong>receive()
 </strong></code></pre>
@@ -120,7 +106,7 @@ constructor (
 )
 ```
 
-9. The Pre Epoch contract sends a message to the Wallet contract to lock the stake:
+9. The [Pre-Epoch](../../glossary.md#pre-epoch) contract sends a message to the Wallet contract to lock the stake:
 
 ```
 setLockStake(uint64 seqNoStart, uint256 stake)
@@ -130,13 +116,13 @@ setLockStake(uint64 seqNoStart, uint256 stake)
 
 <figure><img src="../../.gitbook/assets/elections-10-12n.drawio (1).png" alt=""><figcaption></figcaption></figure>
 
-10. The BK script calls a function in the Pre Epoch contract to join the Acki Nacki protocol:
+10. The BK script calls a function in the Pre-Epoch contract to join the Acki Nacki protocol:
 
 ```
 touch()
 ```
 
-11.1.  The Pre Epoch contract deploys the Epoch contract with the stake attached:
+11.1.  The Pre-Epoch contract deploys the Epoch contract with the stake attached:
 
 ```
 constructor (

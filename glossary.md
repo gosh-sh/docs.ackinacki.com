@@ -4,15 +4,19 @@
 
 #### **Account (contract)**
 
-A record in a distributed database that includes a balance, code, and data.
+A record in a distributed database that includes the balance, code, and data.
 
 #### **Ack**&#x20;
 
 A message from the Verifier broadcast to all network participants by Block Verifier (Acki-Nacki) when a block is verified and deemed valid.
 
+#### Acki Nacki Igniter&#x20;
+
+The decentralized network starter protocol (DNSP), it collects Node and [License](glossary.md#license) information, tests and updates the node software and initiates Zerostate (first block) generation once all DNSP requirements are met.
+
 #### **Attestation**
 
-A message sent to the Block Producer (BP) by any Block Keeper (BK) after receiving a block. The Attestation is a BLS signature generated using the BK’s private key. The Block Producer of the next block must aggregate all received Attestations for the previous block into one BLS signature and include it in the Common section of the new block.
+A message sent to the [Block Producer (BP)](glossary.md#block-producer-bp) by any [Block Keeper (BK)](glossary.md#block-keeper-bk) after receiving a block. The Attestation is a BLS signature generated using the BK’s private key. The BP of the next block must aggregate all received Attestations for the previous block into one BLS signature and include it in the Common section of the new block.
 
 ## B
 
@@ -22,31 +26,43 @@ An object containing new transactions, which, once finalized, are stored in the 
 
 #### **Block Keeper (BK)**&#x20;
 
-A network participant that receives blocks from the Block Producer (BP) and sends back an Attestation with the block hash and other metadata. A Block Keeper can also become a Block Verifier (Acki-Nacki) or a Block Producer (BP).
+A network participant with a deployed [Epoch](glossary.md#epoch) contract that receives blocks from the [Block Producer (BP)](glossary.md#block-producer-bp) and sends back an [Attestation](glossary.md#attestation) containing the block hash and other metadata. A BK can also perform the roles of a [Block Verifier (Acki-Nacki)](glossary.md#block-verifier-or-acki-nacki) or a  BP.
 
-#### **Block Keeper Node (BK)**&#x20;
+#### **BK Node (BK node)**&#x20;
 
-A node with a deployed Epoch contract that participates in the Acki Nacki protocol.
+This is a node that performs the role of a [Block Keeper (BK)](glossary.md#block-keeper-bk).
 
-#### **Block Keeper  Reward System**
+#### **BK Node Owner**
 
-Block Keepers earn rewards based on their participation in the network during each _epoch_, regardless of their specific role (Block Producer, Block Verifier (Acki-Nacki), or Block Keeper). The reward depends on the BK’s stake and Reputation Coefficient.
+[BK Node keys](glossary.md#bk-node-owner-keys) owner.
 
-#### **Block Manager**&#x20;
+#### **BK Node Owner keys**&#x20;
+
+The node management keys that provide access to the BK wallet. They are used for managing the node, running node, staking, restaking, and adding licenses to the approved list. These keys cannot be used to withdraw Rewards from the BK wallet.
+
+#### **BK  Reward System**
+
+Block Keepers earn rewards based on their participation in the network during each [Epoch](glossary.md#epoch), regardless of their specific role ([Block Producer](glossary.md#block-producer-bp), [Block Verifier (Acki-Nacki)](glossary.md#block-verifier-or-acki-nacki), or [Block Keeper](glossary.md#block-keeper-bk)). The reward depends on the BK’s [stake](glossary.md#stake) and [Reputation Coefficient](glossary.md#reputation-coefficient).
+
+#### **BK Wallet**&#x20;
+
+The wallet used for staking. The address of the BK Wallet serves as the identifier of the node.
+
+#### **Block Manager (BM)**
 
 A network participant whose primary role is to provide users with blockchain data and process external messages. Block Managers receive a portion of the total block reward based on the number of external messages they process.
 
 #### **Block Producer (BP)**&#x20;
 
-The leader  of a particular Thread responsible for block production.
+The leader of a particular [Thread](glossary.md#thread) responsible for block production.
 
 #### **Block Verifier (or Acki-Nacki)**&#x20;
 
-A Block Keeper responsible for block validation, who notifies all network participants of whether the block is valid or not.
+A Block Keeper responsible for block validation, who notifies all network participants of whether the block is valid or not by sending an [ACK](glossary.md#ack) or [NACK](glossary.md#nack) message.
 
-**BLS keys**
+#### **BLS keys**
 
-The keys used by BK to sign blocks. The lifespan of the keys is one epoch. For a new epoch, new BLS keys will need to be generated. Each BK stores a list of BLS public keys of other BKs (for the current epoch), which they use to verify attestations on blocks.
+The keys used by BK to sign blocks. The lifespan of the keys is one [Epoch](glossary.md#epoch). For a new Epoch, new BLS keys will need to be generated. Each BK stores a list of [BLS](glossary.md#bls-keys) public keys of other BKs (for the current Epoch), which they use to verify [attestations](glossary.md#attestation) on blocks.
 
 ## C
 
@@ -62,19 +78,21 @@ A set of currencies within the Acki Nacki network designed to address various ta
 
 #### **Dapp ID**
 
-The identifier of a Decentralized Contract System on the Acki Nacki blockchain. This ID is equal to the address of the root smart contract, which is deployed using an external message. All contracts deployed with internal messages from the same root contract, or from contracts deployed by the root contract, automatically receive the same Dapp ID.
+The identifier of a Decentralized Contract System on the Acki Nacki blockchain. This ID is equal to the address of the root smart contract, which is deployed using an external message. All contracts deployed with internal messages automatically receive the same Dapp ID. Whether from the same root contract, or from contracts deployed by the root contract.
 
 ## E
 
 #### **Epoch**
 
-The participation period in the Acki Nacki protocol during which a participant acts as a Block Keeper.
+The participation period in the Acki Nacki protocol during which a participant acts as a [Block Keeper](glossary.md#block-keeper-bk). It begins immediately after the [Pre-Epoch](glossary.md#pre-epoch).
+
+## L
+
+#### License
+
+The [**BK License**](acki-nacki-node-license.md) is a contract that grants the right for a BK to participate in the protocol and receive rewards. The license is delegated to a specific BK. Each BK can be delegated up to 5 licenses. The Licenses are transferable without restrictions.
 
 ## M
-
-#### **Master keys**&#x20;
-
-The keys of the Node Owner.  These are the primary keys for accessing the BK wallet. They can be used to transfer tokens and run the node.
 
 #### **Minimal Stake**
 
@@ -95,38 +113,44 @@ A message from the Verifier broadcast to all network participants by Block Verif
 The native network token, used for security guarantees: staking, slashing and block rewards.\
 (currency collection index: 1)
 
-#### **Node Owner**&#x20;
+#### Node Provider&#x20;
 
-The owner of staked funds, who holds full rights to manage the Block Keeper wallet, including withdrawing funds and performing other operations.
+A model for providing nodes to license owners, allowing them to participate in the protocol by delegating their licenses to specific nodes. Subsequently, the license owner receives a share of the rewards earned by the [Block Keeper (BK)](glossary.md#block-keeper-bk) for participating in the protocol.
+
+## P
+
+#### **Pre-Epoch**
+
+The period before the [Epoch](glossary.md#epoch) during which a [BK node](glossary.md#block-keeper-node-bk-node) synchronizes states with the network.
+
+#### Proxy
+
+A service that relays blocks to its subscribers. **Type 1 Proxies** subscribe to Block Keepers (BKs), which broadcast blocks to the network through them, with BKs specifying their target Proxies during the Pre-Epoch deployment. **Type 2 Proxies** subscribe to all Type 1 Proxies in the network and directly to BKs without their own Proxy. This structure ensures efficient block distribution across the network.
 
 ## R
 
 #### **Reputation Coefficient**
 
-A metric that increases the rewards for Block Keepers based on their continuous participation in the protocol.
+A metric that increases the rewards for [Block Keepers](glossary.md#block-keeper-bk) based on their continuous participation in the protocol.
 
 ## S
 
-#### **Service Key**
+#### **SHELL**&#x20;
 
-An additional key pair that provide limited access to the BK wallet, allowing only BK node operations. These keys are added by the owner.
+The utility token within the Acki Nacki network is designed to compensate [NACKL](glossary.md#nackl) holders for the computing resources the network provides. It can be converted to [VMSHELL](glossary.md#vmshell) to cover network fees at a 1:1 ratio. However, it is not possible to convert VMSHELL back to SHELL. This token can be transferred between different [Dapp IDs](glossary.md#dapp-id). (currency collection index: 2)
 
 #### **Stake**
 
-The amount of NACKL tokens required to participate in the Acki Nacki protocol.
-
-#### **SHELL**&#x20;
-
-The utility token within the Acki Nacki network is designed to compensate NACKL holders for the computing resources the network provides. It can be converted to VMSHELL to cover network fees at a 1:1 ratio. However, it is not possible to convert VMSHELL back to SHELL. SHELL can be transferred between different Dapp IDs. (currency collection index: 2)
+The amount of [NACKL](glossary.md#nackl) tokens required to participate in the Acki Nacki protocol. At the launch of the Acki Nacki network (zero state), staking is not required if a [License BK](glossary.md#license) is present. Staking will become necessary for validation at a later stage, in accordance with the [Minimal Stake](glossary.md#minimal-stake).
 
 ## T
 
 #### **Thread**&#x20;
 
-A subset of nodes that serve a particular subset of Accounts.
+A subset of nodes that serve a particular subset of [Accounts](glossary.md#account-contract).
 
 ## V
 
 #### VMSHELL
 
-The unit of account used to cover network fees. It is converted from SHELL and cannot be converted back to SHELL. VMSHELL can be transferred between contracts that belong to the same Dapp ID.
+The unit of account used to cover network fees. It is converted from [SHELL](glossary.md#shell) and cannot be converted back to SHELL. VMSHELL can be transferred between contracts that belong to the same [Dapp ID](glossary.md#dapp-id).
