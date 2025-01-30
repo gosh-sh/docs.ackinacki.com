@@ -68,8 +68,6 @@ Result:
 **You must run single instance of Acki Nacki Igniter on each BK server**
 {% endhint %}
 
-Link to the [source code](https://github.com/ackinacki/acki-nacki-igniter).
-
 ### Step 2.1
 
 Generation of `BLS keys` **for each BK node** using the `node-helper tool`.&#x20;
@@ -207,6 +205,8 @@ docker run  \
 
 By default the **DNSP state** is accessible on **http://your\_public\_ip\_address:10001**
 
+Link to the [source code](https://github.com/ackinacki/acki-nacki-igniter).
+
 ## **Step 3. Delegating licenses**
 
 If you own [BK licenses](../../glossary.md#license) and want to delegate them to your nodes, do this in the [dashboard](https://dashboard.ackinacki.com/).
@@ -282,12 +282,15 @@ If not, send a delegation request to one of the Node Providers from the suggeste
 <figure><img src="../../.gitbook/assets/Снимок экрана 2025-01-29 в 17.38.07.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
-No more than 5 BK licenses can be delegated to a single node.
+**No more than 5 BK licenses can be delegated to a single node.** \
+The reward for BK validation in the network is evenly distributed among the licenses delegated to it.
 {% endhint %}
 
 Information about delegated licenses will look something like this:
 
 <figure><img src="../../.gitbook/assets/Снимок экрана 2025-01-29 в 18.13.53.png" alt="" width="563"><figcaption></figcaption></figure>
+
+A BK node can be changed, and a license can be delegated to another BK. However, to avoid losing rewards, this should be done between [Epochs](../../glossary.md#epoch).
 
 Actual information about the DNSP Gossip state can be viewed on the **Gossip** tab:
 
