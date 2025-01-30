@@ -37,6 +37,11 @@ export PATH=$PATH:~/.cargo/bin
 
 ## Step 1. Generate seed phrase and keys for each BK node (offline step)
 
+{% hint style="warning" %}
+With [**BK Node Owner keys** ](../../glossary.md#bk-node-owner-keys) you will be able to manage the node. \
+**The public key must be provided to the License Owner for license delegation.**
+{% endhint %}
+
 Here’s an example of a command that generates a key pair from a seed phrase and saves it to a specified file:
 
 ```bash
@@ -63,11 +68,15 @@ Result:
 **You must run single instance of Acki Nacki Igniter on each BK server**
 {% endhint %}
 
-Link to the [source code](https://github.com/ackinacki/acki-nacki-igniter)
+Link to the [source code](https://github.com/ackinacki/acki-nacki-igniter).
 
 ### Step 2.1
 
-Generation of [`BLS keys`](../../glossary.md#bls-keys) **for each BK node** using the `node-helper tool`.&#x20;
+Generation of `BLS keys` **for each BK node** using the `node-helper tool`.&#x20;
+
+{% hint style="warning" %}
+[BLS keys](../../glossary.md#bls-keys) will be required by BKs for signing blocks and will be rotated every [epoch](../../glossary.md#epoch).
+{% endhint %}
 
 Building node-helper:
 
@@ -177,7 +186,7 @@ If you are using a non-standard socket for Docker, you can specify it via the `D
 {% endhint %}
 
 {% hint style="warning" %}
-We strongly recommend using the installation via Docker for proper process operation.
+We strongly recommend using the installation via Docker for proper update process operation.
 {% endhint %}
 
 * and run docker container:
@@ -196,11 +205,15 @@ docker run  \
 
 ```
 
-By default the DNSP state is accessible on http://your\_public\_ip\_address:10001
+By default the **DNSP state** is accessible on **http://your\_public\_ip\_address:10001**
 
 ## **Step 3. Delegating licenses**
 
 If you own [BK licenses](../../glossary.md#license) and want to delegate them to your nodes, do this in the [dashboard](https://dashboard.ackinacki.com/).
+
+{% hint style="warning" %}
+To delegate licenses, you need to know the **public key of the BK node owner.**
+{% endhint %}
 
 * In the first step, you need to connect the cryptocurrency wallet from which the licenses were purchased.
 
@@ -213,36 +226,46 @@ Confirm that you are the wallet owner by signing a message:
 * Generate  Acki Nacki License Owner Phrase and public key or click the "Import an existing phrase" button to import your existing Phrase from Acki Nacki app.
 
 {% hint style="warning" %}
-This Phrase will be linked to your Dashboard Account through a public key. This can only be done once. You will use it to withdraw BK rewards for your delegated licenses.&#x20;
+This Phrase will be linked to your Dashboard Account through a public key. **This can only be done once.** You will use it to withdraw BK rewards for your delegated licenses.&#x20;
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/Снимок экрана 2025-01-29 в 17.02.10.png" alt="" width="331"><figcaption></figcaption></figure>
 
-At this step, a seed phrase will be generated/imported for this Account:
+At this step, a seed phrase will be generated/imported for this Account. \
+It will be required to manage your licenses. After the network starts, you will be able to update the license contract owner to a wallet address, such as a multisig. This way, the withdrawal of rewards can be confirmed by multiple custodians.
 
 {% hint style="danger" %}
-**You will only see seed phrase once and won't be able to restore them!**
+**You will only see `seed phrase` once and won't be able to restore it!**
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/Снимок экрана 2025-01-29 в 14.17.13.png" alt="" width="375"><figcaption></figcaption></figure>
 
 {% hint style="danger" %}
-**Write down your `seed phrase` and store it in a secure location. Never share it with anyone. Avoid storing it in plain text, screenshots, or any other insecure method. If you lose it, you lose access to your assets. Anyone who obtains it will have full access to your assets.**&#x20;
+Write down your **`seed phrase`** and store it in a secure location. \
+Never share it with anyone. Avoid storing it in plain text, screenshots, or any other insecure method. If you lose it, you lose access to your assets. Anyone who obtains it will have full access to your assets.&#x20;
 {% endhint %}
 
 A very important point: make sure you have memorized your seed phrase correctly:
 
 <figure><img src="../../.gitbook/assets/Снимок экрана 2025-01-29 в 14.42.28.png" alt="" width="375"><figcaption></figcaption></figure>
 
-* Create a `passcode` that you will use to access license management and confirm it:
+* Create and confirm a `passcode`:
+
+{% hint style="info" %}
+The **passcode** is used to encrypt the seed phrase in the device storage.
+{% endhint %}
 
 <figure><img src="../../.gitbook/assets/Снимок экрана 2025-01-29 в 15.22.51.png" alt="" width="375"><figcaption></figcaption></figure>
 
-Your license owner's public key will be available in the top right corner:
+Your **license owner's public key** will be available in the top right corner:
 
 <figure><img src="../../.gitbook/assets/Снимок экрана 2025-01-29 в 16.03.14.png" alt=""><figcaption></figcaption></figure>
 
-Then, delegate each license from your list to a node using one of the public keys generated above.
+* Then, delegate each license from your list to a node using one of the **BK Node Owner** public key generated above.
+
+{% hint style="danger" %}
+**Do not use BLS keys for license delegation.**
+{% endhint %}
 
 To do this, go to the **Licenses** tab and click the **Delegate** button.
 

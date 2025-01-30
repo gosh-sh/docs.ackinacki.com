@@ -154,3 +154,9 @@ A subset of nodes that serve a particular subset of [Accounts](glossary.md#accou
 #### VMSHELL
 
 The unit of account used to cover network fees. It is converted from [SHELL](glossary.md#shell) and cannot be converted back to SHELL. VMSHELL can be transferred between contracts that belong to the same [Dapp ID](glossary.md#dapp-id).
+
+## Z
+
+#### **Zerostate**
+
+The initial state of the network (first block).
