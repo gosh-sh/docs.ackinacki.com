@@ -3,7 +3,8 @@
 * [Acki Nacki Overview](README.md)
 * [Glossary](glossary.md)
 * [Launch & Genesis](launch-and-genesis.md)
-* [Tokenomics](tokenomics.md)
+* [Tokenomics](tokenomics/README.md)
+  * [Fee System](tokenomics/fee-system.md)
 * [Acki Nacki Node License](acki-nacki-node-license.md)
 
 ## Protocol participation

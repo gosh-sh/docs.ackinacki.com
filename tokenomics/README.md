@@ -9,7 +9,7 @@ The original document can be found here [Tokenomics Paper](https://tokenomics.ac
 ## Abstract&#x20;
 
 We present the Acki Nacki network Tokenomics, optimized for maximum decentralization from the start, as well as for security and fairness. \
-For more information on the Acki Nacki protocol, refer to the [Acki Nacki Overview](./).
+For more information on the Acki Nacki protocol, refer to the [Acki Nacki Overview](../).
 
 In Acki Nacki, there are five types of Network Participants: Block Producer, Block Keeper, Block Verifier (also known as Acki-Nacki), Block Manager, and Mobile Verifier.
 
@@ -19,9 +19,9 @@ We collectively refer to Block Producer, Block Keeper, and Block Verifier as "Bl
 
 ## Definitions
 
-**Block Keeper** - is a network participant that receives blocks from the Block Producer (BP) and sends back an [Attestation](glossary.md#attestation) with the block hash and other metadata. A BK can also become a Block Verifier (Acki-Nacki) or a Block Producer (BP)
+**Block Keeper** - is a network participant that receives blocks from the Block Producer (BP) and sends back an [Attestation](../glossary.md#attestation) with the block hash and other metadata. A BK can also become a Block Verifier (Acki-Nacki) or a Block Producer (BP)
 
-**Block Producer (BP)** is a BK that serves as the leader of a particular [Thread](glossary.md#thread), responsible for block production.
+**Block Producer (BP)** is a BK that serves as the leader of a particular [Thread](../glossary.md#thread), responsible for block production.
 
 **Block Verifier (or Acki-Nacki)** - is a BK responsible for block validation and notifying all network participants of their verdict: whether the block is valid or not.
 
@@ -31,10 +31,10 @@ We collectively refer to Block Producer, Block Keeper, and Block Verifier as "Bl
 
 ## Quick Facts
 
-| Token                      | Supply    | Emission     | Function         |
-| -------------------------- | --------- | ------------ | ---------------- |
-| [NACKL](glossary.md#nackl) | 10.4 B    | Curve, final | Network security |
-| [SHELL](glossary.md#shell) | Unlimited | Pledge       | Computation      |
+| Token                         | Supply    | Emission     | Function         |
+| ----------------------------- | --------- | ------------ | ---------------- |
+| [NACKL](../glossary.md#nackl) | 10.4 B    | Curve, final | Network security |
+| [SHELL](../glossary.md#shell) | Unlimited | Pledge       | Computation      |
 
 ## Separation of Tokens
 
@@ -50,19 +50,19 @@ Computation token, called **SHELL** — is designed to pay for network usage, an
 
 **NACKL** Coin — is used for Staking and provides a claim for a share of Shell revenues therefore will accumulate value over time.&#x20;
 
-**SHELL** Token — designed in such a way that its price will never increase, it can only decrease, but will eventually correct itself, as described in more details [below](tokenomics.md#shell-equal-or-less)
+**SHELL** Token — designed in such a way that its price will never increase, it can only decrease, but will eventually correct itself, as described in more details [below](./#shell-equal-or-less)
 
 ## NACKL Tokenomics
 
 ### Proof Of Stake
 
-In Acki Nacki there is no predetermined Stake Interest rate. Simple and clear — there are no staking rewards. Like in Bitcoin the rewards are paid for Network Participation which comprises several activities like Block Production, Block Verification and Transaction Processing, but unlike Bitcoin all the [Rewards](tokenomics.md#rewards) are distributed proportionally between all Network Participants within a common Epoche. If Network Participants are not performing according to current Acki Nacki Network rules or boundaries they may be excluded from the network, penalized or slashed depending on the type of rule they violate. This is according to the main idea of [Proof-of-Stake Protocols](https://decred.org/research/king2012.pdf).
+In Acki Nacki there is no predetermined Stake Interest rate. Simple and clear — there are no staking rewards. Like in Bitcoin the rewards are paid for Network Participation which comprises several activities like Block Production, Block Verification and Transaction Processing, but unlike Bitcoin all the [Rewards](./#rewards) are distributed proportionally between all Network Participants within a common Epoche. If Network Participants are not performing according to current Acki Nacki Network rules or boundaries they may be excluded from the network, penalized or slashed depending on the type of rule they violate. This is according to the main idea of [Proof-of-Stake Protocols](https://decred.org/research/king2012.pdf).
 
 ### Delegation
 
 Acki Nacki is trying to avoid delegation of stakes as much as possible. There are special mechanisms in place to make it not economical or not secure to delegate NACKL Token for staking by other Block Keepers: Block Keeper Epoche contract only accepts messages signed by a Block Keeper private key, therefore making it impossible to create decentralized pools and perform staking delegation. Of course, Block Keepers can run off-chain services to obtain stakes from investors, but this is no longer a network concern.
 
-Instead there is a special mechanism to include regular participants into a protocol without a need to become a Block Keeper and have special server equipment etc. ([see section “Mobile Verifiers”](tokenomics.md#mobile-verifiers)) Yet it is important to mention that it’s not based on staking pools or delegation either, as mobile verifiers perform very particular and real security verification contributing to network security guarantees.
+Instead there is a special mechanism to include regular participants into a protocol without a need to become a Block Keeper and have special server equipment etc. ([see section “Mobile Verifiers”](./#mobile-verifiers)) Yet it is important to mention that it’s not based on staking pools or delegation either, as mobile verifiers perform very particular and real security verification contributing to network security guarantees.
 
 ### Fairness
 
@@ -112,13 +112,13 @@ General Reward Per Second is an ever decreasing function of token supply calcula
 
 • $$BMRFC$$ — Block Manager Reward Function Coefficient — coefficient that determines the fraction of the reward $$GRPS$$ allocated to Block Managers
 
-<figure><img src=".gitbook/assets/f_General_Reward_1_2_3.jpg" alt=""><figcaption><p>Formulas 1, 2, 3</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_General_Reward_1_2_3.jpg" alt=""><figcaption><p>Formulas 1, 2, 3</p></figcaption></figure>
 
 The resulting reward is divided among the three groups of network participants in predetermined proportions, calculated based on each group’s contribution to the network’s operation.
 
-<figure><img src=".gitbook/assets/f_General_Reward_4_5a.jpg" alt=""><figcaption><p>Formulas 4, 5</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_General_Reward_4_5a.jpg" alt=""><figcaption><p>Formulas 4, 5</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/P_1_Comparison_plot_of_Bitcoin_and_Acki_Nacki.jpg" alt="" width="563"><figcaption><p>Figure 1: Comparison plot of Bitcoin and Acki Nacki NACKL token supplies per year</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/P_1_Comparison_plot_of_Bitcoin_and_Acki_Nacki.jpg" alt="" width="563"><figcaption><p>Figure 1: Comparison plot of Bitcoin and Acki Nacki NACKL token supplies per year</p></figcaption></figure>
 
 ### Reputation Coefficient
 
@@ -135,13 +135,9 @@ If a Block Keeper skips at least one Epoch, their Reputation Coefficient is imme
 * $$maxRT$$ — Maximal Reputation Time — The time it takes for the Block Keeper to accumulate maximum reputation for continuous validation
 * $$ARFC$$ — Adjustment Reputation Function Coefficient — The parameter regulating the rate of reputation growth over time
 
-<figure><img src=".gitbook/assets/f_Reputation Coefficient_6.jpg" alt=""><figcaption><p>Formula 6</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_Reputation Coefficient_6.jpg" alt=""><figcaption><p>Formula 6</p></figcaption></figure>
 
-<div align="center">
-
-<figure><img src=".gitbook/assets/P_2_Plot_Reputation_Coefficient.jpg" alt="" width="559"><figcaption><p>Figure 2: Plot of the Reputation Coefficient depending on the continuous validation time by a particular Block Keeper</p></figcaption></figure>
-
-</div>
+<div align="center"><figure><img src="../.gitbook/assets/P_2_Plot_Reputation_Coefficient.jpg" alt="" width="559"><figcaption><p>Figure 2: Plot of the Reputation Coefficient depending on the continuous validation time by a particular Block Keeper</p></figcaption></figure></div>
 
 ### Block Keeper Reward
 
@@ -161,7 +157,7 @@ Therefore, the Block Keeper’s reward function $$BKRPS$$ will be calculated as 
 * $$BKRPVE$$ — Block Keeper Reward per Validation Epoche — the reward received by a Block Keeper for one Validation Epoch
 * $$BKED$$ — Block Keeper Epoch Duration — the duration of one validation Epoch in seconds
 
-<figure><img src=".gitbook/assets/f_Block_Keeper_Reward_7.jpg" alt=""><figcaption><p>Formula 7</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_Block_Keeper_Reward_7.jpg" alt=""><figcaption><p>Formula 7</p></figcaption></figure>
 
 #### Block Keeper Epoch Reward
 
@@ -171,7 +167,7 @@ To ensure that each Block Keeper can easily calculate their reward for the Valid
 
 Thus, let us calculate the reward for a single Block Keeper for the Validation Epoch:
 
-<figure><img src=".gitbook/assets/f_Block_Keeper_Epoch_Reward_8.jpg" alt=""><figcaption><p>Formula 8</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_Block_Keeper_Epoch_Reward_8.jpg" alt=""><figcaption><p>Formula 8</p></figcaption></figure>
 
 If a Block Keeper, for any reason, validates longer than the expected duration of a single Epoch, additional time spent as a Block Keeper will be added to the parameter $$BKED$$.
 
@@ -186,21 +182,21 @@ Let’s construct the exponential saturation function for the Free Float (as a p
 * $$FFFC$$ — Free Float Function Coefficient – The parameter regulating the decay rate of the FreeFloatFrac function
 * $$TTMT$$ — Total Token Minting Time — The expected time for minting the last fraction of token
 
-<figure><img src=".gitbook/assets/f_Free_Float_9_10 (1).jpg" alt=""><figcaption><p>Formulas 9, 10</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_Free_Float_9_10 (1).jpg" alt=""><figcaption><p>Formulas 9, 10</p></figcaption></figure>
 
-If Block Keepers do not restake their stakes and withdraw them, thereby increasing the Free Float, the reward remains fixed. Meaning the remaining Block Keepers will start receiving more rewards, which will reduce their motivation to withdraw their stakes even if the token price decreases. Because the min stake will decrease, allowing other Block Keepers to stake their tokens if they couldn’t do so before ([see Section "Block Keeper Min Stake"](tokenomics.md#block-keeper-min-stake)).
+If Block Keepers do not restake their stakes and withdraw them, thereby increasing the Free Float, the reward remains fixed. Meaning the remaining Block Keepers will start receiving more rewards, which will reduce their motivation to withdraw their stakes even if the token price decreases. Because the min stake will decrease, allowing other Block Keepers to stake their tokens if they couldn’t do so before ([see Section "Block Keeper Min Stake"](./#block-keeper-min-stake)).
 
-<figure><img src=".gitbook/assets/P_3_Plot_of_the_total_number_of_minted_tokens_and_free_float.jpg" alt="" width="546"><figcaption><p>Figure 3: Plot of the total number of minted tokens and free float (in tokens) over time</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/P_3_Plot_of_the_total_number_of_minted_tokens_and_free_float.jpg" alt="" width="546"><figcaption><p>Figure 3: Plot of the total number of minted tokens and free float (in tokens) over time</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/P_4_of_Bitcoin_and_Acki_Nacki.jpg" alt="" width="547"><figcaption><p>Figure 4: Comparison plot of Bitcoin and Acki Nacki NACKL Free Floats (as a percentage of the current Supply) per year</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/P_4_of_Bitcoin_and_Acki_Nacki.jpg" alt="" width="547"><figcaption><p>Figure 4: Comparison plot of Bitcoin and Acki Nacki NACKL Free Floats (as a percentage of the current Supply) per year</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/P_5.jpg" alt="" width="545"><figcaption><p>Figure 5: Comparison plot of Bitcoin and Acki Nacki NACKL Free Floats (as a percentage of the Total Supply) per year</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/P_5.jpg" alt="" width="545"><figcaption><p>Figure 5: Comparison plot of Bitcoin and Acki Nacki NACKL Free Floats (as a percentage of the Total Supply) per year</p></figcaption></figure>
 
 ## Block Keeper Min Stake
 
 Because Acki Nacki is a scalable computational network the execution load parameter plays a significant role in its tokenomics.
 
-Acki Nacki is a multithreaded execution environment. Threads grow when computation demand on the network grows, more Block Keepers are required to process the network load. Usually one would argue the rewards should grow to lure more Block Keepers into the network. But that won’t work because of a “spam attack”. In the Spam Attack the Block Keeper may create spam transactions to artificially increase network load so that threads are multiplied to inflate the block rewards. And since in Acki Nacki the payment for computations (electricity) is [stable or less](tokenomics.md#shell-equal-or-less) the arbitrage between the compute expanse and block reward is always beneficial to the attacker. Therefore no increase of the Block Reward is possible. Instead the minimum required stake is lowered automatically. Thus allowing lower barriers to entry for new Block Keepers to provide their computing power to participate in a slice of a block rewards. And since Reputation Coefficient plays a much greater role in the Block reward for each Block Keeper over time, it provides a lucrative opportunity for profitable network participation.
+Acki Nacki is a multithreaded execution environment. Threads grow when computation demand on the network grows, more Block Keepers are required to process the network load. Usually one would argue the rewards should grow to lure more Block Keepers into the network. But that won’t work because of a “spam attack”. In the Spam Attack the Block Keeper may create spam transactions to artificially increase network load so that threads are multiplied to inflate the block rewards. And since in Acki Nacki the payment for computations (electricity) is [stable or less](./#shell-equal-or-less) the arbitrage between the compute expanse and block reward is always beneficial to the attacker. Therefore no increase of the Block Reward is possible. Instead the minimum required stake is lowered automatically. Thus allowing lower barriers to entry for new Block Keepers to provide their computing power to participate in a slice of a block rewards. And since Reputation Coefficient plays a much greater role in the Block reward for each Block Keeper over time, it provides a lucrative opportunity for profitable network participation.
 
 * $$NeedBKNum(t)$$ — Needed Block Keeper Number — The number of Block Keepers required in the network at time $$t$$ according to the number of threads
 * $$baseMinBKStake(t)$$ — Base Minimal Block Keeper Stake — Minimal Stake when the current number of Block Keepers equals the necessary number of Block Keepers
@@ -217,33 +213,33 @@ Acki Nacki is a multithreaded execution environment. Threads grow when computati
 
 The total number of staked tokens is easily calculated from the known total number of minted tokens and the current free float:
 
-<figure><img src=".gitbook/assets/f_Block_Keeper_Min_Stake_11.jpg" alt=""><figcaption><p>Formula 11</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_Block_Keeper_Min_Stake_11.jpg" alt=""><figcaption><p>Formula 11</p></figcaption></figure>
 
-Since in Acki Nacki, not only Block Keepers stake but also Mobile Verifiers and Block Managers (see sections "[Mobile Verifier Min Stake](tokenomics.md#mobile-verifier-min-stake)", "[Block Manager Min Stake](tokenomics.md#block-manager-min-stake)"), let the distribution of their stake from the total number of staked tokens be the same as the reward distribution ([formula 4](tokenomics.md#general-reward)):
+Since in Acki Nacki, not only Block Keepers stake but also Mobile Verifiers and Block Managers (see sections "[Mobile Verifier Min Stake](./#mobile-verifier-min-stake)", "[Block Manager Min Stake](./#block-manager-min-stake)"), let the distribution of their stake from the total number of staked tokens be the same as the reward distribution ([formula 4](./#general-reward)):
 
-<figure><img src=".gitbook/assets/f_Block_Keeper_Min_Stake_12.jpg" alt=""><figcaption><p>Formulas 12</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_Block_Keeper_Min_Stake_12.jpg" alt=""><figcaption><p>Formulas 12</p></figcaption></figure>
 
 From which it follows:
 
-<figure><img src=".gitbook/assets/f_Block_Keeper_Min_Stake_13.jpg" alt=""><figcaption><p>Formula 13</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_Block_Keeper_Min_Stake_13.jpg" alt=""><figcaption><p>Formula 13</p></figcaption></figure>
 
 Since each Validation Epoch for a Block Keeper requires time to verify the correctness of all Block Keepers’ actions, half of the staked tokens is locked in the current validation cycle, and the other half of the staked tokens is locked in the cooling period for slashing calculation. Therefore, each Block Keeper effectively needs to have two stakes to validate.
 
 Let’s calculate $$baseMinBKStake$$ for Block Keepers, taking into account that the minimum stake should be calculated at the start of the Validation Epoch:
 
-<figure><img src=".gitbook/assets/f_14.jpg" alt=""><figcaption><p>Formula 14</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_14.jpg" alt=""><figcaption><p>Formula 14</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/P_6.jpg" alt="" width="563"><figcaption><p>Figure 6: Plot of baseMinBKStake over time since the network’s launch with the necessary number of Block Keepers set to 10, 000</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/P_6.jpg" alt="" width="563"><figcaption><p>Figure 6: Plot of baseMinBKStake over time since the network’s launch with the necessary number of Block Keepers set to 10, 000</p></figcaption></figure>
 
 ## Expected APR for Block Keepers
 
 While we are not keen to use terms like Annual Percentage Reward while talking about Acki Nacki staking, it is still important to provide such indicative calculations on the rewards Block Keeper receive for performing Network Participation work in comparison with NACKL Stake they provide as security bond. Please note that we omit all direct Block Keeper operation costs as they are compensated by SHELL Token as described below.
 
-<figure><img src=".gitbook/assets/P_8.jpg" alt="" width="553"><figcaption><p>Figure 7: APR plot for the first 5 years after network launch</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/P_8.jpg" alt="" width="553"><figcaption><p>Figure 7: APR plot for the first 5 years after network launch</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/P_9.jpg" alt="" width="548"><figcaption><p>Figure 8: APR plot over time</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/P_9.jpg" alt="" width="548"><figcaption><p>Figure 8: APR plot over time</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/P_10.jpg" alt="" width="551"><figcaption><p>Figure 9: APR Plot with a logarithmic Y-axis over time</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/P_10.jpg" alt="" width="551"><figcaption><p>Figure 9: APR Plot with a logarithmic Y-axis over time</p></figcaption></figure>
 
 ## Security Guarantees
 
@@ -271,13 +267,13 @@ Let’s consider how the probability of an attack and the reduction of Free Floa
 
 The probability of a successful attack in one attempt:
 
-<figure><img src=".gitbook/assets/f_Security_Guarantees_17.jpg" alt=""><figcaption><p>Formula 15</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_Security_Guarantees_17.jpg" alt=""><figcaption><p>Formula 15</p></figcaption></figure>
 
 The probability that the attacker successfully breaks the network in $$i$$ attempts is given by:$$(1 − SAP)^{i−1} * SAP$$
 
 Let’s sum this probability over all possible numbers of attempts by the attacker and obtain the probability $$BNP$$:
 
-<figure><img src=".gitbook/assets/f_Security_Guarantees_18_19_20_21a.jpg" alt=""><figcaption><p>Formulas 16, 17, 18, 19</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_Security_Guarantees_18_19_20_21a.jpg" alt=""><figcaption><p>Formulas 16, 17, 18, 19</p></figcaption></figure>
 
 {% hint style="info" %}
 Note that the $$BNP$$ $$(MalBKNum)$$ function will be concave downwards, meaning that a malicious Block Keeper benefits either from attacking many times with a single malicious node or attacking once with multiple malicious nodes.
@@ -285,20 +281,20 @@ Note that the $$BNP$$ $$(MalBKNum)$$ function will be concave downwards, meaning
 
 From this it follows that:
 
-<figure><img src=".gitbook/assets/f_Security_Guarantees_22.jpg" alt=""><figcaption><p>Formula 20</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_Security_Guarantees_22.jpg" alt=""><figcaption><p>Formula 20</p></figcaption></figure>
 
 If the $$BNP$$ parameter is known, \
 then $$MalStakeNum = min (MalStakeNum_1, MalStakeNum_2)$$, where&#x20;
 
-<figure><img src=".gitbook/assets/f_Security_Guarantees_23.jpg" alt=""><figcaption><p>Formula 21</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_Security_Guarantees_23.jpg" alt=""><figcaption><p>Formula 21</p></figcaption></figure>
 
 and
 
-<figure><img src=".gitbook/assets/f_Security_Guarantees_24.jpg" alt=""><figcaption><p>Formula 22</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_Security_Guarantees_24.jpg" alt=""><figcaption><p>Formula 22</p></figcaption></figure>
 
 Therefore
 
-<figure><img src=".gitbook/assets/f_Security_Guarantees_25.jpg" alt=""><figcaption><p>Formula 23</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_Security_Guarantees_25.jpg" alt=""><figcaption><p>Formula 23</p></figcaption></figure>
 
 Even if we do not take into account that the minimum stake increases when the number of Block Keepers exceeds the required amount, we will see a significant reduction in Free Float:
 
@@ -311,13 +307,13 @@ $$ANNum = 40$$,\
 $$AtNum = 800$$,\
 $$BNP = 10^{−8}$$:
 
-<figure><img src=".gitbook/assets/f_Security_Guarantees_26.jpg" alt=""><figcaption><p>Formula 24</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_Security_Guarantees_26.jpg" alt=""><figcaption><p>Formula 24</p></figcaption></figure>
 
 With 1000 Block Keepers,\
 $$FFT$$ $$FFT = 2, 253, 808, 534$$ tokens,\
 $$minBKStake = 2, 253, 808$$ tokens:
 
-<figure><img src=".gitbook/assets/f_Security_Guarantees_27.jpg" alt=""><figcaption><p>Formula 25</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_Security_Guarantees_27.jpg" alt=""><figcaption><p>Formula 25</p></figcaption></figure>
 
 This reduction in Free Float increases the token price by $$2^{ln(0.65)/ln(0.95)} = 2^{8.38} = 331.31$$ times, making it practically impossible to collect that much money to purchase tokens for the attack.
 
@@ -344,21 +340,21 @@ To solve this we introduce the Mobile Verifier role to Acki Nacki. A mobile user
 * $$SAP$$ — successful attack probability in a single attempt
 * $$SAP_{MV}$$ — successful attack probability in a single attempt with Mobile Verifiers
 
-<figure><img src=".gitbook/assets/f_MV_28_29.jpg" alt=""><figcaption><p>Formulas 26, 27</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_MV_28_29.jpg" alt=""><figcaption><p>Formulas 26, 27</p></figcaption></figure>
 
 For the reference, next Figs. are illustrating the successful attack probability from a number of malicious network participants for Bitcoin, pBFT, and Acki Nacki protocols with a total of 1000 Block Keepers.
 
 To calculate the successful attack probability in Bitcoin, we use the commonly accepted number of blocks for probabilistic ’finality’, which is 6. For calculating the successful attack probability in Acki Nacki, we use the number of Acki-Nacki set to 40 and the number of Attestations set to 80.
 
-<figure><img src=".gitbook/assets/P_11 (1).jpg" alt="" width="527"><figcaption><p>Figure 10: Comparison of successful attack probabilities in Bitcoin, pBFT and Acki Nack</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/P_11 (1).jpg" alt="" width="527"><figcaption><p>Figure 10: Comparison of successful attack probabilities in Bitcoin, pBFT and Acki Nack</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/P_12.jpg" alt="" width="535"><figcaption><p>Figure 11: Fig. 10 with log-scaled y-axis</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/P_12.jpg" alt="" width="535"><figcaption><p>Figure 11: Fig. 10 with log-scaled y-axis</p></figcaption></figure>
 
 ### Mobile Verifier Reward
 
 Mobile Verifiers will compete in an online game, which involves earning Boosts, to secure a place in the mobile verifiers list that determines the fraction of block reward they will receive:
 
-<figure><img src=".gitbook/assets/f_MVR_30.jpg" alt=""><figcaption><p>Formula 28</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_MVR_30.jpg" alt=""><figcaption><p>Formula 28</p></figcaption></figure>
 
 ### Boost Coefficient
 
@@ -374,7 +370,7 @@ Our task will be to determine BoostCoef for each Mobile Verifier. To do this, we
 
 An exponential curve with a growth coefficient $$k$$, passing through the points $$(x1, y1)$$ and $$(x2, y2)$$, is defined as follows:
 
-<figure><img src=".gitbook/assets/f_MVR_31.jpg" alt=""><figcaption><p>Formula 29</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_MVR_31.jpg" alt=""><figcaption><p>Formula 29</p></figcaption></figure>
 
 Thus, we obtain a function with the following input parameters:
 
@@ -386,11 +382,11 @@ Thus, we obtain a function with the following input parameters:
 * $$k2$$ — the growth coefficient of the second sub-curve
 * $$k3$$ — the growth coefficient of the third sub-curve
 
-<figure><img src=".gitbook/assets/f_MVR_32.jpg" alt=""><figcaption><p>Formula 30</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_MVR_32.jpg" alt=""><figcaption><p>Formula 30</p></figcaption></figure>
 
 Let us denote these sub-curves as I, II, and III.
 
-<figure><img src=".gitbook/assets/P_13.jpg" alt="" width="557"><figcaption><p>Figure 12: Boost Coefficient Curve</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/P_13.jpg" alt="" width="557"><figcaption><p>Figure 12: Boost Coefficient Curve</p></figcaption></figure>
 
 #### Calculation of Parameters for the Piecewise Exponential Curve
 
@@ -399,21 +395,21 @@ We will empirically choose the following parameters for the curves: $$k_1 = 10$$
 
 The curve starts at the point $$y_1 = 0$$. This means that a Mobile Verifier with the fewest Boosts receives almost no reward. (This could be adjusted to provide a very minimal reward, but for simplicity, we’ll leave it as is for now.)&#x20;
 
-Now we need to find the parameters $$y_2$$, $$k_2$$, and $$k_3$$. To do this, we will calculate the integral for each sub-curve and, based on [point 3](tokenomics.md#boost-coefficient), equate these integrals to the following values:
+Now we need to find the parameters $$y_2$$, $$k_2$$, and $$k_3$$. To do this, we will calculate the integral for each sub-curve and, based on [point 3](./#boost-coefficient), equate these integrals to the following values:
 
-<figure><img src=".gitbook/assets/f_MVR_before_33.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_MVR_before_33.jpg" alt=""><figcaption></figcaption></figure>
 
 Let’s calculate these definite integrals:
 
-<figure><img src=".gitbook/assets/f_MVR_33.jpg" alt=""><figcaption><p>Formula 31</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_MVR_33.jpg" alt=""><figcaption><p>Formula 31</p></figcaption></figure>
 
 Let’s construct a system of three equations for the three unknowns $$y_2$$, $$y_3$$, and $$y_4$$:
 
-<figure><img src=".gitbook/assets/f_MVR_34.jpg" alt=""><figcaption><p>Formula 32</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_MVR_34.jpg" alt=""><figcaption><p>Formula 32</p></figcaption></figure>
 
 The analytical solution to this system of equations would be too large to include in this document, so we will immediately substitute the known parameter values $$x_1, x_2, x_3, x_4, y_1, y_3, y_4, k_1, q_1, q_2, q_3$$ and obtain the following values for $$y_2, k_2, k_3$$:
 
-<figure><img src=".gitbook/assets/f_MVR_35.jpg" alt=""><figcaption><p>Formula 33</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_MVR_35.jpg" alt=""><figcaption><p>Formula 33</p></figcaption></figure>
 
 Thus, we have obtained the curve with all known parameters.
 
@@ -426,7 +422,7 @@ The reward of a Mobile Verifier, who is in the i-th position in the list sorted 
 
 That is,
 
-<figure><img src=".gitbook/assets/f_MVR_36 (1).jpg" alt=""><figcaption><p>Formula 34</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_MVR_36 (1).jpg" alt=""><figcaption><p>Formula 34</p></figcaption></figure>
 
 #### Mobile Verifier Min Stake
 
@@ -436,9 +432,9 @@ That is,
 * $$minMVStake(t)$$ — Minimal Mobile Verifier Stake — Current minimal particular Mobile Verifier stake
 * $$FreeFloatFrac(t)$$ — Free Float Fraction — The current fraction of Free Float of Total Supply
 
-The size of the Mobile Verifier’s stake does not affect their reward ([formula 30](tokenomics.md#mobile-verifier-reward)), only the presence of the Min Stake on the Mobile Verifier’s wallet matters. For Mobile Verifiers, there is no point in dynamically adjusting the stake based on the current number of Mobile Verifiers (as is done for Block Keepers), since it is impossible to determine the required number of Mobile Verifiers. Therefore, each Mobile Verifier’s Min Stake will be unique and depend solely on the amount of tokens MVRH they have earned during their entire participation in the network. The Min Stake of a Mobile Verifier will be a fraction of the MVRH parameter, just as the Total Staked Token Amount TSTA is a fraction of the Total Minted Token Amount TMTA ([11](tokenomics.md#block-keeper-min-stake)), provided that the Mobile Verifier must have two stakes for the same reasons as for Block Keepers.
+The size of the Mobile Verifier’s stake does not affect their reward ([formula 30](./#mobile-verifier-reward)), only the presence of the Min Stake on the Mobile Verifier’s wallet matters. For Mobile Verifiers, there is no point in dynamically adjusting the stake based on the current number of Mobile Verifiers (as is done for Block Keepers), since it is impossible to determine the required number of Mobile Verifiers. Therefore, each Mobile Verifier’s Min Stake will be unique and depend solely on the amount of tokens MVRH they have earned during their entire participation in the network. The Min Stake of a Mobile Verifier will be a fraction of the MVRH parameter, just as the Total Staked Token Amount TSTA is a fraction of the Total Minted Token Amount TMTA ([11](./#block-keeper-min-stake)), provided that the Mobile Verifier must have two stakes for the same reasons as for Block Keepers.
 
-<figure><img src=".gitbook/assets/f_MVR_37.jpg" alt=""><figcaption><p>Formula 35</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_MVR_37.jpg" alt=""><figcaption><p>Formula 35</p></figcaption></figure>
 
 If a Mobile Verifier does not have enough tokens in their wallet to place the stake for the next Epoch, their number of Boosts is reset to zero.
 
@@ -452,7 +448,7 @@ If a Mobile Verifier does not have enough tokens in their wallet to place the st
 
 The Epoch of Mobile Verifiers, unlike the Epochs of Block Keepers, is common for all Mobile Verifiers. The first Epoch starts when the network is launched, and after that, the current Block Producer must send a message to the Epoch contract. If at least $$ $MVED $$ seconds have passed since the start of the Epoch, all Mobile Verifiers will receive the reward for the Epoch $$MVRPE$$, and the next Epoch will begin for them. The current $$BoostCoefficient$$ is locked at the beginning of each Epoch for its entire duration and updated after the Epoch ends to prevent unnecessary continuous calculations, as the number of Boosts for Mobile Verifiers changes with high frequency. $$TMVRPS$$ is locked at the beginning of the Epoch, as its changes during the epoch are negligible.
 
-<figure><img src=".gitbook/assets/f_38.jpg" alt=""><figcaption><p>Formula 36</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_38.jpg" alt=""><figcaption><p>Formula 36</p></figcaption></figure>
 
 ## Block Managers
 
@@ -469,7 +465,7 @@ Block Managers do not have a stake because they do not verify transactions and d
 
 The reward for Block Managers is calculated using the following formula:
 
-<figure><img src=".gitbook/assets/f_39.jpg" alt=""><figcaption><p>Formula 37</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_39.jpg" alt=""><figcaption><p>Formula 37</p></figcaption></figure>
 
 ### External Messages Coefficient
 
@@ -489,11 +485,11 @@ If we establish a direct proportionality between the reward received by a Block 
 * $$Dot3 = (x3, y3)$$ — The rightmost point of the second sub-curve
 * $$k1$$ — the growth coefficient of the first sub-curve
 
-<figure><img src=".gitbook/assets/f_40.jpg" alt=""><figcaption><p>Formula 38</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_40.jpg" alt=""><figcaption><p>Formula 38</p></figcaption></figure>
 
 Let us denote these sub-curves as I, II.
 
-<figure><img src=".gitbook/assets/P_14.jpg" alt="" width="563"><figcaption><p>Figure 13: External Messages Coefficient Curve</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/P_14.jpg" alt="" width="563"><figcaption><p>Figure 13: External Messages Coefficient Curve</p></figcaption></figure>
 
 #### Calculation of Parameters for the Piecewise Curve
 
@@ -505,19 +501,19 @@ The curve starts at the point $$y_1 = 0$$.&#x20;
 
 This means that a Block Manager with the smallest number of processed external messages will receive almost no reward. Now we need to find the parameters $$y_2$$, $$k_1$$. To do this, we will calculate the integral for each sub-curve and, based on point 3, equate these integrals to the following values:
 
-<figure><img src=".gitbook/assets/f_40_1.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_40_1.jpg" alt=""><figcaption></figcaption></figure>
 
 Let’s calculate these definite integrals:
 
-<figure><img src=".gitbook/assets/f_41.jpg" alt=""><figcaption><p>Formula 39</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_41.jpg" alt=""><figcaption><p>Formula 39</p></figcaption></figure>
 
 Let’s construct a system of two equations for the two unknowns $$y_2$$, $$k_1$$:
 
-<figure><img src=".gitbook/assets/f_42.jpg" alt=""><figcaption><p>Formula 40</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_42.jpg" alt=""><figcaption><p>Formula 40</p></figcaption></figure>
 
 For simplicity, we directly substitute the known parameter values $$x_1, x_2, x_3, y_1, y_3, q_1, q_2$$ and obtain the following values for $$y_2, k_1$$:
 
-<figure><img src=".gitbook/assets/f_43.jpg" alt=""><figcaption><p>Formula 41</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_43.jpg" alt=""><figcaption><p>Formula 41</p></figcaption></figure>
 
 Thus, we have obtained the curve with all known parameters.
 
@@ -529,7 +525,7 @@ By analogy with the Mobile Verifiers, we define the reward for the Block Manager
 
 That is,
 
-<figure><img src=".gitbook/assets/f_44.jpg" alt=""><figcaption><p>Formula 42</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_44.jpg" alt=""><figcaption><p>Formula 42</p></figcaption></figure>
 
 ### Block Manager Min Stake
 
@@ -537,9 +533,9 @@ That is,
 * $$minBMStake(t)$$ — Minimal Block Manager Stake — Current minimal particular Block Manager stake
 * $$FreeFloatFrac(t)$$ — Free Float Fraction — The current fraction of Free Float of Total Supply
 
-Similarly to [Mobile Verifiers](tokenomics.md#mobile-verifier-min-stake), the reward of a Block Manager does not depend on the amount of stake they place but only on the presence of the Min Stake. The Min Stake of each Block Manager is unique and depends solely on the amount of tokens they have earned during their participation in the network $$BMRH$$. As with [Block Keepers](tokenomics.md#block-manager-min-stake) and Mobile Verifiers, two stakes are required to continuously participate in the network:
+Similarly to [Mobile Verifiers](./#mobile-verifier-min-stake), the reward of a Block Manager does not depend on the amount of stake they place but only on the presence of the Min Stake. The Min Stake of each Block Manager is unique and depends solely on the amount of tokens they have earned during their participation in the network $$BMRH$$. As with [Block Keepers](./#block-manager-min-stake) and Mobile Verifiers, two stakes are required to continuously participate in the network:
 
-<figure><img src=".gitbook/assets/f_45.jpg" alt=""><figcaption><p>Formula 43</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_45.jpg" alt=""><figcaption><p>Formula 43</p></figcaption></figure>
 
 ### Block Manager Epoch Reward
 
@@ -549,9 +545,9 @@ Similarly to [Mobile Verifiers](tokenomics.md#mobile-verifier-min-stake), the re
 * $$TBMRPS(t)$$ — Total Block Manager Reward Per Second — the fraction of the reward $$GRPS$$ allocated to Block Managers
 * $$t_{manage}$$ — Management Epoch Start Time — the time in seconds that has passed from the moment the network was launched until the start of a particular Epoch of Block Managers
 
-Similarly to [Mobile Verifiers](tokenomics.md#mobile-verifier-epoch-reward), the Epoch of Block Managers is common for all Block Managers and starts and ends after a message is sent to the contract by the Block Producer. $$ExtMesCoef$$ is calculated each time at the end of the epoch and reset after its completion. This means that the reward of a Block Manager is influenced only by their position in the sorted in ascending order list of all Block Managers by the number of processed external messages at the end of the epoch. $$TVMRPS$$ is locked at the beginning of the Epoch, as its changes during the epoch are negligible.
+Similarly to [Mobile Verifiers](./#mobile-verifier-epoch-reward), the Epoch of Block Managers is common for all Block Managers and starts and ends after a message is sent to the contract by the Block Producer. $$ExtMesCoef$$ is calculated each time at the end of the epoch and reset after its completion. This means that the reward of a Block Manager is influenced only by their position in the sorted in ascending order list of all Block Managers by the number of processed external messages at the end of the epoch. $$TVMRPS$$ is locked at the beginning of the Epoch, as its changes during the epoch are negligible.
 
-<figure><img src=".gitbook/assets/f_46.jpg" alt=""><figcaption><p>Formula 44</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/f_46.jpg" alt=""><figcaption><p>Formula 44</p></figcaption></figure>
 
 ## SHELL — Equal or Less
 

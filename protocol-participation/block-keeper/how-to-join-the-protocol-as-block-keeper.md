@@ -1,6 +1,6 @@
 # How to join the protocol as Block Keeper?
 
-[Here](https://tokenomics.ackinacki.com/) you can review multiple plots detailing various aspects of [Tokenomics](../../tokenomics.md).
+[Here](https://tokenomics.ackinacki.com/) you can review multiple plots detailing various aspects of [Tokenomics](../../tokenomics/).
 
 [Glossary](../../glossary.md)
 
