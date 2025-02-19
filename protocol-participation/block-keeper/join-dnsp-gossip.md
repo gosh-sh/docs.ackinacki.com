@@ -165,12 +165,12 @@ seeds:
 
 **Run Igniter in Docker:**
 
-* before this set environment variables:
+Before this set environment variables:
 
 ```bash
 cd ~
-export KEYS=./config/keys.yaml
-export CONFIG_FILE=./config/igniter.yaml
+export KEYS=$home/config/keys.yaml
+export CONFIG_FILE=$home/config/igniter.yaml
 
 # Change the following line to match the `advertise_addr` specified in your config file
 export ADVERTISE_PORT=10000
@@ -187,7 +187,7 @@ If you are using a non-standard socket for Docker, you can specify it via the `D
 We strongly recommend using the installation via Docker for proper update process operation.
 {% endhint %}
 
-* and run docker container:
+and run docker container:
 
 ```bash
 docker run  \
@@ -203,7 +203,45 @@ docker run  \
 
 ```
 
-By default the **DNSP state** is accessible on **http://your\_public\_ip\_address:10001**
+{% hint style="warning" %}
+Make sure that the port specified in the `ADVERTISE_PORT` variable **is accessible from the outside**.
+{% endhint %}
+
+### Step 2.2
+
+By default the **DNSP state** is accessible at **http://your\_public\_ip\_address:10001.**
+
+**Be sure to go there and check the following information:**
+
+* **Seeds** in the `seed_addrs` section:
+
+```
+"seed_addrs": [
+      "94.156.25.206:10000",
+      "94.156.25.205:10000",
+      "94.156.25.209:10000",
+      "94.156.25.202:10000",
+      "94.156.25.210:10000",
+      "94.156.25.203:10000",
+      "94.156.25.208:10000",
+      "94.156.25.201:10000",
+      "94.156.25.204:10000",
+      "94.156.25.207:10000"
+    ]
+```
+
+* **Your nodes** in the `node_states` and `live_nodes` sections:
+
+<table data-header-hidden><thead><tr><th width="350"></th><th></th></tr></thead><tbody><tr><td><p></p><p><img src="../../.gitbook/assets/node_states (2).jpg" alt="" data-size="original"></p></td><td><img src="../../.gitbook/assets/Снимок экрана 2025-01-31 в 14.02.23.png" alt="" data-size="original"></td></tr></tbody></table>
+
+* **If the node is not working or functioning incorrectly, it may:**
+  * Temporarily appear in the `dead_nodes` section.
+  * Only see itself in the DNSP Gossip state and not detect other participants. **Be sure to check if you can see the seeds in the** `live_nodes` **list.**
+  * Not see a populated `key_values` section. **Make sure the** `bls_pubkey` **and** `pubkey` **objects are present and correctly filled out.**
+
+{% hint style="info" %}
+You can view information about the number of delegated licenses to your node and the public keys of their owners in the `licenses` subsection.
+{% endhint %}
 
 Link to the [source code](https://github.com/ackinacki/acki-nacki-igniter).
 
@@ -215,7 +253,7 @@ If you own [BK licenses](../../glossary.md#license) and want to delegate them to
 To delegate licenses, you need to know the **public key of the BK node owner.**
 {% endhint %}
 
-* In the first step, you need to connect the cryptocurrency wallet from which the licenses were purchased.
+* In the first step, you need to connect the cryptocurrency **wallet** **from which the licenses were purchased.**
 
 <figure><img src="../../.gitbook/assets/Снимок экрана 2025-01-29 в 11.56.42.png" alt="" width="563"><figcaption></figcaption></figure>
 
@@ -223,7 +261,7 @@ Confirm that you are the wallet owner by signing a message:
 
 <figure><img src="../../.gitbook/assets/Снимок экрана 2025-01-29 в 12.55.09.png" alt="" width="175"><figcaption></figcaption></figure>
 
-* Generate  Acki Nacki License Owner Phrase and public key or click the "Import an existing phrase" button to import your existing Phrase from Acki Nacki app.
+* Generate  Acki Nacki License Owner Phrase and public key or click the `Import an existing phrase` button to import your existing Phrase from Acki Nacki app.
 
 {% hint style="warning" %}
 This Phrase will be linked to your Dashboard Account through a public key. **This can only be done once.** You will use it to withdraw BK rewards for your delegated licenses.&#x20;
@@ -261,13 +299,14 @@ Your **license owner's public key** will be available in the top right corner:
 
 <figure><img src="../../.gitbook/assets/Снимок экрана 2025-01-29 в 16.03.14.png" alt=""><figcaption></figcaption></figure>
 
-* Then, delegate each license from your list to a node using one of the **BK Node Owner** public key generated above.
+* Then, assign each license from your list to a node using one of the **BK Node Owner public key** generated above. \
+  For each node, these keys can be found in the **wallet** section of the `config/keys.yaml` file.
 
 {% hint style="danger" %}
 **Do not use BLS keys for license delegation.**
 {% endhint %}
 
-To do this, go to the **Licenses** tab and click the **Delegate** button.
+To do this, go to the `Licenses` tab and click the `Delegate` button.
 
 <figure><img src="../../.gitbook/assets/Снимок экрана 2025-01-29 в 17.19.04.png" alt="" width="375"><figcaption></figcaption></figure>
 
@@ -275,11 +314,11 @@ To do this, go to the **Licenses** tab and click the **Delegate** button.
 Licenses that are not delegated will not generate rewards.
 {% endhint %}
 
-If you already know the Node Owner's public key, enter it in the corresponding field and click the **Delegate** button.
+At this step, confirm that you know the **Node Owner's public key**, check the box, and click the `Continue` button. On the next step, enter the key and click the `Delegate` button.
 
-If not, send a delegation request to one of the Node Providers from the suggested list.
+If you don’t have such a key, send a delegation request to one of the **Node Providers** from
 
-<figure><img src="../../.gitbook/assets/Снимок экрана 2025-01-29 в 17.38.07.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Снимок экрана 2025-01-31 в 15.29.28.png" alt="" width="563"><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 **No more than 5 BK licenses can be delegated to a single node.** \
@@ -290,15 +329,25 @@ Information about delegated licenses will look something like this:
 
 <figure><img src="../../.gitbook/assets/Снимок экрана 2025-01-29 в 18.13.53.png" alt="" width="563"><figcaption></figcaption></figure>
 
-A BK node can be changed, and a license can be delegated to another BK. However, to avoid losing rewards, this should be done between [Epochs](../../glossary.md#epoch).
+*   A **BK node can be changed**, and your license can be delegated to another BK owner's public key.
 
-Actual information about the DNSP Gossip state can be viewed on the **Gossip** tab:
+    This can be done at any time, but to avoid losing rewards, change the BK after the `Cooler phase` ends (see the diagram) and before the new BK's [Epoch](../../glossary.md#epoch) begins.
+
+<figure><img src="../../.gitbook/assets/fullsizeoutput_8.jpeg" alt="" width="563"><figcaption></figcaption></figure>
+
+To do this, go to the `Licenses` tab, click the `Delegated` button, and in the pop-up window, click on `Revoke delegation`**:**
+
+<figure><img src="../../.gitbook/assets/Снимок экрана 2025-01-30 в 21.13.54.png" alt="" width="375"><figcaption></figcaption></figure>
+
+Then, delegate it to the new BK.
+
+* Actual information about the DNSP Gossip state can be viewed on the `Gossip` tab:
 
 {% hint style="info" %}
 Information about delegated licenses will be automatically updated in Gossip with Acki Nacki Igniter.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/Снимок экрана 2025-01-29 в 20.33.20.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Снимок экрана 2025-01-29 в 20.33.20.png" alt="" width="563"><figcaption></figcaption></figure>
 
 {% hint style="danger" %}
 If the license is not delegated to a BK node before the network launch, it will not be placed in the Zerostate.

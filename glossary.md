@@ -42,7 +42,7 @@ The node management keys that provide access to the BK wallet. They are used for
 
 #### **BK  Reward System**
 
-Block Keepers earn rewards based on their participation in the network during each [Epoch](glossary.md#epoch), regardless of their specific role ([Block Producer](glossary.md#block-producer-bp), [Block Verifier (Acki-Nacki)](glossary.md#block-verifier-or-acki-nacki), or [Block Keeper](glossary.md#block-keeper-bk)). The reward depends on the BK’s [stake](glossary.md#stake) and [Reputation Coefficient](glossary.md#reputation-coefficient).
+Block Keepers earn rewards based on their participation in the network during each [Epoch](glossary.md#epoch), regardless of their specific role ([Block Producer](glossary.md#block-producer-bp), [Block Verifier (Acki-Nacki)](glossary.md#block-verifier-or-acki-nacki), or [Block Keeper](glossary.md#block-keeper-bk)). The reward depends on the BK’s [stake](glossary.md#stake) and [Reputation Coefficient](glossary.md#reputation-coefficient), and is evenly distributed among the licenses delegated to it.
 
 #### **BK Wallet**&#x20;
 
