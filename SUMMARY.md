@@ -5,10 +5,12 @@
 * [Launch & Genesis](launch-and-genesis.md)
 * [Tokenomics](tokenomics/README.md)
   * [Fee System](tokenomics/fee-system.md)
-* [Acki Nacki Node License](acki-nacki-node-license.md)
 
 ## Protocol participation
 
+* [License](protocol-participation/license/README.md)
+  * [Acki Nacki Node License](protocol-participation/license/acki-nacki-node-license.md)
+  * [License Dashboard Guide](protocol-participation/license/license-dashboard-guide.md)
 * [Block Keeper](protocol-participation/block-keeper/README.md)
   * [Join DNSP Gossip](protocol-participation/block-keeper/join-dnsp-gossip.md)
   * [Setting up Block Keeper Node](protocol-participation/block-keeper/setting-up-block-keeper-node.md)
