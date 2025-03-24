@@ -247,111 +247,11 @@ Link to the [source code](https://github.com/ackinacki/acki-nacki-igniter).
 
 ## **Step 3. Delegating licenses**
 
-If you own [BK licenses](../../glossary.md#license) and want to delegate them to your nodes, do this in the [dashboard](https://dashboard.ackinacki.com/).
+_**COMING SOON:**_&#x20;
 
-{% hint style="warning" %}
-To delegate licenses, you need to know the **public key of the BK node owner.**
-{% endhint %}
+_We're preparing a new release of **Acki Nacki Igniter**, where licenses will be passed in the  configuration file._
 
-* In the first step, you need to connect the cryptocurrency **wallet** **from which the licenses were purchased.**
 
-<figure><img src="../../.gitbook/assets/Снимок экрана 2025-01-29 в 11.56.42.png" alt="" width="563"><figcaption></figcaption></figure>
-
-Confirm that you are the wallet owner by signing a message:
-
-<figure><img src="../../.gitbook/assets/Снимок экрана 2025-01-29 в 12.55.09.png" alt="" width="175"><figcaption></figcaption></figure>
-
-* Generate  Acki Nacki License Owner Phrase and public key or click the `Import an existing phrase` button to import your existing Phrase from Acki Nacki app.
-
-{% hint style="warning" %}
-This Phrase will be linked to your Dashboard Account through a public key. **This can only be done once.** You will use it to withdraw BK rewards for your delegated licenses.&#x20;
-{% endhint %}
-
-<figure><img src="../../.gitbook/assets/Снимок экрана 2025-01-29 в 17.02.10.png" alt="" width="331"><figcaption></figcaption></figure>
-
-At this step, a seed phrase will be generated/imported for this Account. \
-It will be required to manage your licenses. After the network starts, you will be able to update the license contract owner to a wallet address, such as a multisig. This way, the withdrawal of rewards can be confirmed by multiple custodians.
-
-{% hint style="danger" %}
-**You will only see `seed phrase` once and won't be able to restore it!**
-{% endhint %}
-
-<figure><img src="../../.gitbook/assets/Снимок экрана 2025-01-29 в 14.17.13.png" alt="" width="375"><figcaption></figcaption></figure>
-
-{% hint style="danger" %}
-Write down your **`seed phrase`** and store it in a secure location. \
-Never share it with anyone. Avoid storing it in plain text, screenshots, or any other insecure method. If you lose it, you lose access to your assets. Anyone who obtains it will have full access to your assets.&#x20;
-{% endhint %}
-
-A very important point: make sure you have memorized your seed phrase correctly:
-
-<figure><img src="../../.gitbook/assets/Снимок экрана 2025-01-29 в 14.42.28.png" alt="" width="375"><figcaption></figcaption></figure>
-
-* Create and confirm a `passcode`:
-
-{% hint style="info" %}
-The **passcode** is used to encrypt the seed phrase in the device storage.
-{% endhint %}
-
-<figure><img src="../../.gitbook/assets/Снимок экрана 2025-01-29 в 15.22.51.png" alt="" width="375"><figcaption></figcaption></figure>
-
-Your **license owner's public key** will be available in the top right corner:
-
-<figure><img src="../../.gitbook/assets/Снимок экрана 2025-01-29 в 16.03.14.png" alt=""><figcaption></figcaption></figure>
-
-* Then, assign each license from your list to a node using one of the **BK Node Owner public key** generated above. \
-  For each node, these keys can be found in the **wallet** section of the `config/keys.yaml` file.
-
-{% hint style="danger" %}
-**Do not use BLS keys for license delegation.**
-{% endhint %}
-
-To do this, go to the `Licenses` tab and click the `Delegate` button.
-
-<figure><img src="../../.gitbook/assets/Снимок экрана 2025-01-29 в 17.19.04.png" alt="" width="375"><figcaption></figcaption></figure>
-
-{% hint style="warning" %}
-Licenses that are not delegated will not generate rewards.
-{% endhint %}
-
-At this step, confirm that you know the **Node Owner's public key**, check the box, and click the `Continue` button. On the next step, enter the key and click the `Delegate` button.
-
-If you don’t have such a key, send a delegation request to one of the **Node Providers** from
-
-<figure><img src="../../.gitbook/assets/Снимок экрана 2025-01-31 в 15.29.28.png" alt="" width="563"><figcaption></figcaption></figure>
-
-{% hint style="warning" %}
-**No more than 5 BK licenses can be delegated to a single node.** \
-The reward for BK validation in the network is evenly distributed among the licenses delegated to it.
-{% endhint %}
-
-Information about delegated licenses will look something like this:
-
-<figure><img src="../../.gitbook/assets/Снимок экрана 2025-01-29 в 18.13.53.png" alt="" width="563"><figcaption></figcaption></figure>
-
-*   A **BK node can be changed**, and your license can be delegated to another BK owner's public key.
-
-    This can be done at any time, but to avoid losing rewards, change the BK after the `Cooler phase` ends (see the diagram) and before the new BK's [Epoch](../../glossary.md#epoch) begins.
-
-<figure><img src="../../.gitbook/assets/fullsizeoutput_8.jpeg" alt="" width="563"><figcaption></figcaption></figure>
-
-To do this, go to the `Licenses` tab, click the `Delegated` button, and in the pop-up window, click on `Revoke delegation`**:**
-
-<figure><img src="../../.gitbook/assets/Снимок экрана 2025-01-30 в 21.13.54.png" alt="" width="375"><figcaption></figcaption></figure>
-
-Then, delegate it to the new BK.
-
-* Actual information about the DNSP Gossip state can be viewed on the `Gossip` tab:
-
-{% hint style="info" %}
-Information about delegated licenses will be automatically updated in Gossip with Acki Nacki Igniter.
-{% endhint %}
-
-<figure><img src="../../.gitbook/assets/Снимок экрана 2025-01-29 в 20.33.20.png" alt="" width="563"><figcaption></figcaption></figure>
-
-{% hint style="danger" %}
-If the license is not delegated to a BK node before the network launch, it will not be placed in the Zerostate.
-{% endhint %}
 
 {% hint style="info" %}
 **Once over 75% of BK Licenses join the DNSP, the network will automatically go live.**
