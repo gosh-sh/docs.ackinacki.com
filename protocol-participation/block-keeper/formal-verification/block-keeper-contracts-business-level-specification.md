@@ -4,7 +4,7 @@ description: Prepared by Pruvendo
 
 # Block Keeper Contracts Business-Level Specification
 
-<div align="right"><figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure></div>
+<div align="right"><figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure></div>
 
 ## Purpose <a href="#docs-internal-guid-9795c783-7fff-46c9-b911-6f08cd34ef9c" id="docs-internal-guid-9795c783-7fff-46c9-b911-6f08cd34ef9c"></a>
 

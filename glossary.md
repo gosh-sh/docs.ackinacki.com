@@ -38,6 +38,7 @@ This is a node that performs the role of a [Block Keeper (BK)](glossary.md#block
 
 #### **BK Node Owner keys**&#x20;
 
+**(Master keys)**\
 The node management keys that provide access to the BK wallet. They are used for managing the node, running node, staking, restaking, and adding licenses to the approved list. These keys cannot be used to withdraw Rewards from the BK wallet.
 
 #### **BK  Reward System**
@@ -47,6 +48,10 @@ Block Keepers earn rewards based on their participation in the network during ea
 #### **BK Wallet**&#x20;
 
 The wallet used for staking. The address of the BK Wallet serves as the identifier of the node.
+
+#### BK Wallet whitelist
+
+A list of [license numbers](glossary.md#license-number) that can be delegated to this node.
 
 #### **Block Manager (BM)**
 
@@ -90,7 +95,11 @@ The participation period in the Acki Nacki protocol during which a participant a
 
 #### License
 
-The [**BK License**](protocol-participation/license/acki-nacki-node-license.md) is a contract that grants the right for a BK to participate in the protocol and receive rewards. The license is delegated to a specific BK. Each BK can be delegated up to 5 licenses. The Licenses are delegated without restrictions..
+The [**BK License**](protocol-participation/license/acki-nacki-node-license.md) is a [contract](https://github.com/ackinacki/ackinacki/blob/main/contracts/bksystem/License.sol) that grants the right for a BK to participate in the protocol and receive rewards. The license is delegated to a specific BK. Each BK can be delegated up to 5 licenses. The Licenses are delegated without restrictions.
+
+#### License number
+
+An **on-chain unique number** assigned during the deployment of the License contract.
 
 ## M
 
