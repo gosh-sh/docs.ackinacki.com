@@ -101,6 +101,14 @@ The [**BK License**](protocol-participation/license/acki-nacki-node-license.md) 
 
 An **on-chain unique number** assigned during the deployment of the License contract.
 
+#### License Owner
+
+A person who [registered at the Acki Nacki Dashboard](https://docs.ackinacki.com/protocol-participation/license/license-dashboard-guide) and has acquired a [License](https://docs.ackinacki.com/protocol-participation/license/acki-nacki-node-license)  and License Owner Keys to participate in the Acki Nacki protocol.&#x20;
+
+#### License Owner Keys
+
+The keys used to manage license contracts (delegate and revoke delegation) and withdraw staking rewards. They can be obtained by [registering in the dashboard](https://docs.ackinacki.com/protocol-participation/license/license-dashboard-guide).
+
 ## M
 
 #### **Minimal Stake**
@@ -168,4 +176,4 @@ The unit of account used to cover network fees. It is converted from [SHELL](glo
 
 #### **Zerostate**
 
-The initial state of the network (first block).
+The initial state of the network, representing the first block state of the blockchain. It is created after all the requirements of the [**Decentralized Network Starter Protocol (DNSP)**](https://docs.ackinacki.com/protocol-participation/block-keeper/join-dnsp-gossip) have been fulfilled.

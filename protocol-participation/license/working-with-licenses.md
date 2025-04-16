@@ -1,10 +1,14 @@
+---
+description: The described flow will be applicable after the network is launched.
+---
+
 # Working with Licenses
 
 <figure><img src="../../.gitbook/assets/DL (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 ## Obtaining License Owner Keys and License Contract Addresses
 
-The License Owner [registers](https://docs.ackinacki.com/protocol-participation/license/license-dashboard-guide) in the dashboard ([https://dashboard.ackinacki.com](https://dashboard.ackinacki.com/)) using a third-party crypto wallet \[1.1] that was used to purchase the license. Upon registration, the License Owner will receive a generated seed phrase and a corresponding key pair \[1.2].
+The License Owner [registers](https://docs.ackinacki.com/protocol-participation/license/license-dashboard-guide) in the [dashboard](https://dashboard.ackinacki.com) using a third-party crypto wallet \[1.1] that was used to purchase the license. Upon registration, the License Owner will receive a generated seed phrase and a corresponding key pair \[1.2].
 
 {% hint style="warning" %}
 To manage their license contacts, it is recommended that the License Owner save the obtained keys in a file named `License.keys.json`.&#x20;
