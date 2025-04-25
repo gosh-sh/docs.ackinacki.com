@@ -56,7 +56,7 @@ Save your BK wallet address, `Node ID`, and the file containing the BK Node Owne
 **5. Delegating a License to a BK Wallet**
 
 {% hint style="warning" %}
-A maximum of 5 licenses can be delegated to a single node.
+A maximum of 10 licenses can be delegated to a single node.
 {% endhint %}
 
 To delegate a license, a License Owner should call the `addBKWallet(uint256 pubkey)` method in a [License contract](https://github.com/ackinacki/ackinacki/blob/main/contracts/bksystem/License.sol) in each License contract.

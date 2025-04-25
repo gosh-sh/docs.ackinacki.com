@@ -30,7 +30,7 @@ To do this, the License Owner must provide their License Number \[2.1] to the No
 
 {% hint style="warning" %}
 There is no limit to the number of licenses that can be added to a BK Wallet whitelist; \
-however, only **five** of them can be delegated.
+however, only **ten** of them can be delegated.
 {% endhint %}
 
 ## BK Wallet Deployment
@@ -38,7 +38,7 @@ however, only **five** of them can be delegated.
 The BK wallet [is deployed by the Node Owner](https://github.com/ackinacki/ackinacki/tree/main?tab=readme-ov-file#block-keeper-wallet-deployment) using the [deployment script](https://github.com/ackinacki/ackinacki/blob/main/scripts/create_block_keeper_wallet.sh) \[3].
 
 {% hint style="info" %}
-The wallet can be deployed with an empty whitelist or pre-filled with any number of licenses the Node Owner chooses to authorize. But only 5 licenses of these can be delegated later.
+The wallet can be deployed with an empty whitelist or pre-filled with any number of licenses the Node Owner chooses to authorize. But only 10 licenses of these can be delegated later.
 {% endhint %}
 
 {% hint style="info" %}
@@ -52,7 +52,7 @@ To initiate delegation, the Node Owner must send their public key (`BK_NODE_OWNE
 ## Delegating a License
 
 {% hint style="warning" %}
-A maximum of 5 licenses can be delegated to a single node.
+A maximum of 10 licenses can be delegated to a single node.
 {% endhint %}
 
 To delegate a license to a specific node, the License Owner must call the `addBKWallet(uint256 pubkey)` method on their [`License`](https://github.com/ackinacki/ackinacki/blob/main/contracts/bksystem/License.sol) contract \[5.1]:

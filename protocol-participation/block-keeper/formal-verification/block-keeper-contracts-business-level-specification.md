@@ -198,7 +198,7 @@ When performed the special TVM instruction is called with the following paramete
 
 _License_ smart contract is controlled by the License Owner’s cryptographic keys (_ED25519_). Without an active _License_ smart contract,  _Block Keeper_ won’t function (it won’t be able to submit a stake to _Epoch_ smart contract).
 
-In order to submit stakes at least one _License_ must be delegated to _BK Wallet_. Up to 5 _Licenses_ can be delegated. A _License_ can be delegated just to one _BK wallet_.
+In order to submit stakes at least one _License_ must be delegated to _BK Wallet_. Up to 10 _Licenses_ can be delegated. A _License_ can be delegated just to one _BK wallet_.
 
 The rewards are split equally between all _Licenses_ currently delegated. The stake is blocked for active wallet _Licenses_, in proportion to their wallet balances. If a slashing occurred the remaining stake will be divided proportionally between original stake owners.
 

@@ -95,7 +95,7 @@ The participation period in the Acki Nacki protocol during which a participant a
 
 #### License
 
-The [**BK License**](protocol-participation/license/acki-nacki-node-license.md) is a [contract](https://github.com/ackinacki/ackinacki/blob/main/contracts/bksystem/License.sol) that grants the right for a BK to participate in the protocol and receive rewards. The license is delegated to a specific BK. Each BK can be delegated up to 5 licenses. The Licenses are delegated without restrictions.
+The [**BK License**](protocol-participation/license/acki-nacki-node-license.md) is a [contract](https://github.com/ackinacki/ackinacki/blob/main/contracts/bksystem/License.sol) that grants the right for a BK to participate in the protocol and receive rewards. The license is delegated to a specific BK. Each BK can be delegated up to 10 licenses. The Licenses are delegated without restrictions.
 
 #### License number
 
