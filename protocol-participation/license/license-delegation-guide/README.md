@@ -31,7 +31,7 @@ After registering in [the dashboard](https://dashboard.ackinacki.com/licenses), 
 
 Choose a Node Provider to whom you want to delegate your Licenses:
 
-<figure><img src="../../../.gitbook/assets/node providers.jpg" alt="" width="310"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/node providers (3).jpg" alt="" width="366"><figcaption></figcaption></figure>
 
 and submit a delegation request by filling in the following fields:
 
@@ -41,14 +41,23 @@ and submit a delegation request by filling in the following fields:
   * **`Email`**
   * **`Telegram`**
 
-Confirm the entered information by entering your passcode in the **`Passcode`** field.\
+Confirm the entered information by entering your passcode in the **`Passcode`** field.
+
+Contact the selected Node Provider to agree on the delegation fee and complete the payment process, then confirm by checking the box.
+
+{% hint style="warning" %}
+Be sure to contact the selected Node Provider to coordinate and complete the delegation payment.
+{% endhint %}
+
+Confirm this by checking the box.
+
 Then click the **`Sign and send request`** button:
 
 {% hint style="info" %}
 By doing so, you confirm that you are intentionally delegating your licenses to this Node Provider. This action generates a `delegation_sig`, which is required to validate the delegation.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/request (1).jpg" alt="" width="297"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/request (3).jpg" alt="" width="304"><figcaption></figcaption></figure>
 
 You will see a confirmation that your request has been signed.
 
@@ -72,7 +81,7 @@ If the Node Provider has shared their public key with you, then after registerin
 
 In the list of Node Providers that appears, click the **Custom** button:
 
-<figure><img src="../../../.gitbook/assets/list_providers_custom.jpg" alt="" width="309"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/list_providers_custom (1).jpg" alt="" width="366"><figcaption></figcaption></figure>
 
 Please fill out the delegation form, enter your passcode to confirm the delegation, and click `Sign Delegation`
 

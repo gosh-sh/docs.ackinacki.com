@@ -29,5 +29,5 @@ Follow the instructions in the [_Acki Nacki Igniter_ repository](https://github.
 Link to the [source code](https://github.com/ackinacki/acki-nacki-igniter).
 
 {% hint style="info" %}
-**Once over 75% of BK Licenses join the DNSP, the network will automatically go live.**
+**Network launch on June 29, 2025.**
 {% endhint %}
