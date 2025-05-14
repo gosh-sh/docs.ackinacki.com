@@ -275,7 +275,7 @@ Each license has a balance associated with it.
 
 The amount owned by the license but locked by the current Epoch.
 
-* In case of Epoch starting the following amount is locked: $$\frac {\sigma(b(\lambda)-c(\lambda))} {\sum_{l \in L}( b(l)-c(l))}$$, where:
+* In case of Epoch starting the following amount is locked: $$\frac {\sigma(b(\lambda)-c(\lambda))} {\sum_{l \in L}{( b(l)-c(l))}}$$, where:
   * 𝜎 - stake
   * 𝜆 - the current license
   * _L_ - the set of the all participating licenses
@@ -527,7 +527,6 @@ _License_ can be detached from _BK Wallet_ by request from the license _Owner_.
 In this case:
 
 * _License_:
-*
   * Checks if the _License_ is attached to some _BK Wallet_
   * Informs the _BK Wallet_ that it is going to be removed
 * _BK Wallet_:
@@ -539,6 +538,24 @@ In this case:
 * _License_:
   * Detaches the license from the _BK Wallet_
   * Keeps the reputation time
+
+#### Deploying a new license <a href="#docs-internal-guid-674a502c-7fff-85a7-5c41-0e98a5e9e36d" id="docs-internal-guid-674a502c-7fff-85a7-5c41-0e98a5e9e36d"></a>
+
+Deploying a new license
+
+* For commercial deployment can be initiated by the Owner only.
+* For free deployment can be initiated by anybody
+* Reputation is set to zero for a new license
+* License counter is increased by one
+
+#### License locking
+
+License locking
+
+Locks or unlocks the license.
+
+* Can be initiated by the Owner only
+* Fails if the license is unbound
 
 ## Top-level scenarios <a href="#docs-internal-guid-c89ba548-7fff-9bea-b59c-11855d35d726" id="docs-internal-guid-c89ba548-7fff-9bea-b59c-11855d35d726"></a>
 
