@@ -6,6 +6,8 @@ description: Acki Nacki tokenomics
 
 The original document can be found here [Tokenomics Paper](https://tokenomics.ackinacki.com/).
 
+Use the [reward calculator](https://rewardcalculator.ackinacki.com/) to estimate your potential rewards.
+
 ## Abstract&#x20;
 
 We present the Acki Nacki network Tokenomics, optimized for maximum decentralization from the start, as well as for security and fairness. \
@@ -158,6 +160,8 @@ Therefore, the Block Keeper’s reward function $$BKRPS$$ will be calculated as 
 * $$BKED$$ — Block Keeper Epoch Duration — the duration of one validation Epoch in seconds
 
 <figure><img src="../.gitbook/assets/f_Block_Keeper_Reward_7.jpg" alt=""><figcaption><p>Formula 7</p></figcaption></figure>
+
+Use the [reward calculator](https://rewardcalculator.ackinacki.com/) to estimate your potential rewards.
 
 #### Block Keeper Epoch Reward
 
@@ -466,6 +470,8 @@ Block Managers do not have a stake because they do not verify transactions and d
 The reward for Block Managers is calculated using the following formula:
 
 <figure><img src="../.gitbook/assets/f_39.jpg" alt=""><figcaption><p>Formula 37</p></figcaption></figure>
+
+Use the [reward calculator](https://rewardcalculator.ackinacki.com/) to estimate your potential rewards.
 
 ### External Messages Coefficient
 
