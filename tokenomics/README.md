@@ -6,7 +6,7 @@ description: Acki Nacki tokenomics
 
 The original document can be found here [Tokenomics Paper](https://tokenomics.ackinacki.com/).
 
-Use the [reward calculator](https://rewardcalculator.ackinacki.com/) to estimate your potential rewards.
+For personalized projections of token economic metrics and reward amounts, use the [Reward Calculator](https://rewardcalculator.ackinacki.com/).
 
 ## Abstract&#x20;
 
@@ -161,7 +161,7 @@ Therefore, the Block Keeper’s reward function $$BKRPS$$ will be calculated as 
 
 <figure><img src="../.gitbook/assets/f_Block_Keeper_Reward_7.jpg" alt=""><figcaption><p>Formula 7</p></figcaption></figure>
 
-Use the [reward calculator](https://rewardcalculator.ackinacki.com/) to estimate your potential rewards.
+For personalized projections of token economic metrics and reward amounts, use the [Reward Calculator](https://rewardcalculator.ackinacki.com/).
 
 #### Block Keeper Epoch Reward
 
@@ -471,7 +471,7 @@ The reward for Block Managers is calculated using the following formula:
 
 <figure><img src="../.gitbook/assets/f_39.jpg" alt=""><figcaption><p>Formula 37</p></figcaption></figure>
 
-Use the [reward calculator](https://rewardcalculator.ackinacki.com/) to estimate your potential rewards.
+For personalized projections of token economic metrics, use the [Reward Calculator](https://rewardcalculator.ackinacki.com/).
 
 ### External Messages Coefficient
 
