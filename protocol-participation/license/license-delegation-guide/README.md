@@ -31,7 +31,7 @@ After registering in [the dashboard](https://dashboard.ackinacki.com/licenses), 
 
 Choose a Node Provider to whom you want to delegate your Licenses:
 
-<figure><img src="../../../.gitbook/assets/node providers (3).jpg" alt="" width="366"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image.png" alt="" width="375"><figcaption></figcaption></figure>
 
 and submit a delegation request by filling in the following fields:
 
@@ -81,7 +81,7 @@ If the Node Provider has shared their public key with you, then after registerin
 
 In the list of Node Providers that appears, click the **Custom** button:
 
-<figure><img src="../../../.gitbook/assets/list_providers_custom (1).jpg" alt="" width="366"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/providers.jpg" alt="" width="375"><figcaption></figcaption></figure>
 
 Please fill out the delegation form, enter your passcode to confirm the delegation, and click `Sign Delegation`
 
