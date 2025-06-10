@@ -119,11 +119,11 @@ You can view the ID of each license in the Dashboard under the **Licenses** tab:
 * [x] License Owner public key
 * [x] Node Provider public key
 
-Then, follow the instructions described in the [**Create a Delegation Signature**](https://github.com/gosh-sh/acki-nacki-igniter/tree/main/docs/Manual_license_delegation.md) section.
+Then, follow the instructions described in the [**Create a Delegation Signature**](https://github.com/ackinacki/acki-nacki-igniter/blob/main/docs/Manual_license_delegation.md) section.
 
 ## Next Steps After Delegation
 
-At this stage, preparations for the network launch are underway. For licenses delegated during this phase to be included in the [Zerostate](https://app.gitbook.com/s/QOCdnqyOxgbbkJLljM8y/on-chain-architecture/gosh-wallet), the node to which you delegated your license must join the [Decentralized Network Starter Protocol (DNSP)](https://docs.ackinacki.com/protocol-participation/block-keeper/join-dnsp-gossip). After that, the license status will change to **`Online`**, and you will see the update in the Dashboard.
+At this stage, preparations for the network launch are underway. For licenses delegated during this phase to be included in the [Zerostate](../../../glossary.md#zerostate), the node to which you delegated your license must join the [Decentralized Network Starter Protocol (DNSP)](https://docs.ackinacki.com/protocol-participation/block-keeper/join-dnsp-gossip). After that, the license status will change to **`Online`**, and you will see the update in the Dashboard.
 
 ## **Revoke License**
 
