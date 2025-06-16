@@ -20,7 +20,7 @@ The License Owner should send their **`public key`** to a GOSH representative vi
 
 The GOSH team will deploy licenses and provide you with the their addresses and unique on-chain numbers.
 
-**5. Deploying a Block Keeper Wallet with a Whitelist**
+**3. Deploying a Block Keeper Wallet with a Whitelist**
 
 {% hint style="warning" %}
 Before deploying a BK Wallet all the delegating licenses have to be deployed, \
@@ -53,7 +53,7 @@ Initial steps have been done. Save your node id
 Save your BK wallet address, `Node ID`, and the file containing the BK Node Owner keys — these will be needed to run the staking script.
 {% endhint %}
 
-**5. Delegating a License to a BK Wallet**
+**4. Delegating a License to a BK Wallet**
 
 {% hint style="warning" %}
 A maximum of 10 licenses can be delegated to a single node.
@@ -117,7 +117,7 @@ result:
 
 **Learn more about** [**how to work with licenses**](../license/working-with-licenses.md)**.**
 
-**6. Staking**
+**5. Staking**
 
 Only after completing all previous steps can the Node Owner run the [**staking script**](https://github.com/ackinacki/ackinacki/tree/main?tab=readme-ov-file#staking)**.**
 
