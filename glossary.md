@@ -142,7 +142,7 @@ The period before the [Epoch](glossary.md#epoch) during which a [BK node](glossa
 
 #### Proxy
 
-A service that relays blocks to its subscribers. **Type 1 Proxies** subscribe to Block Keepers (BKs), which broadcast blocks to the network through them, with BKs specifying their target Proxies during the Pre-Epoch deployment. **Type 2 Proxies** subscribe to all Type 1 Proxies in the network and directly to BKs without their own Proxy. This structure ensures efficient block distribution across the network.
+A specialized network service designed to optimize block exchange between participants in the Acki Nacki network. Its primary purpose is to reduce overall network traffic between nodes and to improve the scalability and stability of the network.
 
 ## R
 
