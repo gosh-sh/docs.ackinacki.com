@@ -1,16 +1,12 @@
-# How to join the protocol as Block Keeper?
+# How does it work?
 
 [Here](https://tokenomics.ackinacki.com/) you can review multiple plots detailing various aspects of [Tokenomics](../../tokenomics/).
 
 [Glossary](../../glossary.md)
 
-## Setting up Block Keeper Node
-
-By this point, you should already have a [node running](setting-up-block-keeper-node.md).
-
-## **How to join a network as a Block Keeper**
-
 ### **Contracts**
+
+In its operation, the Block Keeper (BK) uses the following contracts:
 
 * **BlockKeeperContractRoot (Root)** - The main system contract that manages a [Block Keeper's (BK)](../../glossary.md#block-keeper-bk) participation in the network.
 * **AckiNackiBlockKeeperNodeWallet (Wallet)** - The BK wallet contract, responsible for [stake](../../glossary.md#stake) management.
@@ -284,8 +280,8 @@ deployBlockKeeperContractContinueAfterDestroy(
 )
 ```
 
-20.4 The Wallet contract deploys a new Epoch contract  if there is already another stake with `isContinue=true` flag ([see the previous step)](how-to-join-the-protocol-as-block-keeper.md#stage-4-preparing-the-stake-for-the-next-epoch-optional).\
-At the same time, the number of active BKs is updated in the Root Contract, and information about the previously blocked stake is refreshed (steps [12.1 and 12.2](how-to-join-the-protocol-as-block-keeper.md#stage-3-starting-the-epoch) ):
+20.4 The Wallet contract deploys a new Epoch contract  if there is already another stake with `isContinue=true` flag ([see the previous step)](how-does-it-work.md#stage-4-preparing-the-stake-for-the-next-epoch-optional).\
+At the same time, the number of active BKs is updated in the Root Contract, and information about the previously blocked stake is refreshed (steps [12.1 and 12.2](how-does-it-work.md#stage-3-starting-the-epoch) ):
 
 ```
   constructor (
