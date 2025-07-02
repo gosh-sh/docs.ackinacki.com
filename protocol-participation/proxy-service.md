@@ -32,4 +32,4 @@ It is **not recommended** to run more than **100 BK nodes** per such Proxy serve
 
 ## Proxy Deployment
 
-Instructions for deploying a Proxy service are available [here](https://github.com/ackinacki/ackinacki/blob/main/proxy/README.md).
+Instructions for deploying a Proxy service are available [here](https://github.com/ackinacki/ackinacki/tree/main?tab=readme-ov-file#deployment-with-ansible-1).

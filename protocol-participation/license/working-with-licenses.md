@@ -30,7 +30,7 @@ To do this, the License Owner must provide their License Number \[2.1] to the No
 
 {% hint style="warning" %}
 There is no limit to the number of licenses that can be added to a BK Wallet whitelist; \
-however, only **ten** of them can be delegated.
+however, only **20 (twenty)** of them can be delegated.
 {% endhint %}
 
 ## BK Wallet Deployment
@@ -38,11 +38,27 @@ however, only **ten** of them can be delegated.
 The BK wallet [is deployed by the Node Owner](https://github.com/ackinacki/ackinacki/tree/main?tab=readme-ov-file#block-keeper-wallet-deployment) using the [deployment script](https://github.com/ackinacki/ackinacki/blob/main/scripts/create_block_keeper_wallet.sh) \[3].
 
 {% hint style="info" %}
-The wallet can be deployed with an empty whitelist or pre-filled with any number of licenses the Node Owner chooses to authorize. But only 10 licenses of these can be delegated later.
+The wallet can be deployed with an empty whitelist or pre-filled with any number of licenses the Node Owner chooses to authorize. But only **20 (twenty)** licenses of these can be delegated later.
 {% endhint %}
 
 {% hint style="info" %}
-The Node Owner can modify the whitelist at any time by using the `setLicenseWhiteList(mapping(uint256 => bool))` method in the [`AckiNackiBlockKeeperNodeWallet`](https://github.com/ackinacki/ackinacki/blob/main/contracts/bksystem/AckiNackiBlockKeeperNodeWallet.sol) contract.
+The Node Owner can modify the whitelist at any time by using the setLicenseWhiteList(mapping(uint256 => bool) whiteListLicense) method in the [`AckiNackiBlockKeeperNodeWallet`](https://github.com/ackinacki/ackinacki/blob/main/contracts/bksystem/AckiNackiBlockKeeperNodeWallet.sol) contract. \
+Pass in the license numbers you received from the License Owners.
+
+* **`uint256` (key)** – the license number.
+* **`bool` (value)** – set to `true` to **add** the license on the whitelist, or `false` to **remove** it.\
+
+
+Example command:
+
+{% code overflow="wrap" %}
+```sh
+tvm-cli call BK_WALLET_ADDR setLicenseWhiteList '{"whiteListLicense": {"1": true, "2": true, "5": true}}' --abi acki-nacki/contracts/bksystem/AckiNackiBlockKeeperNodeWallet.abi.json --sign BK_NODE_OWNER_KEYS
+```
+{% endcode %}
+
+\
+You will need the ABI file [AckiNackiBlockKeeperNodeWallet.abi.json](https://raw.githubusercontent.com/gosh-sh/acki-nacki/refs/heads/refactor/fee/contracts/bksystem/AckiNackiBlockKeeperNodeWallet.sol?token=GHSAT0AAAAAADCMNSQIMA3ZIFGSUAMDQGQY2DDV64Q) to run this command.
 {% endhint %}
 
 ## Providing the BK Node Owner Public Key
@@ -52,7 +68,7 @@ To initiate delegation, the Node Owner must send their public key (`BK_NODE_OWNE
 ## Delegating a License
 
 {% hint style="warning" %}
-A maximum of 10 licenses can be delegated to a single node.
+A maximum of **20 (twenty)** licenses can be delegated to a single node.
 {% endhint %}
 
 To delegate a license to a specific node, the License Owner must call the `addBKWallet(uint256 pubkey)` method on their [`License`](https://github.com/ackinacki/ackinacki/blob/main/contracts/bksystem/License.sol) contract \[5.1]:

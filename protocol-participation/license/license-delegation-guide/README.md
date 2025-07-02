@@ -5,7 +5,7 @@ After purchasing a **BK license**, it does not become active automatically. To a
 In order for the licenses to be added to the zerostate and start getting rewards from the 1st block, this delegation has to happen before the network launch.
 
 {% hint style="info" %}
-A maximum of 10 licenses can be delegated to a single node.
+A maximum of **20 (twenty)** licenses can be delegated to a single node.
 {% endhint %}
 
 ## Delegation via Acki Nacki Dashboard

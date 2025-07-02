@@ -95,7 +95,7 @@ The participation period in the Acki Nacki protocol during which a participant a
 
 #### License
 
-The [**BK License**](protocol-participation/license/acki-nacki-node-license.md) is a [contract](https://github.com/ackinacki/ackinacki/blob/main/contracts/bksystem/License.sol) that grants the right for a BK to participate in the protocol and receive rewards. The license is delegated to a specific BK. Each BK can be delegated up to 10 licenses. The Licenses are delegated without restrictions.
+The [**BK License**](protocol-participation/license/acki-nacki-node-license.md) is a [contract](https://github.com/ackinacki/ackinacki/blob/main/contracts/bksystem/License.sol) that grants the right for a BK to participate in the protocol. The license is delegated to a specific BK. Each BK can be delegated up to 20 (twenty) licenses. The Licenses are delegated without restrictions.
 
 #### License number
 
@@ -114,6 +114,10 @@ The keys used to manage license contracts (delegate and revoke delegation) and w
 #### **Minimal Stake**
 
 The minimum amount of tokens a Block Keeper must stake to participate in the network. This value dynamically adjusts based on the difference between the current number of Block Keepers and the required number of Block Keepers in the network.
+
+#### Maximum stake&#x20;
+
+The maximum number of tokens a Block Keeper can stake to participate in the network. This stake remains valid as long as the license stays active. The value is dynamically adjusted based on the current number of Block Keepers in the network, the total number of tokens minted exclusively by Block Keepers, and the number of tokens burned due to slashing penalties.
 
 #### **Mobile Verifier**
 
@@ -158,7 +162,7 @@ The utility token within the Acki Nacki network is designed to compensate [NACKL
 
 #### **Stake**
 
-The amount of [NACKL](glossary.md#nackl) tokens required to participate in the Acki Nacki protocol. At the launch of the Acki Nacki network (zero state), staking is not required if a [License BK](glossary.md#license) is present. Staking will become necessary for validation at a later stage, in accordance with the [Minimal Stake](glossary.md#minimal-stake).
+The amount of [NACKL](glossary.md#nackl) tokens required to participate in the Acki Nacki protocol. At the launch of the Acki Nacki network (zerostate), staking is not required if a [License BK](glossary.md#license) is present. [Staking](https://github.com/ackinacki/ackinacki/tree/main?tab=readme-ov-file#staking) will become necessary for validation at a later stage.
 
 ## T
 

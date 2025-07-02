@@ -50,13 +50,13 @@ Initial steps have been done. Save your node id
 ```
 
 {% hint style="warning" %}
-Save your BK wallet address, `Node ID`, and the file containing the BK Node Owner keys — these will be needed to run the staking script.
+Save your BK wallet address —which also serves as the node identifier (without the `0:` prefix)—and the file containing the BK Node Owner keys; you’ll need to run the staking script.
 {% endhint %}
 
 **4. Delegating a License to a BK Wallet**
 
 {% hint style="warning" %}
-A maximum of 10 licenses can be delegated to a single node.
+A maximum of 20 (twenty) licenses can be delegated to a single node.
 {% endhint %}
 
 To delegate a license, a License Owner should call the `addBKWallet(uint256 pubkey)` method in a [License contract](https://github.com/ackinacki/ackinacki/blob/main/contracts/bksystem/License.sol) in each License contract.
