@@ -35,18 +35,18 @@ In the network, there may be from several hundred to thousands of nodes, and the
 
 It implies two key points:
 
-*   Incoming data volume is equal to BLOCK\_SIZE × 3 × THREADS\_NUMBER.
+*   Incoming data volume is equal to BLOCK\_SIZE × 3 × THREADS\_NUMBER per second.
 
-    Assuming an average block with 300 transactions is \~100 KB, and the network card limit is 1 Gbit (125 MB/s), the maximum number of threads a Block Keeper with such a card can handle is:
+    Assuming an average block with 300 transactions is \~100 KB, and the network card limit is 1 Gbps (125 MBps), the maximum number of threads a Block Keeper with such a card can handle is:
 
-    125 / (0.1 × 3) = 416.
+    125 / (0.1 × 3) = 416 threads.
 *   Outgoing data volume depends on the number of nodes in the network.
 
-    In a non-proxied network, the outgoing traffic equals BLOCK\_SIZE × 3 × NODES\_NUMBER.
+    In a non-proxied network, the outgoing traffic equals BLOCK\_SIZE × 3 × NODES\_NUMBER per second.
 
-    In a 250-node network, this results in 75 MB = 0.6 Gbit.
+    In a 250-node network, this results in 75 MB = 0.6 Gbps.
 
-    If the network grows to 500 nodes, this exceeds 1 Gbit.
+    If the network grows to 500 nodes, this exceeds 1 Gbps.
 
     Furthermore, if multiple nodes are deployed in a single datacenter, router limitations on outbound traffic and internet bandwidth costs must be considered — without proxies, all traffic is routed via the public internet, making it inefficient and expensive for all participants.
 
@@ -61,7 +61,7 @@ Therefore, if a node operator runs more than one node, it is strongly recommende
 
 The network requirements for a proxy are equal to the network requirements of a single Block Keeper multiplied by the number of Block Keepers behind it.
 
-For example, for 100 nodes behind a proxy, the required bandwidth is 100 Gbit.
+For example, for 100 nodes behind a proxy, the required bandwidth is 100 Gbps.
 
 ## Fault Tolerance and limitations
 
@@ -75,7 +75,7 @@ It is **not recommended** to run more than **100 BK nodes** behind a Proxy insta
 
 ## Proxy System requirements
 
-<table><thead><tr><th width="155">Configuration</th><th width="483.1015625">Recommended</th></tr></thead><tbody><tr><td>CPU</td><td>8c/16t</td></tr><tr><td>RAM</td><td>32 GB</td></tr><tr><td>Storage</td><td>500 GB NVMe</td></tr><tr><td>Network</td><td><p>1Gb *(multiply) the number of nodes behind proxy.  </p><p>For example, for 100 nodes behind a proxy, the required bandwidth is 100 Gbit.</p></td></tr></tbody></table>
+<table><thead><tr><th width="155">Configuration</th><th width="483.1015625">Recommended</th></tr></thead><tbody><tr><td>CPU</td><td>8c/16t</td></tr><tr><td>RAM</td><td>32 GB</td></tr><tr><td>Storage</td><td>500 GB NVMe</td></tr><tr><td>Network</td><td><p>1Gb *(multiply) the number of nodes behind proxy.  </p><p>For example, for 100 nodes behind a proxy, the required bandwidth is 100 Gb.</p></td></tr></tbody></table>
 
 ## Proxy Deployment
 
