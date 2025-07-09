@@ -58,7 +58,7 @@ tvm-cli call BK_WALLET_ADDR setLicenseWhiteList '{"whiteListLicense": {"1": true
 {% endcode %}
 
 \
-You will need the ABI file [AckiNackiBlockKeeperNodeWallet.abi.json](https://raw.githubusercontent.com/gosh-sh/acki-nacki/refs/heads/refactor/fee/contracts/bksystem/AckiNackiBlockKeeperNodeWallet.sol?token=GHSAT0AAAAAADCMNSQIMA3ZIFGSUAMDQGQY2DDV64Q) to run this command.
+You will need the ABI file [AckiNackiBlockKeeperNodeWallet.abi.json](https://raw.githubusercontent.com/ackinacki/ackinacki/refs/heads/main/contracts/bksystem/AckiNackiBlockKeeperNodeWallet.abi.json) to run this command.
 {% endhint %}
 
 ## Providing the BK Node Owner Public Key

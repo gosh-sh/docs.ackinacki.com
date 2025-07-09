@@ -106,9 +106,15 @@ If you are both a License Owner and a Node Owner (Node Provider), you can delega
 This can be done in one of the following ways:
 
 * Using the Dashboard, by specifying your Node Provider public key, [as described in the section above](./#delegate-using-a-node-providers-public-key).
-* **Manually**, via CLI tools like `tvm-cli`.
+* [**Manually**, via CLI tool](https://github.com/ackinacki/ackinacki?tab=readme-ov-file#delegating-license) [`tvm-cli`](https://github.com/tvmlabs/tvm-sdk/releases).&#x20;
 
-If you are using the manual method, make sure you have:
+Then, follow the instructions described in the [**Create a Delegation Signature**](https://github.com/ackinacki/acki-nacki-igniter/blob/main/docs/Manual_license_delegation.md) section.&#x20;
+
+{% hint style="info" %}
+This signature will be required by the Node Provider / Node Owner to correctly configure and launch the [Decentralized Network Starter Protocol (DNSP)](../../block-keeper/join-dnsp-gossip.md).
+{% endhint %}
+
+To do this, make sure you have:
 
 * [x] License ID
 
@@ -118,8 +124,6 @@ You can view the ID of each license in the Dashboard under the **Licenses** tab:
 
 * [x] License Owner public key
 * [x] Node Provider public key
-
-Then, follow the instructions described in the [**Create a Delegation Signature**](https://github.com/ackinacki/acki-nacki-igniter/blob/main/docs/Manual_license_delegation.md) section.
 
 ## Next Steps After Delegation
 

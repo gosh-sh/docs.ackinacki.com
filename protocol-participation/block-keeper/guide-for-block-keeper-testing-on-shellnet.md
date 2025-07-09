@@ -117,9 +117,9 @@ result:
 
 **Learn more about** [**how to work with licenses**](../license/working-with-licenses.md)**.**
 
-**5. Staking**
+**5. Block Keeper Deployment and Staking**
 
-Only after completing all previous steps can the Node Owner run the [**staking script**](https://github.com/ackinacki/ackinacki/tree/main?tab=readme-ov-file#staking)**.**
+Only after completing all previous steps can the Node Owner begin [deploying the node software and starting staking.](https://app.gitbook.com/o/-McrzPd05fQMWkwCo65G/s/yPWnJ1v4nIPgOrEhPVrK/)
 
 {% hint style="warning" %}
 To initiate staking, at least one license must be delegated to the node.

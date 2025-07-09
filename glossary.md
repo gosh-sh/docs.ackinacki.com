@@ -38,12 +38,11 @@ This is a node that performs the role of a [Block Keeper (BK)](glossary.md#block
 
 #### **BK Node Owner keys**&#x20;
 
-**(Master keys)**\
-The node management keys that provide access to the BK wallet. They are used for managing the node, running node, staking, restaking, and adding licenses to the approved list. These keys cannot be used to withdraw Rewards from the BK wallet.
+The node management keys that provide access to the BK wallet. They are used for managing the node operations such as staking and adding licenses to the approved list. These keys cannot be used to withdraw Rewards from the BK wallet.
 
 #### **BK  Reward System**
 
-Block Keepers earn rewards based on their participation in the network during each [Epoch](glossary.md#epoch), regardless of their specific role ([Block Producer](glossary.md#block-producer-bp), [Block Verifier (Acki-Nacki)](glossary.md#block-verifier-or-acki-nacki), or [Block Keeper](glossary.md#block-keeper-bk)). The reward depends on the BK’s [stake](glossary.md#stake) and [Reputation Coefficient](glossary.md#reputation-coefficient), and is evenly distributed among the licenses delegated to it.
+Block Keepers earn rewards based on their participation in the network during each [Epoch](https://docs.ackinacki.com/glossary#epoch), regardless of their specific role ([Block Producer](https://docs.ackinacki.com/glossary#block-producer-bp), [Block Verifier (Acki-Nacki)](https://docs.ackinacki.com/glossary#block-verifier-or-acki-nacki), or [Block Keeper](https://docs.ackinacki.com/glossary#block-keeper-bk)). The reward depends on the [stake](https://docs.ackinacki.com/glossary#stake) and [Reputation Coefficient](https://docs.ackinacki.com/glossary#reputation-coefficient), and is evenly distributed among the licenses delegated to it.
 
 #### **BK Wallet**&#x20;
 
@@ -136,7 +135,7 @@ The native network token, used for security guarantees: staking, slashing and bl
 
 #### Node Provider&#x20;
 
-A model for providing nodes to license owners, allowing them to participate in the protocol by delegating their licenses to specific nodes. Subsequently, the license owner receives a share of the rewards earned by the [Block Keeper (BK)](glossary.md#block-keeper-bk) for participating in the protocol.
+An off-chain entity that for provides  [Block Keeper (BK) nodes](glossary.md#bk-node-bk-node) to license owners, allowing them to participate in the protocol by delegating their licenses to specific nodes. Node Provider keys are used to sign and validate the delegation to a particular Node Provider before Network start to form the zerostate, they do not operate on-chain. Subsequently, the license owner receives a share of the rewards earned by the ВК for participating in the protocol
 
 ## P
 
@@ -162,7 +161,7 @@ The utility token within the Acki Nacki network is designed to compensate [NACKL
 
 #### **Stake**
 
-The amount of [NACKL](glossary.md#nackl) tokens required to participate in the Acki Nacki protocol. At the launch of the Acki Nacki network (zerostate), staking is not required if a [License BK](glossary.md#license) is present. [Staking](https://github.com/ackinacki/ackinacki/tree/main?tab=readme-ov-file#staking) will become necessary for validation at a later stage.
+The amount of [NACKL](glossary.md#nackl) tokens required to participate in the Acki Nacki protocol. It is calculated as the total sum of all stakes from licenses delegated to a specific node. At the launch of the Acki Nacki network (zerostate), staking is not required if a [License BK](glossary.md#license) is present. [Staking](https://github.com/ackinacki/ackinacki/tree/main?tab=readme-ov-file#staking) will become necessary for validation at a later stage.
 
 ## T
 
