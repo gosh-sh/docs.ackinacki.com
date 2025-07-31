@@ -1,16 +1,5 @@
 ---
 description: Join Decentralized Network Starter Protocol
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Join DNSP Gossip
@@ -27,7 +16,3 @@ Follow the instructions in the [_Acki Nacki Igniter_ repository](https://github.
 
 \
 Link to the [source code](https://github.com/ackinacki/acki-nacki-igniter).
-
-{% hint style="info" %}
-**Network launch on June 29, 2025.**
-{% endhint %}

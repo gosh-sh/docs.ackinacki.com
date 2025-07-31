@@ -44,6 +44,13 @@ The node management keys that provide access to the BK wallet. They are used for
 
 Block Keepers earn rewards based on their participation in the network during each [Epoch](https://docs.ackinacki.com/glossary#epoch), regardless of their specific role ([Block Producer](https://docs.ackinacki.com/glossary#block-producer-bp), [Block Verifier (Acki-Nacki)](https://docs.ackinacki.com/glossary#block-verifier-or-acki-nacki), or [Block Keeper](https://docs.ackinacki.com/glossary#block-keeper-bk)). The reward depends on the [stake](https://docs.ackinacki.com/glossary#stake) and [Reputation Coefficient](https://docs.ackinacki.com/glossary#reputation-coefficient), and is evenly distributed among the licenses delegated to it.
 
+#### **BK set**
+
+A set of Block Keepers from which a Block Producer is selected for each [thread](glossary.md#thread).\
+Block Keepers are added to the BK set from the [Future BK set](glossary.md#future-bk-set).\
+The members of the BK‑set ensure the operation of the network: they send [attestations](glossary.md#attestation), validate blocks, and issue [Ack](glossary.md#ack)/[Nack](glossary.md#nack) signals.\
+The size of the BK‑set directly affects the network’s security parameters, defining how many attestations are required to confirm blocks and the percentage of [Block Verifiers (or Acki‑Nacki)](glossary.md#block-verifier-or-acki-nacki) needed for each block.
+
 #### **BK Wallet**&#x20;
 
 The wallet used for staking. The address of the BK Wallet serves as the identifier of the node.
@@ -54,7 +61,11 @@ A list of [license numbers](glossary.md#license-number) that can be delegated to
 
 #### **Block Manager (BM)**
 
-A network participant whose primary role is to provide users with blockchain data and process external messages. Block Managers receive a portion of the total block reward based on the number of external messages they process.
+A network participant whose primary role is to provide users with blockchain data and process external messages. Block Managers receive a portion of the total block reward based on the number of external messages they process. A BM operates in conjunction with a specific BK, and this pairing is defined during start of BM.
+
+#### **BM  Reward System**
+
+The amount of NACKL tokens accrued for processing BM external messages during a single Epoch. The reward should be claimed once per Epoch, but it can only be claimed **after** the slashing period (approximately after 5% of the next epoch’s blocks have been processed).
 
 #### **Block Producer (BP)**&#x20;
 
@@ -86,15 +97,29 @@ The identifier of a Decentralized Contract System on the Acki Nacki blockchain. 
 
 ## E
 
-#### **Epoch**
+#### **Epoch of the BK**
 
-The participation period in the Acki Nacki protocol during which a participant acts as a [Block Keeper](glossary.md#block-keeper-bk). It begins immediately after the [Pre-Epoch](glossary.md#pre-epoch).
+The participation period in the Acki Nacki protocol during which a participant acts as a [Block Keeper](glossary.md#block-keeper-bk). It begins immediately after the [Pre-Epoch](glossary.md#pre-epoch) and lasts for 259,200 blocks (about 24 hours). The duration of a specific BK’s epoch may be extended if the number of BKs in the network is lower than required.
+
+#### **Epoch of the BM**
+
+The participation period in the Acki Nacki protocol during which a participant acts as a [Block Manager](glossary.md#block-manager-bm). The length of an epoch is 259 200 blocks (about 24 hours).
+
+## F
+
+#### Future BK set
+
+A list of prospective [Block Keepers (BKs)](glossary.md#block-keeper-bk) for whom a [Pre‑Epoch](glossary.md#pre-epoch) contract has already been deployed.\
+This list is used for pre‑approving access to the main [BK set](glossary.md#bk-set).\
+After the [Epoch](glossary.md#epoch) contract is deployed, the future BK must be approved by the current BK set to be added to the active BK set. Otherwise, it will be removed from the Future BK set.
 
 ## L
 
 #### License
 
-The [**BK License**](protocol-participation/license/acki-nacki-node-license.md) is a [contract](https://github.com/ackinacki/ackinacki/blob/main/contracts/bksystem/License.sol) that grants the right for a BK to participate in the protocol. The license is delegated to a specific BK. Each BK can be delegated up to 20 (twenty) licenses. The Licenses are delegated without restrictions.
+The [**BK License**](protocol-participation/license/acki-nacki-node-license.md) is a [contract](https://github.com/ackinacki/ackinacki/blob/main/contracts/bksystem/License.sol) that grants the right for a Block Keeper (BK) to participate in the protocol. The license is delegated to a specific BK. Each BK can be delegated up to 20 (twenty) licenses. The Licenses are delegated without restrictions. &#x20;
+
+The **BM License** is a [contract](https://github.com/ackinacki/ackinacki/blob/main/contracts/bksystem/LicenseBM.sol) that grants the Block Manager (BM) the right to participate in the protocol. Each BM License is delegated to  BM wallet _(1 wallet - 1 license)_.
 
 #### License number
 
@@ -110,9 +135,16 @@ The keys used to manage license contracts (delegate and revoke delegation) and w
 
 ## M
 
-#### **Minimal Stake**
+#### **Minimal Stake of the ВK**
 
 The minimum amount of tokens a Block Keeper must stake to participate in the network. This value dynamically adjusts based on the difference between the current number of Block Keepers and the required number of Block Keepers in the network.
+
+**Minimal Stake of the ВM**
+
+The minimum amount of tokens locked on Block Manager wallet.\
+It is calculated individually and represents a percentage of the total NACKLs earned by that BM.\
+The percentage depends on the time elapsed since the network launch.\
+&#xNAN;_(If a BM stops operating in the middle of an_ [_Epoch_](glossary.md#epoch-of-the-bm)_, no reward is accrued for that Epoch.)_
 
 #### Maximum stake&#x20;
 

@@ -103,31 +103,13 @@ You will see a confirmation that your request has been signed.
 
 If you are both a License Owner and a Node Owner (Node Provider), you can delegate your licenses directly to your own node.
 
-This can be done in one of the following ways:
-
-* Using the Dashboard, by specifying your Node Provider public key, [as described in the section above](./#delegate-using-a-node-providers-public-key).
-* [**Manually**, via CLI tool](https://github.com/ackinacki/ackinacki?tab=readme-ov-file#delegating-license) [`tvm-cli`](https://github.com/tvmlabs/tvm-sdk/releases).&#x20;
-
-Then, follow the instructions described in the [**Create a Delegation Signature**](https://github.com/ackinacki/acki-nacki-igniter/blob/main/docs/Manual_license_delegation.md) section.&#x20;
-
-{% hint style="info" %}
-This signature will be required by the Node Provider / Node Owner to correctly configure and launch the [Decentralized Network Starter Protocol (DNSP)](../../block-keeper/join-dnsp-gossip.md).
-{% endhint %}
-
-To do this, make sure you have:
-
-* [x] License ID
-
-You can view the ID of each license in the Dashboard under the **Licenses** tab:
-
-<figure><img src="../../../.gitbook/assets/licence ID.jpg" alt=""><figcaption></figcaption></figure>
-
-* [x] License Owner public key
-* [x] Node Provider public key
+You can do this **Using the Dashboard** by specifying the `Node Provider public key` you generated, [as described in the section above](./#delegate-using-a-node-providers-public-key).
 
 ## Next Steps After Delegation
 
-At this stage, preparations for the network launch are underway. For licenses delegated during this phase to be included in the [Zerostate](../../../glossary.md#zerostate), the node to which you delegated your license must join the [Decentralized Network Starter Protocol (DNSP)](https://docs.ackinacki.com/protocol-participation/block-keeper/join-dnsp-gossip). After that, the license status will change to **`Online`**, and you will see the update in the Dashboard.
+At this stage, preparations for the network launch are underway. For licenses delegated during this phase to be included in the [Zerostate](../../../glossary.md#zerostate), the node to which you delegated your license must join the [Decentralized Network Starter Protocol (DNSP)](https://docs.ackinacki.com/protocol-participation/block-keeper/join-dnsp-gossip).&#x20;
+
+Once the DNSP client is launched by your Node Provider, the license will show an `Online` status in the Dashboard (this feature is still in development).
 
 ## **Revoke License**
 

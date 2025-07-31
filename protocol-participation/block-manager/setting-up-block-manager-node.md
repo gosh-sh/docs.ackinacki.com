@@ -6,7 +6,15 @@
 
 ## How to run
 
-guide is coming soon
+BM license holders are **not required** to join the Acki Nacki network from the Genesis block.\
+A BM node can be launched after the network starts.
+
+However, if you want your BM to launch from Genesis block, you must:
+
+* **Participate in `PreNet` testing.**\
+  Only `PreNet` participants receive access to the configurations and tools needed to deploy nodes from Zerostate.&#x20;
+* **Contact a GOSH representative.**\
+  Reach out to the team to participate in PreNet testing and request  your BM license be added to the Zerostate.
 
 ## API access
 
