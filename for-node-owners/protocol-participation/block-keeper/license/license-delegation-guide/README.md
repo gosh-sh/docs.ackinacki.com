@@ -27,11 +27,11 @@ You can delegate your licenses directly through the [Acki Nacki Dashboard](https
 
 After registering in [the dashboard](https://dashboard.ackinacki.com/licenses), go to the **`Licenses`** tab and click the **`Delegate`** button.
 
-<figure><img src="../../../.gitbook/assets/button Delegation.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/button Delegation.jpg" alt=""><figcaption></figcaption></figure>
 
 Choose a Node Provider to whom you want to delegate your Licenses:
 
-<figure><img src="../../../.gitbook/assets/image.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image.png" alt="" width="375"><figcaption></figcaption></figure>
 
 and submit a delegation request by filling in the following fields:
 
@@ -57,15 +57,15 @@ Then click the **`Sign and send request`** button:
 By doing so, you confirm that you are intentionally delegating your licenses to this Node Provider. This action generates a `delegation_sig`, which is required to validate the delegation.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/request (3).jpg" alt="" width="304"><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/request (3).jpg" alt="" width="304"><figcaption></figcaption></figure>
 
 You will see a confirmation that your request has been signed.
 
-<figure><img src="../../../.gitbook/assets/request_accepted (1).jpg" alt="" width="254"><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/request_accepted (1).jpg" alt="" width="254"><figcaption></figcaption></figure>
 
 Once the request is signed, the **`Provider`** column will display the name of the Node Provider to whom you delegated your licenses, and the counter at the top will update to reflect the increased number of delegated licenses:
 
-<figure><img src="../../../.gitbook/assets/tab_license_after_deleg.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/tab_license_after_deleg.jpg" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 **Inform your Node Provider about the delegation and share your `License Owner public key` with them. This is important for data verification.**
@@ -77,11 +77,11 @@ Now proceed to [the next step after delegation](./#next-steps-after-delegation).
 
 If the Node Provider has shared their public key with you, then after registering in the dashboard, go to the **Licenses** tab and click the **Delegate** button:
 
-<figure><img src="../../../.gitbook/assets/button Delegation (1).jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/button Delegation (1).jpg" alt=""><figcaption></figcaption></figure>
 
 In the list of Node Providers that appears, click the **Custom** button:
 
-<figure><img src="../../../.gitbook/assets/providers.jpg" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/providers.jpg" alt="" width="375"><figcaption></figcaption></figure>
 
 Please fill out the delegation form, enter your passcode to confirm the delegation, and click `Sign Delegation`
 
@@ -89,11 +89,11 @@ Please fill out the delegation form, enter your passcode to confirm the delegati
 By doing so, you confirm that you are intentionally delegating your licenses to this Node Provider. This action generates a `delegation_sig`, which is required to validate the delegation.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/custom_delegate.jpg" alt="" width="312"><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/custom_delegate.jpg" alt="" width="312"><figcaption></figcaption></figure>
 
 You will see a confirmation that your request has been signed.
 
-<figure><img src="../../../.gitbook/assets/custom_accepted.jpg" alt="" width="310"><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/custom_accepted.jpg" alt="" width="310"><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 **Inform your Node Provider about the delegation and share your `License Owner public key` with them. This is important for data verification.**
@@ -107,7 +107,7 @@ You can do this **Using the Dashboard** by specifying the `Node Provider public 
 
 ## Next Steps After Delegation
 
-At this stage, preparations for the network launch are underway. For licenses delegated during this phase to be included in the [Zerostate](../../../glossary.md#zerostate), the node to which you delegated your license must join the [Decentralized Network Starter Protocol (DNSP)](https://docs.ackinacki.com/protocol-participation/block-keeper/join-dnsp-gossip).&#x20;
+At this stage, preparations for the network launch are underway. For licenses delegated during this phase to be included in the [Zerostate](../../../../../glossary.md#zerostate), the node to which you delegated your license must join the [Decentralized Network Starter Protocol (DNSP)](https://docs.ackinacki.com/protocol-participation/block-keeper/join-dnsp-gossip).&#x20;
 
 Once the DNSP client is launched by your Node Provider, the license will show an `Online` status in the Dashboard (this feature is still in development).
 
@@ -125,11 +125,11 @@ If a Node Provider had already started a node with your license - ask  to remove
 
 **If you signed the delegation via Dashboard** - also revoke the delegation to delete the signature - click on the name of the Node Provider to whom the license has been delegated.
 
-<figure><img src="../../../.gitbook/assets/revoke_button_node_provider.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/revoke_button_node_provider.jpg" alt=""><figcaption></figcaption></figure>
 
 Confirm your decision by checking the box and clicking the **`Revoke Delegation`** button:
 
-<figure><img src="../../../.gitbook/assets/revoke.jpg" alt="" width="315"><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/revoke.jpg" alt="" width="315"><figcaption></figcaption></figure>
 
 You will see the changes reflected in the Dashboard, The "Provider" column will be empty
 

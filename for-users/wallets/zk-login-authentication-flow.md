@@ -44,7 +44,7 @@ This Client Application does not backup user-owned Password, Recover Password, S
 Issuer value on the diagram below is a string identifying OpenId provider like Google, Facebook etc.
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/zkStart.drawio (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/zkStart.drawio (2).png" alt=""><figcaption></figcaption></figure>
 
 ## Transactions Authentication sketch
 
@@ -141,7 +141,7 @@ The secret key _SK\_e_ is stored in local storage in the browser or secure stora
 The _T\_max_ timestamp aimed to limit operation time of ephemeral keypair (_PK\_e, SK\_e_). Using the parameter _T\_max_ we maintain the required reasonable frequency of OpenID relogin to handle Wallet transactions. We must keep a balance between security and user comfort. It’s reasonable to choose _T\_max_ quite big to avoid cumbersome using experience to relogin too often. But the user always has an option to add/change ephemeral keypair at any moment of time. At the same time multiple ephemeral key pairs could be handled by the Wallet contract for the same OpenId account (for example each key pair per new device).
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/Normal operating (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Normal operating (2).png" alt=""><figcaption></figcaption></figure>
 
 ### Transaction WITHOUT signIn to OpenID provider
 
@@ -151,7 +151,7 @@ This is the case when the user has not expired ephemeral key pair (_SK\_e, PK\_e
 We minimize the number of VERGRTH16 instruction calls to achieve the best transaction performance. VERGRTH16 is quite cumbersome. So the user calls it only once for a fresh JWT zk-proof. The Wallet contract validates zk-proof. If it’s ok, then it saves the related ephemeral public key and the time of its expiration. Then the user only sends to contract messages signed by ephemeral secret key. The contract checks that the key is present, not expired and the signature is valid.
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/Normal operating no relogin (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Normal operating no relogin (1).png" alt=""><figcaption></figcaption></figure>
 
 ## More details on handling OpenID via zero-knowledge proofs
 
@@ -161,11 +161,11 @@ In Acki Nacki blockchain we allow users to login into their Wallets with OpenID 
 
 We use the OpenID protocol. In this protocol a user can log into a trusted third party (Google, Facebook, etc.) and get a signed access token attesting that they logged in the form of a signed JSON Web Token (JWT). A signed JWT looks like three base64-encoded payloads separated by a dot:
 
-<figure><img src="../.gitbook/assets/p4 (1).jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/p4 (1).jpg" alt=""><figcaption></figcaption></figure>
 
 When decoded, the first part of the payload is a header, the second is the JWT's content itself (called the payload), and the third one is the signature that is done by the OpenID provider secret JWK key. One can use the debugger on jwt.io to inspect such JWTs:
 
-<figure><img src="../.gitbook/assets/p5 (1).jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/p5 (1).jpg" alt=""><figcaption></figcaption></figure>
 
 There are the following important fields in the JWT payload :
 
@@ -178,7 +178,7 @@ There are the following important fields in the JWT payload :
 
 To verify a JWT, one needs to verify the signature over the JWT. To verify a signature one must know the public key of the issuer of the JWT. All issuers have a published JSON Web Key Set (JWKS). For example, Facebook's JWKS can be downloaded from https://www.facebook.com/.well-known/oauth/openid/jwks and looks like the picture below.
 
-<figure><img src="../.gitbook/assets/p6.jpg" alt="" width="543"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/p6.jpg" alt="" width="543"><figcaption></figcaption></figure>
 
 JWKS contains several JSON Web Keys (JWKs) identified by their key ID `kid`. Several keys are often displayed to provide support for key rotation. Since this information is external to the JWT, the network must know who the issuer is, and specifically `kid` that was used to issue the JWT.
 

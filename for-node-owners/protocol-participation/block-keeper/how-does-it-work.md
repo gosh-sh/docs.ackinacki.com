@@ -1,24 +1,24 @@
 # How does it work?
 
-[Here](https://tokenomics.ackinacki.com/) you can review multiple plots detailing various aspects of [Tokenomics](../../tokenomics/).
+[Here](https://tokenomics.ackinacki.com/) you can review multiple plots detailing various aspects of [Tokenomics](../../../tokenomics/).
 
-[Glossary](../../glossary.md)
+[Glossary](../../../glossary.md)
 
 ### **Contracts**
 
 In its operation, the Block Keeper (BK) uses the following contracts:
 
-* **BlockKeeperContractRoot (Root)** - The main system contract that manages a [Block Keeper's (BK)](../../glossary.md#block-keeper-bk) participation in the network.
-* **AckiNackiBlockKeeperNodeWallet (Wallet)** - The BK wallet contract, responsible for [stake](../../glossary.md#stake) management.
-* **BlockKeeperPreEpochContract (Pre Epoch)** - The contract responsible for BK's preparation during the [Epoch](../../glossary.md#epoch).
+* **BlockKeeperContractRoot (Root)** - The main system contract that manages a [Block Keeper's (BK)](../../../glossary.md#block-keeper-bk) participation in the network.
+* **AckiNackiBlockKeeperNodeWallet (Wallet)** - The BK wallet contract, responsible for [stake](../../../glossary.md#stake) management.
+* **BlockKeeperPreEpochContract (Pre Epoch)** - The contract responsible for BK's preparation during the [Epoch](../../../glossary.md#epoch).
 * **BlockKeeperEpochContract (Epoch)** - The contract that indicates its owner is an active BK.
-* **BlockKeeperCoolerContract (Cooler)** - The contract where the stake (plus [rewards](../../glossary.md#bk-reward-system)) is locked for the duration of the BK's operation verification.
+* **BlockKeeperCoolerContract (Cooler)** - The contract where the stake (plus [rewards](../../../glossary.md#bk-reward-system)) is locked for the duration of the BK's operation verification.
 
 ### **Stage 1: Initializing the Block Keeper Wallet before joining the Acki Nacki protocol**
 
 
 
-<figure><img src="../../.gitbook/assets/elections-1-4n.drawio.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/elections-1-4n.drawio.png" alt=""><figcaption></figcaption></figure>
 
 1. To become a network member, a prospective BK must lock their stake. To do this, the Owner needs to deploy a wallet for every BK. \
    To deploy BK wallet Owner should send an external message to the Root contract, signed with their public key:
@@ -40,13 +40,13 @@ constructor (
 )
 ```
 
-3. To restrict access to the wallet but allow node operations, the [Node Owner ](../../glossary.md#bk-node-owner)should set a service key by calling a function in the Wallet contract:
+3. To restrict access to the wallet but allow node operations, the [Node Owner ](../../../glossary.md#bk-node-owner)should set a service key by calling a function in the Wallet contract:
 
 ```
 setServiceKey(optional(uint256))
 ```
 
-4. **Top Up with** [**NACKL**](../../glossary.md#nackl) **(from any source):**
+4. **Top Up with** [**NACKL**](../../../glossary.md#nackl) **(from any source):**
 
 <pre><code><strong>receive()
 </strong></code></pre>
@@ -65,7 +65,7 @@ To determine the minimum stake amount, you can request this information from the
 
 ### Stage 2: Preparing the node for participation in the protocol
 
-<figure><img src="../../.gitbook/assets/elections-5-9n.drawio (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/elections-5-9n.drawio (1).png" alt=""><figcaption></figcaption></figure>
 
 5. Send a request to the Wallet contract for registration as a BK in the Acki Nacki Protocol (this must be signed with either the owner’s public key or the service key):
 
@@ -102,7 +102,7 @@ constructor (
 )
 ```
 
-9. The [Pre-Epoch](../../glossary.md#pre-epoch) contract sends a message to the Wallet contract to lock the stake:
+9. The [Pre-Epoch](../../../glossary.md#pre-epoch) contract sends a message to the Wallet contract to lock the stake:
 
 ```
 setLockStake(uint64 seqNoStart, uint256 stake)
@@ -110,7 +110,7 @@ setLockStake(uint64 seqNoStart, uint256 stake)
 
 ### Stage 3: Starting the Epoch
 
-<figure><img src="../../.gitbook/assets/elections-10-12n.drawio (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/elections-10-12n.drawio (1).png" alt=""><figcaption></figcaption></figure>
 
 10. The BK script calls a function in the Pre-Epoch contract to join the Acki Nacki protocol:
 
@@ -180,7 +180,7 @@ If the Node Owner wants to remain on the Acki Nacki network after the epoch ends
 This process is not automatically repeatable, it just allows transitioning from one epoch to another without time gaps and, therefore, reputation loss but you still need to do it every epoch.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/elections-u13-16.drawio.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/elections-u13-16.drawio.png" alt=""><figcaption></figcaption></figure>
 
 13. To initiate this, send an external message to the Wallet contract with next stake attached while the current epoch is still active:
 
@@ -225,7 +225,7 @@ continueStake(
 
 ### Stage 5: Finalizing the Active Epoch&#x20;
 
-<figure><img src="../../.gitbook/assets/elections-u17-21_with_Epoch_redeploy.drawio.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/elections-u17-21_with_Epoch_redeploy.drawio.png" alt=""><figcaption></figcaption></figure>
 
 17\. Block Producer checks Block Keeper set and epochs duration and when it sees that some BK's epoch is over, it sends a touch message to it:
 

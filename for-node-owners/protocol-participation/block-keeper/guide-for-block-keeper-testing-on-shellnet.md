@@ -115,7 +115,7 @@ result:
 }
 ```
 
-**Learn more about** [**how to work with licenses**](../license/working-with-licenses.md)**.**
+**Learn more about** [**how to work with licenses**](license/working-with-licenses.md)**.**
 
 **5. Block Keeper Deployment and Staking**
 

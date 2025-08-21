@@ -62,7 +62,7 @@ In Acki Nacki there is no predetermined Stake Interest rate. Simple and clear �
 
 ### Delegation
 
-Acki Nacki is trying to avoid delegation of stakes as much as possible. There are special mechanisms in place to make it not economical or not secure to delegate NACKL Token for staking by other Block Keepers: Block Keeper Epoche contract only accepts messages signed by a Block Keeper private key, therefore making it impossible to create decentralized pools and perform staking delegation. Of course, Block Keepers can run off-chain services to obtain stakes from investors, but this is no longer a network concern.
+Acki Nacki is trying to avoid delegation of stakes as much as possible. There are special mechanisms in place to make it not economical or not secure to delegate NACKL Token for staking by other Block Keepers: Block Keeper Epoch contract only accepts messages signed by a Block Keeper private key, therefore making it impossible to create decentralized pools and perform staking delegation. Of course, Block Keepers can run off-chain services to obtain stakes from investors, but this is no longer a network concern.
 
 Instead there is a special mechanism to include regular participants into a protocol without a need to become a Block Keeper and have special server equipment etc. ([see section “Mobile Verifiers”](./#mobile-verifiers)) Yet it is important to mention that it’s not based on staking pools or delegation either, as mobile verifiers perform very particular and real security verification contributing to network security guarantees.
 

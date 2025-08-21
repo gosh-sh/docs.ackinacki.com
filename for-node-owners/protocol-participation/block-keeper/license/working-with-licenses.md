@@ -4,7 +4,7 @@ description: The described flow will be applicable after the network is launched
 
 # Working with Licenses
 
-<figure><img src="../../.gitbook/assets/DL (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/DL (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 ## Obtaining License Owner Keys and License Contract Addresses
 
@@ -20,11 +20,11 @@ The **public** key from this pair must be sent to a GOSH representative via emai
 A separate License contract is deployed for each license purchased.&#x20;
 {% endhint %}
 
-Once the License contract is deployed, the GOSH representative will provide the License Owner with the contract address and [License number](../../glossary.md#license-number)  \[1.7].
+Once the License contract is deployed, the GOSH representative will provide the License Owner with the contract address and [License number](../../../../glossary.md#license-number)  \[1.7].
 
 ## Adding a License to a BK Wallet Whitelist
 
-For the license to be delegated, its license number must be added to the [BK wallet whitelist](../../glossary.md#bk-wallet-whitelist).
+For the license to be delegated, its license number must be added to the [BK wallet whitelist](../../../../glossary.md#bk-wallet-whitelist).
 
 To do this, the License Owner must provide their License Number \[2.1] to the Node Owner, who will then add it to their whitelist \[2.2].
 

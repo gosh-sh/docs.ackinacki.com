@@ -4,7 +4,7 @@ description: Prepared by Pruvendo
 
 # Block Keeper Contracts Business-Level Specification
 
-<div align="right"><figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure></div>
+<div align="right"><figure><img src="../../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure></div>
 
 ## Purpose <a href="#docs-internal-guid-9795c783-7fff-46c9-b911-6f08cd34ef9c" id="docs-internal-guid-9795c783-7fff-46c9-b911-6f08cd34ef9c"></a>
 
@@ -42,7 +42,7 @@ The workflow described below must be followed:
 
 Graphically, the described workflow can be presented by the following chart:
 
-<figure><img src="../../../.gitbook/assets/p1.jpg" alt=""><figcaption><p>Single participation period</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/p1.jpg" alt=""><figcaption><p>Single participation period</p></figcaption></figure>
 
 ### Repeated participation <a href="#docs-internal-guid-f718a19a-7fff-f6ed-34b0-ca7b74dab25c" id="docs-internal-guid-f718a19a-7fff-f6ed-34b0-ca7b74dab25c"></a>
 
@@ -67,17 +67,17 @@ The workflow described below must be followed:
 
 The described workflow is illustrated by the following diagram:
 
-<figure><img src="../../../.gitbook/assets/p2.jpg" alt=""><figcaption><p>Repeated participation</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/p2.jpg" alt=""><figcaption><p>Repeated participation</p></figcaption></figure>
 
 ### Stake workflow <a href="#docs-internal-guid-920047f6-7fff-4afa-4d1e-b3f9cb182c05" id="docs-internal-guid-920047f6-7fff-4afa-4d1e-b3f9cb182c05"></a>
 
 Throughout the loop, stakes are transferred from one entity to another. For single participation their workflow can be illustrated by the following diagram (the second row indicated what entity the stake belongs to at each stage):
 
-<figure><img src="../../../.gitbook/assets/p3.jpg" alt=""><figcaption><p>Stake workflow (single participation period)</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/p3.jpg" alt=""><figcaption><p>Stake workflow (single participation period)</p></figcaption></figure>
 
 For repeated participation the diagram is more complicated:
 
-<figure><img src="../../../.gitbook/assets/p4.jpg" alt=""><figcaption><p>Stake workflow (repeated participation period)</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/p4.jpg" alt=""><figcaption><p>Stake workflow (repeated participation period)</p></figcaption></figure>
 
 It’s important to mention that in case the participant (owner) reinvests each stake for the repeated participation immediately after cooling down by continuing the current _Epoch_, he gets some kind of a carousel of continuous participation.&#x20;
 
@@ -85,7 +85,7 @@ It’s important to mention that in case the participant (owner) reinvests each 
 
 Such a carousel is illustrated in the diagram below. For simplicity, all the “gray” periods between ending of the particular stages and external actions are omitted. Green dots stay for the “first” stake, while the red one - for the “second” stake.
 
-<figure><img src="../../../.gitbook/assets/p5.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/p5.jpg" alt=""><figcaption></figcaption></figure>
 
 ### Auxiliary values <a href="#docs-internal-guid-2be41919-7fff-941b-035d-464cde51524c" id="docs-internal-guid-2be41919-7fff-941b-035d-464cde51524c"></a>
 
@@ -194,7 +194,7 @@ When performed the special TVM instruction is called with the following paramete
 
 ## Licences
 
-<figure><img src="../../../.gitbook/assets/Lisence.jpg" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Lisence.jpg" alt="" width="563"><figcaption></figcaption></figure>
 
 _License_ smart contract is controlled by the License Owner’s cryptographic keys (_ED25519_). Without an active _License_ smart contract,  _Block Keeper_ won’t function (it won’t be able to submit a stake to _Epoch_ smart contract).
 

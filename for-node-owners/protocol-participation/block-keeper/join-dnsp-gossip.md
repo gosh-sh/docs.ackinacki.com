@@ -7,7 +7,7 @@ description: Join Decentralized Network Starter Protocol
 The **Decentralized Network Starter Protocol (DNSP)** (i.e. Igniter Gossip) collects Node and License information, tests and updates the node software, and initiates [Zerostate](https://docs.ackinacki.com/glossary#zerostate) (first block) generation once all DNSP requirements are met.
 
 {% hint style="warning" %}
-Igniter must be launched on each node that you want to include in the Zerostate.
+Igniter must be running on each node that you want to include in the Zerostate.
 {% endhint %}
 
 ### **How to join**

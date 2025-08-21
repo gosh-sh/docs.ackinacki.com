@@ -117,7 +117,7 @@ After the [Epoch](glossary.md#epoch) contract is deployed, the future BK must be
 
 #### License
 
-The [**BK License**](protocol-participation/license/acki-nacki-node-license.md) is a [contract](https://github.com/ackinacki/ackinacki/blob/main/contracts/bksystem/License.sol) that grants the right for a Block Keeper (BK) to participate in the protocol. The license is delegated to a specific BK. Each BK can be delegated up to 20 (twenty) licenses. The Licenses are delegated without restrictions. &#x20;
+The [**BK License**](for-node-owners/protocol-participation/block-keeper/license/acki-nacki-vk-node-license.md) is a [contract](https://github.com/ackinacki/ackinacki/blob/main/contracts/bksystem/License.sol) that grants the right for a Block Keeper (BK) to participate in the protocol. The license is delegated to a specific BK. Each BK can be delegated up to 20 (twenty) licenses. The Licenses are delegated without restrictions. &#x20;
 
 The **BM License** is a [contract](https://github.com/ackinacki/ackinacki/blob/main/contracts/bksystem/LicenseBM.sol) that grants the Block Manager (BM) the right to participate in the protocol. Each BM License is delegated to  BM wallet _(1 wallet - 1 license)_.
 
