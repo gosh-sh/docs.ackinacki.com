@@ -68,10 +68,11 @@ To initiate delegation, the Node Owner must send their public key (`BK_NODE_OWNE
 ## Delegating a License
 
 {% hint style="warning" %}
-A maximum of **20 (twenty)** licenses can be delegated to a single node.
+A maximum of **20 (twenty)** licenses can be delegated to a single node.\
+However, the fewer licenses delegated, the lower the Block Keeper’s total reward will be — and consequently, the lower the reward per license.
 {% endhint %}
 
-To delegate a license to a specific node, the License Owner must call the `addBKWallet(uint256 pubkey)` method on their [`License`](https://github.com/ackinacki/ackinacki/blob/main/contracts/bksystem/License.sol) contract \[5.1]:
+To delegate a license to a specific node, the License Owner must call the `addBKWallet(uint256 pubkey)` method on their [`License` contract](https://github.com/ackinacki/ackinacki/blob/main/contracts/bksystem/License.sol) \[5.1]:
 
 ```
 
@@ -100,8 +101,36 @@ or `NULL` if no delegation has taken place.
 
 ## Staking
 
-Only after successful delegation of at least 1 license can the Node Owner proceed to run the [staking script](https://github.com/ackinacki/ackinacki/tree/main?tab=readme-ov-file#staking) \[6].
+Only after successful delegation of at least 1 license can the Node Owner proceed to run the [staking script](https://github.com/ackinacki/ackinacki/tree/main?tab=readme-ov-file#block-keeper-documentation) \[6].
 
 {% hint style="warning" %}
 At least one license must be delegated to the node in order to initiate staking.
 {% endhint %}
+
+## **How to transfer a License to another owner**
+
+_(coming soon)_
+
+## **How to lock your stake for participation in the next staking round**
+
+_(coming soon)_
+
+## **How to remove a License from a BK wallet**
+
+{% hint style="danger" %}
+A License Owner cannot remove their license from the BK wallet while it is staked.
+{% endhint %}
+
+To remove a license from a BK wallet, the License Owner must call the `removeBKWallet()` function in the contract of the corresponding license:
+
+```
+
+tvm-cli call <LICENSE_ADDRESS> removeBKWallet {} --abi License.abi.json --sign License.keys.json
+
+```
+
+&#x20;Where:
+
+* [`License.abi.json`](https://github.com/ackinacki/ackinacki/blob/main/contracts/bksystem/License.abi.json) is the ABI of the License contract,
+* `License.keys.json` is the keys obtained by the License Owner during registration in the dashboard.
+

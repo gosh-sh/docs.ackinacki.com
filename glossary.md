@@ -135,11 +135,11 @@ The keys used to manage license contracts (delegate and revoke delegation) and w
 
 ## M
 
-#### **Minimal Stake of the ВK**
+#### **Minimal Stake of the BK**
 
 The minimum amount of tokens a Block Keeper must stake to participate in the network. This value dynamically adjusts based on the difference between the current number of Block Keepers and the required number of Block Keepers in the network.
 
-**Minimal Stake of the ВM**
+**Minimal Stake of the BM**
 
 The minimum amount of tokens locked on Block Manager wallet.\
 It is calculated individually and represents a percentage of the total NACKLs earned by that BM.\
@@ -167,7 +167,7 @@ The native network token, used for security guarantees: staking, slashing and bl
 
 #### Node Provider&#x20;
 
-An off-chain entity that for provides  [Block Keeper (BK) nodes](glossary.md#bk-node-bk-node) to license owners, allowing them to participate in the protocol by delegating their licenses to specific nodes. Node Provider keys are used to sign and validate the delegation to a particular Node Provider before Network start to form the zerostate, they do not operate on-chain. Subsequently, the license owner receives a share of the rewards earned by the ВК for participating in the protocol
+An off-chain entity that for provides  [Block Keeper (BK) nodes](glossary.md#bk-node-bk-node) to license owners, allowing them to participate in the protocol by delegating their licenses to specific nodes. Node Provider keys are used to sign and validate the delegation to a particular Node Provider before Network start to form the zerostate, they do not operate on-chain. Subsequently, the license owner receives a share of the rewards earned by the BK for participating in the protocol
 
 ## P
 

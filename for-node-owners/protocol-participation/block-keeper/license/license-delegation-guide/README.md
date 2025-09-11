@@ -1,12 +1,16 @@
 # License Delegation Guide
 
-After purchasing a **BK license**, it does not become active automatically. To activate its participation in the protocol and start receiving rewards, the license must be delegated to a node that will perform validator functions.
+After purchasing a [**BK license**](../), it does not become active automatically. To activate its participation in the protocol and start receiving rewards, the license must be delegated to a node that will perform validator functions.
+
+Failure to do so may result in the License Stake not validating, loss of reputation, or loss of other privileges.
 
 In order for the licenses to be added to the zerostate and start getting rewards from the 1st block, this delegation has to happen before the network launch.
 
 {% hint style="info" %}
 A maximum of **20 (twenty)** licenses can be delegated to a single node.
 {% endhint %}
+
+You can find more details about working with licenses [here](../working-with-licenses.md).
 
 ## Delegation via Acki Nacki Dashboard
 
