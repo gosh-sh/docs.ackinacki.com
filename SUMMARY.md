@@ -24,7 +24,9 @@
       * [Block Keeper Contracts Business-Level Specification](for-node-owners/protocol-participation/block-keeper/formal-verification/block-keeper-contracts-business-level-specification.md)
       * [Block Keeper Contracts High Level Specification](for-node-owners/protocol-participation/block-keeper/formal-verification/block-keeper-contracts-high-level-specification.md)
   * [Block Manager](for-node-owners/protocol-participation/block-manager/README.md)
-    * [Acki Nacki ВM Node License](for-node-owners/protocol-participation/block-manager/acki-nacki-vm-node-license.md)
+    * [Licence](for-node-owners/protocol-participation/block-manager/licence/README.md)
+      * [Acki Nacki ВM Node License](for-node-owners/protocol-participation/block-manager/licence/acki-nacki-vm-node-license.md)
+      * [Guide to BM License Delegation](for-node-owners/protocol-participation/block-manager/licence/guide-to-bm-license-delegation.md)
     * [Setting up Block Manager Node](for-node-owners/protocol-participation/block-manager/setting-up-block-manager-node.md)
 * [Proxy service](for-node-owners/proxy-service.md)
 
