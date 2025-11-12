@@ -1,7 +1,7 @@
 # Guide to BM License Delegation
 
 After purchasing a Block Manager (BM) License, it does **not** become active automatically.\
-To enable participation in the protocol and start receiving rewards, the license must be **delegated to a Block Keeper (BK) Node Provider**.
+To enable participation in the protocol and start receiving rewards, the license must be **delegated to a Provider**.
 
 Delegation can be done through the **Acki Nacki Dashboard**.
 
