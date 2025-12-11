@@ -1,6 +1,6 @@
 # BM License Pre-Deployment Verification
 
-Before the BM License contract is deployed to the **Acki Nacki** network, the **BM License Owner** must launch the **Block Manager (BM) service** and provide it for functionality auditing by a **GOSH representative**
+Веfore the BM License contract is deployed to the **Acki Nacki** network, the **BM License Owner** **must launch the Block Manager (BM) service** **and provide it for functionality auditing by a GOSH representative**
 
 For this, it’s necessary to:
 
@@ -10,8 +10,12 @@ For this, it’s necessary to:
 
 * Open a port for connection to the block streaming service.
 * Provide the following:
-  * **BK node IP address:** `NODE_IP`
-  * **API access token** to retrieve accounts: `BK_API_TOKEN`
+  * **BK node IP address:** `NODE_IP`&#x20;
+  * **API access token** to retrieve accounts: `BK_API_TOKEN`&#x20;
+
+{% hint style="warning" %}
+Only **one Block Manager service** can be registered per **NODE\_IP**
+{% endhint %}
 
 2. Generate two key pairs:
 
