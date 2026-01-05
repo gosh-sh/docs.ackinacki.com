@@ -20,6 +20,10 @@ A message sent to the [Block Producer (BP)](glossary.md#block-producer-bp) by an
 
 ## B
 
+#### **Bee Engine**
+
+An embeddable client-side mining engine and blockchain verification system for background **NACKL** mining, providing cryptographic validation of computation results and reward distribution based on verifiable user contribution (see [**Bee Engine Integration**](https://dev.ackinacki.com/bee-engine/integration))
+
 #### **Block**
 
 An object containing new transactions, which, once finalized, are stored in the blockchain as a permanent and immutable part of the decentralized ledger. Each block includes transaction data, a timestamp, a common section, and a reference to the previous block, creating a chain of interconnected blocks.

@@ -40,6 +40,7 @@
 * [Accounts](for-developers/accounts.md)
 * [Smart Contracts](for-developers/smart-contracts.md)
 * [Developer Tools & SDK](for-developers/developer-tools-and-sdk.md)
+* [Bee Engine](for-developers/bee-engine.md)
 
 ## For Users
 

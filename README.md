@@ -1,8 +1,12 @@
 # Acki Nacki Overview
 
+{% hint style="info" %}
+**For developer documentation, please visit** [**the developer portal**](https://dev.ackinacki.com/)
+{% endhint %}
+
 ## **TLDR** <a href="#secured-decentralized-fast" id="secured-decentralized-fast"></a>
 
-Acki Nacki blockchain technology is a Rust implementation of a novel consensus protocol: ["Acki Nacki: A Probabilistic Proof-of-Stake Consensus Protocol with Fast Finality and Parallelisation"](https://link.springer.com/chapter/10.1007/978-3-031-61486-6\_4) and ["Acki Nacki Binary System"](https://tokenomics.ackinacki.com/tokenomics.pdf) tokenomics research.&#x20;
+Acki Nacki blockchain technology is a Rust implementation of a novel consensus protocol: ["Acki Nacki: A Probabilistic Proof-of-Stake Consensus Protocol with Fast Finality and Parallelisation"](https://link.springer.com/chapter/10.1007/978-3-031-61486-6_4) and ["Acki Nacki Binary System"](https://tokenomics.ackinacki.com/tokenomics.pdf) tokenomics research.&#x20;
 
 Acki Nacki is asynchronous, highly effective proof-of-stake protocol optimized for fast finality, while allowing for high throughputs via execution parallelization.&#x20;
 
@@ -12,7 +16,7 @@ Our protocol reaches consensus in two communication steps and has a total number
 
 We trade off deterministic consensus with theoretical constraints on message complexity and the number of Byzantine agreements, with probabilistic algorithms overtaking these boundaries. We further claim that because of the use of randomness and socioeconomics in blockchain designs, no real trade-off is actually present.
 
-&#x20;One of the key ingredients of our approach is separating the verification of execution by a consensus committee from the attestation of block propagation by network participants.&#x20;
+One of the key ingredients of our approach is separating the verification of execution by a consensus committee from the attestation of block propagation by network participants.&#x20;
 
 Our consensus committee is randomly selected for each block and is not predetermined, while the Leader is deterministic.
 
