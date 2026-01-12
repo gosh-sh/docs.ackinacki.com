@@ -6,7 +6,7 @@ For this, it’s necessary to:
 
 ### Preparing the BM Service
 
-1. The BM license owner must agree on cooperation with the owner of one of the BK nodes, who must:
+1. The BM License owner must agree on cooperation with the owner of one of the BK nodes, who must:
 
 * Open a port for connection to the block streaming service.
 * Provide the following:
@@ -52,16 +52,18 @@ After successfully launching the BM service, make sure to:
 After the service is verified:
 
 * The **BM License contract** will be deployed to the network.
-* The **contract address `LICENSE_ADDR`** and your **license number** will be received from a GOSH representative.
+* The **contract address `LICENSE_ADDR`** and your **License number** will be received from a GOSH representative.
 
-The BM License Owner must then **update the whitelist** in the BM wallet, adding their license number:
+The BM License Owner must then update the whitelist in the BM wallet by adding their License number, thereby granting permission for delegation:
 
+````
+
+```bash
+tvm-cli -j callx --addr BM_WALLET_ADDR --abi contracts/bksystem/AckiNackiBlockManagerNodeWallet.abi.json --keys block_manager.keys.json --method setLicenseWhiteList '{"whiteListLicense": {"YOUR_LICENSE_NUMBER": true}}'
 ```
+````
 
-tvm-cli --abi ../contracts/bksystem/BlockManagerContractRoot.abi.json --addr 0:6666666666666666666666666666666666666666666666666666666666666666 -m deployAckiNackiBlockManagerNodeWallet '{"pubkey": "0xYOUR_PUB_KEY", "signerPubkey": "0xYOUR_SIGNING_KEY", "whiteListLicense": {"YOUR_LICENSE_NUMBER": true}}'
-```
-
-* then add the license to the wallet:
+* then delegated the License to the wallet:
 
 ```
 
