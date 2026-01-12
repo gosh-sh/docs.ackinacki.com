@@ -56,12 +56,9 @@ After the service is verified:
 
 The BM License Owner must then update the whitelist in the BM wallet by adding their License number, thereby granting permission for delegation:
 
-````
-
-```bash
-tvm-cli -j callx --addr BM_WALLET_ADDR --abi contracts/bksystem/AckiNackiBlockManagerNodeWallet.abi.json --keys block_manager.keys.json --method setLicenseWhiteList '{"whiteListLicense": {"YOUR_LICENSE_NUMBER": true}}'
-```
-````
+<pre><code>
+<strong>tvm-cli -j callx --addr BM_WALLET_ADDR --abi contracts/bksystem/AckiNackiBlockManagerNodeWallet.abi.json --keys block_manager.keys.json --method setLicenseWhiteList '{"whiteListLicense": {"YOUR_LICENSE_NUMBER": true}}'
+</strong></code></pre>
 
 * then delegated the License to the wallet:
 
