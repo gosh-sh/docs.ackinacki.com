@@ -81,7 +81,7 @@ A Block Keeper responsible for block validation, who notifies all network partic
 
 #### **BLS keys**
 
-The keys used by BK to sign blocks. The lifespan of the keys is one [Epoch](glossary.md#epoch). For a new Epoch, new BLS keys will need to be generated. Each BK stores a list of [BLS](glossary.md#bls-keys) public keys of other BKs (for the current Epoch), which they use to verify [attestations](glossary.md#attestation) on blocks.
+The keys used by BK to sign blocks. The lifespan of the keys is one [Epoch](glossary.md#epoch). For a new Epoch, new BLS keys will need to be generated. Each BK stores a list of [BLS](glossary.md#bls-keys) public keys of other BKs (for the current Epoch), which they use to verify [attestations](glossary.md#attestation) on blocks. It is recommended to back up BLS keys every time they regenerated.
 
 ## C
 
@@ -89,7 +89,7 @@ The keys used by BK to sign blocks. The lifespan of the keys is one [Epoch](glos
 
 The section of the block that contains information shared among all network participants.
 
-**Currency Collection**&#x20;
+#### **Currency Collection**&#x20;
 
 A set of currencies within the Acki Nacki network designed to address various tasks beyond [VMSHELL](glossary.md#vmshell) tokens, which are used for paying fees. These currencies enhance the flexibility and efficiency of the Acki Nacki ecosystem. They provide diverse functionalities tailored to specific use cases, such as value storage and staking ([NACKL](glossary.md#nackl)) or transferring funds between different Dapp IDs for subsequent conversion ([SHELL](glossary.md#shell)).
 
@@ -121,9 +121,9 @@ After the [Epoch](glossary.md#epoch) contract is deployed, the future BK must be
 
 #### License
 
-The [**BK License**](for-node-owners/protocol-participation/block-keeper/license/acki-nacki-vk-node-license.md) is a [contract](https://github.com/ackinacki/ackinacki/blob/main/contracts/bksystem/License.sol) that grants the right for a Block Keeper (BK) to participate in the protocol. The license is delegated to a specific BK. Each BK can be delegated up to 20 (twenty) licenses. The Licenses are delegated without restrictions. &#x20;
+The [**BK License**](for-node-owners/protocol-participation/block-keeper/license/acki-nacki-vk-node-license.md) is a [contract](https://github.com/ackinacki/ackinacki/blob/main/contracts/bksystem/License.sol) that grants the right for a [Block Keeper (BK)](glossary.md#block-keeper-bk) to participate in the protocol. The license is delegated to a specific BK. Each BK can be delegated up to 20 (twenty) licenses. The Licenses are delegated without restrictions. &#x20;
 
-The **BM License** is a [contract](https://github.com/ackinacki/ackinacki/blob/main/contracts/bksystem/LicenseBM.sol) that grants the Block Manager (BM) the right to participate in the protocol. Each BM License is delegated to  BM wallet _(1 wallet - 1 license)_.
+The **BM License** is a [contract](https://github.com/ackinacki/ackinacki/blob/main/contracts/bksystem/LicenseBM.sol) that grants a [Block Manager (BM)](glossary.md#block-manager-bm) the right to participate in the network. Each BM License is delegated to a BM wallet _(1 wallet - 1 license)_.
 
 #### License number
 
@@ -143,7 +143,7 @@ The keys used to manage license contracts (delegate and revoke delegation) and w
 
 The minimum amount of tokens a Block Keeper must stake to participate in the network. This value dynamically adjusts based on the difference between the current number of Block Keepers and the required number of Block Keepers in the network.
 
-**Minimal Stake of the BM**
+#### **Minimal Stake of the BM**
 
 The minimum amount of tokens locked on Block Manager wallet.\
 It is calculated individually and represents a percentage of the total NACKLs earned by that BM.\
