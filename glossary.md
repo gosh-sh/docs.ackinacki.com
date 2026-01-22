@@ -146,9 +146,8 @@ The minimum amount of tokens a Block Keeper must stake to participate in the net
 #### **Minimal Stake of the BM**
 
 The minimum amount of tokens locked on Block Manager wallet.\
-It is calculated individually and represents a percentage of the total NACKLs earned by that BM.\
-The percentage depends on the time elapsed since the network launch.\
-&#xNAN;_(If a BM stops operating in the middle of an_ [_Epoch_](glossary.md#epoch-of-the-bm)_, no reward is accrued for that Epoch.)_
+It is calculated individually and represents the product of a coefficient and the total amount of [**NACKL**](glossary.md#nackl) earned by the BM. The coefficient depends on the time elapsed since the network launch and decreases over time.\
+If a BM stops operating in the middle of an [Epoch](glossary.md#epoch-of-the-bm), no reward is accrued for that Epoch.
 
 #### Maximum stake&#x20;
 
