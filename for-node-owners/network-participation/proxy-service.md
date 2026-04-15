@@ -53,8 +53,7 @@ It implies two key points:
 The Proxy Service aggregates all or part of the outbound traffic from its datacenter and forwards it directly to other proxies, reducing inter-datacenter traffic by a factor equal to the number of Block Keeper nodes behind the proxy in that datacenter.
 
 {% hint style="warning" %}
-Therefore, if a node operator runs more than one node, it is strongly recommended to run them behind a proxy to optimize traffic across the network.\
-
+Therefore, if a node operator runs more than one node, it is strongly recommended to run them behind a proxy to optimize traffic across the network.<br>
 {% endhint %}
 
 ## Proxy network requirements

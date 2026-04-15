@@ -14,6 +14,10 @@ A message from the Verifier broadcast to all network participants by Block Verif
 
 The decentralized network starter protocol (DNSP), it collects Node and [License](glossary.md#license) information, tests and updates the node software and initiates Zerostate (first block) generation once all DNSP requirements are met.
 
+**Acki Nacki Wallet (Main Network Wallet)**
+
+A non-custodial smart contract wallet serving as the primary wallet of the Acki Nacki network. Available as a mobile and web application. Features ZK Login authentication via zero-knowledge proofs (zk-SNARKs, Groth16) with support for Google, Facebook, and other OpenID providers; multi-factor transaction confirmation; access recovery in case of device or credential loss. No user data is transmitted to external servers — the owner retains full control over assets. The wallet code undergoes formal verification. Install: [ackinacki.com/wallet](https://ackinacki.com/wallet)
+
 #### **Attestation**
 
 A message sent to the [Block Producer (BP)](glossary.md#block-producer-bp) by any [Block Keeper (BK)](glossary.md#block-keeper-bk) after receiving a block. The Attestation is a BLS signature generated using the BK’s private key. The BP of the next block must aggregate all received Attestations for the previous block into one BLS signature and include it in the Common section of the new block.
@@ -89,15 +93,24 @@ The keys used by BK to sign blocks. The lifespan of the keys is one [Epoch](glos
 
 The section of the block that contains information shared among all network participants.
 
-#### **Currency Collection**&#x20;
-
-A set of currencies within the Acki Nacki network designed to address various tasks beyond [VMSHELL](glossary.md#vmshell) tokens, which are used for paying fees. These currencies enhance the flexibility and efficiency of the Acki Nacki ecosystem. They provide diverse functionalities tailored to specific use cases, such as value storage and staking ([NACKL](glossary.md#nackl)) or transferring funds between different Dapp IDs for subsequent conversion ([SHELL](glossary.md#shell)).
-
 ## D
 
 #### **Dapp ID**
 
 The identifier of a Decentralized Contract System on the Acki Nacki blockchain. This ID is equal to the address of the root smart contract, which is deployed using an external message. All contracts deployed with internal messages automatically receive the same Dapp ID. Whether from the same root contract, or from contracts deployed by the root contract.
+
+#### Denominations
+
+A denomination is a fixed lot size when selling [SHELL](glossary.md#shell). There are four denominations, similar to banknotes:
+
+| Denomination (USDC ecc) | SHELL Equivalent |
+| :---------------------: | :--------------: |
+|            1            |        100       |
+|            10           |       1,000      |
+|           100           |      10,000      |
+|          1,000          |      100,000     |
+
+No other denominations exist. When selling SHELL, the AN Wallet automatically breaks down your amount into lots of these denominations.
 
 ## E
 
@@ -109,7 +122,15 @@ The participation period in the Acki Nacki protocol during which a participant a
 
 The participation period in the Acki Nacki protocol during which a participant acts as a [Block Manager](glossary.md#block-manager-bm). The length of an epoch is 259 200 blocks (about 24 hours).
 
+#### **Extra Currency Collection**&#x20;
+
+A set of currencies within the Acki Nacki network designed to address various tasks beyond [VMSHELL](glossary.md#vmshell) tokens, which are used for paying fees. These currencies enhance the flexibility and efficiency of the Acki Nacki ecosystem. They provide diverse functionalities tailored to specific use cases, such as value storage and staking ([NACKL](glossary.md#nackl), index 1) or transferring funds between different [Dapp IDs](glossary.md#dapp-id) for subsequent conversion ([SHELL](glossary.md#shell), index 2) and settlement in a US dollar-pegged stablecoin ([USDC](glossary.md#usdc-ecc), index 3)
+
 ## F
+
+#### Free Reserve
+
+The USDC held in the Accumulator contract that is not reserved for SHELL sellers. It is formed as follows: when a buyer purchases SHELL but there aren't enough sellers in the queues, the system creates (mints) new SHELL. The USDC paid for minted SHELL forms the free reserve. Seller funds are never touched.
 
 #### Future BK set
 
@@ -136,6 +157,12 @@ A person who [registered at the Acki Nacki Dashboard](https://docs.ackinacki.com
 #### License Owner Keys
 
 The keys used to manage license contracts (delegate and revoke delegation) and withdraw staking rewards. They can be obtained by [registering in the dashboard](https://docs.ackinacki.com/protocol-participation/license/license-dashboard-guide).
+
+#### Lot
+
+A lot is a single indivisible sell order for SHELL. Each lot is tied to a specific denomination and can only be sold in full. Partial selling of a lot is not possible.
+
+**Example:** a lot with denomination 10 USDC ecc means the seller deposited 1,000 SHELL and is waiting to receive 10 USDC ecc when their turn comes.
 
 ## M
 
@@ -192,7 +219,7 @@ A metric that increases the rewards for [Block Keepers](glossary.md#block-keeper
 
 #### **SHELL**&#x20;
 
-The utility token within the Acki Nacki network is designed to compensate [NACKL](glossary.md#nackl) holders for the computing resources the network provides. It can be converted to [VMSHELL](glossary.md#vmshell) to cover network fees at a 1:1 ratio. However, it is not possible to convert VMSHELL back to SHELL. This token can be transferred between different [Dapp IDs](glossary.md#dapp-id). (currency collection index: 2)
+The utility token within the Acki Nacki network is designed to compensate [NACKL](glossary.md#nackl) holders for the computing resources the network provides. Minted by depositing USDС ecc, but it isn't collateralized. It can be converted to [VMSHELL](glossary.md#vmshell) to cover network fees at a 1:1 ratio. However, it is not possible to convert VMSHELL back to SHELL. This token can be transferred between different [Dapp IDs](glossary.md#dapp-id). (currency collection index: 2)
 
 #### **Stake**
 
@@ -203,6 +230,12 @@ The amount of [NACKL](glossary.md#nackl) tokens required to participate in the A
 #### **Thread**&#x20;
 
 A subset of nodes that serve a particular subset of [Accounts](glossary.md#account-contract).
+
+## U
+
+#### USDC ecc
+
+A stablecoin pegged to the US dollar. Used for settlements when [buying](for-users/buy-sell-shell/buying-shell/ways-to-buy-shell.md) and[ selling](for-users/buy-sell-shell/selling-shell/) SHELL (the rate is fixed and immutable: **1 USDC = 100 SHELL)**. Within the Acki Nacki network, USDC exists as ECC\[3] — an element of the [Extra Currency Collection](glossary.md#extra-currency-collection).
 
 ## V
 

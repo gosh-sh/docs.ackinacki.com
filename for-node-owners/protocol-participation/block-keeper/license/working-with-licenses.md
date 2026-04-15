@@ -46,8 +46,7 @@ The Node Owner can modify the whitelist at any time by using the setLicenseWhite
 Pass in the license numbers you received from the License Owners.
 
 * **`uint256` (key)** – the license number.
-* **`bool` (value)** – set to `true` to **add** the license on the whitelist, or `false` to **remove** it.\
-
+* **`bool` (value)** – set to `true` to **add** the license on the whitelist, or `false` to **remove** it.<br>
 
 Example command:
 
