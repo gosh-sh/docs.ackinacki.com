@@ -25,15 +25,27 @@ The purchase consists of three steps:
 Navigate to [https://shellbuy.ackinax.com](https://shellbuy.ackinax.com/) in your browser. \
 A **Connect Your Wallet** card appears with the **Generate QR Code** button. Click it.
 
-<figure><img src="../../../.gitbook/assets/2.jpg" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2 (2).jpg" alt="" width="375"><figcaption></figcaption></figure>
+{% endstep %}
+
+{% step %}
+#### Choose Your Packages
+
+The **Choose Your Packages** screen displays five token packages:
+
+<figure><img src="../../../.gitbook/assets/2-1n.jpg" alt=""><figcaption></figcaption></figure>
+
+Each package has a quantity selector (−/+). You can add multiple packages to your order. The **Order Summary** panel on the right updates in real time, showing the selected packages, total SHELL, and subtotal.
+
+When ready, tap **Connect Wallet**.
 {% endstep %}
 
 {% step %}
 #### Scan the QR Code
 
-A QR code is displayed on screen with the message **Scan with Wallet App**. You can either scan the code with your phone's camera or tap **Open in Wallet App** if you are on a mobile device. The page shows "Waiting for wallet confirmation…"
+A QR code is displayed on screen with the message **Approve in your wallet**. You can scan the code either with your phone's camera or with the scanners in the Acki Nacki Wallet app. The page shows "Waiting for wallet confirmation…"
 
-<figure><img src="../../../.gitbook/assets/3.jpg" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/3n.jpg" alt="" width="133"><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -51,56 +63,11 @@ After confirming, the wallet shows a success screen: **Wallet has been connected
 {% step %}
 #### Wallet Connected
 
-Back in the browser, the page now shows **WALLET CONNECTED** with your wallet name and address. Two buttons are available: **Browse Packages** and **Disconnect**.
+Returning to your browser, you'll see the "Order Summary" page with your wallet name, address, and package details.
 
-Tap **Browse Packages** to proceed.
+If everything is correct, click "Proceed to Checkout."
 
-<figure><img src="../../../.gitbook/assets/3_2.jpg" alt="" width="375"><figcaption></figcaption></figure>
-{% endstep %}
-
-{% step %}
-#### Choose Your Packages
-
-The **Choose Your Packages** screen displays five token packages:
-
-<figure><img src="../../../.gitbook/assets/4.jpg" alt="" width="375"><figcaption></figcaption></figure>
-
-Each package has a quantity selector (−/+). You can add multiple packages to your order. The **Order Summary** panel on the right updates in real time, showing the selected packages, total SHELL, and subtotal.
-
-When ready, tap **Proceed to Checkout**.
-{% endstep %}
-
-{% step %}
-#### Verify Wallet Ownership
-
-The **Checkout** page opens. At the top you'll see a **Wallet verification required** banner
-
-Tap the **Verify Wallet Ownership** button.
-
-<figure><img src="../../../.gitbook/assets/5.jpg" alt="" width="375"><figcaption></figcaption></figure>
-
-The button changes to **Verifying with wallet:**
-
-<figure><img src="../../../.gitbook/assets/5_1.jpg" alt="" width="375"><figcaption></figcaption></figure>
-{% endstep %}
-
-{% step %}
-#### Approve Verification in the Wallet
-
-In your wallet app, a prompt appears: **Shell Buyer wants to verify your wallet ownership. Confirm?** Tap **Confirm**.
-
-<figure><img src="../../../.gitbook/assets/5_2.jpg" alt="" width="188"><figcaption></figcaption></figure>
-
-After approval, the Checkout page shows a green **Wallet verified** banner.
-
-<figure><img src="../../../.gitbook/assets/5_3.jpg" alt="" width="375"><figcaption></figcaption></figure>
-
-{% hint style="warning" %}
-If verification times out, you will see the error "Wait for property. Max 60 attempts reached." \
-In this case, tap **Verify Wallet Ownership** again to retry.
-{% endhint %}
-
-<figure><img src="../../../.gitbook/assets/5_4_err0r.jpg" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/5n.jpg" alt="" width="267"><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -126,7 +93,7 @@ In the **Payment Method** section, select **Credit Card** (selected by default).
 
 Tap **Pay with Card**.
 
-<figure><img src="../../../.gitbook/assets/6 credit_card.jpg" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/7n.jpg" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Cryptocurrency" %}
@@ -144,7 +111,7 @@ After selecting the currency and network, the button reads **Pay $X.XX with \[cu
 
 Tap the **Pay** button:
 
-<figure><img src="../../../.gitbook/assets/7 crypto (1).jpg" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/7-1n.jpg" alt="" width="375"><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 {% endstep %}
@@ -228,14 +195,6 @@ Open your Acki Nacki Wallet. Your SHELL balance now reflects the purchased token
 {% endstep %}
 {% endstepper %}
 
-## Disconnecting the Wallet
-
-To disconnect your wallet from Shell Buyer, tap the **Disconnect** button on the Shell Buyer page. \
-The wallet app will show a prompt: **Shell Buyer requested disconnection from your wallet. Disconnect now?** \
-Tap **Disconnect** to confirm, or **Keep connected** to stay connected.
-
-<div><figure><img src="../../../.gitbook/assets/3_2 (1).jpg" alt="" width="375"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/3_4.jpg" alt="" width="188"><figcaption></figcaption></figure></div>
-
 ## Important Notes
 
 * Payment provider fees (card processing fee, VAT) may be added depending on your country and payment method
@@ -245,8 +204,7 @@ Tap **Disconnect** to confirm, or **Keep connected** to stay connected.
 
 ## Possible Errors
 
-| Message                                    | Cause                            | Solution                                    |
-| ------------------------------------------ | -------------------------------- | ------------------------------------------- |
-| Wait for property. Max 60 attempts reached | Wallet verification timed out    | Tap **Verify Wallet Ownership** to retry    |
-| Payment failed                             | Payment provider error           | Try again or use a different payment method |
-| Wallet connection failed                   | QR code expired or network issue | Generate a new QR code and try again        |
+| Message                  | Cause                            | Solution                                    |
+| ------------------------ | -------------------------------- | ------------------------------------------- |
+| Payment failed           | Payment provider error           | Try again or use a different payment method |
+| Wallet connection failed | QR code expired or network issue | Generate a new QR code and try again        |
