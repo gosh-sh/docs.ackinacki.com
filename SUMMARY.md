@@ -3,6 +3,7 @@
 * [Acki Nacki Overview](README.md)
 * [Glossary](glossary.md)
 * [Launch & Genesis](launch-and-genesis.md)
+* [Network Architecture and Participants](network-architecture-and-participants.md)
 * [Tokenomics](tokenomics/README.md)
   * [Tokens Acki Nacki](tokenomics/tokens-acki-nacki.md)
   * [Fee System](tokenomics/fee-system.md)
