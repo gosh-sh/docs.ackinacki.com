@@ -61,4 +61,7 @@
     * [Tracking Your Orders](for-users/buy-sell-shell/selling-shell/tracking-your-orders.md)
     * [Receiving ECC USDC (Claim)](for-users/buy-sell-shell/selling-shell/receiving-ecc-usdc-claim.md)
   * [Burn NACKL for ECC USDC](for-users/buy-sell-shell/burn-nackl-for-ecc-usdc.md)
-* [Acki Nacki Friday Updates](for-users/acki-nacki-friday-updates.md)
+
+***
+
+* [Acki Nacki Friday Updates](acki-nacki-friday-updates.md)
