@@ -64,4 +64,4 @@
 
 ***
 
-* [Acki Nacki Friday Updates](acki-nacki-friday-updates.md)
+* [Acki Nacki News](acki-nacki-news.md)
