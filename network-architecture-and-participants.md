@@ -7,7 +7,12 @@ description: >-
 
 # Network Architecture and Participants
 
-**Acki Nacki is a multithreaded Proof-of-Stake network with parallel execution and fast probabilistic block confirmation.** \
+**Acki Nacki is a multithreaded Proof-of-Stake network with parallel execution and fast probabilistic block confirmation.**&#x20;
+
+{% hint style="info" %}
+Entrypoint for interacting with the network: https://mainnet.ackinacki.org&#x20;
+{% endhint %}
+
 Its architecture separates responsibility across three main layers:
 
 | Layer                    | Purpose                                                                                    | Main participants                                                   |
@@ -18,72 +23,78 @@ Its architecture separates responsibility across three main layers:
 
 ## Capability Status
 
-This page describes the target Acki Nacki architecture according to the white paper and current specification. Core network functions are separated from mechanisms that are still being rolled out.
+This document describes the target Acki Nacki architecture according to the white paper and the current specification.
+
+Some mechanisms are under active development and are marked as:
 
 | Status             | Meaning                                                                             |
 | ------------------ | ----------------------------------------------------------------------------------- |
-| **Available**      | Available in the current network.                                                   |
+| **Available**      | Available in the current [mainnet](https://mainnet.ackinacki.org/) network.         |
 | **Phased rollout** | The base mechanism works, while extensions are introduced through protocol updates. |
 | **Planned**        | Described in the specification but not yet available in production.                 |
 
+The base network functions are described separately from mechanisms that are being developed in phases.
+
 ### Status Summary
 
-| Capability                                              | Status             | Context                                                                                                                                              |
-| ------------------------------------------------------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Block Keeper consensus, attestations, and finalization  | **Available**      | The base consensus layer is running in the current network.                                                                                          |
-| Multithreaded execution and `thread` separation         | **Available**      | Used for parallel processing of independent parts of the state.                                                                                      |
-| Merging `threads` when load decreases                   | **Planned**        | The logic is behind a feature flag and is not enabled in the current network. Merge support at the state and routing table levels must be completed. |
-| NACK mechanism for challenging invalid blocks           | **Phased rollout** | The base challenge flow and producer slashing path are available. Additional protocol guarantees are introduced through updates.                     |
-| Extended accountability rules for invalid attestations  | **Planned**        | These rules will be added to the existing producer slashing mechanism in future protocol updates.                                                    |
-| Broadcast Proxy as the transport layer                  | **Available**      | Used for segmented network topology and for reducing direct load between Block Keepers.                                                              |
-| Block Manager and BM staking                            | **Available**      | Block Managers provide user and API access and can participate in BM staking through the corresponding license.                                      |
-| Mobile Verifier reward game and on-chain infrastructure | **Available**      | The on-chain reward game is active, and rewards are distributed according to the current game rules.                                                 |
-| Light-verification flow for Mobile Verifier             | **Planned**        | Full integration of light state and transaction checks into the protocol-level security flow is introduced gradually.                                |
+| Capability                                              | Status             | Context                                                                                                                                                                                     |
+| ------------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Block Keeper consensus, attestations, and finalization  | **Available**      | The base consensus layer is operational in the current network.                                                                                                                             |
+| Multithreaded execution and `thread` separation         | **Available**      | Used for parallel processing of independent parts of the state.                                                                                                                             |
+| Merging `threads` when load decreases                   | **Planned**        | The logic is behind a feature flag and is not enabled in the current network; merge support must be completed at the state and routing table levels.                                        |
+| NACK mechanism for challenging invalid blocks           | **Phased rollout** | The challenge-and-verification flow and slashing path for the producer are available; extended accountability for invalid attestations and false accusations is being introduced in phases. |
+| Extended accountability rules for invalid attestations  | **Planned**        | These rules complement the existing slashing path for producers in future protocol updates.                                                                                                 |
+| Broadcast Proxy as the transport layer                  | **Available**      | Used for segmented network topology and for reducing direct load between Block Keepers.                                                                                                     |
+| Block Manager and BM staking                            | **Available**      | Block Managers provide user/API access and may participate in BM staking through the corresponding license.                                                                                 |
+| Mobile Verifier reward game and on-chain infrastructure | **Available**      | The on-chain reward game is active, and rewards are distributed according to the current game rules.                                                                                        |
+| Light-verification flow for Mobile Verifier             | **Planned**        | Full integration of light state and transaction checks into the protocol-level security flow is being introduced in phases.                                                                 |
 
-## Network Architecture
+## Network Structure <a href="#network-structure" id="network-structure"></a>
 
-### Execution Layer: Threads
+### Threads and Execution Model <a href="#threads-and-execution-model" id="threads-and-execution-model"></a>
 
 The Acki Nacki execution layer consists of dynamic `threads`. Each `thread` serves a subset of accounts and processes messages related to that part of the state.
 
-This model allows the network to:
+This model makes it possible to:
 
 * place related accounts in the same execution area;
 * execute independent account groups in parallel;
 * split overloaded `threads` as load grows;
 * merge `threads` back when load decreases (**Planned**).
 
-`Threads` do not directly share mutable state. They interact through cross-thread messages: one `thread` can pass messages to another through finalized blocks and references to them. This lets the network execute independent parts of the state in parallel and gradually synchronize account routing among participants.
+`Threads` do not directly share mutable state. They interact through cross-thread messages: one `thread` can pass messages to another through finalized blocks and references to them. This allows the network to execute independent parts of state in parallel and gradually synchronize account routing between participants.
 
 ### Consensus Layer
 
-Acki Nacki consensus is maintained by Block Keepers. A Block Keeper is a validator participant with active stake, signing keys, and the right to participate in block confirmation.
+Acki Nacki consensus is maintained by a set of Block Keepers. A Block Keeper is a validator participant with active stake, signing keys, and the right to participate in block confirmation.
 
-In each round, one Block Keeper is selected as the Block Producer for a specific `thread`. The Producer creates a new block, executes messages, adds the required metadata, signs the block, and distributes it to other Block Keepers.
+In each round, one Block Keeper is selected as the Block Producer for a specific `thread`. The Producer forms a new block, executes messages, adds the required metadata, signs the block, and propagates it to other Block Keepers.
 
-Other Block Keepers check the block against protocol rules and send attestations. An attestation is a cryptographic confirmation of a block by a consensus participant.
+The other Block Keepers verify that the block complies with protocol rules and send attestations. An attestation is a cryptographic confirmation of a block by a consensus participant.
 
-Block confirmation has two stages:
+Block confirmation happens in two stages:
 
-| Stage           | Purpose                                                                                              |
-| --------------- | ---------------------------------------------------------------------------------------------------- |
-| Prefinalization | Locks the network onto one branch and reduces the risk of fork conflicts.                            |
-| Finalization    | Makes the block an irreversible part of network history after all security conditions have been met. |
+| Stage           | Purpose                                                                                               |
+| --------------- | ----------------------------------------------------------------------------------------------------- |
+| Prefinalization | Locks the network onto one branch and reduces the risk of fork conflicts.                             |
+| Finalization    | Means the block becomes finalized under the protocol rules after the finalization conditions are met. |
 
-### Verification and NACK
+### Verification and the NACK Mechanism <a href="#verification-and-the-nack-mechanism" id="verification-and-the-nack-mechanism"></a>
 
-Acki Nacki uses lazy validation. Under normal conditions, each Block Keeper does not have to fully re-execute every received block. Instead, the network uses a challenge mechanism.
+Acki Nacki uses lazy validation. Block Keepers are not required to fully re-execute every block on the happy path. The base security of the current `mainnet` network is provided by Block Keeper consensus, attestations, finalization rules, and the economic accountability of Block Producers for invalid blocks.
 
-If a Block Verifier detects an invalid block or an incorrect state transition, it sends a signed `NACK` accusation. The disputed block then goes through independent verification.
+`NACK` is a challenge mechanism. If a Block Verifier detects an invalid block or an invalid state transition, it sends a signed `NACK` accusation. A `NACK` by itself does not finalize punishment and does not automatically make the accusation true: the disputed block must go through independent verification under the protocol rules.
 
 If the accusation is confirmed:
 
 * the invalid block and its descendants are rejected;
-* the malicious producer can be punished through the available slashing path;
-* additional accountability rules may apply to participants who attested to the invalid block (**Planned**).
+* the producer of the invalid block may be punished through the available slashing path (**Available**);
+* the network returns to the correct branch according to the fork choice and finalization rules.
 
-{% hint style="success" %}
-The NACK mechanism keeps block processing fast on the happy path while preserving an economic punishment mechanism for serious protocol violations.
+Unconfirmed or invalid accusations must not lead to slashing of honest participants. Extended accountability rules, including accountability for invalid attestations and additional rules for false accusations, are being introduced in phases (**Planned**).
+
+{% hint style="info" %}
+Thus, the current NACK flow protects the network from accepting invalid blocks through a challenge-and-verification path, while future updates extend the accountability of participants who attest to or initiate invalid actions.
 {% endhint %}
 
 ### Transport Topology
@@ -95,7 +106,9 @@ The Acki Nacki transport network is not a flat mesh where every node connects to
 | `Single node segment` | One Block Keeper without a Proxy, to which other participants connect directly. |
 | `Proxied segment`     | One or more Proxies and a group of Block Keepers behind them.                   |
 
-Broadcast Proxy is not a consensus participant. Its purpose is to reduce network load, improve message propagation, and help scale the transport layer.
+Broadcast Proxy is not a consensus participant and cannot create, modify, or attest to consensus messages on behalf of Block Keepers. Consensus messages are signed by Block Keepers, so Proxy performs only a transport function: it relays data between participants and helps reduce network load.
+
+Proxy segments are not the only connection model. A Block Keeper may operate in a `Single node segment` without a Proxy, or use a proxy segment to optimize network propagation. For fault tolerance, participants may use several network paths and update the transport configuration when a specific Proxy is unavailable.
 
 ### User Layer
 
@@ -115,13 +128,11 @@ The public network model includes the following main roles:
 * `Block Manager`;
 * `Mobile Verifier`.
 
-Block Producer and Block Verifier are not separate permanent node types. They are temporary functions performed by participants from the current Block Keeper set.
-
-`Broadcast Proxy` operates separately at the transport layer: it does not participate in consensus but is an important part of the network topology.
-
 {% hint style="warning" %}
 Block Producer and Block Verifier are not separate permanent node types. They are temporary functions performed by participants from the current Block Keeper set.
 {% endhint %}
+
+`Broadcast Proxy` operates separately at the transport layer: it does not participate in consensus but is an important part of the network topology.
 
 ## Block Keeper
 
@@ -134,11 +145,11 @@ Block Keeper is the base consensus participant in Acki Nacki.
 * Send attestations.
 * Participate in prefinalization and finalization.
 * Maintain fork choice and network security rules.
-* Perform the Block Verifier role when needed.
+* Perform the Block Verifier role when necessary.
 
 ### Participation Requirements
 
-* Have the right to participate in consensus through a license and stake. For the first two years after mainnet launch, the license is required; this requirement is removed afterward.
+* Have the right to participate in consensus through a [license](https://docs.ackinacki.com/for-node-owners/protocol-participation/block-keeper/license) and stake. For the first two years after `mainnet` launch, the license is required; this requirement is removed afterward.
 * Have signing keys for consensus participation.
 * Run and maintain an available Block Keeper node.
 * Be in the active consensus participant set.
@@ -178,7 +189,7 @@ Block Producer is a Block Keeper selected to produce a block in a specific round
 
 ### Slashing
 
-* Possible for producing an invalid block, equivocation, or other violations of block production rules.
+* Possible for producing an invalid block, equivocation, or other violations of Block Production rules.
 
 ## Block Verifier / Acki-Nacki
 
@@ -257,7 +268,6 @@ Block Manager is a participant in the user-facing and infrastructure part of the
 
 * Participates in BM staking through the corresponding license.
 * Rewards are accrued through the BM wallet according to BM staking parameters and network state.
-* The current implementation uses a simplified reward model that differs from the formula in the White Paper.
 
 ### Slashing
 
@@ -266,28 +276,31 @@ Block Manager is a participant in the user-facing and infrastructure part of the
 
 ## Mobile Verifier
 
-Mobile Verifier is a lightweight Acki Nacki security participant. It does not have to run a full Block Keeper node or validate every block.
+Mobile Verifier is a light participant in Acki Nacki. It is not required to run a full Block Keeper node or validate every block.
+
+The Mobile Verifier role is related to the reward game and the development of the light-verification model. It expands user participation in network verification and creates an operational foundation for light independent checks.
 
 ### Main Functions
 
-* Participate in the reward game for lightweight verifiers through on-chain infrastructure (**Available**).
-* Perform independent checks of selected parts of the state or transaction activity through the light-verification flow (**Planned**).
+* Participate in the reward game for light verifiers through on-chain infrastructure;
+* Perform selective checks of state or transaction activity within the light-verification flow;
+* Confirm verification results according to the rules of the corresponding flow.
 
 ### Participation Requirements
 
-* Register as a Mobile Verifier and participate in the reward game (**Available**).
-* Use the light-verifier client as it becomes publicly available (**Planned**).
-* Follow the rules for verification and result confirmation.
+* Register as a Mobile Verifier;
+* Use the light-verifier client or another supported participation method;
+* Follow the rules of the reward game, verification, and result confirmation.
 
 ### Rewards
 
-* The reward game for Mobile Verifiers is active, and rewards are distributed according to the current game rules (**Available**).
-* Integration of light state checks with the reward flow is introduced gradually (**Planned**).
+* Rewards are distributed according to the reward game rules;
+* Reward parameters depend on the current game rules and on-chain infrastructure.
 
-### Slashing
+### **Accountability:**
 
-* The accountability model for Mobile Verifier evolves together with the light-verification flow (**Planned**).
-* Rules for false or incorrect checks will be published as part of future updates (**Planned**).
+* Mobile Verifier is responsible for the correctness of submitted results under the rules of the corresponding flow;
+* False or invalid checks are handled according to the current reward game rules and light-verification model.
 
 ## Operational and Economic Entities
 
