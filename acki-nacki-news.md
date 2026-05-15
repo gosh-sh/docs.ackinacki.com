@@ -9,8 +9,7 @@ hidden: true
 
 ### Node & Network
 
-* Durable State was released in [`v0.16.0`](https://github.com/ackinacki/ackinacki/releases/tag/v0.16.0).
-* Network providers are coordinating the update to keep the transition aligned across the network.
+* Durable State was released in [`v0.16.0`](https://github.com/ackinacki/ackinacki/releases/tag/v0.16.0). Network providers are coordinating the update to keep the transition aligned across the network.
 
 ### Bridge
 
