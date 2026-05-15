@@ -36,9 +36,10 @@ For Dodex, we are continuing to develop the API and contract layer&#x20;
 
 In wallet, we continue improving the user experience and adding developer tools.
 
-* Added a `dev setting` toggle in settings to enable developer mode.
-* In developer mode, users can see an option to send SHELL to a precomputed contract address for a future deployment; this option is hidden in the regular mode.
-* When developer mode is enabled, the Multifactor contract address, its `DAPP ID`, and the network switcher become visible.
+* In the coming release  `Dev setting`  page is added
+* When developer mode is enabled,&#x20;
+  * the Multifactor contract address, its `DAPP ID`, and the network switcher become visible.
+  * users can see an option to send SHELL to a precomputed contract address for a future deployment; this option is hidden in the regular mode.
 * The release is already available as an APK. App Store publication is coming, and Google Play publication will be later.
 * Transaction history and SHELL sell order history display were fixed: the data no longer disappears in the scenarios reported by a user.
 * Fixed an Android login issue for test wallets on `Shellnet`.
