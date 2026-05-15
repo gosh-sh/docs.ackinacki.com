@@ -16,11 +16,8 @@ hidden: true
 
 On the bridge side, we continue building the infrastructure for ZKP-proof verification and safe asset movement between EVM and Acki Nacki.
 
-* The SDK now includes the `vergrth16WithVK` instruction for proving an EVM-to-Acki Nacki transfer proof on the Acki Nacki side. The instruction is not included in a public release yet.
-* The next step in this direction is integrating `vergrth16WithVK` instruction into the Acki Nacki bridge and testing the full deposit to Acki Nacki scenario.
-* The `Exchange` contract was renamed to `TokenBridge`.
-* Withdrawal bridge interface was added to `TokenBridge`: it will allow initiating USDC withdrawals to the EVM network with event generation for a later ZKP-proof on the EVM side.
-* The withdrawal bridge interface is currently under audit by the Pruvendo team.
+* The SDK now includes the `vergrth16WithVK` instruction for proving an EVM-to-Acki Nacki transfer proof on the Acki Nacki side. The instruction is not included in a public release yet. The next step in this direction is integrating `vergrth16WithVK` instruction into the Acki Nacki bridge and testing the full deposit to Acki Nacki scenario.
+* The `Exchange` contract was renamed to `TokenBridge`  and withdrawal bridge interface was added to `TokenBridge`: it will allow initiating USDC withdrawals to the EVM network with event generation for a later ZKP-proof on the EVM side. The withdrawal bridge interface is currently under audit by the Pruvendo team. These changes are in Shellnet only, not in Mainnet.
 * The circuit for layer hash movement, which proves that a block belongs to network history, was tested in an EVM test network. Based on the test results, the node-side logic for storing hash movement data needs additional refinement.
 
 {% hint style="info" %}
