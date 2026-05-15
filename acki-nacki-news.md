@@ -45,10 +45,7 @@ In wallet, we continue improving the user experience and adding developer tools.
 
 ### Popits
 
-We are preparing Popits 3.0 for the new boosts season.
-
-* In the new season, users will be able to create AI tracks as Popits and receive boosts for them.
-* We are also preparing a NACKL mining scenario while listening to tracks from the bucket feed or minted Popcoins.
+Popits 3.0 on the way - with get boosts for AI tracks creation and NACKL mining. Get ready for new Boost Season
 
 ### Documentation & Developer Experience
 
