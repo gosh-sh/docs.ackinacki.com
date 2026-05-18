@@ -23,7 +23,7 @@ Detailed guide: [Buy via Acki Nacki Wallet](purchase-with-ecc-usdc.md)
 
 **For:** users who want to buy SHELL using fiat currency (credit/debit card) or cryptocurrency (USDT, USDC).
 
-**Application:** [Shell Buyer App](https://shellbuyer-production.up.railway.app/) — a web application accessible through any browser. A mobile version is planned for the future.
+**Application:** [Shell Buyer App](https://shellbuy.ackinax.com/) — a web application accessible through any browser. A mobile version is planned for the future.
 
 **How it works:**
 
@@ -34,7 +34,7 @@ Detailed guide: [Buy via Acki Nacki Wallet](purchase-with-ecc-usdc.md)
 5. Payment is processed through the payment provider
 6. SHELL is credited to your wallet
 
-Detailed guide: [Buy via Shell Bayer App](https://shellbuyer-production.up.railway.app/#how-it-works)
+Detailed guide: [Buy via Shell Bayer App](https://shellbuy.ackinax.com/)
 
 ***
 
