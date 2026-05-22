@@ -5,6 +5,56 @@ hidden: true
 
 # Acki Nacki News
 
+## Update - 22.05.26
+
+### Node & Network
+
+After the Durable State release, the network team identified a bug in external message processing. Patch releases [`v0.16.1`](https://github.com/ackinacki/ackinacki/releases/tag/v0.16.1) and [`v0.16.2`](https://github.com/ackinacki/ackinacki/releases/tag/v0.16.2) were prepared and have already been rolled out to the network.
+
+Work on State V2 is currently in progress.
+
+{% hint style="danger" %}
+**Attention!!!!!**
+
+Account addressing in State V2 will use the DApp ID + address format. At the moment, all applications are still using the old addressing scheme.
+
+We are planning to prepare a migration guide for applications to support the transition.
+
+The SDK with new account addressing support is already available (latest version: [v2.24.21](https://github.com/tvmlabs/tvm-sdk/releases/tag/v2.24.21.an))
+{% endhint %}
+
+### API Access
+
+Degraded public API performance over the last 1.5 week was caused by increased miner bot activity. These bots abused public infrastructure from a set of IP addresses.
+
+To prevent this load from affecting other network users, the rate limit policy for public endpoints was tightened. API request optimizations were also made to improve response speed.
+
+Miner applications may acquire a Block Manager license to avoid these limits. There will be an additional post on this topic the next week.&#x20;
+
+<mark style="color:$success;">**The internal network economy is evolving, and that is great to see!**</mark>
+
+### Bridge
+
+Changes made to the TokenBridge event circuit based on the results of the Pruvendo audit.
+
+Decision was made to replace `vergrth16WithVK` instruction with `ZKHALO2VERIFYWITHVK` - this will simplify the integration a lot.&#x20;
+
+### DODEX
+
+Dodex development focused on the Market Maker API and Shellnet testing tools. Added Cancel Order API, all orders API (including cancelled, rejected and fulfilled orders), and batched API support. Prepared the first version of scripts for producing artificial load for end-to-end API testing on Shellnet.
+
+Maker and Taker commission supported in DODEX core smart contracts.
+
+### Wallet
+
+A wallet release with support for the new DAPP ID + Account ID addressing format is planned in the near future. Please follow upcoming announcements.\
+After the State V2 release, the old addressing format will no longer be supported.\
+We will keep you updated.
+
+### Documentation & Developer Experience
+
+A separate documentation page was added for receiving test tokens on Shellnet: [Get test tokens from giver in Shellnet](https://dev.ackinacki.com/readme/get-test-tokens-from-giver-in-shellnet).&#x20;
+
 ## Update - 15.05.26
 
 ### Node & Network
@@ -23,7 +73,7 @@ On the bridge side, we continue building the infrastructure for ZKP-proof verifi
 There are no `Mainnet` changes yet: integration testing is running on `Shellnet`
 {% endhint %}
 
-### Dodex
+### DODEX
 
 For Dodex, we are continuing to develop the API and contract layer&#x20;
 
