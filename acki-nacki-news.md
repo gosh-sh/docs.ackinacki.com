@@ -5,6 +5,36 @@ hidden: true
 
 # Acki Nacki News
 
+### Update - 29.05.26
+
+#### Node & Network & SDK
+
+TVM-SDK 3.0.0 with new addressing scheme is coming. All the applications MUST migrate to it before StateV2 release.&#x20;
+
+#### Bridge
+
+End-to-end positive deposit/withdraw scenarios testing is ongoing. The audit excludes BK set update proof verification, as Shellnet currently does not perform BK set updates. User documentation for transfers from the test EVM network to Shellnet is also in preparation. Stay tuned for upcoming announcements!
+
+#### DEX.DO
+
+* Added account balance APIs covering both collateral and per-market outcome tokens.&#x20;
+* Exposed maker and taker commission rates on the markets endpoint.&#x20;
+* Published the OpenAPI specification.&#x20;
+* Released POST `/api/v1/buyFullSet` for buying a full set of outcome tokens with collateral; \
+  the matching sellFullSet and claim endpoints are specified and will follow.&#x20;
+
+An open-source release of the DEX.DO stack - including halo2 libraries, the indexer, API, and exchange integration libraries - is coming. Stay tuned. 🚀
+
+#### Documentation
+
+A new [Synchronization and Consensus Mechanism](https://docs.ackinacki.com/synchronization-and-consensus-mechanism) section was added. It explains how Acki Nacki reaches consensus on block order and validation, including finalization and error handling.
+
+#### Support
+
+Support requests were simplified and now go through a single bot: [@ackinackisupport\_bot](https://t.me/ackinackisupport_bot). A questionnaire and screenshot upload option were added. Bot links are available in all official chats, and requests are reviewed daily.
+
+We established a new automated process of collecting feedback from the community across all chat channels for further discussion and follow-up with the core team.
+
 ## Update - 22.05.26
 
 ### Node & Network
