@@ -5,17 +5,56 @@ hidden: true
 
 # Acki Nacki News
 
-### Update - 29.05.26
+## Update - 05.06.26
 
-#### Node & Network & SDK
+### DEX.DO
+
+* **The terms for the Points & Rewards incentive program are being prepared to help attract testers and participants to DEX.DO. The program terms will be published soon.**
+* **Launched the public Oracle API** — a new endpoint for accessing oracle information and available events for market creation.
+* An open-source release of the DEX.DO stack - including halo2 libraries, the indexer, API, and exchange integration libraries: [dexdo](https://github.com/gosh-sh/dexdo), [dexdo-halo2-kit](https://github.com/gosh-sh/dexdo-halo2-kit), [DEX.DO documentation](https://gosh-sh.github.io/dexdo/).
+* A new giver has been published in Shellnet with support for parallel top-ups to speed up testing.
+
+### Block Manager Licenses
+
+Sales of [Block Manager Licenses](https://bm.gosh.sh/) have started. These licenses are intended for independent operators of Acki Nacki network access infrastructure.
+
+### Popits
+
+[Popits 3.0](https://popit.music/home) has launched together with a new Boosts season. Popits has evolved into an AI ecosystem for creating, distributing, and monetizing music: users can generate original tracks with AI, publish and mint them, and participate in community-driven contests and reward programs.
+
+The new season includes NACKL mining mechanics linked to music listening and platform activity. At launch, more than 1,000 AI-generated tracks created by the community during closed testing were available. Popits is also available through the [Telegram bot](https://t.me/PopitMusic_Bot).
+
+### Node & Network & SDK
+
+* [TVM SDK 3.0.0](https://github.com/tvmlabs/tvm-sdk/releases/tag/v3.0.0.an) has been released, and the new addressing scheme has been rolled out to Shellnet. Shellnet is now compatible only with SDK 3.0.0, so application developers should migrate to this version now. The [migration guide is here](https://github.com/tvmlabs/tvm-sdk/blob/main/docs/MIGRATION-3.0.md).
+* `bee-engine` and `ackinacki-kit` do not support SDK 3.0.0 yet. A release with 3.0.0 support will follow soon; stay tuned for announcements.
+* The Mainnet release of the new addressing scheme is still being tested.
+
+### Network Status
+
+A public [Acki Nacki network status](https://grafana.ackinacki.org/) page has been launched.
+
+### Bridge
+
+* A repository for generating proofs for withdrawals from Acki Nacki has been prepared. It will be published soon.
+* Deposit testing from a test EVM network to Acki Nacki Shellnet has been completed; a guide will be published soon. The latest version of the bridge contract with deposit support has been deployed to Shellnet.
+* Work on the circuit for BK set updates has resumed.
+
+### Wallet
+
+AN Wallet is currently not compatible with Shellnet: to speed up development and testing, the final API version with the new addressing scheme was rolled out there first. An AN Wallet release with Shellnet support is expected in the coming days.
+
+## Update - 29.05.26
+
+### Node & Network & SDK
 
 TVM-SDK 3.0.0 with new addressing scheme is coming. All the applications MUST migrate to it before StateV2 release.&#x20;
 
-#### Bridge
+### Bridge
 
 End-to-end positive deposit/withdraw scenarios testing is ongoing. The audit excludes BK set update proof verification, as Shellnet currently does not perform BK set updates. User documentation for transfers from the test EVM network to Shellnet is also in preparation. Stay tuned for upcoming announcements!
 
-#### DEX.DO
+### DEX.DO
 
 * Added account balance APIs covering both collateral and per-market outcome tokens.&#x20;
 * Exposed maker and taker commission rates on the markets endpoint.&#x20;
@@ -25,11 +64,11 @@ End-to-end positive deposit/withdraw scenarios testing is ongoing. The audit exc
 
 An open-source release of the DEX.DO stack - including halo2 libraries, the indexer, API, and exchange integration libraries - is coming. Stay tuned. 🚀
 
-#### Documentation
+### Documentation
 
 A new [Synchronization and Consensus Mechanism](https://docs.ackinacki.com/synchronization-and-consensus-mechanism) section was added. It explains how Acki Nacki reaches consensus on block order and validation, including finalization and error handling.
 
-#### Support
+### Support
 
 Support requests were simplified and now go through a single bot: [@ackinackisupport\_bot](https://t.me/ackinackisupport_bot). A questionnaire and screenshot upload option were added. Bot links are available in all official chats, and requests are reviewed daily.
 
