@@ -5,6 +5,30 @@ hidden: true
 
 # Acki Nacki News
 
+## Update - 12.06.26
+
+### DEX.DO
+
+* **While preparing the Points & Rewards program, we made an important product decision: DEX.DO will expand beyond prediction markets into a decentralized trading layer for AI model access. We are updating the program structure to reflect this broader product direction and reward meaningful participation across DEX.DO. More details will follow.**
+* Added a public Trades API that does not require authorization, allowing retrieval of the latest market price and recent trade history.
+
+### Node & Network & SDK
+
+* Testing of the `v0.16.3` release with the new addressing scheme has been completed. Network upgrade announcements will be published separately.
+* `bee-engine` and `ackinacki-kit` now support `SDK 3.0.0`.
+
+### Bridge
+
+* Published the repository for generating proofs for withdrawals from Acki Nacki: [https://github.com/gosh-sh/acki-nacki-to-eth-bridge-halo2-prover](https://github.com/gosh-sh/acki-nacki-to-eth-bridge-halo2-prover)
+* Local end-to-end tests of withdrawals from Acki Nacki to EVM were successfully completed on a local network without BK set updates.
+* The BK Set Update circuit has completed the first audit cycle by Pruvendo. The circuit is currently being covered with additional tests.
+* The next step is to determine the optimal circuit parameters to ensure acceptable withdrawal timings to EVM.
+
+### Apps
+
+* Wallet have been migrated to SDK 3.0 and sent to App Store and Play Market for review.
+* Popits and Batteries have been migrated to SDK 3.0. Migration of Popit Music and Ludo is planned for next week.
+
 ## Update - 05.06.26
 
 ### DEX.DO
