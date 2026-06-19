@@ -5,6 +5,36 @@ hidden: true
 
 # Acki Nacki News
 
+## Update - 19.06.26
+
+### DEX.DO
+
+* **The Points and Rewards program terms have been finalized, and the new landing page is ready for publication. Stay tuned for announcements!**
+* The backend for calculating program points, the participant account, and leaderboard are in development.&#x20;
+* A smart contract system with a primary market for model tokens is being developed in parallel. The program launch will not be blocked by primary market support for model tokens.
+* Added an AI skill for deploying the Multisig, as well as deploying and topping up Private Notes on Shellnet: [dexdo-onboarding-shellnet](https://github.com/gosh-sh/dexdo/blob/dev/.claude/skills/dexdo-onboarding-shellnet/SKILL.md).
+
+### Ecosystem
+
+* The PR to add Acki Nacki to the SLIP-0044 registry has been accepted. The project has been assigned number `1331`, creating the foundation for further integration with wallets and blockchain infrastructure services.
+
+### Node & Network & SDK
+
+* The network has been upgraded to `v0.16.3` with support for the new addressing scheme.
+* A new `bee-engine` has been published. The release includes `bee-connect` and `bee-wallet` for the first time. Usage examples are available in the [miner-react example](https://github.com/gosh-sh/bee-engine/tree/main/examples/javascript/miner-react).
+
+### Bridge
+
+* The latest bridge updates have been rolled out to Shellnet. Infrastructure preparation has started for calculating heavy proofs of key blocks on the EVM side. Since Mainnet BK set updates may happen as often as once every 5 minutes, proof calculation will be parallelized. This will allow the heavy part of the proof to move faster, leaving the user only to complete the lightweight event proof.
+
+### Popit Music
+
+* Popit Music has been updated: generation token logic has been fully migrated to GoshAI Agent Tokens, Agent Tokens can now be purchased with fiat, localization has been added for popular languages, and the track creation flow has been improved. It is now more stable and produces results closer to the user's prompt. Try the update here: [Popit Music](https://popit.music/?utm_source=community\&utm_medium=social\&utm_campaign=update_2026_06_19\&utm_content=community_update).
+
+### Documentation
+
+Added page: [**Connecting an Acki Nacki Wallet and Setting Up Mining Keys**](https://docs.ackinacki.com/for-users/wallets/connecting-an-acki-nacki-wallet-and-setting-up-mining-keys)
+
 ## Update - 12.06.26
 
 ### DEX.DO
