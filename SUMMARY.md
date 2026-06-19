@@ -47,6 +47,7 @@
 ## For Users
 
 * [Wallets](for-users/wallets/README.md)
+  * [Connecting an Acki Nacki Wallet and Setting Up Mining Keys](for-users/wallets/connecting-an-acki-nacki-wallet-and-setting-up-mining-keys.md)
   * [ZK Login Authentication Flow](for-users/wallets/zk-login-authentication-flow.md)
   * [Formal Verification](for-users/wallets/formal-verification/README.md)
     * [Multi-Factoring Business-level Specification](for-users/wallets/formal-verification/multi-factoring-business-level-specification.md)
