@@ -16,7 +16,8 @@ The decentralized network starter protocol (DNSP), it collects Node and [License
 
 **Acki Nacki Wallet (Main Network Wallet)**
 
-A non-custodial smart contract wallet serving as the primary wallet of the Acki Nacki network. Available as a mobile and web application. Features ZK Login authentication via zero-knowledge proofs (zk-SNARKs, Groth16) with support for Google, Facebook, and other OpenID providers; multi-factor transaction confirmation; access recovery in case of device or credential loss. No user data is transmitted to external servers — the owner retains full control over assets. The wallet code undergoes formal verification. Install: [ackinacki.com/wallet](https://ackinacki.com/wallet)
+A non-custodial smart contract wallet serving as the primary wallet of the Acki Nacki network. Available as a mobile and web application. Features ZK Login authentication via zero-knowledge proofs (zk-SNARKs, Groth16) with support for Google, Facebook, and other OpenID providers; multi-factor transaction confirmation; access recovery in case of device or credential loss. No user data is transmitted to external servers — the owner retains full control over assets. The wallet code undergoes formal verification. Install: [ackinacki.com/wallet](https://ackinacki.com/wallet)\
+Acki Nacki Wallet is created and operates within the system DAPP ID of the Mobile Verifiers. It is not intended for invoking arbitrary methods of user contracts. For such use cases, you should deploy your own [DAPP ID](glossary.md#dapp-id) and use a [Multisig Wallet](https://dev.ackinacki.com/how-to-deploy-a-multisig-wallet).
 
 #### **Attestation**
 

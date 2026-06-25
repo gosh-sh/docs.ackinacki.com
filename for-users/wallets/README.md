@@ -20,6 +20,10 @@ The primary wallet of the Acki Nacki network is a non-custodial smart contract w
 * **Non-custodial** — no user data is sent to any server; the owner retains full control over their assets.
 * **Formal verification** — the wallet code undergoes formal verification for maximum security assurance.
 
+**Contract interaction scope:** the Acki Nacki Wallet App is designed for supported wallet flows, token operations, application connection, and mining authorization. It cannot invoke arbitrary methods of user contracts. The app operates in the system `mvsystem` DAPP ID, so custom contract interaction should be implemented in the DAPP that owns the user flow.
+
+If your users need to interact with your contracts, build a dedicated DAPP for that experience. Start with the [DAPP development prerequisites](https://dev.ackinacki.com/#prerequisites). If your scenario requires wallet-based calls to contract methods, use a Multisig Wallet instead.
+
 **Install:** [ackinacki.com/wallet​​](https://ackinacki.com/wallet)
 
 ***
@@ -32,10 +36,8 @@ If you need a custodial solution or multi-party fund management, you can deploy 
 
 * **Multiple owners** — the wallet can have one or more owners, each with their own key.
 * **Confirmation threshold** — the number of required signatures to execute a transaction is configured at deployment (`reqConfirms`).
+* **Contract method calls** — Unlike the MultiFactor Wallet (Acki NAcki Wallet), the Multisig Wallet allows users to invoke methods of other contracts by including the corresponding payload in the transaction.
 * **Flexibility** — suitable for both personal use (single owner) and team or corporate scenarios.
 * **Deployment via TVM CLI** — the wallet is deployed using the `tvm-cli` command-line tool.
 
 **Deployment guide:** [dev.ackinacki.com/how-to-deploy-a-multisig-wallet​​](https://dev.ackinacki.com/how-to-deploy-a-multisig-wallet)
-
-***
-
