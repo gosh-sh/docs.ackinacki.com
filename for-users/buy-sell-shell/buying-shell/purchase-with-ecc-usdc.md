@@ -15,7 +15,7 @@ If you already have ECC USDC in your balance, you can instantly buy SHELL direct
 
 On the main wallet screen, where your balances are displayed, tap the **Exchange** button  button and select **Buy and Sell SHELL**
 
-<div><figure><img src="../../../.gitbook/assets/1 (1).jpg" alt=""><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/1_2.jpg" alt=""><figcaption></figcaption></figure></div>
+<div><figure><img src="../../../.gitbook/assets/1 (1) (1).jpg" alt=""><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/1_2.jpg" alt=""><figcaption></figcaption></figure></div>
 {% endstep %}
 
 {% step %}
@@ -23,7 +23,7 @@ On the main wallet screen, where your balances are displayed, tap the **Exchange
 
 In the exchange screen, make sure the **Buy** mode is selected.
 
-<figure><img src="../../../.gitbook/assets/2 (1).jpg" alt="" width="287"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2 (1) (1).jpg" alt="" width="287"><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}

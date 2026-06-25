@@ -244,6 +244,12 @@ A stablecoin pegged to the US dollar. Used for settlements when [buying](for-use
 
 The unit of account used to cover network fees. It is converted from [SHELL](glossary.md#shell) and cannot be converted back to SHELL. VMSHELL can be transferred between contracts that belong to the same [Dapp ID](glossary.md#dapp-id).
 
+## **W**
+
+#### Wallets
+
+Smart contract [accounts](glossary.md#account-contract) used to hold assets and initiate transactions in the Acki Nacki network. A wallet's behavior is defined by its deployed contract code, which can support different capabilities such as token transfers, multi-signature approvals, access recovery, spending limits, or staking operations. See [Wallets](for-users/wallets/).
+
 ## Z
 
 #### **Zerostate**
