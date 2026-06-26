@@ -220,7 +220,7 @@ A metric that increases the rewards for [Block Keepers](glossary.md#block-keeper
 
 #### **SHELL**&#x20;
 
-The utility token within the Acki Nacki network is designed to compensate [NACKL](glossary.md#nackl) holders for the computing resources the network provides. Minted by depositing USDС ecc, but it isn't collateralized. It can be converted to [VMSHELL](glossary.md#vmshell) to cover network fees at a 1:1 ratio. However, it is not possible to convert VMSHELL back to SHELL. This token can be transferred between different [Dapp IDs](glossary.md#dapp-id). (currency collection index: 2)
+The utility token within the Acki Nacki network is designed to compensate [NACKL](glossary.md#nackl) holders for the computing resources the network provides. Minted by depositing eccUSDС, but it isn't collateralized. It can be converted to [VMSHELL](glossary.md#vmshell) to cover network fees at a 1:1 ratio. However, it is not possible to convert VMSHELL back to SHELL. This token can be transferred between different [Dapp IDs](glossary.md#dapp-id). (currency collection index: 2). Learn how [to buy SHELL here](https://docs.ackinacki.com/for-users/buy-sell-shell/introduction).
 
 #### **Stake**
 
@@ -236,7 +236,7 @@ A subset of nodes that serve a particular subset of [Accounts](glossary.md#accou
 
 #### USDC ecc
 
-A stablecoin pegged to the US dollar. Used for settlements when [buying](for-users/buy-sell-shell/buying-shell/ways-to-buy-shell.md) and[ selling](for-users/buy-sell-shell/selling-shell/) SHELL (the rate is fixed and immutable: **1 USDC = 100 SHELL)**. Within the Acki Nacki network, USDC exists as ECC\[3] — an element of the [Extra Currency Collection](glossary.md#extra-currency-collection).
+A stablecoin pegged to the US dollar. Used for settlements when [buying](for-users/buy-sell-shell/buying-shell/ways-to-buy-shell.md) and[ selling](for-users/buy-sell-shell/selling-shell/) SHELL (the rate is fixed and immutable: **1 eccUSDC = 100 SHELL)**. Within the Acki Nacki network, USDC exists as ECC\[3] — an element of the [Extra Currency Collection](glossary.md#extra-currency-collection).
 
 ## V
 
