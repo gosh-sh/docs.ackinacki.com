@@ -5,6 +5,29 @@ hidden: true
 
 # Acki Nacki News
 
+## Update - 26.06.26
+
+### DEX.DO
+
+* **The** [**Points and Rewards program terms have been published**](https://seasons.dex.do/)**. The program launch is coming — stay tuned for updates!**
+* [**https://app.dex.do/**](https://app.dex.do/) **dashboard and leaderboards for Points and Rewards program participants is released.**&#x20;
+* Debugging of the AI Token Market client is in progress. AI Token exchange contracts are ready.
+* The skills library has been expanded with a new set of DEX.DO automation and trading skills, covering Multisig setup, deposits, account registration, market data, trading, and withdrawals. Learn more: https://github.com/gosh-sh/dexdo/tree/dev/.claude/skills&#x20;
+
+### Node & Network & SDK
+
+* Node testing with blockchain multithreading continues. Synchronization stability has been improved, and Poseidon integration is in progress (instruction required for Bridge).&#x20;
+* Published [Bee SDK](https://www.npmjs.com/package/@teamgosh/bee-sdk) on npm (`@teamgosh/bee-sdk`)
+
+### Bridge
+
+* The StateV2 release with multithreading is getting closer, so the team has moved to the stage of supporting multithreading in the bridge circuits.
+* Pruvendo brought in additional resources to audit the EVM side of the bridge. The issues found have already been fixed, and the final version of the chain for depositing USDC into Acki Nacki will be deployed during the next Shellnet restart.
+
+### Documentation
+
+* Published a new user guide: [What to Do If Your Authentication Factor Has Expired](https://docs.ackinacki.com/for-users/wallets/troubleshooting/what-to-do-if-your-authentication-factor-has-expired), with step-by-step instructions for updating an expired authentication factor.
+
 ## Update - 19.06.26
 
 ### DEX.DO
