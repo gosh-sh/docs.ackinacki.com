@@ -5,6 +5,24 @@ hidden: true
 
 # Acki Nacki News
 
+## Update - 03.07.26
+
+### DEX.DO
+
+The DEX.DO Points & Rewards program has officially launched.
+
+DEX: [https://dex.do/](https://dex.do/)
+
+Incentive Program: [https://seasons.dex.do/](https://seasons.dex.do/)
+
+### Bridge
+
+The final version of the node supporting deposits from EVM to Acki Nacki has been deployed to Shellnet. On the Pruvendo side, the end-to-end deposit flow from EVM to Shellnet has been successfully validated. This component is now entering the final audit phase. On the withdrawal side, the audit of the single-threaded circuit implementation is still in progress.
+
+### Node & SDK
+
+The Poseidon instruction has been added. It is required for the Bridge and will be included in the next mainnet release.
+
 ## Update - 26.06.26
 
 ### DEX.DO
