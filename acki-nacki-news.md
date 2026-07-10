@@ -5,6 +5,26 @@ hidden: true
 
 # Acki Nacki News
 
+## Update - 10.07.26
+
+### DEX.DO
+
+* **Released** [**DEX.DO CLI** ](https://github.com/gosh-sh/dexdo-cli)- the official command-line interface for DEX.DO, making it easier to automate trading workflows, test the API, and integrate DEX.DO with AI agents. \
+  **Community feedback is welcome** — report issues at [https://github.com/gosh-sh/dexdo-cli/issues](https://github.com/gosh-sh/dexdo-cli/issues) and **support the project by starring the repository**.
+* The Season 1 Points & Rewards program continues on Shellnet, with ongoing testing and refinement.
+* Secondary markets (predictions on AI events and model prices) are coming to the Points & Rewards program soon.
+* Published the DEX.DO Points & Rewards FAQ.
+* Started work on a Bug Bounty program for DEX.DO — rewards for finding and reporting bugs, so we harden the protocol together. More soon.
+* Continued preparations for bringing DEX.DO to Mainnet.
+
+### Bridge
+
+The bridge integration layer is now being implemented, including the relayer and the components responsible for end-to-end proof generation and delivery.
+
+### Node & SDK
+
+Continued preparations for the next releases required for DEX.DO. The upcoming SDK introduces Halo2 proof verification instructions (`ZKHALO2VERIFY`, `ZKHALO2VERIFYWITHVK`) and a new instruction for block history Merkle proof verification (`CHKHISTPROOF`).
+
 ## Update - 03.07.26
 
 ### DEX.DO
