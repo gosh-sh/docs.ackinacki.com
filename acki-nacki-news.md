@@ -5,6 +5,32 @@ hidden: true
 
 # Acki Nacki News
 
+## Update - 17.07.26
+
+### DEX.DO
+
+* **DEX.DO Bug Bounty program is in development. Stay tuned!**&#x20;
+*   &#x20;[**DEX.DO CLI** ](https://github.com/gosh-sh/dexdo-cli)**has been updated to v0.0.12.**
+
+    The release fixes a critical security issue affecting withdrawals from previous-generation Private Notes, restores compatibility with the updated Shellnet and the new `Halo2/Hermez KZG prover`, and improves order management by ensuring that scanning no longer stops when it encounters already executed orders.
+
+    All changes have been successfully validated through a complete end-to-end DEX workflow.
+* The migration to the **Hermez trusted setup–based KZG** has been completed. **This significantly simplifies `halo2-prover` setup and reduces initialization time of private note deployment.** All components are now running on the final secure configuration, providing the foundation for future development and releases.
+
+### Node & SDK
+
+*   The rollout of **network upgrade v0.18.0** has started. [https://github.com/ackinacki/ackinacki/releases/tag/v0.18.0](https://github.com/ackinacki/ackinacki/releases/tag/v0.18.0)&#x20;
+
+    This release introduces major enhancements, including the integration of a fully on-chain DEX and the AI Inference Market, the completion of the USDC Bridge with Halo2 proof verification, a new History Proof system and Poseidon Merkle Tree-based block identifiers, required for ZK Bridge, significant node performance and reliability improvements, as well as updated TVM-SDK and infrastructure for the ZK bridge.
+* TVM-SDK v3.0.4.an has been released: [https://github.com/tvmlabs/tvm-sdk/releases/tag/v3.0.4.an](https://github.com/tvmlabs/tvm-sdk/releases/tag/v3.0.4.an). The SDK now supports verification of `Halo2/KZG zero-knowledge proofs` through the new TVM instructions `ZKHALO2VERIFY` and `ZKHALO2VERIFYWITHVK`, extending the existing support for Groth16 and Poseidon. The release also introduces the `CHKHISTPROOF` instruction for verifying Merkle proofs of block history in TVM.
+*   TVM Solidity Compiler v0.81.0 has been released: [https://github.com/gosh-sh/TVM-Solidity-Compiler/releases/tag/gosh\_0.81.0](https://github.com/gosh-sh/TVM-Solidity-Compiler/releases/tag/gosh_0.81.0)
+
+    `dapp_id` field is added to the contract events, allowing  DApp developers to query only their DApp's events for indexing.&#x20;
+
+### Bridge
+
+Bridge TVM instructions  are being rolled out to the network in v0.18.0 release. These may be not the final version of them, as the audit is still ongoing. With this v0.18.0 Network Update we are getting very close to the ZK Bridge release.&#x20;
+
 ## Update - 10.07.26
 
 ### DEX.DO
@@ -13,7 +39,7 @@ hidden: true
   **Community feedback is welcome** — report issues at [https://github.com/gosh-sh/dexdo-cli/issues](https://github.com/gosh-sh/dexdo-cli/issues) and **support the project by starring the repository**.
 * The Season 1 Points & Rewards program continues on Shellnet, with ongoing testing and refinement.
 * Secondary markets (predictions on AI events and model prices) are coming to the Points & Rewards program soon.
-* Published the DEX.DO Points & Rewards FAQ.
+* Published the DEX.DO Points & Rewards [FAQ](https://t.me/c/3819653418/428/910).
 * Started work on a Bug Bounty program for DEX.DO — rewards for finding and reporting bugs, so we harden the protocol together. More soon.
 * Continued preparations for bringing DEX.DO to Mainnet.
 
