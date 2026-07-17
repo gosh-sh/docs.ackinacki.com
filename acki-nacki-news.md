@@ -19,9 +19,10 @@ hidden: true
 
 ### Node & SDK
 
-*   The rollout of **network upgrade v0.18.0** has started. [https://github.com/ackinacki/ackinacki/releases/tag/v0.18.0](https://github.com/ackinacki/ackinacki/releases/tag/v0.18.0)&#x20;
+*   The rollout of **network upgrade v0.18.0** has started. [https://github.com/ackinacki/ackinacki/releases/tag/v0.18.0](https://github.com/ackinacki/ackinacki/releases/tag/v0.18.0) \
+    **This release unlocks the technical possibility to release DEX.DO in Mainnet.**
 
-    This release introduces major enhancements, including the integration of a fully on-chain DEX and the AI Inference Market, the completion of the USDC Bridge with Halo2 proof verification, a new History Proof system and Poseidon Merkle Tree-based block identifiers, required for ZK Bridge, significant node performance and reliability improvements, as well as updated TVM-SDK and infrastructure for the ZK bridge. This release unlocks the technical possibility to release DEX.DO in Mainnet.
+    It introduces major enhancements, including the integration of a fully on-chain DEX and the AI Inference Market, the completion of the USDC Bridge with Halo2 proof verification, a new History Proof system and Poseidon Merkle Tree-based block identifiers, required for ZK Bridge, significant node performance and reliability improvements, as well as updated TVM-SDK and infrastructure for the ZK bridge.&#x20;
 * TVM-SDK v3.0.4.an has been released: [https://github.com/tvmlabs/tvm-sdk/releases/tag/v3.0.4.an](https://github.com/tvmlabs/tvm-sdk/releases/tag/v3.0.4.an). The SDK now supports verification of `Halo2/KZG zero-knowledge proofs` through the new TVM instructions `ZKHALO2VERIFY` and `ZKHALO2VERIFYWITHVK`, extending the existing support for Groth16 and Poseidon. The release also introduces the `CHKHISTPROOF` instruction for verifying Merkle proofs of block history in TVM.
 *   TVM Solidity Compiler v0.81.0 has been released: [https://github.com/gosh-sh/TVM-Solidity-Compiler/releases/tag/gosh\_0.81.0](https://github.com/gosh-sh/TVM-Solidity-Compiler/releases/tag/gosh_0.81.0)
 
