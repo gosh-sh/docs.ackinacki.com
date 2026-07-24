@@ -5,6 +5,30 @@ hidden: true
 
 # Acki Nacki News
 
+## Update - 24.07.26
+
+### DEX.DO
+
+* The new version of [**dexdo-cli**](https://github.com/gosh-sh/dexdo-cli/releases/tag/v0.0.15) is now available, bringing a range of fixes and improvements for greater reliability and a smoother user experience. The update resolves issues with model-only orders, Private Note deployment, buyer and seller workflows, Anthropic API support, clock-skew validation, error reporting, and fund provisioning, while also strengthening recovery mechanisms and improving Hermez SRS validation.
+* `Shellnet` has been fully prepared for the upcoming contract upgrade. All testers must **close all active deals and withdraw their rewards from Private Notes to their wallet in app.dex.do before 16:00 CET on July 25** to ensure no funds are left on the old contracts.
+
+### Node & SDK
+
+The network upgrade to [**v0.18.1**](https://github.com/ackinacki/ackinacki/releases/tag/v0.18.1) has begun. The release improves node finalization time, performance and stability.
+
+### Bridge
+
+Another audit cycle has been completed. Several issues were identified during the review, and the team is actively working to address them before the Bridge Public Beta release.
+
+### Popit Music
+
+A major [Popit Music](https://popit.music/?utm_source=socials\&utm_medium=annoncments\&utm_campaign=tvmupdate_2026_07_24\&utm_content=tvmupdate) update is live just in time for the weekend!
+
+* The song creation engine has been upgraded to a new version, with more generation controls and a more stable creation flow.&#x20;
+* We’ve also introduced a new entry point: the Sequencer.
+* A large number of bugs and service issues have been fixed.
+* You can now sort your created tracks, completely hide them from the list, regenerate covers for tracks and playlists, generate images for artists and Popcoins, and download them.
+
 ## Update - 17.07.26
 
 ### DEX.DO
