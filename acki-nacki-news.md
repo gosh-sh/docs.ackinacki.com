@@ -5,6 +5,26 @@ hidden: true
 
 # Acki Nacki News
 
+## Update - 31.07.26
+
+### DEX.DO
+
+🎉 `Shellnet` **Points & Rewards Season 1 has officially concluded!**
+
+A huge thank you to everyone who participated and helped shape the future of **Acki Nacki**. ❤️
+
+We apologize for the reward calculation issue that occurred on the final day of the season. The historical data has been successfully reprocessed, and all rewards for the last 24 hours have now been restored and credited.
+
+We're working on a new feature that will allow buyers and sellers to fund their Private Notes directly from their Acki Nacki Wallet, making it even easier to manage your trading funds on DEX.DO.
+
+🚀 Stay tuned for the announcement of **DEX.DO Season 2 on Mainnet**!
+
+* **DEX.DO CLI** has been updated through **v0.0.16–v0.0.19**, adding support for the latest `Shellnet` contracts (v4.0.31) and the new multisig wallet (v2.2.0), while improving transaction safety, recovery mechanisms, diagnostics, security, and the overall reliability of DEX.DO trading workflows. DEX.DO CLI v0.0.20 is expected to be released soon.
+
+### SDK
+
+* **Bee Engine** now supports the new `UpdateCustodianMultisigWallet_v2` multisig wallet, ensuring compatibility with the latest wallet infrastructure across the Acki Nacki ecosystem.
+
 ## Update - 24.07.26
 
 ### DEX.DO
