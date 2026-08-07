@@ -5,6 +5,31 @@ hidden: true
 
 # Acki Nacki News
 
+## Update - 07.08.26
+
+### DEX.DO
+
+🚀 **DEX.DO Season 2 launches on Mainnet next week!** \
+Stay tuned for the official announcement.&#x20;
+
+* A new **`dexdo-cli`** release is coming with support for the latest contract updates. Key improvements will include:
+  * **deadline** support for both BUY and SELL orders;
+  * improved access to AI models for users connecting via VPN;
+  * **AON|FOK** is now the default execution mode for immediate BUY orders;
+  * the new `--wait-for-seller` option, allowing buyers to place orders even when no seller is currently available.
+* The release also will include numerous fixes and improvements across buyer and seller workflows, further enhancing the reliability, stability, and overall trading experience in DEX.DO.
+
+### **Bridge**
+
+* The Deposit Circuit has successfully passed verification and is now undergoing its final audit.
+* **History data proofs** are now being successfully submitted to the **Sepolia** contract, keeping it synchronized with the latest **Acki Nacki** block history and completing a key step toward withdrawal support.
+
+### Node
+
+Active performance testing of the multithreaded node implementation is underway to optimize scalability and throughput, while development of the new **MessageDB** storage layer continues.
+
+
+
 ## Update - 31.07.26
 
 ### DEX.DO
