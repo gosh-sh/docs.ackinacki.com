@@ -5,6 +5,31 @@ hidden: true
 
 # Acki Nacki News
 
+## Update - 14.08.26
+
+### DEX.DO
+
+**DEX.DO is now live on Mainnet**, **with full public access coming alongside the next public dexdo-cli release.**
+
+This week, **DEX.DO CLI** development focused on Mainnet readiness, introducing new wallet onboarding and automated funding flows, network selection and deployment support, operator tooling, and improved model and deal diagnostics. Multiple fixes also improved buyer and seller recovery, settlement and refunds, gas handling, wallet safety, gateway reliability, and overall CLI stability.
+
+### **Bridge**
+
+Both **deposit and withdrawal circuits** have successfully passed their final audits. The complete deposit flow and supporting infrastructure are now undergoing audit.
+
+### Node & SDK
+
+* Performance testing of the multithreaded node implementation has been completed, with the results meeting our expectations at this stage. **MessageDB** has moved to the load testing stage. Several fixes have also been made to the node synchronization mechanism in a multithreaded environment, while work continues on an external message queue scheduler to ensure fair processing of external messages.
+* **TVM-SDK v3.0.5.an** [https://github.com/tvmlabs/tvm-sdk/releases/tag/v3.0.5.an](https://github.com/tvmlabs/tvm-sdk/releases/tag/v3.0.5.an) has been released. The update makes the execution fee constant for executions that fail due to an execution timeout, improving fee predictability in timeout scenarios.
+
+### Popit Music
+
+Popit Music An update is coming in the next few days, fixing the 7:59 track length issue and the related sound quality drop toward the end of tracks, while also improving the sound of TECHNO and ACID genres. COMPOSER has also been improved with a fix for the LENGTH 16 display and new contextual hints explaining NOTE / VEL / AUTO modes.
+
+### **Documentation**
+
+A new guide on [**exchanging eccUSDC for SHELL via the Accumulator**](https://docs.ackinacki.com/for-users/buy-sell-shell/buying-shell/exchange-eccusdc-for-shell-via-accumulator) has been published in the Acki Nacki documentation.
+
 ## Update - 07.08.26
 
 ### DEX.DO
