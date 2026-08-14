@@ -12,12 +12,13 @@ The SHELL exchange rate is fixed and the same for all participants:
 
 This rate never changes and is independent of market conditions. When buying, you always receive exactly 100 SHELL for every USDC spent. When selling, you always receive exactly 1 USDC for every 100 SHELL.
 
-## Two Ways to Buy SHELL
+## Ways to Buy SHELL
 
-| Method            | Application                                       | Payment                            | Speed                       |
-| ----------------- | ------------------------------------------------- | ---------------------------------- | --------------------------- |
-| Cryptocurrency    | [Shell Buyer App](https://shellbuy.ackinax.com/)  | Visa, Mastercard, USDT, USDC, etc. | Depends on payment provider |
-| ECC USDC directly | [Acki Nacki Wallet](https://ackinacki.com/wallet) | ECC USDC (network-native currency) | Instant                     |
+| Method                      | Application or interface                          | Payment                            | Speed                       |
+| --------------------------- | ------------------------------------------------- | ---------------------------------- | --------------------------- |
+| Direct contract interaction | `tvm-cli`                                         | eccUSDC (ECC\[3])                  | Instant                     |
+| Cryptocurrency              | [Shell Buyer App](https://shellbuy.ackinax.com/)  | Visa, Mastercard, USDT, USDC, etc. | Depends on payment provider |
+| ECC USDC in the wallet      | [Acki Nacki Wallet](https://ackinacki.com/wallet) | ECC USDC (network-native currency) | Instant                     |
 
 ## Selling SHELL
 
