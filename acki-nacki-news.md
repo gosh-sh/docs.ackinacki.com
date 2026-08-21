@@ -5,6 +5,35 @@ hidden: true
 
 # Acki Nacki News
 
+## Update - 21.08.26
+
+### **DEX.DO**
+
+*   **`dexdo-cli` is undergoing a major UX update.** The team is implementing **three ways to link your wallet**:&#x20;
+
+    * local multisig for deep technical CLI integrations,
+    * **Acki Nacki Wallet** application for Wallet users and **Points and Rewards Program** participants
+    * **gosh.ai** platform for the people outside the comminity.
+
+    Overall CLI UX will also be significantly improved in the next release.
+* [**dexdo-cli v0.0.23**](https://github.com/gosh-sh/dexdo-cli/releases/tag/v0.0.23) has been released with the 1st part of UX improvements:
+  * The onboarding QR code now renders as a real image in `kitty`, `iTerm2`, and `sixel`-capable terminals.
+  * Fewer required flags — `--pool`, `--contracts`, and the multisig pair are no longer mandatory, making the CLI easier to use.
+  * The CLI now runs from any directory: the contracts manifest ships inside the binary.
+  * `note balance` now shows whether a note is busy.
+  * Buyers see the probe-tick cost before paying.
+  * Windows: the seller no longer crashes silently.
+* Support for **Acki Nacki Mainnet** on [markets.dex.do](https://markets.dex.do) is in active development and will be available shortly.
+
+### **Node & SDK**
+
+* The rollout of [**v0.19.0**](https://github.com/ackinacki/ackinacki/releases/tag/v0.19.0) to the network is in progress. The release introduces a **DApp execution scheduler**, so that mining no longer affects neighbouring DApps. This will reduce the number of `queue is full` errors for all applications outside DApp 1, but does not address indexer overload.
+* The **Block Manager API** now parses `src_dapp_id` (source DApp ID) for type 4 events — a new event type supported starting from [TVM Solidity Compiler v0.81.0](https://github.com/gosh-sh/TVM-Solidity-Compiler/releases/tag/gosh_0.81.0), already available in both Shellnet and Mainnet. Dapp developers can now query precisely their DApp's events which dramatically reduces the data processing on the DApp side.
+
+### **gosh.ai**
+
+The **gosh.ai subscription and sub-account creation service** for funding payments on DEX.DO is in active development and will be available in integration with dexdo-cli shortly.
+
 ## Update - 14.08.26
 
 ### DEX.DO
