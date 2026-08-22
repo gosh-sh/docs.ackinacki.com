@@ -5,7 +5,7 @@ This guide explains how to exchange [eccUSDC](../../../glossary.md#usdc-ecc) for
 ## Prerequisites
 
 * [tvm-cli](https://github.com/tvmlabs/tvm-sdk/releases)
-* A deployed `UpdateCustodianMultisigWallet_v2` wallet; the Acki Nacki Wallet app cannot submit this raw contract transaction
+* A deployed `UpdateCustodianMultisigWallet_v2` wallet; the Acki Nacki Wallet app cannot submit this raw contract transaction. To deploy one: [How to deploy a Multisig Wallet](https://dev.ackinacki.com/how-to-deploy-a-multisig-wallet)
 * The wallet's full `<WALLET_DAPP_ID>::<WALLET_ACCOUNT_ID>` address and the keys file required to sign transactions
 * The `UpdateCustodianMultisigWallet_v2.abi.json` ABI file available locally
 * At least `1 eccUSDC` (ECC currency ID `3`); only whole eccUSDC amounts can be exchanged
@@ -246,6 +246,9 @@ The event contains:
 * `shellMinted`: additional SHELL minted by the system.
 
 The source of the SHELL does not change the result for the user: `shellFromSellers + shellMinted` is sent to the recipient in a single transaction.
+
+How the queues, lots and payouts work:
+[Accumulator contract system](https://dev.ackinacki.com/accumulator-contract-system/overview).
 
 Check the wallet balance with:
 
