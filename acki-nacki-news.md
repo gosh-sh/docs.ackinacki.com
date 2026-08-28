@@ -5,11 +5,56 @@ hidden: true
 
 # Acki Nacki News
 
+## Update - 28.08.26
+
+#### AVM SDK
+
+🚀 The **AVM SDK** is now publicly available. This is an important step in Acki Nacki’s transition to the **Acki Nacki Virtual Machine (AVM)**, which is expected to improve network performance and make smart contract execution more efficient.
+
+Developers can already use the SDK to build smart contracts in **Rust**, test them locally, work with contract state and events, and verify contract behavior before deployment.
+
+The repository also includes documentation, examples, and getting-started instructions: [https://github.com/gosh-sh/avm-sdk](https://github.com/gosh-sh/avm-sdk)
+
+If you find a bug or think something is missing in the documentation, please open an issue in the repository: [https://github.com/gosh-sh/avm-sdk/issues](https://github.com/gosh-sh/avm-sdk/issues)
+
+### **gosh.ai**
+
+**gosh.ai** — The SHELL purchase service for use with DEX.DO and gosh.ai product subscriptions has been developed and is now in testing. It will be released alongside DEX.DO Season 2 Points and Rewards Program on Mainnet.
+
+### **DEX.DO**
+
+A new public **DEX.DO CLI** release is on its way. The upcoming version significantly improves the UX: wallet onboarding and market tooling now include a new interactive mode and additional functionality. It also expands the canonical model catalog and introduces several new recovery and diagnostic commands. Model naming validation has been added.&#x20;
+
+Mainnet support has been added to [https://markets.dex.do/](https://markets.dex.do/) (data will become available once indexing is operational). The interface now also supports simplified model naming for search.
+
+### **Bridge**
+
+Development of the **ackinacki-bridge CLI** is underway. Its first feature, **withdraw**, will initially support test USDC withdrawals from Shellnet to EVM Sepolia.\
+Stay tuned for announcements.
+
+### **Node & SDK**
+
+The network is undergoing upgrade to **v0.19.1** release [https://github.com/ackinacki/ackinacki/releases/tag/v0.19.1](https://github.com/ackinacki/ackinacki/releases/tag/v0.19.1) right now. The release adds GraphQL event filtering by `src_dapp_id` and extra-currency delta tracking in messages and transactions, adds new external-message queue metrics and updated queue limits and block gas limits, and includes fixes across transaction data handling, **eccUSDC Bridge**, attestation processing.
+
+### Wallet
+
+The **GOSH TLS library** repository is now publicly available. This Rust-based library provides tools for establishing and working with TLS connections, including certificate handling and TLS session data, and is used as part of the secure networking stack.
+
+Repository: [https://github.com/gosh-sh/gosh\_tls\_lib](https://github.com/gosh-sh/gosh_tls_lib)
+
+### Popit Music
+
+**Popit Music** has just shipped an update fixing the main music generation bugs:
+
+* No more long 8-minute tracks with audio that gradually degraded as the track played
+* Proper endings are back on all tracks — the broken fade-out at the end is gone&#x20;
+* A step toward fewer copyright errors falsely triggered by users' own recorded material
+
 ## Update - 21.08.26
 
 ### **DEX.DO**
 
-*   **`dexdo-cli` is undergoing a major UX update.** The team is implementing **three ways to link your wallet**:&#x20;
+*   **`dexdo-cli` is undergoing a major UX update.** The team is implementing **three ways to link your wallet**:
 
     * local multisig for deep technical CLI integrations,
     * **Acki Nacki Wallet** application for Wallet users and **Points and Rewards Program** participants
@@ -63,8 +108,8 @@ A new guide on [**exchanging eccUSDC for SHELL via the Accumulator**](https://do
 
 ### DEX.DO
 
-🚀 **DEX.DO Season 2 launches on Mainnet next week!** \
-Stay tuned for the official announcement.&#x20;
+🚀 **DEX.DO Season 2 launches on Mainnet next week!**\
+Stay tuned for the official announcement.
 
 * A new **`dexdo-cli`** release is coming with support for the latest contract updates. Key improvements will include:
   * **deadline** support for both BUY and SELL orders;
@@ -81,8 +126,6 @@ Stay tuned for the official announcement.&#x20;
 ### Node
 
 Active performance testing of the multithreaded node implementation is underway to optimize scalability and throughput, while development of the new **MessageDB** storage layer continues.
-
-
 
 ## Update - 31.07.26
 
@@ -123,7 +166,7 @@ Another audit cycle has been completed. Several issues were identified during th
 
 A major [Popit Music](https://popit.music/?utm_source=socials\&utm_medium=annoncments\&utm_campaign=tvmupdate_2026_07_24\&utm_content=tvmupdate) update is live just in time for the weekend!
 
-* The song creation engine has been upgraded to a new version, with more generation controls and a more stable creation flow.&#x20;
+* The song creation engine has been upgraded to a new version, with more generation controls and a more stable creation flow.
 * We’ve also introduced a new entry point: the Sequencer.
 * A large number of bugs and service issues have been fixed.
 * You can now sort your created tracks, completely hide them from the list, regenerate covers for tracks and playlists, generate images for artists and Popcoins, and download them.
@@ -132,8 +175,8 @@ A major [Popit Music](https://popit.music/?utm_source=socials\&utm_medium=annonc
 
 ### DEX.DO
 
-* **DEX.DO Bug Bounty program is in development. Stay tuned!**&#x20;
-*   &#x20;[**DEX.DO CLI** ](https://github.com/gosh-sh/dexdo-cli)**has been updated to v0.0.12.**
+* **DEX.DO Bug Bounty program is in development. Stay tuned!**
+*   [**DEX.DO CLI** ](https://github.com/gosh-sh/dexdo-cli)**has been updated to v0.0.12.**
 
     The release fixes a critical security issue affecting withdrawals from previous-generation Private Notes, restores compatibility with the updated Shellnet and the new `Halo2/Hermez KZG prover`, and improves order management by ensuring that scanning no longer stops when it encounters already executed orders.
 
@@ -142,24 +185,24 @@ A major [Popit Music](https://popit.music/?utm_source=socials\&utm_medium=annonc
 
 ### Node & SDK
 
-*   The rollout of **network upgrade v0.18.0** has started. [https://github.com/ackinacki/ackinacki/releases/tag/v0.18.0](https://github.com/ackinacki/ackinacki/releases/tag/v0.18.0) \
+*   The rollout of **network upgrade v0.18.0** has started. [https://github.com/ackinacki/ackinacki/releases/tag/v0.18.0](https://github.com/ackinacki/ackinacki/releases/tag/v0.18.0)\
     **This release unlocks the technical possibility to release DEX.DO in Mainnet.**
 
-    It introduces major enhancements, including the integration of a fully on-chain DEX and the AI Inference Market, the completion of the USDC Bridge with Halo2 proof verification, a new History Proof system and Poseidon Merkle Tree-based block identifiers, required for ZK Bridge, significant node performance and reliability improvements, as well as updated TVM-SDK and infrastructure for the ZK bridge.&#x20;
+    It introduces major enhancements, including the integration of a fully on-chain DEX and the AI Inference Market, the completion of the USDC Bridge with Halo2 proof verification, a new History Proof system and Poseidon Merkle Tree-based block identifiers, required for ZK Bridge, significant node performance and reliability improvements, as well as updated TVM-SDK and infrastructure for the ZK bridge.
 * TVM-SDK v3.0.4.an has been released: [https://github.com/tvmlabs/tvm-sdk/releases/tag/v3.0.4.an](https://github.com/tvmlabs/tvm-sdk/releases/tag/v3.0.4.an). The SDK now supports verification of `Halo2/KZG zero-knowledge proofs` through the new TVM instructions `ZKHALO2VERIFY` and `ZKHALO2VERIFYWITHVK`, extending the existing support for Groth16 and Poseidon. The release also introduces the `CHKHISTPROOF` instruction for verifying Merkle proofs of block history in TVM.
 *   TVM Solidity Compiler v0.81.0 has been released: [https://github.com/gosh-sh/TVM-Solidity-Compiler/releases/tag/gosh\_0.81.0](https://github.com/gosh-sh/TVM-Solidity-Compiler/releases/tag/gosh_0.81.0)
 
-    `dapp_id` field is added to the contract events, allowing  DApp developers to query only their DApp's events for indexing.&#x20;
+    `dapp_id` field is added to the contract events, allowing DApp developers to query only their DApp's events for indexing.
 
 ### Bridge
 
-Bridge TVM instructions  are being rolled out to the network in v0.18.0 release. These may be not the final version of them, as the audit is still ongoing. With this v0.18.0 Network Update we are getting very close to the ZK Bridge release.&#x20;
+Bridge TVM instructions are being rolled out to the network in v0.18.0 release. These may be not the final version of them, as the audit is still ongoing. With this v0.18.0 Network Update we are getting very close to the ZK Bridge release.
 
 ## Update - 10.07.26
 
 ### DEX.DO
 
-* **Released** [**DEX.DO CLI** ](https://github.com/gosh-sh/dexdo-cli)- the official command-line interface for DEX.DO, making it easier to automate trading workflows, test the API, and integrate DEX.DO with AI agents. \
+* **Released** [**DEX.DO CLI** ](https://github.com/gosh-sh/dexdo-cli)- the official command-line interface for DEX.DO, making it easier to automate trading workflows, test the API, and integrate DEX.DO with AI agents.\
   **Community feedback is welcome** — report issues at [https://github.com/gosh-sh/dexdo-cli/issues](https://github.com/gosh-sh/dexdo-cli/issues) and **support the project by starring the repository**.
 * The Season 1 Points & Rewards program continues on Shellnet, with ongoing testing and refinement.
 * Secondary markets (predictions on AI events and model prices) are coming to the Points & Rewards program soon.
@@ -198,13 +241,13 @@ The Poseidon instruction has been added. It is required for the Bridge and will 
 ### DEX.DO
 
 * **The** [**Points and Rewards program terms have been published**](https://seasons.dex.do/)**. The program launch is coming — stay tuned for updates!**
-* [**https://app.dex.do/**](https://app.dex.do/) **dashboard and leaderboards for Points and Rewards program participants is released.**&#x20;
+* [**https://app.dex.do/**](https://app.dex.do/) **dashboard and leaderboards for Points and Rewards program participants is released.**
 * Debugging of the AI Token Market client is in progress. AI Token exchange contracts are ready.
-* The skills library has been expanded with a new set of DEX.DO automation and trading skills, covering Multisig setup, deposits, account registration, market data, trading, and withdrawals. Learn more: https://github.com/gosh-sh/dexdo/tree/dev/.claude/skills&#x20;
+* The skills library has been expanded with a new set of DEX.DO automation and trading skills, covering Multisig setup, deposits, account registration, market data, trading, and withdrawals. Learn more: https://github.com/gosh-sh/dexdo/tree/dev/.claude/skills
 
 ### Node & Network & SDK
 
-* Node testing with blockchain multithreading continues. Synchronization stability has been improved, and Poseidon integration is in progress (instruction required for Bridge).&#x20;
+* Node testing with blockchain multithreading continues. Synchronization stability has been improved, and Poseidon integration is in progress (instruction required for Bridge).
 * Published [Bee SDK](https://www.npmjs.com/package/@teamgosh/bee-sdk) on npm (`@teamgosh/bee-sdk`)
 
 ### Bridge
@@ -221,7 +264,7 @@ The Poseidon instruction has been added. It is required for the Bridge and will 
 ### DEX.DO
 
 * **The Points and Rewards program terms have been finalized, and the new landing page is ready for publication. Stay tuned for announcements!**
-* The backend for calculating program points, the participant account, and leaderboard are in development.&#x20;
+* The backend for calculating program points, the participant account, and leaderboard are in development.
 * A smart contract system with a primary market for model tokens is being developed in parallel. The program launch will not be blocked by primary market support for model tokens.
 * Added an AI skill for deploying the Multisig, as well as deploying and topping up Private Notes on Shellnet: [dexdo-onboarding-shellnet](https://github.com/gosh-sh/dexdo/blob/dev/.claude/skills/dexdo-onboarding-shellnet/SKILL.md).
 
@@ -313,7 +356,7 @@ AN Wallet is currently not compatible with Shellnet: to speed up development and
 
 ### Node & Network & SDK
 
-TVM-SDK 3.0.0 with new addressing scheme is coming. All the applications MUST migrate to it before StateV2 release.&#x20;
+TVM-SDK 3.0.0 with new addressing scheme is coming. All the applications MUST migrate to it before StateV2 release.
 
 ### Bridge
 
@@ -321,11 +364,11 @@ End-to-end positive deposit/withdraw scenarios testing is ongoing. The audit exc
 
 ### DEX.DO
 
-* Added account balance APIs covering both collateral and per-market outcome tokens.&#x20;
-* Exposed maker and taker commission rates on the markets endpoint.&#x20;
-* Published the OpenAPI specification.&#x20;
-* Released POST `/api/v1/buyFullSet` for buying a full set of outcome tokens with collateral; \
-  the matching sellFullSet and claim endpoints are specified and will follow.&#x20;
+* Added account balance APIs covering both collateral and per-market outcome tokens.
+* Exposed maker and taker commission rates on the markets endpoint.
+* Published the OpenAPI specification.
+* Released POST `/api/v1/buyFullSet` for buying a full set of outcome tokens with collateral;\
+  the matching sellFullSet and claim endpoints are specified and will follow.
 
 An open-source release of the DEX.DO stack - including halo2 libraries, the indexer, API, and exchange integration libraries - is coming. Stay tuned. 🚀
 
@@ -363,7 +406,7 @@ Degraded public API performance over the last 1.5 week was caused by increased m
 
 To prevent this load from affecting other network users, the rate limit policy for public endpoints was tightened. API request optimizations were also made to improve response speed.
 
-Miner applications may acquire a Block Manager license to avoid these limits. There will be an additional post on this topic the next week.&#x20;
+Miner applications may acquire a Block Manager license to avoid these limits. There will be an additional post on this topic the next week.
 
 <mark style="color:$success;">**The internal network economy is evolving, and that is great to see!**</mark>
 
@@ -371,7 +414,7 @@ Miner applications may acquire a Block Manager license to avoid these limits. Th
 
 Changes made to the TokenBridge event circuit based on the results of the Pruvendo audit.
 
-Decision was made to replace `vergrth16WithVK` instruction with `ZKHALO2VERIFYWITHVK` - this will simplify the integration a lot.&#x20;
+Decision was made to replace `vergrth16WithVK` instruction with `ZKHALO2VERIFYWITHVK` - this will simplify the integration a lot.
 
 ### DODEX
 
@@ -387,7 +430,7 @@ We will keep you updated.
 
 ### Documentation & Developer Experience
 
-A separate documentation page was added for receiving test tokens on Shellnet: [Get test tokens from giver in Shellnet](https://dev.ackinacki.com/readme/get-test-tokens-from-giver-in-shellnet).&#x20;
+A separate documentation page was added for receiving test tokens on Shellnet: [Get test tokens from giver in Shellnet](https://dev.ackinacki.com/readme/get-test-tokens-from-giver-in-shellnet).
 
 ## Update - 15.05.26
 
@@ -400,7 +443,7 @@ A separate documentation page was added for receiving test tokens on Shellnet: [
 On the bridge side, we continue building the infrastructure for ZKP-proof verification and safe asset movement between EVM and Acki Nacki.
 
 * The SDK now includes the `vergrth16WithVK` instruction for proving an EVM-to-Acki Nacki transfer proof on the Acki Nacki side. The instruction is not included in a public release yet. The next step in this direction is integrating `vergrth16WithVK` instruction into the Acki Nacki bridge and testing the full deposit to Acki Nacki scenario.
-* The `Exchange` contract was renamed to `TokenBridge`  and withdrawal bridge interface was added to `TokenBridge`: it will allow initiating USDC withdrawals to the EVM network with event generation for a later ZKP-proof on the EVM side. The withdrawal bridge interface is currently under audit by the Pruvendo team. These changes are in Shellnet only, not in Mainnet.
+* The `Exchange` contract was renamed to `TokenBridge` and withdrawal bridge interface was added to `TokenBridge`: it will allow initiating USDC withdrawals to the EVM network with event generation for a later ZKP-proof on the EVM side. The withdrawal bridge interface is currently under audit by the Pruvendo team. These changes are in Shellnet only, not in Mainnet.
 * The circuit for layer hash movement, which proves that a block belongs to network history, was tested in an EVM test network. Based on the test results, the node-side logic for storing hash movement data needs additional refinement.
 
 {% hint style="info" %}
@@ -409,7 +452,7 @@ There are no `Mainnet` changes yet: integration testing is running on `Shellnet`
 
 ### DODEX
 
-For Dodex, we are continuing to develop the API and contract layer&#x20;
+For Dodex, we are continuing to develop the API and contract layer
 
 * The orderbook API is complete.
 * The first synchronous version of the API for order creation and cancellation has been prepared. But, based on market maker scenarios, we decided to move the order creation and cancellation API to an asynchronous model to make placing large numbers of orders easier. This is a WIP.
@@ -420,8 +463,8 @@ For Dodex, we are continuing to develop the API and contract layer&#x20;
 
 In wallet, we continue improving the user experience and adding developer tools.
 
-* In the coming release  `Dev setting`  page is added
-* When developer mode is enabled,&#x20;
+* In the coming release `Dev setting` page is added
+* When developer mode is enabled,
   * the Multifactor contract address, its `DAPP ID`, and the network switcher become visible.
   * users can see an option to send SHELL to a precomputed contract address for a future deployment; this option is hidden in the regular mode.
 * The release is already available as an APK. App Store publication is coming, and Google Play publication will be later.
@@ -449,12 +492,12 @@ This week, the team made progress across several Acki Nacki workstreams: ecosyst
 
 ### Ecosystem
 
-A PR has been opened to register Acki Nacki in the SLIP-0044 registry under number `1331`. This is an important step toward deeper integration with wallet infrastructure and ecosystem tools. \
+A PR has been opened to register Acki Nacki in the SLIP-0044 registry under number `1331`. This is an important step toward deeper integration with wallet infrastructure and ecosystem tools.\
 Support our PR :rocket: [satoshilabs/slips#2016](https://github.com/satoshilabs/slips/pull/2016)
 
-### State&#x20;
+### State
 
-Durable state (3/4)  is in the final testing phase.&#x20;
+Durable state (3/4) is in the final testing phase.
 
 ### Bridge
 
@@ -482,11 +525,11 @@ Dodex continues to expand the infrastructure needed by market makers and applica
 
 In parallel, we continue improving the documentation so users, developers, and partners can better understand the ecosystem and complete key flows faster.
 
-* Published a detailed overview of the network architecture and participant roles: \
+* Published a detailed overview of the network architecture and participant roles:\
   [Network Architecture and Participants](https://docs.ackinacki.com/network-architecture-and-participants).
-* Updated the documentation for buying SHELL tokens to reflect the simplified user flow in [shellbuy.ackinax.com](https://shellbuy.ackinax.com): \
+* Updated the documentation for buying SHELL tokens to reflect the simplified user flow in [shellbuy.ackinax.com](https://shellbuy.ackinax.com):\
   [Purchase with crypto or card](https://docs.ackinacki.com/for-users/buy-sell-shell/buying-shell/purchase-with-crypto-or-card-credit-debit).
-* Clarified the steps for obtaining `app_dapp_id` in the Bee Engine SDK integration documentation: \
+* Clarified the steps for obtaining `app_dapp_id` in the Bee Engine SDK integration documentation:\
   [Bee Engine SDK Integration Documentation](https://dev.ackinacki.com/bee-engine/bee-engine-sdk-integration-documentation).
 
 Thank you to everyone following Acki Nacki's progress, supporting the team's initiatives, and helping move the ecosystem forward.
