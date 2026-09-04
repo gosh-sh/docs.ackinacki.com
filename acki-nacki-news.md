@@ -5,6 +5,22 @@ hidden: true
 
 # Acki Nacki News
 
+## Update - 04.09.26
+
+### DEX.DO
+
+🚀 [**DEX.DO**](https://dex.do/) **Season 2 is now live on Acki Nacki Mainnet.** Users can earn points by trading AI model access, consuming purchased inference, and inviting new participants. Points accumulated during the incentive program will convert into a **NACKL allocation** once all seasons are completed.
+
+A live leaderboard is available at [app.dex.do](https://app.dex.do/), where participants can track their rank and progress throughout the season.
+
+[Join Season 2](https://app.dex.do/connect) \
+[Program page](https://seasons.dex.do/) \
+[Full rules](https://seasons.dex.do/season-rules.html)
+
+### **gosh.ai**
+
+**gosh.ai is now live.** The service for purchasing and managing AI model credits is now available, allowing users to purchase **SHELL** for use with **DEX.DO**.
+
 ## Update - 28.08.26
 
 #### AVM SDK
