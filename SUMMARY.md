@@ -53,6 +53,7 @@
     * [Multi-Factoring Business-level Specification](for-users/wallets/formal-verification/multi-factoring-business-level-specification.md)
   * [Troubleshooting](for-users/wallets/troubleshooting/README.md)
     * [What to Do if Your Authentication Factor Has Expired](for-users/wallets/troubleshooting/what-to-do-if-your-authentication-factor-has-expired.md)
+    * [Cannot install or update Acki Nacki Wallet from Google Play](for-users/wallets/troubleshooting/cannot-install-or-update-acki-nacki-wallet-from-google-play.md)
 * [Buy/Sell Shell](for-users/buy-sell-shell/README.md)
   * [Introduction](for-users/buy-sell-shell/introduction.md)
   * [Key Concepts](for-users/buy-sell-shell/key-concepts.md)
