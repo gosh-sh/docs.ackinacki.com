@@ -5,6 +5,32 @@ hidden: true
 
 # Acki Nacki News
 
+## Update - 11.09.26
+
+### **gosh.ai** <a href="#bd0f707e-ea54-4f15-ad44-f830317bdd75" id="bd0f707e-ea54-4f15-ad44-f830317bdd75"></a>
+
+**GPU server pools are now available to join on gosh.ai.** Users can join shared pools on high-performance GPU servers to run leading open-source models at below-market prices.
+
+Commitments start at **$2,000 per month**. Funds are held in escrow and remain refundable until the server boots; once the pool is filled, the server launches within 24 hours. Participants can also move to newer models as they become available.
+
+👉 **Join a pool:** [https://gosh.ai/enterprise](https://gosh.ai/enterprise)
+
+### **Bridge**
+
+The **Bridge repository was published today!**\
+&#x20;[**https://github.com/gosh-sh/bridge**](https://github.com/gosh-sh/bridge)&#x20;
+
+The first release of the **`ackinacki-bridge` CLI** is now available, with support for **withdrawals from Shellnet to Sepolia**.
+
+👉 [Release](https://github.com/gosh-sh/bridge/releases/tag/v0.2.0)\
+👉 [Quick Start](https://github.com/gosh-sh/bridge/blob/main/crates/ackinacki-bridge/QUICKSTART.md)
+
+### DEX.DO
+
+Over the past week, two new **DEX.DO CLI releases —** [**v0.2.1**](https://github.com/gosh-sh/dexdo-cli/releases#release-v0.2.1) **and** [**v0.3.0**](https://github.com/gosh-sh/dexdo-cli/releases#release-v0.3.0) **— were published**.
+
+The updates moved model-name validation and market lookup to the on-chain `ModelRegistry`, improved CLI stability and diagnostics, fixed issues related to PrivateNotes, funding, billing, and transient network errors, and added new user documentation covering registered models, wallets, PrivateNotes, and fund flows.
+
 ## Update - 04.09.26
 
 ### DEX.DO
