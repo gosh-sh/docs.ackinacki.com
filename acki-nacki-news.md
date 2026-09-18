@@ -17,19 +17,16 @@ A new `dexdo-cli` release, [v0.4.0](https://github.com/gosh-sh/dexdo-cli/release
 
 We continue working through the remaining issues based on their priority. If a particular issue is especially important to you, please react to it on GitHub or mention it in this chat so we can better understand its impact.
 
-Release:  [v0.4.0](https://github.com/gosh-sh/dexdo-cli/releases/tag/v0.4.0)&#x20;
-
 #### **Bridge**
 
-With the multithreading release on Shellnet approaching, this week we prepared the changes required to redeploy the Bridge immediately after multithreading goes live on Shellnet.
-
-Meanwhile, public testing of [`ackinacki-bridge-cli`](https://github.com/gosh-sh/bridge/releases/tag/v0.2.0) continues on Shellnet. We are also working on simplifying the CLI installation process and expanding metrics coverage for the Bridge.
+Public testing of [`ackinacki-bridge-cli`](https://github.com/gosh-sh/bridge/releases/tag/v0.2.0) continues on Shellnet. We are also working on simplifying the CLI installation process and expanding metrics coverage for the Bridge.
 
 The deposit relayer, including the EVM light client and EVM data prover, has been launched on Shellnet. In addition, a new [`EthBeaconLightClient.sol`](https://ethbeaconlightclient.solhttps/ethbeaconlightclient.solhttps/github.com/gosh-sh/bridge/pull/53/changes#diff-9e15f11068ac2770378169b734d85161e0598e679b169f34b9ec59891467cd56) contract was deployed as part of the Bridge smart contract system on Shellnet to store and verify on-chain proofs that EVM blocks committed to Acki Nacki belong to the canonical EVM chain.
 
+With the multithreading release on Shellnet approaching, this week we prepared the changes required to redeploy the Bridge immediately after multithreading goes live on Shellnet.
+
 ### Popit Music
 
-\
 A major Popit Music update has been released: the track generation pipeline has been fixed, a track parts editor has been added, the authentication flow has been updated, and artists can now change their artist name. \
 \
 Follow Popit Music on X to stay up to date with announcements and updates: [https://x.com/popitmusicai](https://x.com/popitmusicai)
