@@ -5,6 +5,34 @@ hidden: true
 
 # Acki Nacki News
 
+## Update - 25.09.26
+
+### **Node & SDK**
+
+**Multithreading testing is in progress:**
+
+* external message processing
+* node compatibility with the bridge
+
+Once testing is complete, multithreading will be rolled out to Shellnet.
+
+### Bridge
+
+Public testing of the [Bridge withdrawal](https://github.com/gosh-sh/bridge/releases/tag/v0.2.0) functionality continues.
+
+Meanwhile, we have two priorities in progress:
+
+* implementing the ackinacki-bridge deposit CLI, which will allow users to deposit tokens from Sepolia to Shellnet;
+* making the Bridge compatible with the multithreaded network: the multithreading release to Shellnet is close, and it must not interrupt the Bridge public beta.
+
+### DEX.DO
+
+A new `dexdo-cli` release, [**v0.5.0**](https://github.com/gosh-sh/dexdo-cli/releases/tag/v0.5.0), is now available.
+
+The release adds support for text-only requests through the OpenAI Responses API (`POST /v1/responses`) and improves token usage tracking and buyer request statistics. It also includes a guide for withdrawing funds from a PrivateNote and collecting late ECC\[2] refunds with `dexdo note sweep`.
+
+PrivateNote recovery from stale deal records and withdrawal destination validation have also been improved. Unsupported tool calls are now rejected before contacting the seller or charging the deal.
+
 ## Update - 18.09.26
 
 ### **Node & SDK**
