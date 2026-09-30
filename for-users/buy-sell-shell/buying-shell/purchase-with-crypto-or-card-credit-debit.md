@@ -6,7 +6,7 @@ Shell Buyer is a web application for purchasing SHELL tokens using a credit/debi
 
 The purchase consists of three steps:
 
-1. **Connect Wallet** — scan a QR code with your Acki Nacki Wallet to link it
+1. **Connect Wallet** — scan a QR code with your [Acki Nacki Wallet](https://ackinacki.com/wallet) to link it
 2. **Choose Package** — select a token package and pay with a card or crypto
 3. **Confirm & Receive** — SHELL tokens are delivered directly to your wallet
 
@@ -22,7 +22,7 @@ The purchase consists of three steps:
 {% step %}
 #### Open Shell Buyer
 
-Navigate to [https://shellbuy.ackinax.com](https://shellbuy.ackinax.com/) in your browser. \
+Navigate to [https://shellbuy.ackinax.com](https://shellbuy.ackinax.com/) in your browser.\
 A **Connect Your Wallet** card appears with the **Generate QR Code** button. Click it.
 
 <figure><img src="../../../.gitbook/assets/2 (2).jpg" alt="" width="375"><figcaption></figcaption></figure>
@@ -138,7 +138,7 @@ Payments are securely processed. Card details never touch Shell Buyer servers.
 {% endtab %}
 
 {% tab title="Cryptocurrency" %}
-You are redirected to the NOWPayments page. \
+You are redirected to the NOWPayments page.\
 The page displays:
 
 * A **QR code** for the payment address

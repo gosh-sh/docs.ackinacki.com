@@ -60,7 +60,7 @@
   * [Buying SHELL](for-users/buy-sell-shell/buying-shell/README.md)
     * [Ways to Buy SHELL](for-users/buy-sell-shell/buying-shell/ways-to-buy-shell.md)
     * [Exchange eccUSDC for SHELL via Accumulator](for-users/buy-sell-shell/buying-shell/exchange-eccusdc-for-shell-via-accumulator.md)
-    * [Exchange eccUSDC for SHELL via Acki Nacki Wallet (Android only)](for-users/buy-sell-shell/buying-shell/exchange-eccusdc-for-shell-via-acki-nacki-wallet-android-only.md)
+    * [Converting eccUSDC for SHELL via Acki Nacki Wallet (Android only)](for-users/buy-sell-shell/buying-shell/exchange-eccusdc-for-shell-via-acki-nacki-wallet-android-only.md)
     * [Purchase with Crypto or Card (Credit/Debit)](for-users/buy-sell-shell/buying-shell/purchase-with-crypto-or-card-credit-debit.md)
   * [Selling SHELL](for-users/buy-sell-shell/selling-shell/README.md)
     * [How to Sell SHELL](for-users/buy-sell-shell/selling-shell/how-to-sell-shell.md)

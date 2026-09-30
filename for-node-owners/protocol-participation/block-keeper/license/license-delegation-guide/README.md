@@ -14,7 +14,7 @@ You can find more details about working with licenses [here](../working-with-lic
 
 ## Delegation via Acki Nacki Dashboard
 
-To use the dashboard, you need to register and obtain [License Owner Keys](https://docs.ackinacki.com/glossary#license-owner-keys) .&#x20;
+To use the dashboard, you need to register and obtain [License Owner Keys](https://docs.ackinacki.com/glossary#license-owner-keys) .
 
 To do this, follow [the onboarding guide for the dashboard](dashboard-onboarding.md).
 
@@ -81,7 +81,7 @@ Now proceed to [the next step after delegation](./#next-steps-after-delegation).
 
 If the Node Provider has shared their public key with you, then after registering in the dashboard, go to the **Licenses** tab and click the **Delegate** button:
 
-<figure><img src="../../../../../.gitbook/assets/button Delegation (1).jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/button Delegation.jpg" alt=""><figcaption></figcaption></figure>
 
 In the list of Node Providers that appears, click the **Custom** button:
 
@@ -111,20 +111,20 @@ You can do this **Using the Dashboard** by specifying the `Node Provider public 
 
 ## Next Steps After Delegation
 
-At this stage, preparations for the network launch are underway. For licenses delegated during this phase to be included in the [Zerostate](../../../../../glossary.md#zerostate), the node to which you delegated your license must join the [Decentralized Network Starter Protocol (DNSP)](https://docs.ackinacki.com/protocol-participation/block-keeper/join-dnsp-gossip).&#x20;
+At this stage, preparations for the network launch are underway. For licenses delegated during this phase to be included in the [Zerostate](../../../../../glossary.md#zerostate), the node to which you delegated your license must join the [Decentralized Network Starter Protocol (DNSP)](https://docs.ackinacki.com/protocol-participation/block-keeper/join-dnsp-gossip).
 
 Once the DNSP client is launched by your Node Provider, the license will show an `Online` status in the Dashboard (this feature is still in development).
 
 ## **Revoke License**
 
-**Before revoking the delegation of your license, please notify your Node Provider.**&#x20;
+**Before revoking the delegation of your license, please notify your Node Provider.**
 
 {% hint style="danger" %}
-A delegation signature on a running node  is only invalidated by a newer delegation signature on another running node.
+A delegation signature on a running node is only invalidated by a newer delegation signature on another running node.
 {% endhint %}
 
 {% hint style="danger" %}
-If a Node Provider had already started a node with your license - ask  to remove your license from the node
+If a Node Provider had already started a node with your license - ask to remove your license from the node
 {% endhint %}
 
 **If you signed the delegation via Dashboard** - also revoke the delegation to delete the signature - click on the name of the Node Provider to whom the license has been delegated.

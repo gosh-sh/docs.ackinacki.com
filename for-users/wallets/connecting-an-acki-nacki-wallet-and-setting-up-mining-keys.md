@@ -38,7 +38,7 @@ Wallet Authentication creates a secure connection between your AN Wallet and the
 Open the application and tap **"Connect or sign in",**\
 then choose: "**Connect Acki Nacki Wallet"**
 
-<figure><img src="../../.gitbook/assets/1-pm.jpg" alt="" width="143"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/14.jpg" alt="" width="143"><figcaption></figcaption></figure>
 
 ***
 
@@ -47,7 +47,7 @@ then choose: "**Connect Acki Nacki Wallet"**
 Popit Music displays a QR code for wallet connection.\
 Open AN Wallet and **scan the QR** code or tap "**Open AN Wallet**" and you will be redirected directly to your wallet
 
-<figure><img src="../../.gitbook/assets/2-pm.jpg" alt="" width="142"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/13.jpg" alt="" width="142"><figcaption></figcaption></figure>
 
 ***
 
@@ -55,7 +55,7 @@ Open AN Wallet and **scan the QR** code or tap "**Open AN Wallet**" and you will
 
 AN Wallet requests your password to approve the authentication request.
 
-<figure><img src="../../.gitbook/assets/3 -w.jpg" alt="" width="143"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/12.jpg" alt="" width="143"><figcaption></figcaption></figure>
 
 ***
 
@@ -63,7 +63,7 @@ AN Wallet requests your password to approve the authentication request.
 
 Review the request details and confirm the connection.
 
-<figure><img src="../../.gitbook/assets/4-w.jpg" alt="" width="142"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/11.jpg" alt="" width="142"><figcaption></figcaption></figure>
 
 When approved:
 
@@ -161,7 +161,7 @@ Location: **AN Wallet → Settings → Connected Apps**
 
 **Screenshot:** `5-w-settings.jpg`
 
-<figure><img src="../../.gitbook/assets/5-w-settings (1).jpg" alt="" width="143"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/5-w-settings.jpg" alt="" width="143"><figcaption></figcaption></figure>
 
 ***
 
@@ -173,7 +173,7 @@ Location: **AN Wallet → Settings → Connected Mining Apps**
 
 **Screenshot:** `12-w-settings.jpg`
 
-<figure><img src="../../.gitbook/assets/12-w-settings (1).jpg" alt="" width="142"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/12-w-settings.jpg" alt="" width="142"><figcaption></figcaption></figure>
 
 ***
 
@@ -188,4 +188,4 @@ To remove an application:
 
 The application will immediately lose the associated permission.
 
-<div><figure><img src="../../.gitbook/assets/6- w.jpg" alt="" width="143"><figcaption></figcaption></figure> <figure><img src="../../.gitbook/assets/12-w-settings (2).jpg" alt="" width="142"><figcaption></figcaption></figure></div>
+<div><figure><img src="../../.gitbook/assets/6- w.jpg" alt="" width="143"><figcaption></figcaption></figure> <figure><img src="../../.gitbook/assets/12-w-settings.jpg" alt="" width="142"><figcaption></figcaption></figure></div>

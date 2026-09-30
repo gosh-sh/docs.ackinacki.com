@@ -13,7 +13,7 @@ When burning NACKL, you receive a portion of the free eccUSDC reserve proportion
 **Formula:**
 
 ```
-Payout = USDC reserve × (Your NACKL / NACKL total supply)
+Payout = eccUSDC reserve × (Your NACKL / NACKL total supply)
 ```
 
 There is no fixed price for NACKL. The value of one NACKL is floating and depends on the size of the reserve and the total supply. The more NACKL you hold relative to the total supply, the larger your share of the reserve.
@@ -72,8 +72,6 @@ In this example: entering 3 NACKL yields ≈ 0.000390 eccUSDC.
 Tap **Burn & Redeem:**
 
 <figure><img src="../../.gitbook/assets/05 (1).jpg" alt="" width="285"><figcaption></figcaption></figure>
-
-
 {% endstep %}
 
 {% step %}
@@ -83,7 +81,7 @@ A confirmation screen appears:
 
 Tap **Confirm burn** to proceed or **Cancel** to go back.
 
-<figure><img src="../../.gitbook/assets/06 (3).jpg" alt="" width="288"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/06 (2).jpg" alt="" width="288"><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -93,7 +91,7 @@ On success, you'll see the **NACKL redeemed** screen.
 
 Tap **Close** to return.
 
-<figure><img src="../../.gitbook/assets/07 (3).jpg" alt="" width="286"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/07 (2).jpg" alt="" width="286"><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -104,15 +102,15 @@ After burning:
 * Your NACKL balance decreased (was 10, now 7)
 * The NACKL transaction history shows a **Sent to Accumulator** entry with amount -3
 
-<figure><img src="../../.gitbook/assets/08 (2).jpg" alt="" width="285"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/08 (1).jpg" alt="" width="285"><figcaption></figcaption></figure>
 
 Your NACKL balance on the main wallet screen updates automatically.
 
-<figure><img src="../../.gitbook/assets/09 (3).jpg" alt="" width="281"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/09 (2).jpg" alt="" width="281"><figcaption></figcaption></figure>
 
 The received eccUSDC can be seen on the eccUSDC token screen in the **Transaction history** section — a **Received from Accumulator** entry with amount +0.00039.
 
-<figure><img src="../../.gitbook/assets/10 (1).jpg" alt="" width="285"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/10.jpg" alt="" width="285"><figcaption></figcaption></figure>
 {% endstep %}
 {% endstepper %}
 

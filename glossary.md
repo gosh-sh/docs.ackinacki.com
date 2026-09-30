@@ -6,11 +6,11 @@
 
 A record in a distributed database that includes the balance, code, and data.
 
-#### **Ack**&#x20;
+#### **Ack**
 
 A message from the Verifier broadcast to all network participants by Block Verifier (Acki-Nacki) when a block is verified and deemed valid.
 
-#### Acki Nacki Igniter&#x20;
+#### Acki Nacki Igniter
 
 The decentralized network starter protocol (DNSP), it collects Node and [License](glossary.md#license) information, tests and updates the node software and initiates Zerostate (first block) generation once all DNSP requirements are met.
 
@@ -33,11 +33,11 @@ An embeddable client-side mining engine and blockchain verification system for b
 
 An object containing new transactions, which, once finalized, are stored in the blockchain as a permanent and immutable part of the decentralized ledger. Each block includes transaction data, a timestamp, a common section, and a reference to the previous block, creating a chain of interconnected blocks.
 
-#### **Block Keeper (BK)**&#x20;
+#### **Block Keeper (BK)**
 
-A network participant with a deployed [Epoch](glossary.md#epoch) contract that receives blocks from the [Block Producer (BP)](glossary.md#block-producer-bp) and sends back an [Attestation](glossary.md#attestation) containing the block hash and other metadata. A BK can also perform the roles of a [Block Verifier (Acki-Nacki)](glossary.md#block-verifier-or-acki-nacki) or a  BP.
+A network participant with a deployed [Epoch](glossary.md#epoch) contract that receives blocks from the [Block Producer (BP)](glossary.md#block-producer-bp) and sends back an [Attestation](glossary.md#attestation) containing the block hash and other metadata. A BK can also perform the roles of a [Block Verifier (Acki-Nacki)](glossary.md#block-verifier-or-acki-nacki) or a BP.
 
-#### **BK Node (BK node)**&#x20;
+#### **BK Node (BK node)**
 
 This is a node that performs the role of a [Block Keeper (BK)](glossary.md#block-keeper-bk).
 
@@ -45,11 +45,11 @@ This is a node that performs the role of a [Block Keeper (BK)](glossary.md#block
 
 [BK Node keys](glossary.md#bk-node-owner-keys) owner.
 
-#### **BK Node Owner keys**&#x20;
+#### **BK Node Owner keys**
 
 The node management keys that provide access to the BK wallet. They are used for managing the node operations such as staking and adding licenses to the approved list. These keys cannot be used to withdraw Rewards from the BK wallet.
 
-#### **BK  Reward System**
+#### **BK Reward System**
 
 Block Keepers earn rewards based on their participation in the network during each [Epoch](https://docs.ackinacki.com/glossary#epoch), regardless of their specific role ([Block Producer](https://docs.ackinacki.com/glossary#block-producer-bp), [Block Verifier (Acki-Nacki)](https://docs.ackinacki.com/glossary#block-verifier-or-acki-nacki), or [Block Keeper](https://docs.ackinacki.com/glossary#block-keeper-bk)). The reward depends on the [stake](https://docs.ackinacki.com/glossary#stake) and [Reputation Coefficient](https://docs.ackinacki.com/glossary#reputation-coefficient), and is evenly distributed among the licenses delegated to it.
 
@@ -60,7 +60,7 @@ Block Keepers are added to the BK set from the [Future BK set](glossary.md#futur
 The members of the BK‑set ensure the operation of the network: they send [attestations](glossary.md#attestation), validate blocks, and issue [Ack](glossary.md#ack)/[Nack](glossary.md#nack) signals.\
 The size of the BK‑set directly affects the network’s security parameters, defining how many attestations are required to confirm blocks and the percentage of [Block Verifiers (or Acki‑Nacki)](glossary.md#block-verifier-or-acki-nacki) needed for each block.
 
-#### **BK Wallet**&#x20;
+#### **BK Wallet**
 
 The wallet used for staking. The address of the BK Wallet serves as the identifier of the node.
 
@@ -72,15 +72,15 @@ A list of [license numbers](glossary.md#license-number) that can be delegated to
 
 A network participant whose primary role is to provide users with blockchain data and process external messages. Block Managers receive a portion of the total block reward based on the number of external messages they process. A BM operates in conjunction with a specific BK, and this pairing is defined during start of BM.
 
-#### **BM  Reward System**
+#### **BM Reward System**
 
 The amount of NACKL tokens accrued for processing BM external messages during a single Epoch. The reward should be claimed once per Epoch, but it can only be claimed **after** the slashing period (approximately after 5% of the next epoch’s blocks have been processed).
 
-#### **Block Producer (BP)**&#x20;
+#### **Block Producer (BP)**
 
 The leader of a particular [Thread](glossary.md#thread) responsible for block production.
 
-#### **Block Verifier (or Acki-Nacki)**&#x20;
+#### **Block Verifier (or Acki-Nacki)**
 
 A Block Keeper responsible for block validation, who notifies all network participants of whether the block is valid or not by sending an [ACK](glossary.md#ack) or [NACK](glossary.md#nack) message.
 
@@ -104,16 +104,20 @@ The identifier of a Decentralized Contract System on the Acki Nacki blockchain. 
 
 A denomination is a fixed lot size when selling [SHELL](glossary.md#shell). There are four denominations, similar to banknotes:
 
-| Denomination (USDC ecc) | SHELL Equivalent |
-| :---------------------: | :--------------: |
-|            1            |        100       |
-|            10           |       1,000      |
-|           100           |      10,000      |
-|          1,000          |      100,000     |
+| Denomination (eccUSDC) | SHELL Equivalent |
+| :--------------------: | :--------------: |
+|            1           |        100       |
+|           10           |       1,000      |
+|           100          |      10,000      |
+|          1,000         |      100,000     |
 
 No other denominations exist. When selling SHELL, the AN Wallet automatically breaks down your amount into lots of these denominations.
 
 ## E
+
+#### eccUSDC
+
+A stablecoin pegged to the US dollar. Used for settlements when [buying](for-users/buy-sell-shell/buying-shell/ways-to-buy-shell.md) and[ selling](for-users/buy-sell-shell/selling-shell/) SHELL (the rate is fixed and immutable: **1 eccUSDC = 100 SHELL)**. Within the Acki Nacki network, eccUSDC exists as ECC\[3] — an element of the [Extra Currency Collection](glossary.md#extra-currency-collection).
 
 #### **Epoch of the BK**
 
@@ -123,15 +127,15 @@ The participation period in the Acki Nacki protocol during which a participant a
 
 The participation period in the Acki Nacki protocol during which a participant acts as a [Block Manager](glossary.md#block-manager-bm). The length of an epoch is 259 200 blocks (about 24 hours).
 
-#### **Extra Currency Collection**&#x20;
+#### **Extra Currency Collection**
 
-A set of currencies within the Acki Nacki network designed to address various tasks beyond [VMSHELL](glossary.md#vmshell) tokens, which are used for paying fees. These currencies enhance the flexibility and efficiency of the Acki Nacki ecosystem. They provide diverse functionalities tailored to specific use cases, such as value storage and staking ([NACKL](glossary.md#nackl), index 1) or transferring funds between different [Dapp IDs](glossary.md#dapp-id) for subsequent conversion ([SHELL](glossary.md#shell), index 2) and settlement in a US dollar-pegged stablecoin ([USDC](glossary.md#usdc-ecc), index 3)
+A set of currencies within the Acki Nacki network designed to address various tasks beyond [VMSHELL](glossary.md#vmshell) tokens, which are used for paying fees. These currencies enhance the flexibility and efficiency of the Acki Nacki ecosystem. They provide diverse functionalities tailored to specific use cases, such as value storage and staking ([NACKL](glossary.md#nackl), index 1) or transferring funds between different [Dapp IDs](glossary.md#dapp-id) for subsequent conversion ([SHELL](glossary.md#shell), index 2) and settlement in a US dollar-pegged stablecoin ([eccUSDC](glossary.md#eccusdc), index 3)
 
 ## F
 
 #### Free Reserve
 
-The USDC held in the Accumulator contract that is not reserved for SHELL sellers. It is formed as follows: when a buyer purchases SHELL but there aren't enough sellers in the queues, the system creates (mints) new SHELL. The USDC paid for minted SHELL forms the free reserve. Seller funds are never touched.
+The eccUSDC held in the Accumulator contract that is not reserved for SHELL sellers. It is formed as follows: when a buyer purchases SHELL but there aren't enough sellers in the queues, the system creates (mints) new SHELL. The eccUSDC paid for minted SHELL forms the free reserve. Seller funds are never touched.
 
 #### Future BK set
 
@@ -143,7 +147,7 @@ After the [Epoch](glossary.md#epoch) contract is deployed, the future BK must be
 
 #### License
 
-The [**BK License**](for-node-owners/protocol-participation/block-keeper/license/acki-nacki-vk-node-license.md) is a [contract](https://github.com/ackinacki/ackinacki/blob/main/contracts/bksystem/License.sol) that grants the right for a [Block Keeper (BK)](glossary.md#block-keeper-bk) to participate in the protocol. The license is delegated to a specific BK. Each BK can be delegated up to 20 (twenty) licenses. The Licenses are delegated without restrictions. &#x20;
+The [**BK License**](for-node-owners/protocol-participation/block-keeper/license/acki-nacki-vk-node-license.md) is a [contract](https://github.com/ackinacki/ackinacki/blob/main/contracts/bksystem/License.sol) that grants the right for a [Block Keeper (BK)](glossary.md#block-keeper-bk) to participate in the protocol. The license is delegated to a specific BK. Each BK can be delegated up to 20 (twenty) licenses. The Licenses are delegated without restrictions.
 
 The **BM License** is a [contract](https://github.com/ackinacki/ackinacki/blob/main/contracts/bksystem/LicenseBM.sol) that grants a [Block Manager (BM)](glossary.md#block-manager-bm) the right to participate in the network. Each BM License is delegated to a BM wallet _(1 wallet - 1 license)_.
 
@@ -153,7 +157,7 @@ An **on-chain unique number** assigned during the deployment of the License cont
 
 #### License Owner
 
-A person who [registered at the Acki Nacki Dashboard](https://docs.ackinacki.com/protocol-participation/license/license-dashboard-guide) and has acquired a [License](https://docs.ackinacki.com/protocol-participation/license/acki-nacki-node-license)  and License Owner Keys to participate in the Acki Nacki protocol.&#x20;
+A person who [registered at the Acki Nacki Dashboard](https://docs.ackinacki.com/protocol-participation/license/license-dashboard-guide) and has acquired a [License](https://docs.ackinacki.com/protocol-participation/license/acki-nacki-node-license) and License Owner Keys to participate in the Acki Nacki protocol.
 
 #### License Owner Keys
 
@@ -163,7 +167,7 @@ The keys used to manage license contracts (delegate and revoke delegation) and w
 
 A lot is a single indivisible sell order for SHELL. Each lot is tied to a specific denomination and can only be sold in full. Partial selling of a lot is not possible.
 
-**Example:** a lot with denomination 10 USDC ecc means the seller deposited 1,000 SHELL and is waiting to receive 10 USDC ecc when their turn comes.
+**Example:** a lot with denomination 10 eccUSDC means the seller deposited 1,000 SHELL and is waiting to receive 10 eccUSDC when their turn comes.
 
 ## M
 
@@ -177,7 +181,7 @@ The minimum amount of tokens locked on Block Manager wallet.\
 It is calculated individually and represents the product of a coefficient and the total amount of [**NACKL**](glossary.md#nackl) earned by the BM. The coefficient depends on the time elapsed since the network launch and decreases over time.\
 If a BM stops operating in the middle of an [Epoch](glossary.md#epoch-of-the-bm), no reward is accrued for that Epoch.
 
-#### Maximum stake&#x20;
+#### Maximum stake
 
 The maximum number of tokens a Block Keeper can stake to participate in the network. This stake remains valid as long as the license stays active. The value is dynamically adjusted based on the current number of Block Keepers in the network, the total number of tokens minted exclusively by Block Keepers, and the number of tokens burned due to slashing penalties.
 
@@ -187,18 +191,18 @@ A participant in the protocol who occasionally validates transactions in subtree
 
 ## N
 
-#### **Nack**&#x20;
+#### **Nack**
 
 A message from the Verifier broadcast to all network participants by Block Verifier (Acki-Nacki) when a block is verified and deemed invalid.
 
-#### **NACKL**&#x20;
+#### **NACKL**
 
 The native network token, used for security guarantees: staking, slashing and block rewards.\
 (currency collection index: 1)
 
-#### Node Provider&#x20;
+#### Node Provider
 
-An off-chain entity that for provides  [Block Keeper (BK) nodes](glossary.md#bk-node-bk-node) to license owners, allowing them to participate in the protocol by delegating their licenses to specific nodes. Node Provider keys are used to sign and validate the delegation to a particular Node Provider before Network start to form the zerostate, they do not operate on-chain. Subsequently, the license owner receives a share of the rewards earned by the BK for participating in the protocol
+An off-chain entity that for provides [Block Keeper (BK) nodes](glossary.md#bk-node-bk-node) to license owners, allowing them to participate in the protocol by delegating their licenses to specific nodes. Node Provider keys are used to sign and validate the delegation to a particular Node Provider before Network start to form the zerostate, they do not operate on-chain. Subsequently, the license owner receives a share of the rewards earned by the BK for participating in the protocol
 
 ## P
 
@@ -218,7 +222,7 @@ A metric that increases the rewards for [Block Keepers](glossary.md#block-keeper
 
 ## S
 
-#### **SHELL**&#x20;
+#### **SHELL**
 
 The utility token within the Acki Nacki network is designed to compensate [NACKL](glossary.md#nackl) holders for the computing resources the network provides. Minted by depositing eccUSDС, but it isn't collateralized. It can be converted to [VMSHELL](glossary.md#vmshell) to cover network fees at a 1:1 ratio. However, it is not possible to convert VMSHELL back to SHELL. This token can be transferred between different [Dapp IDs](glossary.md#dapp-id). (currency collection index: 2). Learn how [to buy SHELL here](https://docs.ackinacki.com/for-users/buy-sell-shell/introduction).
 
@@ -228,15 +232,9 @@ The amount of [NACKL](glossary.md#nackl) tokens required to participate in the A
 
 ## T
 
-#### **Thread**&#x20;
+#### **Thread**
 
 A subset of nodes that serve a particular subset of [Accounts](glossary.md#account-contract).
-
-## U
-
-#### USDC ecc
-
-A stablecoin pegged to the US dollar. Used for settlements when [buying](for-users/buy-sell-shell/buying-shell/ways-to-buy-shell.md) and[ selling](for-users/buy-sell-shell/selling-shell/) SHELL (the rate is fixed and immutable: **1 eccUSDC = 100 SHELL)**. Within the Acki Nacki network, USDC exists as ECC\[3] — an element of the [Extra Currency Collection](glossary.md#extra-currency-collection).
 
 ## V
 

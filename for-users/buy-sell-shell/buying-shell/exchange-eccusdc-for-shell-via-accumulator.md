@@ -48,7 +48,7 @@ Message amounts are specified in base units:
 * `1 eccUSDC = 1,000,000` eccUSDC units;
 * `1 SHELL = 1,000,000,000` SHELL units.
 
-The Accumulator accepts only whole USDC amounts. The eccUSDC amount must be greater than zero and divisible by `1,000,000`.
+The Accumulator accepts only whole eccUSDC amounts. The eccUSDC amount must be greater than zero and divisible by `1,000,000`.
 
 |        Sent | Value in `cc["3"]` |     Received |
 | ----------: | -----------------: | -----------: |
@@ -90,7 +90,7 @@ The message contains only one ECC currency: eccUSDC with ID `3`.
 {% endstep %}
 
 {% step %}
-### Use a whole-eccUSDC amount
+### Use a whole - eccUSDC amount
 
 The eccUSDC amount is divisible by `1,000,000`.
 {% endstep %}
@@ -108,7 +108,7 @@ Do not send eccUSDC together with other ECC currencies in the same message. The 
 
 ## Message Parameters
 
-Use these parameters to purchase SHELL for `1 USDC`:
+Use these parameters to purchase SHELL for `1 eccUSDC`:
 
 ```json
 {
@@ -138,11 +138,18 @@ Use the `value = 100000000` and `flags = 0`. After the fee is deducted, the Accu
 
 Some wallets may name the ECC currency field `ecc` or `currencies` instead of `cc`. The meaning is the same: key `3` is the eccUSDC identifier, and its value is the amount in base units.
 
-## Send from an UpdateCustodianMultisigWallet\_v2 Multisig
+## Send from a Multisig Wallet
+
+{% hint style="info" %}
+Multisig is the [`UpdateCustodianMultisigWallet_v2.sol`](https://github.com/ackinacki/ackinacki/blob/main/contracts/updatecustodianmultisigwallet_v2/UpdateCustodianMultisigWallet_v2.sol) contract.\
+You can learn how to deploy a multisig [here](https://dev.ackinacki.com/how-to-deploy-a-multisig-wallet)
+{% endhint %}
+
+### For a wallet with a single custodian
 
 For a wallet with one custodian, call the `sendTransaction` method.
 
-The following Shellnet example exchanges `1 USDC`:
+The following Shellnet example exchanges `1 eccUSDC`:
 
 {% hint style="info" %}
 For the Mainnet network, use the `mainnet.ackinacki.org` endpoint.
@@ -165,13 +172,15 @@ tvm-cli -j -u shellnet.ackinacki.org callx \
   }'
 ```
 
-The `dapp_id` field in this wallet version is used for transfer reporting. The Accumulator DApp ID is `1`.
+The `dapp_id` field in this wallet version is used for transfer reporting. The Accumulator DAPP ID is `1`.
 
 {% hint style="warning" %}
 Do not use the legacy `0:<WALLET_ACCOUNT_ID>` address in the `--addr` parameter. The current `tvm-cli` accepts only the full `<WALLET_DAPP_ID>::<WALLET_ACCOUNT_ID>` format here. The `dest` value inside the JSON must remain in the legacy `0:3535...` format.
 {% endhint %}
 
-If the wallet has multiple custodians, use `submitTransaction` with the same parameters instead of `sendTransaction`, and then collect the required number of confirmations through the wallet's usual process.
+### For a wallet with multiple custodians
+
+**If the wallet has multiple custodians, use `submitTransaction`** with the same parameters instead of `sendTransaction`, and then collect the required number of confirmations through the wallet's usual process.
 
 {% hint style="warning" %}
 Do not use outdated multisig versions.
@@ -247,8 +256,7 @@ The event contains:
 
 The source of the SHELL does not change the result for the user: `shellFromSellers + shellMinted` is sent to the recipient in a single transaction.
 
-How the queues, lots and payouts work:
-[Accumulator contract system](https://dev.ackinacki.com/accumulator-contract-system/overview).
+How the queues, lots and payouts work: [Accumulator contract system](https://dev.ackinacki.com/accumulator-contract-system/overview).
 
 Check the wallet balance with:
 
@@ -263,16 +271,16 @@ tvm-cli -j -u shellnet.ackinacki.org account \
 
 In the `ecc_balance` field:
 
-* key `3` contains the eccUSDC balance in micro-USDC;
+* key `3` contains the eccUSDC balance in micro-eccUSDC;
 * key `2` contains the SHELL balance in nanoSHELL.
 
-After exchanging `1 USDC`, the balance under key `3` should decrease by `1000000`, and the balance under key `2` should increase by `100000000000`.
+After exchanging `1 eccUSDC`, the balance under key `3` should decrease by `1000000`, and the balance under key `2` should increase by `100000000000`.
 
 ## Common Errors
 
 <details>
 
-<summary>Amount Is Not a Whole USDC Value</summary>
+<summary>Amount Is Not a Whole eccUSDC Value</summary>
 
 A `cc["3"]` value such as `1500000` represents `1.5 USDC` and will be rejected. Use only whole amounts such as `1000000`, `2000000`, or `10000000`.
 
@@ -313,5 +321,5 @@ The Accumulator accepts eccUSDC, the ECC currency with ID `3`. Standard TIP-3 US
 ## Important
 
 {% hint style="warning" %}
-Before sending a large amount, perform a test exchange of `1 USDC` and confirm that the SHELL arrived at the expected address. Blockchain transactions are irreversible.
+Before sending a large amount, perform a test exchange of `1 eccUSDC` and confirm that the SHELL arrived at the expected address. Blockchain transactions are irreversible.You can learn how to deploy a Multisig wallet [here](https://dev.ackinacki.com/how-to-deploy-a-multisig-wallet)
 {% endhint %}

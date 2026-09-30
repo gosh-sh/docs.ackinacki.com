@@ -21,8 +21,6 @@ Detailed guide: [Exchange eccUSDC for SHELL via the Accumulator](exchange-eccusd
 
 ## Option 2: Shell Buyer App — Pay with Card or Crypto
 
-
-
 **For:** users who want to buy SHELL using fiat currency (credit/debit card) or cryptocurrency (USDT, USDC).
 
 **Application:** [Shell Buyer App](https://shellbuy.ackinax.com/) — a web application accessible through any browser. A mobile version is planned for the future.
@@ -40,7 +38,7 @@ Detailed guide: [Buy via Shell Bayer App](https://shellbuy.ackinax.com/)
 
 ***
 
-## Option 3: Acki Nacki Wallet — Pay with eccUSDC
+## Option 3: Acki Nacki Wallet — Swapping eccUSDC
 
 **For:** users who already have eccUSDC in their balance on the Acki Nacki wallet.
 
@@ -48,17 +46,18 @@ Detailed guide: [Buy via Shell Bayer App](https://shellbuy.ackinax.com/)
 
 **How it works:**
 
-1. Open the Buy/Sell SHELL section in the wallet
+1. Open the Swap section on the main Acki Nacki Wallet screen
 2. Enter the eccUSDC amount
 3. Confirm the transaction
 4. SHELL is instantly credited to your balance
 
-Detailed guide: [Buy via Acki Nacki Wallet](exchange-eccusdc-for-shell-via-acki-nacki-wallet-android-only.md)
+Detailed guide: [Converting via Acki Nacki Wallet](exchange-eccusdc-for-shell-via-acki-nacki-wallet-android-only.md)
 
 ***
 
 ## Which Method Should I Choose?
 
-* **Already have eccUSDC and prefer a graphical interface?** Use the Acki Nacki Wallet — it's instant and has no additional fees.
-* **Need to exchange eccUSDC programmatically?** Send the exchange transaction directly to the Accumulator contract.
-* **Have a bank card or crypto on another blockchain?** Use the Shell Buyer App — it lets you buy SHELL without needing to acquire eccUSDC first.
+* **Already have eccUSDC and prefer a graphical interface?** Use the Acki Nacki Wallet — it's instant and has no additional fees. [Go →](exchange-eccusdc-for-shell-via-acki-nacki-wallet-android-only.md)
+* **Need to exchange eccUSDC programmatically?** Send the exchange transaction directly to the Accumulator contract. [Go →](exchange-eccusdc-for-shell-via-accumulator.md)
+* **Have a bank card or crypto on another blockchain?** Use the Shell Buyer App — it lets you buy SHELL without needing to acquire eccUSDC first. [Go →](purchase-with-crypto-or-card-credit-debit.md)
+

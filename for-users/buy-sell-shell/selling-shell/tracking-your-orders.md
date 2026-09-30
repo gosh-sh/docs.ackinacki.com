@@ -1,6 +1,6 @@
 # Tracking Your Orders
 
-After placing a sell order for SHELL, you can track the status of each lot in the Acki Nacki Wallet.
+After placing an order to convert SHELL to eccUSDC, you can track the status of each lot in the Acki Nacki Wallet.
 
 ## Where to Check Status
 
@@ -8,44 +8,45 @@ Open the SHELL token screen (tap the SHELL row on the main screen). The **My Ord
 
 For each lot, you can see:
 
-* The SHELL and USDC amounts (e.g., 1,000 SHELL → 10 USDC)
+* The SHELL and eccUSDC amounts (e.g., 1,000 SHELL → 10 eccUSDC)
 * Your position in the queue (e.g., **#1 in queue**)
 
-<figure><img src="../../../.gitbook/assets/07 (1).jpg" alt="" width="165"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/7 (2).jpg" alt="" width="188"><figcaption></figcaption></figure>
 
 ## Lot Statuses
 
 Each lot goes through three states:
 
-| Status                     | Description                                                             |
-| -------------------------- | ----------------------------------------------------------------------- |
-| **In queue** (#N in queue) | Lot is in the queue waiting for a buyer. The number shows your position |
-| **Sold**                   | Lot has been sold; USDC is ready for collection                         |
-| **Claimed**                | USDC has been received in your balance                                  |
+| Status                     | Description                                                                                            |
+| -------------------------- | ------------------------------------------------------------------------------------------------------ |
+| **In queue** (#N in queue) | Lot is in the queue waiting for a buyer. The number shows your position                                |
+| **Sold**                   | Lot has been sold; eccUSDC is ready for collection                                                     |
+| **Claimed**                | <p>eccUSDC has been received in your balance<br>After that, the order disappears from the section.</p> |
 
-## How Fast Do Lots Sell?
+### How Quickly Are Lots Converted?
 
-Selling speed depends on buyer activity. Key factors:
+Lot processing speed depends on the activity of users converting eccUSDC to SHELL. The main factors are:
 
-* **Denomination:** lots with smaller denominations (1 and 10 USDC) typically sell faster, as even small purchases can fill them
-* **Queue position:** the lower the number, the sooner you'll be sold. Position #1 means your lot will be sold first
-* **Purchase priority:** the system processes queues from large to small denominations (1000 → 100 → 10 → 1), so large purchases first fill 1000-denomination lots, then 100, and so on
+* **Denomination:** lots with smaller denominations (1 and 10 eccUSDC) are typically processed faster because even small conversions can fill them.
+* **Queue position:** the lower the number, the sooner your lot will be processed. Position #1 means your lot will be processed first.
+* **Conversion priority:** the system processes queues from larger to smaller denominations (1,000 → 100 → 10 → 1). For large conversions, 1,000 eccUSDC lots are processed first, followed by 100 eccUSDC lots, and so on.
 
-## Transaction History
+### Transaction History
 
-In the **Transaction history** section on the SHELL token screen, you can see all operations:
+The **History** section on the main screen displays all transactions:
 
-* **Sent to Accumulator** — SHELL sent when the sell order was placed (locked)
-* **Received from Accumulator** — SHELL received (from a purchase)
+* **Sent to Accumulator** — SHELL locked when placing an order to convert SHELL to eccUSDC.
+* **Received from Accumulator** — SHELL received as a result of converting eccUSDC to SHELL.
 
-Each entry includes the date, time, and amount.
+Each transaction includes the date, time, and amount.
 
-<figure><img src="../../../.gitbook/assets/09 (1).jpg" alt="" width="167"><figcaption></figcaption></figure>
+<div><figure><img src="../../../.gitbook/assets/h-1.jpg" alt="" width="563"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/h-2.jpg" alt="" width="563"><figcaption></figcaption></figure></div>
 
 ## Multiple Lots
 
-If you created multiple lots (different or same denominations), each is shown separately in **My Orders**. Lots are independent — they are sold and paid out separately.
+If you created multiple lots (different or same denominations), each lot is displayed separately in the **My Orders** section. Lots are processed independently—the conversion and payout for each lot are completed separately.
 
-## Empty State
+### No Active Orders
 
-If you have no active sell orders, the **My Orders** section is not displayed.
+If you have no active conversion orders, the **My Orders** section is not displayed.
+

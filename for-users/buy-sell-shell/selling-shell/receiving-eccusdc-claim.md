@@ -1,6 +1,6 @@
 # Receiving eccUSDC (Claim)
 
-When your lot is sold, ECC USDC becomes available for collection. In the Acki Nacki Wallet, the claim process happens **automatically**.
+When your lot is sold, eccUSDC becomes available for collection. In the Acki Nacki Wallet, the claim process happens **automatically**.
 
 ## How It Works
 
@@ -11,7 +11,7 @@ When your lot is sold, ECC USDC becomes available for collection. In the Acki Na
 5. The lot's receipt contract self-destructs after payout
 
 {% hint style="info" %}
-**Automatic claim** works in the background while the wallet is open. \
+**Automatic claim** works in the background while the wallet is open.\
 **You just need to open the SHELL details on the main screen.**
 {% endhint %}
 
@@ -44,4 +44,3 @@ This is completely transparent to you and requires no action on your part.
 Each lot is an independent entity. If you created 8 lots, each one will be sold and paid out separately. You'll start receiving eccUSDC as each individual lot sells, without waiting for all of them to sell.
 
 **Example:** you sold 5,300 SHELL (8 lots). An hour later, 3 lots of 10 eccUSDC each are sold — you receive 30 eccUSDC. The remaining 5 lots continue waiting in their queues.
-
