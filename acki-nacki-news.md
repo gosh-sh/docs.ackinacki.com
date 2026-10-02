@@ -5,6 +5,30 @@ hidden: true
 
 # Acki Nacki News
 
+## Update - 02.10.26
+
+### **Node & SDK**
+
+A new node release, [**v0.19.3**](https://github.com/ackinacki/ackinacki/releases/tag/v0.19.3), is being rolled out across the network.
+
+The release improves node stability and observability, adds new metrics for external messages rejected by queue limits or when a node is not the current Block Producer, and reduces default log volume.
+
+Added rejection of unsigned external messages to Miner accounts, with the new `UNSIGNED_MINER_MESSAGE` feedback error.
+
+It also fixes several issues affecting node operation, including high CPU load and `502` responses from the Block Keeper TLS proxy during block production, finalization stalls after snapshot sync, occasional graceful shutdowns with status `101`, and block production failures caused by redirected external messages.
+
+The release also includes major bridge updates: bridge contracts have been upgraded to **v1.4.0**, Ethereum light-client support has been added, and bridge deposits now verify that the source Ethereum block has been explicitly accepted before processing.
+
+### Bridge
+
+This week, we successfully completed a positive end-to-end test of a deposit from Sepolia to Acki Nacki.
+
+The first version of `ackinacki-bridge deposit` has been merged into the main branch. The next CLI improvement will be QR code integration with an EVM wallet.
+
+In parallel, work is ongoing to integrate the bridge with the multithreaded network.
+
+The team also continues to address issues identified during the audit.<br>
+
 ## Update - 25.09.26
 
 ### **Node & SDK**
