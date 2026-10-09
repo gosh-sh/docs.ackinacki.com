@@ -5,6 +5,44 @@ hidden: true
 
 # Acki Nacki News
 
+## Update - 09.10.26
+
+### **Node & SDK**
+
+Released [**Node v0.19.4**](https://github.com/ackinacki/ackinacki/releases/tag/v0.19.4) with fixes for external message handling and block production.
+
+Duplicate external messages are now rejected with `DUPLICATE_MESSAGE`, duplicate hashes are skipped by the block builder, and verification errors no longer cause a panic. Miner inline-body function decoding, including `acceptTap`, was fixed so low priority is applied correctly, with the same decoder used by the mainnet CSV helper. External messages to redirect accounts are now discarded with `WRONG_DAPP_ID`, while redirects remain supported for replaying transactions from older BP blocks and for internal messages.
+
+### DEX.DO CLI
+
+Released [**DEX.DO CLI v0.6.0**](https://github.com/gosh-sh/dexdo-cli/releases/tag/v0.6.0) with updates to pricing, deal recovery, seller limits, PrivateNote safety, and inference accounting.
+
+`seller` now always uses the TokenContract price, while `buyer`, `provision`, and `executable-book` require an explicit price. `buyer --resume` can reconnect to priced deals without a new buy ceiling, with continuation BUYs limited to explicitly enabled model-only resumes. `seller.max_open_deals` is enforced before provisioning spends funds, while paid deals continue to be served. `note withdraw` now clearly warns that withdrawal links the note to its destination wallet and permanently disables future sell offers. Settlement and OpenAI/Anthropic diagnostics were also improved, including billable usage, partial output, 502/disconnects, and failure reporting.
+
+v0.6.0 includes fixes for issues [#153](https://github.com/gosh-sh/dexdo-cli/issues/153), [#169](https://github.com/gosh-sh/dexdo-cli/issues/169), [#174](https://github.com/gosh-sh/dexdo-cli/issues/174), and [#176](https://github.com/gosh-sh/dexdo-cli/issues/176)
+
+v0.7.0 release is coming shortly.&#x20;
+
+### Bridge
+
+Sepolia activated Glamsterdam on 6 October - the fork changes block structure (enshrined PBS, block-level access lists), and the bridge’s deposit circuit parses the header in-circuit and binds each event to its hash. We are working on support for the new format. The contract will be extended to hold a registry of verification keys keyed by activation height, so that future fork migrations rotate the deposit VK through a single transaction instead of a contract upgrade.&#x20;
+
+After the migration the Bridge will be redeployed.
+
+The team has moved on to the final step of the single-threaded bridge: proving BK set updates on the EVM side. Up to now we have been testing deposits and withdrawals on Shellnet, where the BK set never changed; every success-path test passed. We are now implementing this remaining proof, after which the bridge will be fully ready for testing in both directions on a single-threaded network.
+
+When BK Sets support will be done the next steps will be to test integration with AAVE on Sepolia and support L2 EVM networks so that we can make Bridge with Arbitrum network and others.&#x20;
+
+### Popit Music
+
+Popit Music received a major update with a new **LIGHT engine** that is 2× cheaper to run alongside PRO, improved loudness normalization for PRO tracks, a new **3-band EQ** in Edit Track, the **My Music Wave** personalized listening feature, and clearer track minting statuses, tips, and competition rules. \
+Try update now - [popit.music](https://popit.musichttps/popit.music/?utm_source=telegram\&utm_medium=messaging\&utm_campaign=update_2026_06_19\&utm_content=community_update)
+
+### Community
+
+Launched a **seed phrase challenge** for the community, inviting participants to compete in recovering hidden seed phrases and test their skills for rewards.\
+[https://t.me/ackinackinews/799](https://t.me/ackinackinews/799)
+
 ## Update - 02.10.26
 
 ### **Node & SDK**
