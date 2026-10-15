@@ -18,6 +18,7 @@
       * [Working with Licenses](for-node-owners/protocol-participation/block-keeper/license/working-with-licenses.md)
       * [License Delegation Guide](for-node-owners/protocol-participation/block-keeper/license/license-delegation-guide/README.md)
         * [Dashboard Onboarding](for-node-owners/protocol-participation/block-keeper/license/license-delegation-guide/dashboard-onboarding.md)
+      * [License Ownership Transfer](for-node-owners/protocol-participation/block-keeper/license/license-ownership-transfer.md)
     * [Setting up Block Keeper Node](for-node-owners/protocol-participation/block-keeper/setting-up-block-keeper-node.md)
     * [Join DNSP Gossip](for-node-owners/protocol-participation/block-keeper/join-dnsp-gossip.md)
     * [How does it work?](for-node-owners/protocol-participation/block-keeper/how-does-it-work.md)
