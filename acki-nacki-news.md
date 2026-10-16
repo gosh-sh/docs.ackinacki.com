@@ -5,6 +5,35 @@ hidden: true
 
 # Acki Nacki News
 
+## Update - 16.10.26
+
+### **Node & SDK**
+
+Released [**Node v0.19.5**](https://github.com/ackinacki/ackinacki/releases/tag/v0.19.5). The update improves how nodes track the network, prioritizes selected external messages, and makes deployments more resilient to temporary errors. New monitoring helps operators keep track of network health. Following the transition to **engine 1.0.7**, this version removes support for older block formats. The network upgrade to v0.19.5 is currently underway.
+
+### **Mining**&#x20;
+
+Acki Nacki announced a gradual increase in **mining complexity** starting October 15. The changes aim to keep mining on individual phones worthwhile while making large automated farms less profitable. Released [**bee-sdk 6.0.0**](https://www.npmjs.com/package/@teamgosh/bee-sdk/v/6.0.0), which fixes the `session_rejected` issue caused by complexity changes. **Miners should update their apps** to continue mining without interruption as complexity increases.
+
+### DEX.DO CLI
+
+Released [**DEX.DO CLI v0.7.0**](https://github.com/gosh-sh/dexdo-cli/releases/tag/v0.7.0) and [**v0.8.0**](https://github.com/gosh-sh/dexdo-cli/releases/tag/v0.8.0), bringing major improvements to **seller reliability, recovery, and market operations**. Sellers can now automatically relist expired offers, restore offers when models become available again, and recover funded deals after timeouts or restarts. Improved **buyer purchase recovery** prevents duplicate BUY submissions after uncertain timeouts, while safer **PrivateNote deployment** avoids duplicate wallet payments during recovery. Market listings now use indexer data, with improved liquidity filtering, and `dexdo monitor` accurately displays active SELL offers. Market replacement now safely retires unsold offers while preserving funded deals.
+
+### Bridge
+
+The bridge has been fully redeployed and is now running in both directions, deposits and withdrawals, between Shellnet and Sepolia. The native `KECCAK256` instruction has been released in the TVM SDK and is already rolled out on Shellnet for the Bridge.
+
+The next step is L2 support on Arbitrum Sepolia.&#x20;
+
+### Popit Music
+
+Introduced **2 free MAIN Engine track generations daily**, plus **up to 3 additional generations** earned by listening to Popit Music artists (1 generation per 15 minutes). **Light**, **Medium**, and **Pro** subscribers now get **unlimited MAIN Engine generations** with processing priority based on their subscription tier. Added **COMPOSER and COVER** support to MAIN Engine, updated charts on **Collections** page, **fixed mining** through `BeeEngine` and Acki Nacki network updates, with NACKL rewards successfully received across multiple epochs, and improved player stability, authentication, and mobile UI.\
+Try update now - 🔥[popit.music](https://popit.music/?utm_source=telegram\&utm_medium=messaging\&utm_campaign=update_2026_10_14\&utm_content=community_update)
+
+### Community
+
+🎉 The **Seed Phrase Hunt** has ended! All three wallets have been claimed, with winners receiving **25,000 NACKL each**. **Thanks to everyone who participated!**
+
 ## Update - 09.10.26
 
 ### **Node & SDK**
