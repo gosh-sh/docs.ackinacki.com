@@ -5,6 +5,52 @@ hidden: true
 
 # Acki Nacki News
 
+## Update - 23.10.26
+
+### AVM
+
+🚀 [**AVM SDK 0.2.0 (Guest SDK 0.1.1)**](https://github.com/gosh-sh/avm-sdk/releases/tag/avm-dev-06e96ef71006-sdk-0748f4f0767a) was released last week! \
+The release improves contract execution efficiency, updated the local runtime, strengthened build and installation checks, and enabled owner-authorized contract upgrades. The release also introduces breaking state-encoding changes requiring local redeployment.\
+Work on integrating **AVM** with the **Node** continues this week.
+
+### DEX.DO CLI
+
+Released [DEX.DO CLI v0.9.0](https://github.com/gosh-sh/dexdo-cli/releases/tag/v0.9.0)
+
+This release brings more control over spending and model settings, parallel requests, and improved deal stability.
+
+* **New `keep_open` buyer policy:** For each `buyer.on.*` event, you can choose to keep the deal open on error. The client continues running, and the next request reuses the same deal. Automatic closing, refunds, and disputes are not triggered. Use `dexdo close` to close the deal manually.
+* **Usage tracking:** Track token consumption, current costs, and remaining quota in SHELL. Usage history persists across restarts, and confirmed expenses can be exported.
+* **Reasoning control:** Choose a reasoning level from `minimal` to `max`, or disable reasoning for compatible models.
+* **Parallel requests:** Multiple requests within a single deal share the same purchased budget.
+* **Larger prompts:** The API request body limit has been increased from 4 MiB to 32 MiB.
+* **Improved stability:** Better handling of transient provider and network errors, deal recovery, and protection against duplicate operations. Canceling a single request no longer closes the entire session.
+* **For sellers:** New OpenTelemetry metrics for monitoring availability, requests, and deals.
+
+⚠️ **To use the new features, update both the buyer and seller.** If you use the usage tracking API, note the format changes to `/v1/usage` and `/v1/usage/facts`.
+
+### Bridge
+
+Released **Acki Nacki Bridge** [**v0.4.0**](https://github.com/gosh-sh/bridge/releases/tag/v0.4.0)**,** [**v0.5.0**](https://github.com/gosh-sh/bridge/releases/tag/v0.5.0)**, and** [**v0.6.0**](https://github.com/gosh-sh/bridge/releases/tag/v0.6.0)
+
+* Fixed recipient address handling in the web form and made wallet error messages clearer. Added retries for failed deposit processing. Fixed proof preparation errors for withdrawals.
+* Introduced a **50 USDC limit per transfer** in both directions. Capped the principal liquidity of each L1 bridge at **10,000 USDC**. Deposit processing now waits for the required Ethereum block to be confirmed in Acki Nacki instead of failing.
+* Added automatic failover between Ethereum RPC endpoints. Improved handling of stuck and replaced transactions.
+
+### Popit Music
+
+A new 🎛 LIVE tool to record keys, bass, drums and vocals and turn your sketch into a full track, \
+👻 Spooky, Creepy and Bloody moods with a Halloween pack for LIVE,\
+🎵 New genres (Soul, Balkan, Neurofunk, Rap, Highlife, Techstep and Jungle) \
+💿 Mixes based on genres and vibes,\
+👑 monthly charts with more accurate data,\
+🖼 Images and 🎬 Video tabs on the Create page, \
+⛏️ Mamaboard power and Boosts right in Popit Music with rewards on par with third-party miners,\
+🛠 Pipeline fixes on MAIN and WIDE.\
+\
+Try update now - 🔥[popit.music](https://popit.musichttps/popit.music/?utm_source=telegram\&utm_medium=messaging\&utm_campaign=update_2026_10_23\&utm_content=community_update)\
+Or open it through our [Telegram bot](https://t.me/PopitMusic_Bot) 🤖&#x20;
+
 ## Update - 16.10.26
 
 ### **Node & SDK**
