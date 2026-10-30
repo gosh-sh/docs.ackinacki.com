@@ -5,6 +5,84 @@ hidden: true
 
 # Acki Nacki News
 
+## Update - 30.10.26
+
+### AVM
+
+:rocket: [AVM SDK 0.3.0 for Linux x86\_64](https://github.com/gosh-sh/avm-sdk/releases/tag/avm-dev-2662a32e7c91-sdk-93e34e16e449) is now available!&#x20;
+
+The release introduces explicit ECC currency balances and transfers, improved smart contract development and diagnostics tools, automatic ABI binding generation, deploy callbacks, new contract examples, and build and installation fixes.
+
+⚠️ **Important:** This release introduces breaking changes to encodings, ABI, and profiles. Upgrading from 0.2.0 requires rebuilding contracts and creating fresh local stand state.
+
+:link: [Full Release Notes ](https://github.com/gosh-sh/avm-sdk/blob/main/docs/release-notes.md)
+
+### **Node & SDK**
+
+[**Acki Nacki 0.19.6**](https://github.com/ackinacki/ackinacki/releases/tag/v0.19.6) **is out!**
+
+Release highlights:
+
+* **Improved node synchronization:** snapshots are split into partitions, downloaded in parallel, and support resuming interrupted downloads - it is a VERY important milestone for the network!&#x20;
+* **Stronger mining verification:** stricter proof validation and mining duration calculation independent of client timestamps.
+* **Improved stability:** fixed synchronization stalls, message processing errors, and state recovery failures.
+* **Updated GraphQL API:** added transaction lookup by inbound message and fixed missing related data.
+
+The network upgrade is currently in progress.
+
+### DEX.DO CLI
+
+This week, **DEX.DO CLI** [**v0.10.0**](https://github.com/gosh-sh/dexdo-cli/releases/tag/v0.10.0) **and** [**v0.11.0**](https://github.com/gosh-sh/dexdo-cli/releases/tag/v0.11.0) were released, bringing improved API compatibility, faster buyer requests, more reliable billing, and better deal management and recovery.
+
+**Major highlights:**
+
+* For all users who have experienced stuck funds: We recommend performing a clean reinstall of the DEX.DO CLI and starting to use DEX.DO again without worrying about funds getting stuck due to cryptographic errors. New ZKP capabilities have been introduced, allowing notes that previously failed to deploy completely because they exceeded the L1 window to now be automatically finalized using L2 hashes.
+* GPT models are now available on DEX.DO and can be easily integrated into your Codex client. Simply purchase a model at [markets.dex.do](https://markets.dex.do/?utm_source=chatgpt.com) and add the following lines to the beginning of your Codex configuration file (`~/.codex/config.toml`):
+
+```
+model = "gpt-6.1-sol" 
+model_provider="dexdo"
+
+[model_providers.dexdo]
+name = "dexdo inference"
+base_url = "https://buyerplane.dex.do/inference/v1"
+env_key = "DEXDO_API_KEY"
+wire_api = "responses"
+```
+
+And then run:
+
+{% tabs %}
+{% tab title="Codex CLI" %}
+export DEXDO\_API\_KEY="Inference API key" codex -c model\_provider=dexdo -c model=gpt-6.1-sol
+{% endtab %}
+
+{% tab title="Codex Desktop" %}
+launchctl setenv DEXDO\_API\_KEY "Inference API key"
+{% endtab %}
+{% endtabs %}
+
+🔗 **Full changelogs:** [v0.10.0](https://github.com/gosh-sh/dexdo-cli/releases/tag/v0.10.0) | [v0.11.0](https://github.com/gosh-sh/dexdo-cli/releases/tag/v0.11.0)\
+\
+ℹ️ We're also collecting community feedback in the [markets.dex.do feedback](https://t.me/c/3819653418/3477?utm_source=chatgpt.com) discussion thread! Share your ideas and suggestions there, and report any bugs via [GitHub Issues](https://github.com/gosh-sh/dexdo-cli/issues?utm_source=chatgpt.com). \
+Your feedback will help us make the platform even better!😍
+
+### Bridge
+
+This week, the Bridge was launched on Arbitrum Sepolia, and numerous issues were resolved.
+
+Next steps include adding staking through AAVE, followed by another security audit focused on the safety of funds.
+
+In parallel, work is underway to support historical Layer Hashes and BK Set Updates data in the Block Manager, ensuring that the complete history of this data remains accessible. This is a mandatory step toward improving the Bridge's resilience and fault tolerance.
+
+### Popit Music
+
+Popit Music this week: Remixes for all tracks have been completely fixed and allowed, a feature for adding descriptions to track, collection, artist, and playlist pages has been implemented; Platform traffic has been optimized—everything now loads 4–8 times faster
+
+### Community
+
+😈 **GGgliit/ Remix Contest!** Launched a Halloween remix contest on [Popit Music](https://popit.music/contest/glitch), running from **October 26 to November 5**. Participants can remix _Overture :: 0xDEAD_, mint their tracks, and compete for rewards based on unique listens. **Nine winners will share 52,500 NACKL**, with 15,000 NACKL for first place. An active subscription is required to enter. [Full details](https://t.me/ackinackinews/811).
+
 ## Update - 23.10.26
 
 ### AVM
