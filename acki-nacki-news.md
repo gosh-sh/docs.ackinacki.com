@@ -5,6 +5,49 @@ hidden: true
 
 # Acki Nacki News
 
+## Update - 06.11.26
+
+### AVM
+
+:rocket: [AVM SDK 0.4.0 and 0.5.0 Released!](https://github.com/gosh-sh/avm-sdk/releases) \
+The updates introduce support for wide arithmetic operations in Core-WASM V2 and Real FUEL — precise pricing for every operation and memory page, enabling comprehensive economic accounting for every contract call. Fine-grained memory management delivers several times faster contract execution, while the upgrade to Wasmtime 48 LTS brings the latest upstream security fixes. Additional improvements include updated Revenue Hub and Vesting Streams optimizers, improved contract memory configuration, and reproducible release builds. \
+\
+🔗 Release notes: [v0.4.0](https://github.com/gosh-sh/avm-sdk/blob/main/docs/release-notes.md#avm-sdk-040) | [v0.5.0](https://github.com/gosh-sh/avm-sdk/blob/main/docs/release-notes.md#avm-sdk-050)
+
+### **Node & SDK**
+
+Work continues on improving message admission with miner key installation and integrating State V2 with AVM.
+
+### DEX.DO CLI
+
+[**DEX.DO CLI v0.12.0 and v0.13.0 Released!** ](https://github.com/gosh-sh/dexdo-cli/releases)\
+These updates improve billing accuracy, monitoring, and reliability for buyers and sellers. Highlights include excluding cache reads and writes reported in supported formats from billing, a new API endpoint for cumulative accepted token counts and the current SHELL quota, expanded monitoring metrics, improved retry guidance and recovery handling, all-or-none sell offers, pre-deployment funding checks, and support for additional provider cache metadata.
+
+⚠️ **Both buyers and sellers should update to v0.13.0** to apply consistent billing rules.
+
+🔗 Release notes: [v0.12.0](https://github.com/gosh-sh/dexdo-cli/releases/tag/v0.12.0) | [v0.13.0](https://github.com/gosh-sh/dexdo-cli/releases/tag/v0.13.0)
+
+### Bridge
+
+[**Acki Nacki Bridge — v0.8.0 Released!**](https://github.com/gosh-sh/bridge/releases)
+
+This release automates AAVE liquidity management on Arbitrum Sepolia, strengthens withdrawal security by binding proofs to a specific destination bridge contract, and improves relayer reliability and logging. It also fixes withdrawal proofs near L2 boundaries, automates sync-committee rotation for the Ethereum light client, and introduces a unified Docker Compose setup for all bridge services.
+
+🔗 [Full release notes — v0.8.0](https://github.com/gosh-sh/bridge/releases/tag/v0.8.0)
+
+### Popit Music
+
+Popit Music has received a major set of updates, including: comments on tracks and replies to those comments; a notification system; enhancements to the management of tracks, collections, and artists; improvements to the live tool, track generation pipeline, and remix features; and an updated payment flow—users can now make payments from any wallet on the Aki Naki network and purchase "pay-as-you-go" tokens. \
+[Read in details](https://t.me/+KxyJvc4PzaM2YjVi)
+
+### Community
+
+The remix contest for the song "[Overture :: 0xDEAD](https://popit.music/popcoin/e587262e-581d-42c1-b826-7bfb4ef925ba?track=477e613c-4773-47c5-85ba-c0883cff554e\&s=BVMtbsrjwGHL)" has also concluded; 9 winners have been selected, while 3 participants were SLASHED for using bot farms listens. \
+Prizes will be distributed early next week \
+\
+The third single "0xDEAD - Acki Nacki & Zero State Orchestra" is out now. \
+Listen [here](https://gosh.meme/ackinacki-orchestra/tracks/0xdead#links)
+
 ## Update - 30.10.26
 
 ### AVM
