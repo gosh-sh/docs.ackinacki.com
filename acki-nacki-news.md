@@ -5,6 +5,59 @@ hidden: true
 
 # Acki Nacki News
 
+## Update - 13.11.26
+
+### AVM
+
+[**AVM SDK 0.5.1, 0.6.0 and 0.6.1 are out**](https://github.com/gosh-sh/avm-sdk/releases)
+
+* **0.5.1** — Local FUEL limits now match the network: up to **≈1.03 billion FUEL** per message, up from 10 million.
+* **0.6.0** — Owner-key authorization for external calls with key rotation, plus CLI commands for network calls and deployments. Optimized memory use, updated deployment limits and code publication fees.
+* **0.6.1** — Fixed deployment of modules larger than **1 MiB**. Vesting, bounty escrow and Revenue Hub examples now measure schedules from their first execution. Local payment checks and failed external call handling now match network behavior.
+
+**When upgrading from 0.5.x to 0.6.x**, create fresh local test environment state, rebuild contracts and remeasure memory. Updated examples with new state schemas must be redeployed.
+
+🔗 Release notes: [0.5.1](https://github.com/gosh-sh/avm-sdk/blob/main/docs/release-notes.md#avm-sdk-051) · [0.6.0](https://github.com/gosh-sh/avm-sdk/blob/main/docs/release-notes.md#avm-sdk-060) · [0.6.1](https://github.com/gosh-sh/avm-sdk/blob/main/docs/release-notes.md#avm-sdk-061)
+
+### **Node & SDK**
+
+A new release is in the works that will increase the priority of messages used to install miner keys. Stay tuned for the announcement!
+
+### DEX.DO
+
+📊 **New Statistics and Balance Information on** [**markets.dex.do**](https://markets.dex.do/)**!**\
+\
+The [Markets](https://markets.dex.do/) tab now displays token trading statistics, including trading volume, available offers, and token sales. **Over 110 billion tokens have been sold in the past 30 days!** Registered users can now also view their **Trading and FUEL balances** directly on the platform. The team is working on simplifying the user flow.&#x20;
+
+Seller and Buyer processes are now more stable.
+
+### Bridge
+
+**Test Acki Nacki Bridge v0.9.0 is live between Shellnet and Arbitrum Sepolia🚀** [**https://github.com/gosh-sh/bridge#the-current-deployment**](https://github.com/gosh-sh/bridge#the-current-deployment)&#x20;
+
+* **Built for more than USDC.** The bridge now works with different tokens under the hood. USDC goes first, and adding new tokens no longer means rebuilding the bridge.
+* **Deposits got lighter and faster.** No more heavy cryptographic proof on your machine and no extra download. Acki Nacki checks your transaction receipt itself.
+* **Smoother all round.** Plenty of reliability work under the hood, so transfers go through without a hitch.
+
+### Popit Music
+
+**Popit Music has received a new set of updates, including:**&#x20;
+
+* **our new track** [**0xDEAD by Acki Nacki & Zero State**](https://gosh.meme/ackinacki-orchestra/tracks/0xdead#links), now on Popit Music and in the LIVE tool as a backing split into stems;
+* **free full-frame video creation** on every plan, with a movable watermark and editable post text;
+* **image gallery tools** — bulk delete, a 30-day trash and reference images for covers and avatars;
+* &#x20;**three winter moods** and a Winter Vibe playlist;
+* and **track generation fixes** on MAIN.&#x20;
+
+Read in [details](https://t.me/+KxyJvc4PzaM2YjVi)
+
+### Community
+
+🎵 **0xDEAD BEATS Contest!**\
+The new contest for Hip Hop, Rap, R\&B, and Soul tracks runs from **November 13 to 23**. \
+Nine winners will receive prizes of up to 7,500 NACKL and subscription discounts of up to 99%. \
+🔗 [Contest details](https://popit.music/contests/beats?utm_source=chatgpt.com)
+
 ## Update - 06.11.26
 
 ### AVM
