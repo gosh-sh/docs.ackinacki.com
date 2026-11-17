@@ -8,7 +8,7 @@ description: >-
 
 **Before you begin, make sure you have registered on** [**markets.dex.do**](https://markets.dex.do/)**, funded your Funding Account with SHELL, and purchased access to a model.**
 
-If you haven't completed these steps yet, follow the [How to Buy AI Inference on DEX.DO](how-to-buy-ai-inference-on-dex.do.md) guide.
+If you haven't completed these steps yet, follow the [How to Buy AI Inference on DEX.DO](./) guide.
 
 {% hint style="info" %}
 In this guide, we'll use the `gpt-6.1-sol` model as an example.
@@ -46,9 +46,9 @@ model_reasoning_effort = "high"
 
 On [markets.dex.do](https://markets.dex.do/), open **Inference keys**, select **All current and future models**, and click **Copy** next to the key in the panel that opens.
 
-![List of keys in the Inference keys section](../.gitbook/assets/.gitbookassetsinference-keys.png)
+![List of keys in the Inference keys section](../../.gitbook/assets/.gitbookassetsinference-keys.png)
 
-<img src="../.gitbook/assets/.gitbookassetscopy-inference-key.png" alt="Copy button for the DEX.DO API key" width="375">
+<img src="../../.gitbook/assets/.gitbookassetscopy-inference-key.png" alt="Copy button for the DEX.DO API key" width="375">
 {% endstep %}
 
 {% step %}
@@ -82,9 +82,9 @@ codex -p dexdo-6-1-sol -m another-model
 
 To change the reasoning effort during a Codex session, enter `/model`, select a model, and choose the reasoning effort.
 
-![Model selection in Codex CLI](../.gitbook/assets/.gitbookassetscodex-select-model.png)
+![Model selection in Codex CLI](../../.gitbook/assets/.gitbookassetscodex-select-model.png)
 
-![Reasoning effort selection in Codex CLI](../.gitbook/assets/.gitbookassetscodex-reasoning-level.png)
+![Reasoning effort selection in Codex CLI](../../.gitbook/assets/.gitbookassetscodex-reasoning-level.png)
 {% endstep %}
 {% endstepper %}
 

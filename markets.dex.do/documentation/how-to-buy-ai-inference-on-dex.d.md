@@ -1,4 +1,4 @@
-# How to Buy AI Inference on DEX.DO
+# How to Buy AI Inference on DEX.D
 
 Sign up for [markets.dex.do](https://markets.dex.do/), fund your **Funding Account** with SHELL, buy access to a model, and configure a Codex CLI profile. This guide uses the `gpt-6.1-sol` model.
 
@@ -8,9 +8,9 @@ Sign up for [markets.dex.do](https://markets.dex.do/), fund your **Funding Accou
 
 Go to [markets.dex.do](https://markets.dex.do/), click **Sign in**, and choose a sign-up method.
 
-![Sign in button on DEX.DO](../.gitbook/assets/.gitbookassetsdex-do-sign-in.png)
+![Sign in button on DEX.DO](../../.gitbook/assets/.gitbookassetsdex-do-sign-in.png)
 
-<img src="../.gitbook/assets/.gitbookassetsdex-do-sign-in-options.png" alt="DEX.DO sign-in options" width="188">
+<img src="../../.gitbook/assets/.gitbookassetsdex-do-sign-in-options.png" alt="DEX.DO sign-in options" width="188">
 {% endstep %}
 
 {% step %}
@@ -22,7 +22,7 @@ After you sign up, the **Funding accounts** page opens. You use funds from your 
 You can top up your Funding Account with SHELL either **by paying with a card** or by transferring funds **from your** [**Acki Nacki Wallet**](https://ackinacki.com/wallet).
 {% endhint %}
 
-![Funding accounts page](../.gitbook/assets/.gitbookassetsfunding-accounts.png)
+![Funding accounts page](../../.gitbook/assets/.gitbookassetsfunding-accounts.png)
 
 ### Buy SHELL with a card
 
@@ -30,13 +30,13 @@ You can top up your Funding Account with SHELL either **by paying with a card** 
 {% step %}
 Choose the amount of SHELL to buy in the **Buy SHELL** section.
 
-<img src="../.gitbook/assets/.gitbookassetsbuy-shell.png" alt="Amount selection in the Buy SHELL section" width="375">
+<img src="../../.gitbook/assets/.gitbookassetsbuy-shell.png" alt="Amount selection in the Buy SHELL section" width="375">
 {% endstep %}
 
 {% step %}
 Enter your card details and complete the payment.
 
-![Example card checkout form](../.gitbook/assets/.gitbookassetscard-checkout.png)
+![Example card checkout form](../../.gitbook/assets/.gitbookassetscard-checkout.png)
 {% endstep %}
 {% endstepper %}
 
@@ -46,13 +46,13 @@ Enter your card details and complete the payment.
 {% step %}
 Open the **I already have SHELL** section.
 
-<img src="../.gitbook/assets/.gitbookassetsalready-have-shell.png" alt="Funding Account setup details in the I already have SHELL section" width="375">
+<img src="../../.gitbook/assets/.gitbookassetsalready-have-shell.png" alt="Funding Account setup details in the I already have SHELL section" width="375">
 {% endstep %}
 
 {% step %}
 Use the [**Acki Nacki Wallet app**](https://ackinacki.com/wallet) to scan the QR code shown in your account. You can also **copy the address below the QR code** and paste it into the recipient address field in your wallet.
 
-<img src="../.gitbook/assets/Pasted image 2026-11-16 19.49.44.png" alt="Scan the QR code or copy the address below it to transfer SHELL" height="386" width="127">
+<img src="../../.gitbook/assets/Pasted image 2026-11-16 19.49.44.png" alt="Scan the QR code or copy the address below it to transfer SHELL" height="386" width="127">
 {% endstep %}
 
 {% step %}
@@ -65,7 +65,7 @@ At this stage, the **Funding Account** has not yet been deployed, so its address
 **If DEV mode** is enabled in your Acki Nacki Wallet, **DO NOT** **check the box** to Auto-convert to VMSHELL
 {% endhint %}
 
-<img src="../.gitbook/assets/.gitbookassetsacki-nacki-wallet-transfer.png" alt="Example transfer of 450 SHELL in the Acki Nacki Wallet app" width="188">
+<img src="../../.gitbook/assets/.gitbookassetsacki-nacki-wallet-transfer.png" alt="Example transfer of 450 SHELL in the Acki Nacki Wallet app" width="188">
 {% endstep %}
 {% endstepper %}
 
@@ -80,7 +80,7 @@ You can see your balances in **Spendable balance** in the lower-left corner. \
 Click **All funding accounts** to add funds, or click **Manage on gosh.ai** to manage your account on [gosh.ai](https://gosh.ai/).
 {% endhint %}
 
-<img src="../.gitbook/assets/.gitbookassetsmanage-funding-account.png" alt="Manage on gosh.ai and All funding accounts buttons" width="375">
+<img src="../../.gitbook/assets/.gitbookassetsmanage-funding-account.png" alt="Manage on gosh.ai and All funding accounts buttons" width="375">
 {% endstep %}
 
 {% step %}
@@ -96,19 +96,19 @@ Check the **Estimated transfer amount** and make sure your Funding Account has e
 
 Click **Create request**. DEX.DO creates a Trading Wallet when you make your first purchase.
 
-<img src="../.gitbook/assets/.gitbookassetscreate-model-request.png" alt="Purchase request showing the amount, price, and estimated transfer" width="375">
+<img src="../../.gitbook/assets/.gitbookassetscreate-model-request.png" alt="Purchase request showing the amount, price, and estimated transfer" width="375">
 
-<img src="../.gitbook/assets/.gitbookassetsbuying-ticks.png" alt="Progress of a tick purchase after submitting the request" width="375">
+<img src="../../.gitbook/assets/.gitbookassetsbuying-ticks.png" alt="Progress of a tick purchase after submitting the request" width="375">
 
 Wait for the status to change to **Serving** with a green indicator. If the request stays **Pending**, [contact support via chat](https://t.me/c/3819653418/3477).
 
-![Model order with Serving status](../.gitbook/assets/.gitbookassetsorder-serving.png)
+![Model order with Serving status](../../.gitbook/assets/.gitbookassetsorder-serving.png)
 
 {% hint style="info" %}
 DEX.DO uses funds from your Funding Account to top up the **Trading balance** and **Fuel balance**. DEX.DO deducts the funds for model access immediately. You can check your balances in **Spendable balance**.
 {% endhint %}
 
-<img src="../.gitbook/assets/.gitbookassetstrading-and-fuel-balances.png" alt="Trading balance and Fuel balance in the Trading Wallet" width="375">
+<img src="../../.gitbook/assets/.gitbookassetstrading-and-fuel-balances.png" alt="Trading balance and Fuel balance in the Trading Wallet" width="375">
 {% endstep %}
 
 {% step %}
