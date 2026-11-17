@@ -73,3 +73,10 @@
 ***
 
 * [Acki Nacki News](acki-nacki-news.md)
+
+## markets.dex.do
+
+* [How to Buy AI Inference on DEX.DO](markets.dex.do/how-to-buy-ai-inference-on-dex.do.md)
+* [How to Set Up Codex CLI](markets.dex.do/how-to-set-up-codex-cli.md)
+* [How to Set Up Codex Desktop](markets.dex.do/how-to-set-up-codex-desktop.md)
+* [времянка фак](markets.dex.do/vremyanka-fak.md)
