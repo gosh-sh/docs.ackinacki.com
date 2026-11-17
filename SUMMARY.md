@@ -74,14 +74,10 @@
 
 * [Acki Nacki News](acki-nacki-news.md)
 
-## Group 1
-
-* [Page 1](group-1/page-1.md)
-
 ## markets.dex.do
 
 * [Documentation](markets.dex.do/documentation/README.md)
-  * [How to Buy AI Inference on DEX.D](markets.dex.do/documentation/how-to-buy-ai-inference-on-dex.d.md)
+  * [How to Buy AI Inference on DEX.DO](markets.dex.do/documentation/how-to-buy-ai-inference-on-dex.do.md)
   * [How to Set Up Codex CLI](markets.dex.do/documentation/how-to-set-up-codex-cli.md)
   * [How to Set Up Codex Desktop](markets.dex.do/documentation/how-to-set-up-codex-desktop.md)
 * [FAQ](markets.dex.do/faq.md)

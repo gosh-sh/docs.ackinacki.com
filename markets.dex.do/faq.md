@@ -4,7 +4,7 @@
 
 <summary><strong>Can I purchase access to a model through the web app without using an AI agent?</strong></summary>
 
-Yes. You can complete the entire purchase process yourself on [markets.dex.do](https://markets.dex.do/): sign up, select a model, fund your Funding Account, and purchase access to the model. After that, you can configure a Codex CLI profile to use the purchased model. No AI agent is required. [Learn more here](documentation/how-to-buy-ai-inference-on-dex.d.md)
+Yes. You can complete the entire purchase process yourself on [markets.dex.do](https://markets.dex.do/): sign up, select a model, fund your Funding Account, and purchase access to the model. After that, you can configure a Codex CLI profile to use the purchased model. No AI agent is required. [Learn more here](documentation/how-to-buy-ai-inference-on-dex.do.md)
 
 </details>
 
