@@ -8,7 +8,7 @@ description: >-
 
 **Before you begin, make sure you have registered on** [**markets.dex.do**](https://markets.dex.do/)**, funded your Funding Account with SHELL, and purchased access to a model.**
 
-If you haven't completed these steps yet, follow the [How to Buy AI Inference on DEX.DO](./) guide.
+If you haven't completed these steps yet, follow the [How to Buy AI Inference on DEX.DO](how-to-buy-ai-inference-on-dex.do.md) guide.
 
 {% hint style="info" %}
 In this guide, we'll use the `gpt-6.1-sol` model as an example.
@@ -100,4 +100,6 @@ curl -s https://buyerplane.dex.do/inference/v1/models \
 
 ### DEX.DO API URLs
 
-<table><thead><tr><th width="243.25">Environment</th><th>Base URL</th></tr></thead><tbody><tr><td>Main</td><td><code>https://buyerplane.dex.do/inference/v1</code></td></tr><tr><td>Dev</td><td><code>https://buyerplane-dev.dex.do/inference/v1</code></td></tr></tbody></table>
+```
+https://buyerplane.dex.do/inference/v1
+```

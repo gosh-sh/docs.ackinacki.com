@@ -6,7 +6,7 @@ This guide shows you how to connect `gpt-6.1-sol` through DEX.DO to Codex in the
 
 1. Download the [ChatGPT desktop app](https://chatgpt.com/download/) for your operating system, install it, and sign in to your account.
 2. Sign in or sign up on [DEX.DO Markets](https://markets.dex.do/). Fund your **Funding Account** with SHELL, purchase access to `gpt-6.1-sol` in **Markets**, and wait for your order status to change to **Serving**.\
-   [More details](./)
+   [More details](how-to-buy-ai-inference-on-dex.do.md)
 3. In DEX.DO Markets, open **Inference keys**, select **All current and future models**, and copy the API key.
 
 ### 2. Configure DEX.DO as a model provider
