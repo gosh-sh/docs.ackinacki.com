@@ -37,7 +37,11 @@ Place the first three settings at the top of the file, before the first section 
 
 These settings make DEX.DO the default provider. They also apply to Codex CLI if it uses the same file.
 
-### 3. Set the API key
+### 3. Get an API key
+
+On [markets.dex.do](https://markets.dex.do/), open **Inference keys**, select **All current and future models**, or choose a key for a specific model, and click **Copy** next to the key in the panel that opens.
+
+### 4. Set the API key
 
 Quit ChatGPT completely. Then run the command for your operating system, replacing `YOUR_API_KEY` with the key you copied from **Inference keys**.
 
@@ -61,7 +65,7 @@ launchctl setenv DEXDO_API_KEY "YOUR_API_KEY"
 
 The app can read the key during your current macOS session. After signing out or restarting your Mac, run the command again before launching ChatGPT.
 
-### 4. Verify the connection
+### 5. Verify the connection
 
 Open ChatGPT, go to **Codex**, and start a new local task. Send a short prompt such as “Reply with the word ready.”
 

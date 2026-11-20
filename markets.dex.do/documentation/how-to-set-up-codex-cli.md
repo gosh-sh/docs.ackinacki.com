@@ -45,10 +45,6 @@ model_reasoning_effort = "high"
 ### Get an API key
 
 On [markets.dex.do](https://markets.dex.do/), open **Inference keys**, select **All current and future models**, and click **Copy** next to the key in the panel that opens.
-
-![List of keys in the Inference keys section](../../.gitbook/assets/.gitbookassetsinference-keys.png)
-
-<img src="../../.gitbook/assets/.gitbookassetscopy-inference-key.png" alt="Copy button for the DEX.DO API key" width="375">
 {% endstep %}
 
 {% step %}
