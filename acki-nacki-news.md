@@ -5,6 +5,57 @@ hidden: true
 
 # Acki Nacki News
 
+## Update - 20.11.26
+
+### AVM
+
+[**AVM SDK 0.6.2, 0.6.3, 0.6.4, and 0.6.5 Released!**](https://github.com/gosh-sh/avm-sdk/releases)
+
+* **0.6.2** — On nodes supporting `avm.precompile`, contracts can now compute `BLAKE3` and `SHA-256` hashes and verify `Ed25519` signatures. In the signature verification example, this reduced the WASM size by almost three times.
+* **0.6.3** — The local stand now returns unused FUEL reserves to the sender as SHELL through callbacks and reports contract errors in the same way as a network node.
+* **0.6.4** — After rebuilding and redeploying, contracts consume less FUEL when processing large inputs. Callback handlers can receive more data within the same budget.
+* **0.6.5** — The local stand and examples now follow the network's DAPP deployment rules. An external deploy creates the first contract of a new DAPP, while additional contracts within that DAPP must be deployed internally. \
+  \
+  **When upgrading, create fresh local stand state.**\
+  🔗 Release notes: [0.6.2](https://github.com/gosh-sh/avm-sdk/blob/main/docs/release-notes.md#avm-sdk-062) · [0.6.3](https://github.com/gosh-sh/avm-sdk/blob/main/docs/release-notes.md#avm-sdk-063) · [0.6.4](https://github.com/gosh-sh/avm-sdk/blob/main/docs/release-notes.md#avm-sdk-064) · [0.6.5](https://github.com/gosh-sh/avm-sdk/blob/main/docs/release-notes.md#avm-sdk-065)
+
+🚀 **Ready to start building on AVM?** We invite developers to explore the AVM SDK and start building smart contracts with Rust and WebAssembly. Follow our [Getting Started guide](https://dev.ackinacki.com/avm-sdk-rust-webassembly/getting-started) to get started.
+
+### **Node & SDK**
+
+[**Acki Nacki 0.19.7**](https://github.com/ackinacki/ackinacki/releases/tag/v0.19.7) **has been rolled out across the network**
+
+* Multifactor messages for setting miner keys (`setOwnerPubkey`) now receive normal priority in the external-message queue.
+* Catch-up synchronization and snapshot import now require less CPU and memory. Account snapshot partitions are downloaded in parallel, and bugs causing synchronization timeouts have been fixed.
+* GraphQL now provides access to the latest Block Keeper set for thread 0. Bridge event history remains available even after the events are removed from the archives.
+
+### DEX.DO
+
+[markets.dex.do](https://markets.dex.do/) now checks seller availability. If a seller is unavailable, buyers can cancel the deal directly on the website. [Documentation](https://markets.dex.do/docs) and an [FAQ](https://markets.dex.do/faq) have also been added to help users get started with the platform.
+
+### Bridge
+
+Work on NACKL support is nearly complete. Integration of deposits and withdrawals between Shellnet and Arbitrum Sepolia into Acki Nacki Wallet is in progress. Several issues related to security and bridge optimizations have also been resolved.
+
+### Popit Music
+
+The latest updates include:
+
+* **a new notifications page**, also in the desktop sidebar, with every kind on by default and contest news of your own;&#x20;
+* **Popit in your Telegram chats** — add [@PopitMusic\_Bot](https://t.me/PopitMusic_Bot) to a group or channel for daily top tracks, popular playlists, charts, and contest leaders three times a day during a contest;&#x20;
+* **Popular Playlists** on Discover and a full playlists chart;&#x20;
+* **Free pictures for everyone** in the new Free mode — gallery pictures, covers and avatars with no tokens; a bigger video studio with 16:9 or a Short per video, as many videos per track as you like, previews and delete with Undo;&#x20;
+* and the **Festive Vibe** winter look with snow on the player.&#x20;
+
+Read in [details](https://t.me/+KxyJvc4PzaM2YjVi)
+
+### Community
+
+🎵 **The second Popit Music contest, 0xDEAD BEATS, is still ongoing!** \
+Hurry up and join! Participation is open to logged-in users with at least 6 published tracks. No subscription is required. Compete for subscriptions and NACKL prizes!
+
+🔗 [Contest details](https://popit.music/contests/beats?utm_source=chatgpt.com)
+
 ## Update - 13.11.26
 
 ### AVM
@@ -27,13 +78,13 @@ A new release is in the works that will increase the priority of messages used t
 
 📊 **New Statistics and Balance Information on** [**markets.dex.do**](https://markets.dex.do/)**!**\
 \
-The [Markets](https://markets.dex.do/) tab now displays token trading statistics, including trading volume, available offers, and token sales. **Over 110 billion tokens have been sold in the past 30 days!** Registered users can now also view their **Trading and FUEL balances** directly on the platform. The team is working on simplifying the user flow.&#x20;
+The [Markets](https://markets.dex.do/) tab now displays token trading statistics, including trading volume, available offers, and token sales. **Over 110 billion tokens have been sold in the past 30 days!** Registered users can now also view their **Trading and FUEL balances** directly on the platform. The team is working on simplifying the user flow.
 
 Seller and Buyer processes are now more stable.
 
 ### Bridge
 
-**Test Acki Nacki Bridge v0.9.0 is live between Shellnet and Arbitrum Sepolia🚀** [**https://github.com/gosh-sh/bridge#the-current-deployment**](https://github.com/gosh-sh/bridge#the-current-deployment)&#x20;
+**Test Acki Nacki Bridge v0.9.0 is live between Shellnet and Arbitrum Sepolia🚀** [**https://github.com/gosh-sh/bridge#the-current-deployment**](https://github.com/gosh-sh/bridge#the-current-deployment)
 
 * **Built for more than USDC.** The bridge now works with different tokens under the hood. USDC goes first, and adding new tokens no longer means rebuilding the bridge.
 * **Deposits got lighter and faster.** No more heavy cryptographic proof on your machine and no extra download. Acki Nacki checks your transaction receipt itself.
@@ -41,29 +92,29 @@ Seller and Buyer processes are now more stable.
 
 ### Popit Music
 
-**Popit Music has received a new set of updates, including:**&#x20;
+**Popit Music has received a new set of updates, including:**
 
 * **our new track** [**0xDEAD by Acki Nacki & Zero State**](https://gosh.meme/ackinacki-orchestra/tracks/0xdead#links), now on Popit Music and in the LIVE tool as a backing split into stems;
 * **free full-frame video creation** on every plan, with a movable watermark and editable post text;
 * **image gallery tools** — bulk delete, a 30-day trash and reference images for covers and avatars;
-* &#x20;**three winter moods** and a Winter Vibe playlist;
-* and **track generation fixes** on MAIN.&#x20;
+* **three winter moods** and a Winter Vibe playlist;
+* and **track generation fixes** on MAIN.
 
 Read in [details](https://t.me/+KxyJvc4PzaM2YjVi)
 
 ### Community
 
 🎵 **0xDEAD BEATS Contest!**\
-The new contest for Hip Hop, Rap, R\&B, and Soul tracks runs from **November 13 to 23**. \
-Nine winners will receive prizes of up to 7,500 NACKL and subscription discounts of up to 99%. \
+The new contest for Hip Hop, Rap, R\&B, and Soul tracks runs from **November 13 to 23**.\
+Nine winners will receive prizes of up to 7,500 NACKL and subscription discounts of up to 99%.\
 🔗 [Contest details](https://popit.music/contests/beats?utm_source=chatgpt.com)
 
 ## Update - 06.11.26
 
 ### AVM
 
-:rocket: [AVM SDK 0.4.0 and 0.5.0 Released!](https://github.com/gosh-sh/avm-sdk/releases) \
-The updates introduce support for wide arithmetic operations in Core-WASM V2 and Real FUEL — precise pricing for every operation and memory page, enabling comprehensive economic accounting for every contract call. Fine-grained memory management delivers several times faster contract execution, while the upgrade to Wasmtime 48 LTS brings the latest upstream security fixes. Additional improvements include updated Revenue Hub and Vesting Streams optimizers, improved contract memory configuration, and reproducible release builds. \
+:rocket: [AVM SDK 0.4.0 and 0.5.0 Released!](https://github.com/gosh-sh/avm-sdk/releases)\
+The updates introduce support for wide arithmetic operations in Core-WASM V2 and Real FUEL — precise pricing for every operation and memory page, enabling comprehensive economic accounting for every contract call. Fine-grained memory management delivers several times faster contract execution, while the upgrade to Wasmtime 48 LTS brings the latest upstream security fixes. Additional improvements include updated Revenue Hub and Vesting Streams optimizers, improved contract memory configuration, and reproducible release builds.\
 \
 🔗 Release notes: [v0.4.0](https://github.com/gosh-sh/avm-sdk/blob/main/docs/release-notes.md#avm-sdk-040) | [v0.5.0](https://github.com/gosh-sh/avm-sdk/blob/main/docs/release-notes.md#avm-sdk-050)
 
@@ -73,7 +124,7 @@ Work continues on improving message admission with miner key installation and in
 
 ### DEX.DO CLI
 
-[**DEX.DO CLI v0.12.0 and v0.13.0 Released!** ](https://github.com/gosh-sh/dexdo-cli/releases)\
+[**DEX.DO CLI v0.12.0 and v0.13.0 Released!**](https://github.com/gosh-sh/dexdo-cli/releases)\
 These updates improve billing accuracy, monitoring, and reliability for buyers and sellers. Highlights include excluding cache reads and writes reported in supported formats from billing, a new API endpoint for cumulative accepted token counts and the current SHELL quota, expanded monitoring metrics, improved retry guidance and recovery handling, all-or-none sell offers, pre-deployment funding checks, and support for additional provider cache metadata.
 
 ⚠️ **Both buyers and sellers should update to v0.13.0** to apply consistent billing rules.
@@ -90,28 +141,28 @@ This release automates AAVE liquidity management on Arbitrum Sepolia, strengthen
 
 ### Popit Music
 
-Popit Music has received a major set of updates, including: comments on tracks and replies to those comments; a notification system; enhancements to the management of tracks, collections, and artists; improvements to the live tool, track generation pipeline, and remix features; and an updated payment flow—users can now make payments from any wallet on the Aki Naki network and purchase "pay-as-you-go" tokens. \
+Popit Music has received a major set of updates, including: comments on tracks and replies to those comments; a notification system; enhancements to the management of tracks, collections, and artists; improvements to the live tool, track generation pipeline, and remix features; and an updated payment flow—users can now make payments from any wallet on the Aki Naki network and purchase "pay-as-you-go" tokens.\
 [Read in details](https://t.me/+KxyJvc4PzaM2YjVi)
 
 ### Community
 
-The remix contest for the song "[Overture :: 0xDEAD](https://popit.music/popcoin/e587262e-581d-42c1-b826-7bfb4ef925ba?track=477e613c-4773-47c5-85ba-c0883cff554e\&s=BVMtbsrjwGHL)" has also concluded; 9 winners have been selected, while 3 participants were SLASHED for using bot farms listens. \
-Prizes will be distributed early next week \
+The remix contest for the song "[Overture :: 0xDEAD](https://popit.music/popcoin/e587262e-581d-42c1-b826-7bfb4ef925ba?track=477e613c-4773-47c5-85ba-c0883cff554e\&s=BVMtbsrjwGHL)" has also concluded; 9 winners have been selected, while 3 participants were SLASHED for using bot farms listens.\
+Prizes will be distributed early next week\
 \
-The third single "0xDEAD - Acki Nacki & Zero State Orchestra" is out now. \
+The third single "0xDEAD - Acki Nacki & Zero State Orchestra" is out now.\
 Listen [here](https://gosh.meme/ackinacki-orchestra/tracks/0xdead#links)
 
 ## Update - 30.10.26
 
 ### AVM
 
-:rocket: [AVM SDK 0.3.0 for Linux x86\_64](https://github.com/gosh-sh/avm-sdk/releases/tag/avm-dev-2662a32e7c91-sdk-93e34e16e449) is now available!&#x20;
+:rocket: [AVM SDK 0.3.0 for Linux x86\_64](https://github.com/gosh-sh/avm-sdk/releases/tag/avm-dev-2662a32e7c91-sdk-93e34e16e449) is now available!
 
 The release introduces explicit ECC currency balances and transfers, improved smart contract development and diagnostics tools, automatic ABI binding generation, deploy callbacks, new contract examples, and build and installation fixes.
 
 ⚠️ **Important:** This release introduces breaking changes to encodings, ABI, and profiles. Upgrading from 0.2.0 requires rebuilding contracts and creating fresh local stand state.
 
-:link: [Full Release Notes ](https://github.com/gosh-sh/avm-sdk/blob/main/docs/release-notes.md)
+:link: [Full Release Notes](https://github.com/gosh-sh/avm-sdk/blob/main/docs/release-notes.md)
 
 ### **Node & SDK**
 
@@ -119,7 +170,7 @@ The release introduces explicit ECC currency balances and transfers, improved sm
 
 Release highlights:
 
-* **Improved node synchronization:** snapshots are split into partitions, downloaded in parallel, and support resuming interrupted downloads - it is a VERY important milestone for the network!&#x20;
+* **Improved node synchronization:** snapshots are split into partitions, downloaded in parallel, and support resuming interrupted downloads - it is a VERY important milestone for the network!
 * **Stronger mining verification:** stricter proof validation and mining duration calculation independent of client timestamps.
 * **Improved stability:** fixed synchronization stalls, message processing errors, and state recovery failures.
 * **Updated GraphQL API:** added transaction lookup by inbound message and fixed missing related data.
@@ -160,7 +211,7 @@ launchctl setenv DEXDO\_API\_KEY "Inference API key"
 
 🔗 **Full changelogs:** [v0.10.0](https://github.com/gosh-sh/dexdo-cli/releases/tag/v0.10.0) | [v0.11.0](https://github.com/gosh-sh/dexdo-cli/releases/tag/v0.11.0)\
 \
-ℹ️ We're also collecting community feedback in the [markets.dex.do feedback](https://t.me/c/3819653418/3477?utm_source=chatgpt.com) discussion thread! Share your ideas and suggestions there, and report any bugs via [GitHub Issues](https://github.com/gosh-sh/dexdo-cli/issues?utm_source=chatgpt.com). \
+ℹ️ We're also collecting community feedback in the [markets.dex.do feedback](https://t.me/c/3819653418/3477?utm_source=chatgpt.com) discussion thread! Share your ideas and suggestions there, and report any bugs via [GitHub Issues](https://github.com/gosh-sh/dexdo-cli/issues?utm_source=chatgpt.com).\
 Your feedback will help us make the platform even better!😍
 
 ### Bridge
@@ -183,7 +234,7 @@ Popit Music this week: Remixes for all tracks have been completely fixed and all
 
 ### AVM
 
-🚀 [**AVM SDK 0.2.0 (Guest SDK 0.1.1)**](https://github.com/gosh-sh/avm-sdk/releases/tag/avm-dev-06e96ef71006-sdk-0748f4f0767a) was released last week! \
+🚀 [**AVM SDK 0.2.0 (Guest SDK 0.1.1)**](https://github.com/gosh-sh/avm-sdk/releases/tag/avm-dev-06e96ef71006-sdk-0748f4f0767a) was released last week!\
 The release improves contract execution efficiency, updated the local runtime, strengthened build and installation checks, and enabled owner-authorized contract upgrades. The release also introduces breaking state-encoding changes requiring local redeployment.\
 Work on integrating **AVM** with the **Node** continues this week.
 
@@ -213,17 +264,17 @@ Released **Acki Nacki Bridge** [**v0.4.0**](https://github.com/gosh-sh/bridge/re
 
 ### Popit Music
 
-A new 🎛 LIVE tool to record keys, bass, drums and vocals and turn your sketch into a full track, \
+A new 🎛 LIVE tool to record keys, bass, drums and vocals and turn your sketch into a full track,\
 👻 Spooky, Creepy and Bloody moods with a Halloween pack for LIVE,\
-🎵 New genres (Soul, Balkan, Neurofunk, Rap, Highlife, Techstep and Jungle) \
+🎵 New genres (Soul, Balkan, Neurofunk, Rap, Highlife, Techstep and Jungle)\
 💿 Mixes based on genres and vibes,\
 👑 monthly charts with more accurate data,\
-🖼 Images and 🎬 Video tabs on the Create page, \
+🖼 Images and 🎬 Video tabs on the Create page,\
 ⛏️ Mamaboard power and Boosts right in Popit Music with rewards on par with third-party miners,\
 🛠 Pipeline fixes on MAIN and WIDE.\
 \
 Try update now - 🔥[popit.music](https://popit.musichttps/popit.music/?utm_source=telegram\&utm_medium=messaging\&utm_campaign=update_2026_10_23\&utm_content=community_update)\
-Or open it through our [Telegram bot](https://t.me/PopitMusic_Bot) 🤖&#x20;
+Or open it through our [Telegram bot](https://t.me/PopitMusic_Bot) 🤖
 
 ## Update - 16.10.26
 
@@ -231,7 +282,7 @@ Or open it through our [Telegram bot](https://t.me/PopitMusic_Bot) 🤖&#x20;
 
 Released [**Node v0.19.5**](https://github.com/ackinacki/ackinacki/releases/tag/v0.19.5). The update improves how nodes track the network, prioritizes selected external messages, and makes deployments more resilient to temporary errors. New monitoring helps operators keep track of network health. Following the transition to **engine 1.0.7**, this version removes support for older block formats. The network upgrade to v0.19.5 is currently underway.
 
-### **Mining**&#x20;
+### **Mining**
 
 Acki Nacki announced a gradual increase in **mining complexity** starting October 15. The changes aim to keep mining on individual phones worthwhile while making large automated farms less profitable. Released [**bee-sdk 6.0.0**](https://www.npmjs.com/package/@teamgosh/bee-sdk/v/6.0.0), which fixes the `session_rejected` issue caused by complexity changes. **Miners should update their apps** to continue mining without interruption as complexity increases.
 
@@ -243,7 +294,7 @@ Released [**DEX.DO CLI v0.7.0**](https://github.com/gosh-sh/dexdo-cli/releases/t
 
 The bridge has been fully redeployed and is now running in both directions, deposits and withdrawals, between Shellnet and Sepolia. The native `KECCAK256` instruction has been released in the TVM SDK and is already rolled out on Shellnet for the Bridge.
 
-The next step is L2 support on Arbitrum Sepolia.&#x20;
+The next step is L2 support on Arbitrum Sepolia.
 
 ### Popit Music
 
@@ -270,21 +321,21 @@ Released [**DEX.DO CLI v0.6.0**](https://github.com/gosh-sh/dexdo-cli/releases/t
 
 v0.6.0 includes fixes for issues [#153](https://github.com/gosh-sh/dexdo-cli/issues/153), [#169](https://github.com/gosh-sh/dexdo-cli/issues/169), [#174](https://github.com/gosh-sh/dexdo-cli/issues/174), and [#176](https://github.com/gosh-sh/dexdo-cli/issues/176)
 
-v0.7.0 release is coming shortly.&#x20;
+v0.7.0 release is coming shortly.
 
 ### Bridge
 
-Sepolia activated Glamsterdam on 6 October - the fork changes block structure (enshrined PBS, block-level access lists), and the bridge’s deposit circuit parses the header in-circuit and binds each event to its hash. We are working on support for the new format. The contract will be extended to hold a registry of verification keys keyed by activation height, so that future fork migrations rotate the deposit VK through a single transaction instead of a contract upgrade.&#x20;
+Sepolia activated Glamsterdam on 6 October - the fork changes block structure (enshrined PBS, block-level access lists), and the bridge’s deposit circuit parses the header in-circuit and binds each event to its hash. We are working on support for the new format. The contract will be extended to hold a registry of verification keys keyed by activation height, so that future fork migrations rotate the deposit VK through a single transaction instead of a contract upgrade.
 
 After the migration the Bridge will be redeployed.
 
 The team has moved on to the final step of the single-threaded bridge: proving BK set updates on the EVM side. Up to now we have been testing deposits and withdrawals on Shellnet, where the BK set never changed; every success-path test passed. We are now implementing this remaining proof, after which the bridge will be fully ready for testing in both directions on a single-threaded network.
 
-When BK Sets support will be done the next steps will be to test integration with AAVE on Sepolia and support L2 EVM networks so that we can make Bridge with Arbitrum network and others.&#x20;
+When BK Sets support will be done the next steps will be to test integration with AAVE on Sepolia and support L2 EVM networks so that we can make Bridge with Arbitrum network and others.
 
 ### Popit Music
 
-Popit Music received a major update with a new **LIGHT engine** that is 2× cheaper to run alongside PRO, improved loudness normalization for PRO tracks, a new **3-band EQ** in Edit Track, the **My Music Wave** personalized listening feature, and clearer track minting statuses, tips, and competition rules. \
+Popit Music received a major update with a new **LIGHT engine** that is 2× cheaper to run alongside PRO, improved loudness normalization for PRO tracks, a new **3-band EQ** in Edit Track, the **My Music Wave** personalized listening feature, and clearer track minting statuses, tips, and competition rules.\
 Try update now - [popit.music](https://popit.musichttps/popit.music/?utm_source=telegram\&utm_medium=messaging\&utm_campaign=update_2026_06_19\&utm_content=community_update)
 
 ### Community
@@ -366,7 +417,7 @@ With the multithreading release on Shellnet approaching, this week we prepared t
 
 ### Popit Music
 
-A major Popit Music update has been released: the track generation pipeline has been fixed, a track parts editor has been added, the authentication flow has been updated, and artists can now change their artist name. \
+A major Popit Music update has been released: the track generation pipeline has been fixed, a track parts editor has been added, the authentication flow has been updated, and artists can now change their artist name.\
 \
 Follow Popit Music on X to stay up to date with announcements and updates: [https://x.com/popitmusicai](https://x.com/popitmusicai)
 
@@ -383,7 +434,7 @@ Commitments start at **$2,000 per month**. Funds are held in escrow and remain r
 ### **Bridge**
 
 The **Bridge repository was published today!**\
-&#x20;[**https://github.com/gosh-sh/bridge**](https://github.com/gosh-sh/bridge)&#x20;
+[**https://github.com/gosh-sh/bridge**](https://github.com/gosh-sh/bridge)
 
 The first release of the **`ackinacki-bridge` CLI** is now available, with support for **withdrawals from Shellnet to Sepolia**.
 
@@ -404,8 +455,8 @@ The updates moved model-name validation and market lookup to the on-chain `Model
 
 A live leaderboard is available at [app.dex.do](https://app.dex.do/), where participants can track their rank and progress throughout the season.
 
-[Join Season 2](https://app.dex.do/connect) \
-[Program page](https://seasons.dex.do/) \
+[Join Season 2](https://app.dex.do/connect)\
+[Program page](https://seasons.dex.do/)\
 [Full rules](https://seasons.dex.do/season-rules.html)
 
 ### **gosh.ai**
@@ -430,7 +481,7 @@ If you find a bug or think something is missing in the documentation, please ope
 
 ### **DEX.DO**
 
-A new public **DEX.DO CLI** release is on its way. The upcoming version significantly improves the UX: wallet onboarding and market tooling now include a new interactive mode and additional functionality. It also expands the canonical model catalog and introduces several new recovery and diagnostic commands. Model naming validation has been added.&#x20;
+A new public **DEX.DO CLI** release is on its way. The upcoming version significantly improves the UX: wallet onboarding and market tooling now include a new interactive mode and additional functionality. It also expands the canonical model catalog and introduces several new recovery and diagnostic commands. Model naming validation has been added.
 
 Mainnet support has been added to [https://markets.dex.do/](https://markets.dex.do/) (data will become available once indexing is operational). The interface now also supports simplified model naming for search.
 
@@ -454,7 +505,7 @@ Repository: [https://github.com/gosh-sh/gosh\_tls\_lib](https://github.com/gosh-
 **Popit Music** has just shipped an update fixing the main music generation bugs:
 
 * No more long 8-minute tracks with audio that gradually degraded as the track played
-* Proper endings are back on all tracks — the broken fade-out at the end is gone&#x20;
+* Proper endings are back on all tracks — the broken fade-out at the end is gone
 * A step toward fewer copyright errors falsely triggered by users' own recorded material
 
 ## Update - 21.08.26
