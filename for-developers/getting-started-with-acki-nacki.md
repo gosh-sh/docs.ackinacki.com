@@ -5,6 +5,14 @@ This portal will walk you through the key concepts of building on Acki Nacki —
 
 Whether you're deploying your first smart contract, testing transactions, or building a full-scale Dapp, this section will help you get up and running quickly.
 
+### **Building a new smart contract? Start with** [**AVM**](../glossary.md#avm)&#x20;
+
+{% hint style="danger" %}
+Acki Nacki is gradually moving away from TVM.&#x20;
+{% endhint %}
+
+**Use Rust and the AVM SDK** to [build and call your first contract locally](https://dev.ackinacki.com/avm-sdk/getting-started).
+
 ### 🧠 Core Concepts
 
 In the **Acki Nacki** blockchain, every user action begins with a [**message**](messages.md).\
@@ -98,4 +106,3 @@ You can interact with the blockchain using the official **Acki Nacki SDK** and d
 
 * Have a question? Need help? → [Join our Telegram](https://t.me/tvmlabs)
 * Found a bug? → Submit an issue on [GitHub](https://github.com/ackinacki/ackinacki/issues)
-
