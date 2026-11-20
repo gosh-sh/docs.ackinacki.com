@@ -4,7 +4,8 @@
 
 <summary><strong>Can I purchase access to a model through the web app without using an AI agent?</strong></summary>
 
-Yes. You can complete the entire purchase process yourself on [markets.dex.do](https://markets.dex.do/): sign up, select a model, fund your Funding Account, and purchase access to the model. After that, you can configure a Codex CLI profile to use the purchased model. No AI agent is required. [Learn more here](documentation/how-to-buy-ai-inference-on-dex.do.md)
+Yes. You can complete the entire purchase process yourself on [markets.dex.do](https://markets.dex.do/): sign up, select a model, fund your Funding Account, and purchase access to the model. After that, you can [configure a Codex CLI](documentation/how-to-set-up-codex-cli.md) profile or [Codex Dekctop](documentation/how-to-set-up-codex-desktop.md) to use the purchased model. \
+No AI agent is required. [Learn more here](documentation/how-to-buy-ai-inference-on-dex.do.md)
 
 </details>
 
@@ -36,7 +37,11 @@ To proceed with the transfer:
 
 <summary><strong>Does purchased inference have an expiration date?</strong></summary>
 
-No, purchased inference does not expire. However, the seller can close the deal at any time. In this case, any unused SHELL will be refunded to the buyer's account.
+Regular tick purchases have **no fixed expiration date**. You can use the purchased inference until the allocated amount is exhausted, as long as the deal remains open.
+
+Either the buyer or the seller can close the deal early. After final settlement, any remaining buyer funds are returned to their **Trading Wallet**. The seller receives the payment owed to them and the refundable portion of their bond.
+
+The final amounts depend on inference usage, fees, and any applicable deductions specified in the deal terms.
 
 </details>
 
@@ -56,3 +61,66 @@ Make sure you're signed in to [gosh.ai](https://gosh.ai) with the same account y
 
 </details>
 
+<details>
+
+<summary><strong>Can I use multiple purchased models at the same time?</strong></summary>
+
+Yes, you can purchase access to multiple models and use them through [**Codex CLI**](documentation/how-to-set-up-codex-cli.md) or [**Codex Desktop**](documentation/how-to-set-up-codex-desktop.md).
+
+You can use:
+
+* **A  shared API key** (**All current and future models )** — to access all purchased models, including future purchases.
+* **Separate API keys** — to access specific models individually.
+
+You can manage your keys in the **Inference API Keys** section in the left-hand menu.
+
+</details>
+
+<details>
+
+<summary><strong>What is a Funding Account?</strong></summary>
+
+A **Funding Account** is a SHELL account used to pay for purchases on [markets.dex.do](https://markets.dex.do/). It is linked to your [**gosh.ai** ](https://gosh.ai/)account.
+
+You top up your Funding Account and select it as the payment source when purchasing model access on markets.dex.do.
+
+When you make a purchase, the required amount is deducted from your Funding Account. This includes the cost of the purchased inference, funding your Trading Wallet, and the wallet creation fee if it has not yet been created.
+
+You can create and use **multiple Funding Accounts**. To create an additional Funding Account, go to **gosh.ai** and click **Create Sub Account**.
+
+</details>
+
+<details>
+
+<summary><strong>What is a Trading Wallet?</strong></summary>
+
+A **Trading Wallet** is a wallet used to pay for inference on DEX.DO.
+
+It is automatically created when you purchase access to a model for the first time and is used for all your purchased models. It is funded from your **Funding Account**.
+
+The wallet has two separate balances:
+
+* **Trading Balance** — funds reserved for payments to inference sellers.
+* **Fuel Balance** — funds used to cover the wallet's blockchain transaction fees.
+
+</details>
+
+<details>
+
+<summary><strong>Can a buyer check whether the seller's gateway is publicly accessible before making a purchase?</strong></summary>
+
+No. The seller provides access details for their backend only after the purchase is completed.
+
+If the seller does not respond after the purchase, the buyer can close the order. To do this, go to **Orders** in the left-hand menu, open the relevant order, and click **Stop Order** at the bottom of the page.&#x20;
+
+</details>
+
+<details>
+
+<summary><strong>What does the <code>On Hold</code> status mean? Can I use an order with this status?</strong></summary>
+
+**`On Hold`** means that the order is awaiting fulfillment or is still being processed. The order is not yet ready for use.
+
+Wait until the status changes to the green **Serving** status. Once it does, you can start sending requests to the model.
+
+</details>

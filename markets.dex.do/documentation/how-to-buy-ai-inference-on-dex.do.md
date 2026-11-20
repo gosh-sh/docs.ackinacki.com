@@ -1,4 +1,4 @@
-# How to Buy AI Inference on DEX.D
+# How to Buy AI Inference on DEX.DO
 
 Sign up for [markets.dex.do](https://markets.dex.do/), fund your **Funding Account** with SHELL, buy access to a model, and configure a Codex CLI profile. This guide uses the `gpt-6.1-sol` model.
 
@@ -69,11 +69,7 @@ At this stage, the **Funding Account** has not yet been deployed, so its address
 {% endstep %}
 {% endstepper %}
 
-{% hint style="info" %}
-The initial transfer goes to your **Main Wallet.** DEX.DO automatically sets up your Main Wallet, creates your **Funding Account**, and credits the remaining SHELL to it after deducting setup fees, the Main Wallet reserve, and network fees.
-{% endhint %}
-
-<table><thead><tr><th width="313.35003662109375">Amount</th><th>Purpose</th></tr></thead><tbody><tr><td>3 SHELL</td><td>Main Wallet deployment</td></tr><tr><td>2 SHELL</td><td>Main Wallet reserve for future network fees</td></tr><tr><td>3 SHELL</td><td>Funding Account setup</td></tr></tbody></table>
+DEX.DO automatically creates your **Funding Account** and credits the remaining SHELL to it after deducting the `8 SHELL` required to create it.
 
 {% hint style="info" %}
 You can see your balances in **Spendable balance** in the lower-left corner. \
@@ -112,10 +108,41 @@ DEX.DO uses funds from your Funding Account to top up the **Trading balance** an
 {% endstep %}
 
 {% step %}
-## Configure Codex CLI
+## Get an API key
 
-To start using your purchased model, configure a **Codex CLI profile** to connect through DEX.DO.
+On [markets.dex.do](https://markets.dex.do/), open **Inference keys**, select **All current and future models**, or choose a key for a specific model, and click **Copy** next to the key in the panel that opens.&#x20;
 
-For step-by-step instructions, see [How to Set Up Codex CLI](how-to-set-up-codex-cli.md)
+<figure><img src="../../.gitbook/assets/изображение.png" alt=""><figcaption><p>List of keys in the Inference keys section</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/изображение (1).png" alt="" width="375"><figcaption><p>Desktop</p></figcaption></figure>
+
+Use this key to configure Codex CLI and Codex Desktop.
+{% endstep %}
+
+{% step %}
+## Configure Codex CLI or Desktop&#x20;
+
+To start using your purchased model, configure **Codex CLI or Codex Desktop** to connect to DEX.DO.
+
+For step-by-step instructions, see [How to Set Up Codex CLI](how-to-set-up-codex-cli.md) or [How to Set Up Codex Desktop](how-to-set-up-codex-desktop.md)
 {% endstep %}
 {% endstepper %}
+
+## How can a buyer close an order?
+
+If the seller stops responding, you can close your order by following these steps:
+
+1. Go to **Orders** in the left-hand menu.
+2. Open the order you want to close.
+3. Click **Stop order** at the bottom of the panel.
+4. Review the closing conditions and click **Stop order** again to confirm.
+
+The order status will change to **Closing**. Click **Refresh** to check the status.
+
+Once all associated deals are confirmed closed, the order status will change to **Filled**, and the message **The deal is closed** will appear in the order details.
+
+Any remaining funds will be returned to your **Trading Wallet** after final settlement and applicable deductions. They will **not** be automatically returned to your Funding Account.
+
+{% hint style="info" %}
+The **Stop order** button is available only when the order has deals eligible to be stopped. If the button is not visible, refresh the order status. If you are still unable to close the order, contact support.
+{% endhint %}
