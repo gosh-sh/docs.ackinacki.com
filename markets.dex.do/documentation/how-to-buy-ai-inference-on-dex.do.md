@@ -2,6 +2,8 @@
 
 Sign up for [markets.dex.do](https://markets.dex.do/), fund your **Funding Account** with SHELL, buy access to a model, and configure a Codex CLI profile. This guide uses the `gpt-6.1-sol` model.
 
+{% embed url="https://drive.google.com/file/d/1Av1Kq2u_XTRCrOr5ecpfoEmyNWNQr-aH/view" %}
+
 {% stepper %}
 {% step %}
 ## Sign up for DEX.DO
