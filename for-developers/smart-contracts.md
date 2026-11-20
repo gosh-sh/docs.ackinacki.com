@@ -1,9 +1,22 @@
 # Smart Contracts
 
-Smart contracts in Acki Nacki are the core of all logic and state in the network.\
-They are written in **Solidity**, compiled into bytecode, and executed within the **TON Virtual Machine (TVM)**.
+A smart contract is code that runs when its account receives a message. The account holds the contract's state and balance.
 
-This page introduces the key tools, standards, and guides you’ll need to write, deploy, and maintain smart contracts on Acki Nacki.
+{% hint style="warning" %}
+Use the AVM SDK for new smart contracts. Acki Nacki is gradually moving away from TVM.
+{% endhint %}
+
+## Rust contracts with AVM
+
+With the AVM SDK, you write a contract in Rust and compile it to WebAssembly. When a message reaches the account, AVM runs the contract's code against its current state. The contract can update that state and send messages to other accounts.
+
+For example, the owner of the SDK's sample wallet signs a request to send funds. The wallet processes the request and sends an internal message carrying value to the recipient. You can try building and calling a Rust contract on your computer with the SDK's local stand.
+
+[Build and call your first AVM contract](https://dev.ackinacki.com/avm-sdk/getting-started)
+
+## Solidity contracts with TVM
+
+Solidity contracts compile to bytecode for the **TON Virtual Machine (TVM)**. Use these resources to build and deploy them.
 
 * **TON Virtual Machine (TVM)**.
 * [VM Instruction Set](https://dev.ackinacki.com/vm-instructions/acki-nacki-vm-instructions)

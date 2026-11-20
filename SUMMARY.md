@@ -43,6 +43,7 @@
 * [Transactions](for-developers/transactions.md)
 * [Accounts](for-developers/accounts.md)
 * [Smart Contracts](for-developers/smart-contracts.md)
+* [AVM SDK: Rust Quick Start](https://dev.ackinacki.com/avm-sdk/getting-started)
 * [Developer Tools & SDK](for-developers/developer-tools-and-sdk.md)
 * [Bee Engine](for-developers/bee-engine.md)
 

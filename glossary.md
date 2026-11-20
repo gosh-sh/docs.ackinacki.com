@@ -23,6 +23,10 @@ Acki Nacki Wallet is created and operates within the system DAPP ID of the Mobil
 
 A message sent to the [Block Producer (BP)](glossary.md#block-producer-bp) by any [Block Keeper (BK)](glossary.md#block-keeper-bk) after receiving a block. The Attestation is a BLS signature generated using the BK’s private key. The BP of the next block must aggregate all received Attestations for the previous block into one BLS signature and include it in the Common section of the new block.
 
+#### **AVM**
+
+The virtual machine that executes WebAssembly contracts built with the AVM SDK. See [Rust contracts with AVM](for-developers/smart-contracts.md#rust-contracts-with-avm).
+
 ## B
 
 #### **Bee Engine**
