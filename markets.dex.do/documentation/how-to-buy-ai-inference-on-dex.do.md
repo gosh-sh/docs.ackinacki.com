@@ -1,6 +1,6 @@
 # How to Buy AI Inference on DEX.DO
 
-Sign up for [markets.dex.do](https://markets.dex.do/), fund your **Funding Account** with SHELL, buy access to a model, and configure a Codex CLI profile. This guide uses the `gpt-6.1-sol` model.
+Sign up for [markets.dex.do](https://markets.dex.do/), fund your **Funding Account** with [SHELL](../../glossary.md#shell), buy access to a model, and configure a Codex CLI profile. This guide uses the `gpt-6.1-sol` model.
 
 {% embed url="https://drive.google.com/file/d/1Av1Kq2u_XTRCrOr5ecpfoEmyNWNQr-aH/view" %}
 
@@ -24,36 +24,41 @@ In the left sidebar, open **Markets**. It lists every model with tokens on offer
 {% endstep %}
 
 {% step %}
-## Check the price
+### Review the order price and top-up amount
 
-The buy panel shows what the order costs and how many credits it needs.
+After you enter the number of tokens and the maximum price per tick, review the **Order price breakdown**. \
+In this example, you’re buying **10 million tokens (10 ticks)** at a maximum price of **2 SHELL per tick**.
 
-**Order price breakdown** is the order itself:
+<table data-header-hidden><thead><tr><th width="166.75006103515625"></th><th width="136.29998779296875" align="center"></th><th></th></tr></thead><tbody><tr><td>Item</td><td align="center">Amount (SHELL)</td><td>What it covers</td></tr><tr><td><strong>Order budget</strong></td><td align="center">20 </td><td>The budget for inference, calculated as 10 ticks × 2 SHELL.</td></tr><tr><td><strong>Taker fee reserve</strong></td><td align="center">0.5 </td><td>2.5% of the order budget, set aside to cover the marketplace fee when you buy from an existing sell order.</td></tr><tr><td><strong>Buyer bond</strong></td><td align="center">4 </td><td>A deposit equal to the price of two ticks, held for the duration of the deal.</td></tr><tr><td><strong>Order total</strong></td><td align="center"><strong>24.5</strong> </td><td>The order budget, fee reserve, and buyer bond combined.</td></tr></tbody></table>
 
-* **Order budget** — ticks × max price per tick: 10 × 2 = 20 SHELL.
-* **Taker fee reserve** — 2.5% of the budget: 0.5 SHELL.
-* **Buyer bond** — the price of 2 ticks: 4 SHELL.
-* **Order total** — 24.5 SHELL.
+When the deal settles, any unused portion of the fee reserve returns to your **Trading Wallet**. If the deal settles normally, the full buyer bond also returns to your wallet. If a dispute arises or the deal terms are breached, part of the bond may be withheld.
 
-Your first purchase also deploys your **Trading Wallet** and creates your **Funding Account**, so the card below it reads **Required credits to deploy wallet and buy tokens**. Click a line to see its parts:
+#### Review the top-up amount for your first purchase
 
-* **Spendable top-up** — the Trading Wallet needs at least 100 SHELL. It pays for this order (24.5 SHELL); the rest stays for future orders.
-* **Fuel reserve** — 250 SHELL of Trading Wallet fuel for network operations, plus 8 SHELL to set up the Funding Account.
-* **Total credits required amount** — rounded up to whole dollars, $4 at least: **400 SHELL ($4.00)** here. What the rounding adds stays spendable in your Funding Account.
-
-<img src="../../.gitbook/assets/dex-do-buy-first-estimate.png" alt="Order price breakdown and the credits a first purchase requires" width="375">
+To make your first purchase on DEX.DO, you’ll need to create a **Funding Account** and deploy a **Trading Wallet**. \
+The **Buy** panel shows the **Required credits to deploy wallet and buy tokens** section.
 
 {% hint style="info" %}
-On a short screen, **Order price breakdown** folds into one line with the order total. Tap it to see the lines.
+**Funding Account -** a SHELL account linked to your [**gosh.ai** ](https://gosh.ai/)account that you use to pay for model access on **markets.dex.do**. It covers the cost of inference, any required **Trading Wallet** top-up, and the wallet setup fee if needed.
+
+**Trading Wallet -** a wallet funded from your **Funding Account** that pays for inference across all your models on DEX.DO. DEX.DO creates it automatically on your first purchase. It holds separate balances for inference payments (**Trading Balance**) and blockchain transaction fees (**Fuel Balance**).
 {% endhint %}
 
-Click **Add credits to deploy wallet and buy**.
+Expand **Spendable top-up** and **Fuel reserve** to see how the funds are allocated.
+
+* **Spendable top-up — 142 SHELL.** Of this amount, **24.5 SHELL** covers the current order and **117.5 SHELL** remains available for future purchases. The minimum top-up for your **Trading Wallet**’s spendable balance is **100 SHELL**.
+* **Fuel reserve — 258 SHELL.** Of this amount, **250 SHELL** is reserved for **Trading Wallet** network operations and **8 SHELL** goes toward setting up your **Funding Account**.
+* **Total credits required amount — 400 SHELL ($4.00).** This is the total amount you need to add. The dollar amount is rounded up to a whole dollar, with a minimum top-up of **$4.00**.
+
+Click **Add credits to deploy wallet and buy** to continue.
+
+<img src="../../.gitbook/assets/dex-do-buy-first-estimate.png" alt="Order price breakdown and the credits a first purchase requires" width="375">
 {% endstep %}
 
 {% step %}
 ## Add credits
 
-**Add credits** opens with the amount your order needs. Choose **Buy by Card** or **Deposit from Wallet**.
+The **Add credits** dialog opens with the required top-up amount prefilled. Choose **Buy by Card** to pay by card, or select **Deposit from Wallet** if you have SHELL in your [**Acki Nacki Wallet**.](https://ackinacki.com/wallet)
 
 ### Buy by card
 
@@ -73,11 +78,16 @@ Enter your card details on Stripe Checkout and complete the payment.
 {% step %}
 Wait while DEX.DO buys your SHELL. The page shows each step: **Paying on Stripe**, **Delivering SHELL to your gosh.ai account**, **Creating your funding account**, and **Adding SHELL to dexdo-buy**. This can take a few minutes.
 
+{% hint style="info" %}
+The default name for your **Funding Account** is `dexdo-buy`
+{% endhint %}
+
 <img src="../../.gitbook/assets/dex-do-buy-buying-shell.png" alt="Progress of a SHELL purchase by card" width="560">
 {% endstep %}
 
 {% step %}
-When **SHELL added** appears, your Funding Account **dexdo-buy** holds the SHELL: 400 SHELL minus the 8 SHELL setup. Click **Back to buying ticks**.
+When **SHELL added** appears, your Funding Account **dexdo-buy** holds the SHELL: 400 SHELL minus the 8 SHELL setup. \
+Click **Back to buying ticks**.
 
 <img src="../../.gitbook/assets/dex-do-buy-shell-added.png" alt="SHELL added to the dexdo-buy Funding Account" width="560">
 {% endstep %}
@@ -101,13 +111,15 @@ Choose **Deposit from Wallet**. The page asks you to **Send 400 SHELL** and show
 {% step %}
 Send the whole amount from your wallet.
 
-At this stage, the **Funding Account** has not yet been deployed, so its address will have the status **`NonExist`**. **This is expected behavior.** Once the SHELL transfer is received, the system will automatically deploy the Funding Account and all required contracts.
+At this stage, the **Funding Account** has not yet been deployed, so its address will have the status **`NonExist`**. \
+**This is expected behavior.** Once the SHELL transfer is received, the system will automatically deploy the Funding Account and all required contracts.
 
 {% hint style="warning" %}
-**If DEV mode** is enabled in your Acki Nacki Wallet, **DO NOT** **check the box** to Auto-convert to VMSHELL
+**If DEV mode** is enabled in your Acki Nacki Wallet, \
+**DO NOT** **check the box** to `Auto-convert to VMSHELL`
 {% endhint %}
 
-<img src="../../.gitbook/assets/.gitbookassetsacki-nacki-wallet-transfer.png" alt="Example transfer of 450 SHELL in the Acki Nacki Wallet app" width="188">
+<figure><img src="../../.gitbook/assets/Example transfer of 400 SHELL in the Acki Nacki Wallet app.jpg" alt="" width="286"><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -123,10 +135,11 @@ When **Ready** appears, click **Back to buying ticks**.
 {% endstep %}
 {% endstepper %}
 
-Either way, DEX.DO deducts **8 SHELL** to set up your accounts. The rest goes to **dexdo-buy**.
+Your Funding Account balance is shown in **Spendable balance** in the lower-left corner. Open it to see your Trading Wallet and Funding Accounts.
 
 {% hint style="info" %}
-Your Funding Account balance is shown in **Spendable balance** in the lower-left corner. Open it to see your Trading Wallet and Funding Accounts, click **All funding accounts** to add funds, or click **Manage on gosh.ai** to manage your account on [gosh.ai](https://gosh.ai/).
+To add funds later, select **All funding accounts**.\
+To manage your account on gosh.ai, click **Manage on** [gosh.ai](https://gosh.ai/).
 {% endhint %}
 
 <img src="../../.gitbook/assets/dex-do-buy-balance-menu.png" alt="Spendable balance menu with the Funding Account, Manage on gosh.ai, and All funding accounts" width="375">
@@ -165,7 +178,7 @@ DEX.DO uses funds from your Funding Account to top up the **Trading balance** an
 {% step %}
 ## Get an API key
 
-On [markets.dex.do](https://markets.dex.do/), open **Inference keys**, select **All current and future models**, or choose a key for a specific model, and click **Copy** next to the key in the panel that opens.&#x20;
+On [markets.dex.do](https://markets.dex.do/), open **Inference keys**, select **All current and future models**, or choose a key for a specific model, and click **Copy** next to the key in the panel that opens.
 
 <figure><img src="../../.gitbook/assets/изображение.png" alt=""><figcaption><p>List of keys in the Inference keys section</p></figcaption></figure>
 
@@ -175,13 +188,43 @@ Use this key to configure Codex CLI and Codex Desktop.
 {% endstep %}
 
 {% step %}
-## Configure Codex CLI or Desktop&#x20;
+## Configure Codex CLI or Desktop
 
 To start using your purchased model, configure **Codex CLI or Codex Desktop** to connect to DEX.DO.
 
 For step-by-step instructions, see [How to Set Up Codex CLI](how-to-set-up-codex-cli.md) or [How to Set Up Codex Desktop](how-to-set-up-codex-desktop.md)
 {% endstep %}
+
+{% step %}
+## **View Token Usage**
+
+Open **Inference keys** in the dashboard and select the active API key you want to check. Below the list of models in the API key details, you will find the **Usage** section. It displays your account's usage statistics for the models accessible through the selected API key.
+{% endstep %}
 {% endstepper %}
+
+## How do I check the connection to a Seller?
+
+After you purchase access to a model, the dashboard automatically tests each new seller connection once the slot is ready. \
+You can view the result or run another test from the **Pools** page.
+
+1. Open Pools and expand the model you purchased access to. Find the slot you want to check. Under **Seller status and** click **Connection details**
+
+<figure><img src="../../.gitbook/assets/Open Connection details on the Pools page.jpg" alt=""><figcaption><p>Open Connection details on the Pools page</p></figcaption></figure>
+
+2. The **Seller connection** window will open. **Last checked** shows when the last test was completed. To run a new test, click **Test connection**.
+
+<figure><img src="../../.gitbook/assets/2 (6).jpg" alt=""><figcaption></figcaption></figure>
+
+3. The slot must be **Ready** and have an active deal. Once the test starts, it can take up to five minutes.
+
+<figure><img src="../../.gitbook/assets/3 (6).jpg" alt=""><figcaption></figcaption></figure>
+
+<table data-header-hidden data-search="false"><thead><tr><th width="163.8499755859375"></th><th></th></tr></thead><tbody><tr><td>Seller status</td><td>What it means</td></tr><tr><td><strong>Not tested</strong></td><td>The connection has not been tested yet.</td></tr><tr><td><strong>Queued</strong></td><td>The test is waiting to start.</td></tr><tr><td><strong>Checking…</strong></td><td>The test is in progress.</td></tr><tr><td><strong>OK</strong></td><td>The model returned the expected <code>OK</code> response during the last test.</td></tr><tr><td><strong>Check failed</strong></td><td>The test encountered an error or received an unexpected response. Open <strong>Connection details</strong> to see what happened.</td></tr><tr><td><strong>Result unknown</strong></td><td>The test ended without a confirmed result. You can try again when the slot is ready.</td></tr></tbody></table>
+
+{% hint style="info" %}
+**Test connection** sends a request to the model, consuming a small number of tokens purchased for the slot.\
+**Refresh** reloads the displayed status without sending a request to the model or consuming tokens.
+{% endhint %}
 
 ## How can a buyer close an order?
 

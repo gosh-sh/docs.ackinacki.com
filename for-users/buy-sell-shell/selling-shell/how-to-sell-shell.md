@@ -36,7 +36,7 @@ On the conversion screen, make sure the **`-`** mode is selected.
 
 The panel will show which lots are available based on your balance.
 
-The **Convert SHELL** panel opens with the prompt "Choose how much eccUSDC you want to receive." \
+The **Convert SHELL** panel opens with the prompt "Choose how much eccUSDC you want to receive."\
 \
 Four denominations are available:
 
@@ -49,7 +49,7 @@ Four denominations are available:
 
 Denominations that exceed your SHELL balance are unavailable. Your current SHELL balance is displayed at the bottom of the screen.
 
-Tap the desired denomination. \
+Tap the desired denomination.\
 In this example, the **1,000 SHELL → 10 eccUSDC** lot is selected:
 
 <figure><img src="../../../.gitbook/assets/4 (3).jpg" alt="" width="188"><figcaption></figcaption></figure>
@@ -126,7 +126,7 @@ On the SHELL token screen, the **Transaction history** section shows all operati
 * **Sent to Accumulator** — SHELL locked when placing an order to convert SHELL to eccUSDC.
 * **Received from Accumulator** — SHELL received as a result of converting eccUSDC to SHELL.
 
-<figure><img src="../../../.gitbook/assets/7 (4).jpg" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/7 (1).jpg" alt="" width="188"><figcaption></figcaption></figure>
 
 ## What Happens Next
 

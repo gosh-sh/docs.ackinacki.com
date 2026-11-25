@@ -11,7 +11,7 @@ For each lot, you can see:
 * The SHELL and eccUSDC amounts (e.g., 1,000 SHELL → 10 eccUSDC)
 * Your position in the queue (e.g., **#1 in queue**)
 
-<figure><img src="../../../.gitbook/assets/7 (2).jpg" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/7 (1).jpg" alt="" width="188"><figcaption></figcaption></figure>
 
 ## Lot Statuses
 
@@ -49,4 +49,3 @@ If you created multiple lots (different or same denominations), each lot is disp
 ### No Active Orders
 
 If you have no active conversion orders, the **My Orders** section is not displayed.
-
