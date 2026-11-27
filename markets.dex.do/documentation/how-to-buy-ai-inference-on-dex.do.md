@@ -188,11 +188,11 @@ The panel shows the purchase step by step: **Creating the request**, **Paying fr
 
 <img src="../../.gitbook/assets/dex-do-buy-buying-ticks.png" alt="Progress of a tick purchase" width="375">
 
-When **Ticks bought** appears, the model is ready. Click **Continue to API key**, or wait a few seconds for it to open by itself.
+When **Ticks bought** appears, select **Continue to API keys**, or wait for the 10-second countdown. The dashboard opens **Inference keys**. Select an active key that can access the model you bought. If you see **Some slots are ready**, open **Pools** to check which slots are **Ready**.
 
-<img src="../../.gitbook/assets/dex-do-buy-ticks-bought.png" alt="Ticks bought: the model, the ticks, the price, and what was paid" width="375">
+<img src="../../.gitbook/assets/dex-do-buy-ticks-bought.png" alt="Ticks bought with the Continue to API keys button and countdown" width="375">
 
-Wait for the status to change to **Serving** with a green indicator. If the request stays **Pending**, [contact support via chat](https://t.me/c/3819653418/3477).
+In **Orders**, a green **Serving** status indicates that the order is ready. If the request stays **Pending**, [contact support via chat](https://t.me/c/3819653418/3477).
 
 ![Model order with Serving status](../../.gitbook/assets/.gitbookassetsorder-serving.png)
 
@@ -206,11 +206,15 @@ DEX.DO uses funds from your Funding Account to top up the **Trading balance** an
 {% step %}
 ## Get an API key
 
-On [markets.dex.do](https://markets.dex.do/), open **Inference keys**, select **All current and future models**, or choose a key for a specific model, and click **Copy** next to the key in the panel that opens.
+On [markets.dex.do](https://markets.dex.do/), open **Inference keys**. On a new account, your first purchase creates a shared key labeled **All current and future models**. You can keep using that key as more purchased models become ready. Select the key and click **Copy** next to **API key**.
 
-<figure><img src="../../.gitbook/assets/изображение.png" alt=""><figcaption><p>List of keys in the Inference keys section</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/изображение.png" alt="Active shared key labeled All current and future models" width="420"><figcaption><p>Inference keys after the first purchase on a new account</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/изображение (1).png" alt="" width="375"><figcaption><p>Desktop</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/изображение (1).png" alt="Shared key details with the Copy button next to the masked API key" width="375"><figcaption><p>Desktop</p></figcaption></figure>
+
+For a key limited to specific models, select **Create API key** → **Selected models**, choose the ready models you want to include, and select **Create API key**. You can also reuse an existing active key that includes your model.
+
+Later purchases keep your existing keys and their permissions. If you deleted your shared key and need another one, select **Create API key** → **Any**. To change which models an existing key can access, open it and select **Edit models**.
 
 Use this key to configure Codex CLI and Codex Desktop.
 {% endstep %}
@@ -244,17 +248,17 @@ Open **All activity** to compare **Today** and **All time**, **By model** for a 
 After you purchase access to a model, the dashboard automatically tests each new seller connection once the slot is ready. \
 You can view the result or run another test from the **Pools** page.
 
-1. Open Pools and expand the model you purchased access to. Find the slot you want to check. Under **Seller status and** click **Connection details**
+1. Open **Pools**, expand the model, and find the slot you want to check. **Max concurrency** shows how many inference requests this slot can handle at the same time. Under **Seller status**, select **Connection details**.
 
-<figure><img src="../../.gitbook/assets/Open Connection details on the Pools page.jpg" alt=""><figcaption><p>Open Connection details on the Pools page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Open Connection details on the Pools page.jpg" alt="Expanded pool showing Max concurrency and the Connection details button for a ready slot" width="420"><figcaption><p>Open Connection details on the Pools page</p></figcaption></figure>
 
-2. The **Seller connection** window will open. **Last checked** shows when the last test was completed. To run a new test, click **Test connection**.
+2. In **Seller connection**, you can also see the slot’s **Max concurrency**. **Last checked** shows when the last test finished. To run a new test, select **Test connection**.
 
-<figure><img src="../../.gitbook/assets/2 (6).jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (6).jpg" alt="Seller connection showing the same slot’s Max concurrency and the Test connection button" width="500"><figcaption></figcaption></figure>
 
 3. The slot must be **Ready** and have an active deal. Once the test starts, it can take up to five minutes.
 
-<figure><img src="../../.gitbook/assets/3 (6).jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3 (6).jpg" alt="Successful seller connection test with an OK response for the same slot" width="500"><figcaption></figcaption></figure>
 
 <table data-header-hidden data-search="false"><thead><tr><th width="163.8499755859375"></th><th></th></tr></thead><tbody><tr><td>Seller status</td><td>What it means</td></tr><tr><td><strong>Not tested</strong></td><td>The connection has not been tested yet.</td></tr><tr><td><strong>Queued</strong></td><td>The test is waiting to start.</td></tr><tr><td><strong>Checking…</strong></td><td>The test is in progress.</td></tr><tr><td><strong>OK</strong></td><td>The model returned the expected <code>OK</code> response during the last test.</td></tr><tr><td><strong>Check failed</strong></td><td>The test encountered an error or received an unexpected response. Open <strong>Connection details</strong> to see what happened.</td></tr><tr><td><strong>Result unknown</strong></td><td>The test ended without a confirmed result. You can try again when the slot is ready.</td></tr></tbody></table>
 
