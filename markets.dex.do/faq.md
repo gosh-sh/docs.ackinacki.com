@@ -35,6 +35,14 @@ To proceed with the transfer:
 
 <details>
 
+<summary><strong>What should I do if my crypto payment needs review?</strong></summary>
+
+If the dashboard says your crypto payment needs review, select **Contact support** on the purchase screen and share the **Invoice ID** shown there.
+
+</details>
+
+<details>
+
 <summary><strong>Does purchased inference have an expiration date?</strong></summary>
 
 Regular tick purchases have **no fixed expiration date**. You can use the purchased inference until the allocated amount is exhausted, as long as the deal remains open.
@@ -211,7 +219,7 @@ The transaction history includes deposits, transfers, funds reserved for purchas
 Open **Inference keys** in the dashboard, select an active API key, and scroll down to the **Usage** section.
 
 * **Remaining** — SHELL available for inference requests.
-* **Total tokens** also includes tokens read from and written to the cache.
+* **Total tokens** includes **Uncached input tokens**, **Output tokens**, **Cache read tokens**, and **Cache write tokens**. Each count is shown separately, so you can see how much of your usage came from reading or writing cached input.
 * **Cost** — SHELL spent over the selected period.
 
 You can view the number of requests, token usage, and costs for today, all time, by model, or by day.
