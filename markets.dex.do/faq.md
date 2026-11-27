@@ -35,6 +35,14 @@ To proceed with the transfer:
 
 <details>
 
+<summary><strong>What should I do if my crypto payment needs review?</strong></summary>
+
+If the dashboard says your crypto payment needs review, select **Contact support** on the purchase screen and share the **Invoice ID** shown there.
+
+</details>
+
+<details>
+
 <summary><strong>Does purchased inference have an expiration date?</strong></summary>
 
 Regular tick purchases have **no fixed expiration date**. You can use the purchased inference until the allocated amount is exhausted, as long as the deal remains open.
@@ -67,12 +75,10 @@ Make sure you're signed in to [gosh.ai](https://gosh.ai) with the same account y
 
 Yes, you can purchase access to multiple models and use them through [**Codex CLI**](documentation/how-to-set-up-codex-cli.md) or [**Codex Desktop**](documentation/how-to-set-up-codex-desktop.md).
 
-You can use:
+Open **Inference keys** to choose how to access your models.
 
-* **A shared API key** (**All current and future models )** — to access all purchased models, including future purchases.
-* **Separate API keys** — to access specific models individually.
-
-You can manage your keys in the **Inference API Keys** section in the left-hand menu.
+* **Shared key.** On a new account, your first purchase creates a key labeled **All current and future models**. Use the same key for additional models once they are ready.
+* **Restricted key.** To give an application access only to certain models, select **Create API key** → **Selected models** and choose them. Later purchases keep this selection. To update it, open the key and select **Edit models**.
 
 {% hint style="info" %}
 Purchasing access to the same model again will automatically close the current deal. Once the deal is settled, the remaining funds will be returned to your **Trading Wallet** in SHELL, minus any applicable deductions.\
@@ -211,7 +217,7 @@ The transaction history includes deposits, transfers, funds reserved for purchas
 Open **Inference keys** in the dashboard, select an active API key, and scroll down to the **Usage** section.
 
 * **Remaining** — SHELL available for inference requests.
-* **Total tokens** also includes tokens read from and written to the cache.
+* **Total tokens** includes **Uncached input tokens**, **Output tokens**, **Cache read tokens**, and **Cache write tokens**. Each count is shown separately, so you can see how much of your usage came from reading or writing cached input.
 * **Cost** — SHELL spent over the selected period.
 
 You can view the number of requests, token usage, and costs for today, all time, by model, or by day.
@@ -239,7 +245,7 @@ If the result is **OK**, the connection is working. If the test fails, see the *
 Store your API key on your backend. Set up a proxy that checks each user’s permissions, forwards authorized requests to markets.dex.do using your API key, and returns the model’s response to your app. Users sign in through your app, and the API key stays on your server.
 
 {% hint style="info" %}
-By default, each model slot supports **up to two concurrent requests**. \
+To see how many requests a slot can handle at the same time, open **Pools**, expand the model, and read **Max concurrency** for that slot. You can also find it under **Connection details**. \
 All users whose requests go through the same slot share this limit. Idle sessions do not count toward it. A streaming request occupies one spot until the response ends.
 {% endhint %}
 
