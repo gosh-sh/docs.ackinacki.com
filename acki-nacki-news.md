@@ -5,6 +5,48 @@ hidden: true
 
 # Acki Nacki News
 
+## Update - 27.11.26
+
+### Network
+
+**🚀 AVM Comes to Shellnet**.\
+Shellnet launches today with AVM support.
+
+[**AVM SDK 0.6.6 is out**](https://github.com/gosh-sh/avm-sdk/releases)
+
+* A contract can query internal events from any account in any DApp. The sender specifies the account and event class in an internal message, and the recipient reads the result. Enable `event-rings` at build time to read and write internal events.
+* The account data limit has increased **from 1 MiB to 4 MiB**. Accounts remain callable even at the data limit. Long message queues are processed in batches across subsequent blocks.
+* If an internal message does not unfreeze the account, the runtime rejects it before running WASM and charges **3 million FUEL**. Funds sent to a frozen account through a callback or an automatic refund are burned.
+
+**When upgrading**, use the 0.6.6 tools and profile together, and initialize your local test environment with fresh state. Rebuilding a contract changes its code hash.
+
+🔗 Release notes: [0.6.6](https://github.com/gosh-sh/avm-sdk/releases/tag/avm-dev-73418ea9bfba-sdk-21509f7d32ce)
+
+### DEX.DO
+
+[**markets.dex.do**](https://markets.dex.dohttps/markets.dex.do) **updates:** Added crypto payments, network-wide market statistics, and detailed token usage including cache reads and writes. Slots now shows concurrency limits and lets you stop individual slots independently. Orders is now Payment History. Purchases no longer automatically create model-specific API keys; users can manage shared keys or keys restricted to selected models
+
+[**DEXDO CLI v0.14.0 was released**](https://github.com/gosh-sh/dexdo-cli/releases)
+
+* **Deal recovery.** After a `SELL` timeout, the seller checks for the order in the background, even after a restart. It picks up late orders and submits a replacement only after confirming the original expired unfilled. Buyer deals stay active if a response or model check is interrupted.
+* **Trading and settlement.** `BUY`, `quote`, and `executable-book` check seller reserves against the actual purchase size. Sellers can claim payment for up to 1 million delivered tokens per minute per deal and retry until the claim is confirmed or the deal closes.
+* **Monitoring.** Buyers and sellers now count contract call errors. Sellers refresh trading and gas balances every 60 seconds for notes with active deals. In buyer gRPC metric queries, replace `rpc.response.status_code` with `rpc.status_code`.
+
+🔗 Release notes: [v0.14.0](https://github.com/gosh-sh/dexdo-cli/releases/tag/v0.14.0)
+
+### Bridge
+
+Rolled out NACKL support on the test bridge.
+
+The Acki Nacki Wallet build with bridge support is now on TestFlight and undergoing internal testing. This version supports USDC only; NACKL support is coming in the next release.
+
+### Popit Music
+
+**Popit Music** [**The 0xDEAD BEATS**](https://gosh.meme/ackinacki-orchestra/tracks/0xdead#links) **contest results are in!**\
+85 creators submitted 877 tracks, and nine winners shared 26,250 NACKL in prizes.\
+🤩Congratulations to the winners!🎉\
+<a href="https://popit.music/contests/beats" target="_blank">Full results</a>
+
 ## Update - 20.11.26
 
 ### AVM
